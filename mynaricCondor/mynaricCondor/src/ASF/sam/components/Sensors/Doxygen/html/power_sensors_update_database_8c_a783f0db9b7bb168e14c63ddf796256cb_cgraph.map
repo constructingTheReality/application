@@ -1,0 +1,9 @@
+<map id="ePowerSensorsUpdateDatabaseBooster" name="ePowerSensorsUpdateDatabaseBooster">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,215,63"/>
+<area shape="rect" id="Node000002" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="263,31,437,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,41,249,41,249,46,215,46"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="485,5,679,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="437,31,472,27,472,33,438,36"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="501,55,663,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="438,50,488,55,487,60,437,55"/>
+</map>

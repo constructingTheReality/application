@@ -1,0 +1,5 @@
+<map id="eCurrentSensorsBoosterConfigUpdate" name="eCurrentSensorsBoosterConfigUpdate">
+<area shape="rect" id="Node000001" title="set the current intercept scaling factor for the booster" alt="" coords="5,5,205,48"/>
+<area shape="rect" id="Node000002" href="$current_sensors_config_update_8c.html#ac507fb6083cdf8891c523923af36a9e3" title=" " alt="" coords="253,13,471,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,24,237,24,237,29,205,29"/>
+</map>

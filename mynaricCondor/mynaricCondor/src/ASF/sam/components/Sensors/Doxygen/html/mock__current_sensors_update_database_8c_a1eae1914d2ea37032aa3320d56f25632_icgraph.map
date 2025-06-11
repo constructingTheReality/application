@@ -1,0 +1,7 @@
+<map id="CMockExpectParameters_eCurrentSensorsUpdateDatabaseLna" name="CMockExpectParameters_eCurrentSensorsUpdateDatabaseLna">
+<area shape="rect" id="Node000001" title=" " alt="" coords="304,37,547,77"/>
+<area shape="rect" id="Node000002" href="$mock__current_sensors_update_database_8c.html#a699131363ec6a49a95734706a3301c8f" title=" " alt="" coords="23,5,238,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,45,238,40,238,34,291,40"/>
+<area shape="rect" id="Node000003" href="$mock__current_sensors_update_database_8c.html#a86566827cedcfad2777c6493642d84b3" title=" " alt="" coords="5,69,256,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,75,257,78,256,73,290,69"/>
+</map>

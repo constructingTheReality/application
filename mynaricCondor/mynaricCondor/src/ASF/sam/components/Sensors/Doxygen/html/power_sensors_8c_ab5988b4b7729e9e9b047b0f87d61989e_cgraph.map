@@ -1,0 +1,11 @@
+<map id="ePowerSensorsBoosterConfigUpdate" name="ePowerSensorsBoosterConfigUpdate">
+<area shape="rect" id="Node000001" title="Save the config from the DB &#45; HPA section &#45; into the local copy." alt="" coords="5,23,200,63"/>
+<area shape="rect" id="Node000002" href="$power_sensors_config_update_8c.html#aa1cbba11c4cc25e0d37faad019f82b90" title=" " alt="" coords="248,23,439,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,41,234,41,234,46,200,46"/>
+<area shape="rect" id="Node000003" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="487,31,661,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,41,473,41,473,46,439,46"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="709,5,903,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="661,31,696,27,696,33,662,36"/>
+<area shape="rect" id="Node000005" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="725,55,887,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="662,50,712,55,711,60,661,55"/>
+</map>

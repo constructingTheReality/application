@@ -1,0 +1,17 @@
+<map id="eCurrentSensorUpdate" name="eCurrentSensorUpdate">
+<area shape="rect" id="Node000001" title="Update critical currents of the laser." alt="" coords="5,104,159,129"/>
+<area shape="rect" id="Node000002" href="$current_sensors_common_alarm_8c.html#a15cf7457d6aeb14ad8f30d20e8f80d8c" title=" " alt="" coords="207,5,435,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,102,145,70,206,40,229,32,230,37,208,44,148,75,102,106"/>
+<area shape="rect" id="Node000003" href="$current_sensors_hpa_alarm_8c.html#a310f0d1b4a533547de969c1f2bb03c2e" title=" " alt="" coords="221,55,420,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,101,245,80,246,85,145,107"/>
+<area shape="rect" id="Node000004" href="$current_sensors_lna_alarm_8c.html#abb8b4cd637d2cd2aa927133561b74a92" title=" " alt="" coords="222,104,419,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,114,208,114,208,119,159,119"/>
+<area shape="rect" id="Node000005" href="$current_sensors_read_channel_8c.html#a85c46064daefd0c494784e3b436fcbb1" title="get current value for a specific channel" alt="" coords="211,153,430,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="145,127,246,148,245,153,144,132"/>
+<area shape="rect" id="Node000006" href="$mock__laser_data_8c.html#afde4bcc28d4b6e77c27c0bfe793e2e53" title=" " alt="" coords="239,203,403,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="102,127,149,158,208,188,234,196,233,202,206,192,146,162,99,132"/>
+<area shape="rect" id="Node000007" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="483,177,676,203"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="403,205,468,198,469,203,403,210"/>
+<area shape="rect" id="Node000008" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="499,227,660,252"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="403,220,485,228,485,233,403,226"/>
+</map>

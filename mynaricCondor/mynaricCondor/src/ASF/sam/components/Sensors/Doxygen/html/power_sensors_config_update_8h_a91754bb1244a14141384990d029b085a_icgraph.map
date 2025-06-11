@@ -1,0 +1,12 @@
+<map id="ePowerSensorsConfigUpdateLna" name="ePowerSensorsConfigUpdateLna">
+<area shape="rect" id="Node000001" title=" " alt="" coords="363,63,573,88"/>
+<area shape="rect" id="Node000002" href="$power_sensors_8c.html#af5b153abbaf61bcd560e931412a5680d" title="Save the config from the DB &#45; LNA section &#45; into the local copy." alt="" coords="104,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="396,62,267,33,268,28,397,57"/>
+<area shape="rect" id="Node000003" href="$test__for_power_sensors_config_updat_8c.html#a93de308ed1ee2ceecf7a9c5b2f3da936" title=" " alt="" coords="106,55,313,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="349,78,313,78,313,73,349,73"/>
+<area shape="rect" id="Node000005" href="$test__for_power_sensors_config_updat_8c.html#a7912f7a0e64f858a3957fbb8bbbbce9e" title=" " alt="" coords="106,119,313,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="403,94,292,122,290,117,402,89"/>
+<area shape="rect" id="Node000004" href="$test__for_power_sensors_config_updat__runner_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,95,56,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,99,57,106,56,100,92,94"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="92,121,56,114,57,109,93,116"/>
+</map>

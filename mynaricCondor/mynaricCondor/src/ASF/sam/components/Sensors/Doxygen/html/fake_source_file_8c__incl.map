@@ -1,0 +1,20 @@
+<map id="fakeSourceFile.c" name="fakeSourceFile.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,221,32"/>
+<area shape="rect" id="Node000002" href="$_current_sensing_8h.html" title="Library to calculate a current according to a current sensing signal input." alt="" coords="5,155,127,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,34,85,143,80,140,152,31"/>
+<area shape="rect" id="Node000004" href="$fake_source_file_8h.html" title=" " alt="" coords="152,80,271,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,31,196,66,192,69,168,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="27,229,105,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,182,69,214,63,214,63,182"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="204,109,177,143,141,183,97,222,93,218,137,179,173,140,200,105"/>
+<area shape="rect" id="Node000005" href="$power_sensors_8h.html" title=" " alt="" coords="202,155,317,181"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="222,106,245,140,240,143,217,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="361,229,448,256"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="245,105,287,125,330,153,363,183,389,215,385,218,359,187,327,157,284,130,242,110"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="227,184,115,226,113,221,225,179"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="129,229,256,256"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="250,184,216,220,212,216,246,180"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="286,179,367,220,365,224,283,184"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="281,229,337,256"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="270,180,294,215,289,218,266,183"/>
+</map>

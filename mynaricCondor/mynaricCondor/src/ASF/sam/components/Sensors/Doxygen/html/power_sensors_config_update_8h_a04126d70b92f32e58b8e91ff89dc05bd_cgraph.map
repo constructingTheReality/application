@@ -1,0 +1,11 @@
+<map id="ePowerSensorsConfigUpdateCommon" name="ePowerSensorsConfigUpdateCommon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,196,62"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="515,5,708,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,20,244,14,377,8,501,10,501,15,377,13,244,19,196,25"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="531,55,692,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,59,244,65,388,71,517,69,517,75,387,76,244,70,196,64"/>
+<area shape="rect" id="Node000004" href="$mock__laser_data_8c.html#ad6a5fa3ee2c4cfdaeb42ada068072dee" title=" " alt="" coords="244,29,467,55"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,39,230,39,230,45,196,45"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="466,29,501,26,501,31,467,34"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="467,50,517,55,517,61,466,56"/>
+</map>

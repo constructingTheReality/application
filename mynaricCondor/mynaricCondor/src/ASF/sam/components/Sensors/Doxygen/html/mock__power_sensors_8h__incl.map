@@ -1,0 +1,15 @@
+<map id="UnitTestFramework/build/test/mocks/mock_powerSensors.h" name="UnitTestFramework/build/test/mocks/mock_powerSensors.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="67,5,293,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="94,96,154,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,50,144,85,139,82,163,47"/>
+<area shape="rect" id="Node000003" href="$power_sensors_8h.html" title=" " alt="" coords="179,96,293,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,47,221,82,216,85,192,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,171,83,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="203,126,93,167,91,162,202,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="107,171,234,197"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="227,125,194,161,190,157,223,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="259,171,346,197"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="250,121,283,157,279,161,246,125"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="371,171,427,197"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="265,121,357,161,355,166,263,126"/>
+</map>

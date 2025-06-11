@@ -1,0 +1,5 @@
+<map id="eCurrentSensorsLnaConfigUpdate" name="eCurrentSensorsLnaConfigUpdate">
+<area shape="rect" id="Node000001" title="set the current intercept scaling factor for the lna" alt="" coords="5,5,181,48"/>
+<area shape="rect" id="Node000002" href="$current_sensors_config_update_8c.html#a2bbf6f4d05e5a871a31fbb46b82a7275" title=" " alt="" coords="229,13,445,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,24,213,24,213,29,181,29"/>
+</map>

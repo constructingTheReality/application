@@ -1,0 +1,11 @@
+<map id="ePowerSensorsFactoryInitLnaChannels" name="ePowerSensorsFactoryInitLnaChannels">
+<area shape="rect" id="Node000001" title="Init the power sensors &#45; LNA section &#45; with factory &#45; emergency&#45; values. In case nvm fail." alt="" coords="5,23,180,63"/>
+<area shape="rect" id="Node000002" href="$power_sensors_update_database_8c.html#ae14ab190b4dad867bdbbea23eb47b244" title=" " alt="" coords="228,31,459,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,41,214,41,214,46,180,46"/>
+<area shape="rect" id="Node000003" href="$mock__laser_data_8c.html#a8d710388e55b44e04f911e6d240a502e" title=" " alt="" coords="507,31,657,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="459,41,493,41,493,46,459,46"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="705,5,899,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="657,32,691,28,692,33,658,37"/>
+<area shape="rect" id="Node000005" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="721,55,883,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="658,49,708,54,708,60,657,54"/>
+</map>

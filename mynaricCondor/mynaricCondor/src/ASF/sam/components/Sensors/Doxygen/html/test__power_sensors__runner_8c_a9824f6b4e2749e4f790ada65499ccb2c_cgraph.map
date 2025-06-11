@@ -1,0 +1,33 @@
+<map id="test_3_2_ePowerSensorUpdate_ePowerReadOffsetChannelRunFailure_Fail" name="test_3_2_ePowerSensorUpdate_ePowerReadOffsetChannelRunFailure_Fail">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,146,279,186"/>
+<area shape="rect" id="Node000002" href="$power_sensors_8c.html#abbfd3d79a28a89134ad3d5ea9ed06b0f" title="Update critical power of the laser." alt="" coords="327,153,473,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,163,313,163,313,169,279,169"/>
+<area shape="rect" id="Node000003" href="$power_read_channel_8c.html#acdb1c09066c33f53244861da8d347e80" title="get temperature value for a specific channel" alt="" coords="543,5,708,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,151,451,97,483,66,520,40,533,33,535,38,523,44,487,70,455,101,412,155"/>
+<area shape="rect" id="Node000004" href="$power_read_channel_8c.html#aa894f8700120f30e5d3a63ffecd61ca1" title="get the offset in raw data. this info will be used for calculate the power in the other channels." alt="" coords="526,55,725,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="416,151,462,120,520,89,542,81,543,86,522,94,464,125,419,155"/>
+<area shape="rect" id="Node000005" href="$power_sensors_booster_alarm_8c.html#a481d21045f682e4e3880254cb6fb2998" title=" " alt="" coords="521,153,729,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="474,163,508,163,508,169,474,169"/>
+<area shape="rect" id="Node000008" href="$power_sensors_lna_alarm_8c.html#a43e9079ef81445f2e5497f17fd63d167" title=" " alt="" coords="533,104,717,129"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="458,151,553,130,554,135,459,156"/>
+<area shape="rect" id="Node000009" href="$mock__laser_data_8c.html#afde4bcc28d4b6e77c27c0bfe793e2e53" title=" " alt="" coords="543,203,707,228"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="459,176,554,197,553,202,458,181"/>
+<area shape="rect" id="Node000012" href="$mock__booster_state_machine_8c.html#ad871052e9b70c459a91d77b2710ffd98" title=" " alt="" coords="540,252,711,277"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="420,177,465,207,522,237,547,246,545,251,520,242,462,211,417,181"/>
+<area shape="rect" id="Node000013" href="$mock__lna_state_machine_8c.html#ad6d2280690918084e4a3d9167a75e32f" title=" " alt="" coords="541,301,709,327"/>
+<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="412,177,455,231,487,262,523,288,535,294,533,299,520,292,483,266,451,235,408,181"/>
+<area shape="rect" id="Node000006" href="$power_sensors_alarm_validate_limits_8c.html#a268655ca851e1b8ecf08f07bb95a5023" title="Validate the Input Alarm Limits." alt="" coords="783,90,965,130"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="682,151,771,130,772,136,683,156"/>
+<area shape="rect" id="Node000007" href="$power_sensors_alarm_validate_limits_8c.html#a258925ea28197e4a09bd5757fcff009c" title="Validate the Output Alarm Limits." alt="" coords="778,154,970,194"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="730,167,764,168,764,173,729,172"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="717,112,769,110,769,115,718,117"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="682,127,774,148,773,153,681,132"/>
+<area shape="rect" id="Node000010" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="777,232,971,257"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="708,222,764,229,763,234,707,228"/>
+<area shape="rect" id="Node000011" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="793,281,955,307"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="696,226,730,237,755,252,779,268,798,275,796,280,776,272,752,257,728,242,695,231"/>
+<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="711,255,763,251,764,256,711,260"/>
+<area shape="poly" id="edge15_Node000012_Node000011" title=" " alt="" coords="711,272,780,280,779,286,711,277"/>
+<area shape="poly" id="edge17_Node000013_Node000010" title=" " alt="" coords="688,299,728,287,776,267,806,258,808,263,778,273,730,293,689,304"/>
+<area shape="poly" id="edge18_Node000013_Node000011" title=" " alt="" coords="709,305,779,299,780,304,710,310"/>
+</map>

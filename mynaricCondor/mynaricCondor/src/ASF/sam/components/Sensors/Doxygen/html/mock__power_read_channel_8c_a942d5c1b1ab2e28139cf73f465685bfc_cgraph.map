@@ -1,0 +1,9 @@
+<map id="ePowerReadChannelRun_CMockIgnoreArg_pfPowerReaded" name="ePowerReadChannelRun_CMockIgnoreArg_pfPowerReaded">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,228,63"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="281,5,474,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,30,267,26,267,31,228,35"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a7a60479d86c12fa24499c516365f5c71" title=" " alt="" coords="276,55,479,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,51,262,54,262,59,228,56"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="527,55,688,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="479,65,513,65,513,70,479,70"/>
+</map>

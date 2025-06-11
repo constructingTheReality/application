@@ -1,0 +1,42 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_boosterAccSm.c
+:successes:
+- :test: test_1_1_eBoosterAccSmRun_InvalidParam_Fail
+  :line: 48
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_2_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_IncreasingCurrent_test1_Success
+  :line: 57
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_3_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_IncreasingCurrent_test2_Success
+  :line: 73
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_4_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_DecreasingCurrent_test1_Success
+  :line: 87
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_5_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_DecreasingCurrent_test2_Success
+  :line: 101
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_6_eBoosterAccSmRun_OneStepLeft_Success
+  :line: 115
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_7_eBoosterAccSmRun_ZeroSteps_Success
+  :line: 129
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 7
+  :passed: 7
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.2347152999136597

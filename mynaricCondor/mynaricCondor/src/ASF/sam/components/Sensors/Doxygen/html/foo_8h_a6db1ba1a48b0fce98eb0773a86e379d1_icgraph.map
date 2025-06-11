@@ -1,0 +1,7 @@
+<map id="foo_turn_on" name="foo_turn_on">
+<area shape="rect" id="Node000001" title=" " alt="" coords="159,31,247,57"/>
+<area shape="rect" id="Node000002" href="$test__foo_8c.html#af1eeda34d0c7ab1f41b5067320a6fff5" title=" " alt="" coords="24,5,92,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,36,92,27,93,22,144,31"/>
+<area shape="rect" id="Node000003" href="$test__foo_8c.html#adc19021f83dcbc0bd7dbf8b55a91b288" title=" " alt="" coords="5,56,111,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,57,111,63,111,58,143,52"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="vCurrentSensorsFactoryInitBoosterChannels" name="vCurrentSensorsFactoryInitBoosterChannels">
+<area shape="rect" id="Node000001" title="Init the current scaling internal channels for HPA." alt="" coords="5,23,184,63"/>
+<area shape="rect" id="Node000002" href="$current_sensors_update_database_8c.html#aa44c34357f4fe90d788c6cc6e828bafe" title=" " alt="" coords="232,31,471,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,41,218,41,218,46,184,46"/>
+<area shape="rect" id="Node000003" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="519,31,693,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="471,41,505,41,505,46,471,46"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="741,5,935,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="693,31,728,27,728,33,694,36"/>
+<area shape="rect" id="Node000005" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="757,55,919,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="694,50,744,55,743,60,693,55"/>
+</map>

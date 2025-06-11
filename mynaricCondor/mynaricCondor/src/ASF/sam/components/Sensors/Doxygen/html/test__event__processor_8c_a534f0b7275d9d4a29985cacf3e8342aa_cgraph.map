@@ -1,0 +1,10 @@
+<map id="test_givenTheUserHasTypedSleep_whenItIsTimeToCheckTheKeyboard_theDisplayIsPoweredDown" name="test_givenTheUserHasTypedSleep_whenItIsTimeToCheckTheKeyboard_theDisplayIsPoweredDown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,269,73"/>
+<area shape="rect" id="Node000002" href="$display_8h.html#a33e97a1d26f45f9f14f3428a9cad2ff8" title=" " alt="" coords="564,5,699,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="269,35,548,20,548,26,269,40"/>
+<area shape="rect" id="Node000003" href="$event__processor_8c.html#a215d1e5ccd386376a8f2f7ca5de2d6fa" title=" " alt="" coords="317,52,497,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="269,56,301,59,301,65,269,61"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="497,49,559,34,560,39,498,54"/>
+<area shape="rect" id="Node000004" href="$display_8h.html#ad3acc697e3c1f49d46c5fe833a68c8e4" title=" " alt="" coords="545,60,718,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="497,71,529,71,529,76,497,76"/>
+</map>

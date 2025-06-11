@@ -1,0 +1,5 @@
+<map id="ePowerReadChannelRun" name="ePowerReadChannelRun">
+<area shape="rect" id="Node000001" title="get temperature value for a specific channel" alt="" coords="200,5,364,32"/>
+<area shape="rect" id="Node000002" href="$power_sensors_8c.html#a18bcbf28ca9f7186226cee9d99cd80f0" title="Update critical power of the laser." alt="" coords="5,5,152,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,21,152,21,152,16,184,16"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mock_powerSensors_Init" name="mock_powerSensors_Init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" id="Node000002" href="$mock__power_sensors_8c.html#a89bba5b911edf67e6096c624eab6e23a" title=" " alt="" coords="220,5,414,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,16,204,16,204,21,172,21"/>
+<area shape="rect" id="Node000003" href="$vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c.html#a348bc07d37efc57ac52128cd99ee7c72" title=" " alt="" coords="462,5,636,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="414,16,447,16,447,21,414,21"/>
+</map>

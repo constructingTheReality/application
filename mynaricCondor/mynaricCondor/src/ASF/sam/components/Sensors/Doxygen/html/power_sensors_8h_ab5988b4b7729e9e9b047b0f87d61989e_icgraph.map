@@ -1,0 +1,7 @@
+<map id="ePowerSensorsBoosterConfigUpdate" name="ePowerSensorsBoosterConfigUpdate">
+<area shape="rect" id="Node000001" title="Save the config from the DB &#45; HPA section &#45; into the local copy." alt="" coords="435,13,629,53"/>
+<area shape="rect" id="Node000002" href="$test__power_sensors_8c.html#ac37ca8de175c511af0e47fd95792d58a" title=" " alt="" coords="104,5,387,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="421,35,387,35,387,30,421,30"/>
+<area shape="rect" id="Node000003" href="$test__power_sensors__runner_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,20,56,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,35,56,35,56,30,90,30"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsBackfacetAlarm.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsBackfacetAlarm.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="409,5,680,104"/>
+<area shape="rect" id="Node000002" href="$test__current_sensors_backfacet_alarm_8c.html" title="test file for test_currentSensorsBackfacetAlarm.c" alt="" coords="5,152,252,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,109,266,155,253,159,251,154,264,149,395,104"/>
+<area shape="rect" id="Node000003" href="$current_sensors_v2_8c.html" title=" " alt="" coords="277,152,525,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="489,116,451,153,447,150,485,112"/>
+<area shape="rect" id="Node000004" href="$current_sensors_8c.html" title=" " alt="" coords="549,159,831,243"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="605,112,651,157,647,161,601,116"/>
+<area shape="rect" id="Node000005" href="$current_sensors_backfacet_alarm_8c.html" title=" " alt="" coords="855,152,1125,251"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="694,101,844,149,855,153,854,158,843,155,692,106"/>
+</map>

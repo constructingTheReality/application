@@ -1,0 +1,17 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsReadChannel.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsReadChannel.c">
+<area shape="rect" id="Node000001" title="currentSensorsReadChannel source file" alt="" coords="68,5,339,104"/>
+<area shape="rect" id="Node000002" href="$current_sensors_read_channel_8h.html" title="currentSensorsreadChannel header file." alt="" coords="104,152,303,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,104,206,138,201,138,201,104"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,299,84,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,180,121,199,101,211,83,227,64,256,53,286,48,284,59,253,79,224,98,207,119,194,161,175"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="224,299,281,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="211,177,230,224,248,284,243,286,225,226,206,179"/>
+<area shape="rect" id="Node000005" href="$current_sensors_8h.html" title=" " alt="" coords="93,225,215,251"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="197,179,172,216,168,213,193,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="290,225,410,251"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="228,175,315,217,313,222,226,180"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="138,253,76,293,73,289,135,248"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="171,249,227,288,224,293,168,253"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="108,299,200,324"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="157,251,157,285,151,285,151,251"/>
+</map>

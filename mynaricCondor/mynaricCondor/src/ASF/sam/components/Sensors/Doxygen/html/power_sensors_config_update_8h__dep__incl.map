@@ -1,0 +1,17 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsConfigUpdate.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsConfigUpdate.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="464,5,728,104"/>
+<area shape="rect" id="Node000002" href="$test__for_power_sensors_config_updat_8c.html" title=" " alt="" coords="5,152,240,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,96,253,155,241,158,239,153,251,149,450,91"/>
+<area shape="rect" id="Node000003" href="$mock__power_sensors_config_update_8h.html" title=" " alt="" coords="265,152,599,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="532,115,489,154,485,150,529,111"/>
+<area shape="rect" id="Node000007" href="$power_sensors_8c.html" title=" " alt="" coords="624,159,899,243"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="664,111,716,157,713,161,660,115"/>
+<area shape="rect" id="Node000008" href="$power_sensors_config_update_8c.html" title=" " alt="" coords="923,152,1187,251"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="742,97,911,149,923,153,922,158,910,155,741,102"/>
+<area shape="rect" id="Node000004" href="$test__power_sensors_8c.html" title="test file for powerSensorsConfigUpdate.c (creating a file with this name is resulting in an unknown e..." alt="" coords="26,299,241,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="321,259,234,301,232,296,319,254"/>
+<area shape="rect" id="Node000005" href="$mock__power_sensors_config_update_8c.html" title=" " alt="" coords="265,299,599,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="435,265,435,298,429,298,429,265"/>
+<area shape="rect" id="Node000006" href="$test__power_sensors__runner_8c.html" title=" " alt="" coords="623,299,918,397"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="559,254,659,296,656,301,557,259"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="test_whenThePowerReadingIsLessThan5_thenTheStatusLedIsNotTurnedOn" name="test_whenThePowerReadingIsLessThan5_thenTheStatusLedIsNotTurnedOn">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,212,73"/>
+<area shape="rect" id="Node000002" href="$display_8c.html#ace29b0b5f6128f04d1800a81a37ad248" title=" " alt="" coords="267,5,433,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,30,251,26,252,32,212,36"/>
+<area shape="rect" id="Node000003" href="$event__processor_8c.html#ab67dfe66cdf6520c6a2fe56416ec49ee" title=" " alt="" coords="260,56,440,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,52,245,56,244,61,212,58"/>
+<area shape="rect" id="Node000004" href="$display_8h.html#afe3765474613174779452f7453b51bca" title=" " alt="" coords="488,56,655,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,67,473,67,473,72,440,72"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.c">
+<area shape="rect" id="Node000001" title="powerReadChannel.c source file" alt="" coords="5,5,309,89"/>
+<area shape="rect" id="Node000002" href="$power_read_channel_8h.html" title="powerReadChannel header file." alt="" coords="85,137,229,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,89,160,124,155,124,155,89"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,284,105,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="152,165,82,274,78,271,148,162"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="129,284,186,309"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="160,163,160,270,155,270,155,163"/>
+<area shape="rect" id="Node000005" href="$power_sensors_8h.html" title=" " alt="" coords="205,211,320,236"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="176,160,236,201,233,205,173,165"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="232,239,111,282,110,277,230,234"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="247,238,187,279,184,274,244,234"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="211,284,339,309"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="267,236,273,270,268,271,262,237"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="363,284,455,309"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="287,234,374,276,372,280,285,238"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="480,284,600,309"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="308,233,482,278,481,283,307,239"/>
+</map>

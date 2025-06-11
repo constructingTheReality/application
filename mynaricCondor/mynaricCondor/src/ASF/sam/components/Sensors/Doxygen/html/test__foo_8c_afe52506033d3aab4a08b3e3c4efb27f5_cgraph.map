@@ -1,0 +1,7 @@
+<map id="test_foo_mock_with_variable_args" name="test_foo_mock_with_variable_args">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,142,48"/>
+<area shape="rect" id="Node000002" href="$foo_8c.html#a50473552f0ce06c1a06c1774f9f3501d" title=" " alt="" coords="190,13,368,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,24,174,24,174,29,142,29"/>
+<area shape="rect" id="Node000003" href="$bar_8h.html#a7855f342293ae0f18f3596a2e3aec874" title=" " alt="" coords="416,13,608,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,24,400,24,400,29,368,29"/>
+</map>

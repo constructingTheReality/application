@@ -1,0 +1,10 @@
+<map id="test_givenTheDisplayHasAnError_whenTheDeviceIsPoweredOn_thenTheDisplayIsPoweredDown" name="test_givenTheDisplayHasAnError_whenTheDeviceIsPoweredOn_thenTheDisplayIsPoweredDown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,228,73"/>
+<area shape="rect" id="Node000002" href="$display_8h.html#a33e97a1d26f45f9f14f3428a9cad2ff8" title=" " alt="" coords="485,5,620,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,35,470,21,470,26,228,40"/>
+<area shape="rect" id="Node000003" href="$event__processor_8c.html#a07ad329255bf724d42e83d7288b20905" title=" " alt="" coords="276,56,437,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,53,260,57,260,62,228,58"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="410,53,483,34,484,39,412,58"/>
+<area shape="rect" id="Node000004" href="$display_8h.html#a5e53a692fe6fb0e657002a703dab5ade" title=" " alt="" coords="499,56,606,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,67,484,67,484,72,438,72"/>
+</map>

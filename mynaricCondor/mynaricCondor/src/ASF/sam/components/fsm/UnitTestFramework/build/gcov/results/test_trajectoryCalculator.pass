@@ -1,0 +1,58 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_trajectoryCalculator.c
+:successes:
+- :test: test_1_1_vTrajectoryCalculatorRun_InvalidParams_Fail
+  :line: 49
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_2_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test1_Success
+  :line: 73
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_3_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test2_Success
+  :line: 91
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_4_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test3_Success
+  :line: 109
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_5_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test4_Success
+  :line: 127
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_6_vTrajectoryCalculatorRun_SetpointEqualToCurrent_Success
+  :line: 145
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_7_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test1_Success
+  :line: 163
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_8_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test2_Success
+  :line: 181
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_9_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test3_Success
+  :line: 199
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_10_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test4_Success
+  :line: 217
+  :message: ''
+  :unity_test_time: 0
+- :test: test_1_11_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test5_Success
+  :line: 235
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 11
+  :passed: 11
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.24923259997740388

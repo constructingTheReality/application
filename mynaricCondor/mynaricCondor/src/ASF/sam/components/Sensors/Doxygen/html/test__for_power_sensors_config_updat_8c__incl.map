@@ -1,0 +1,41 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/Tests/test_forPowerSensorsConfigUpdat.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/Tests/test_forPowerSensorsConfigUpdat.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="301,5,536,104"/>
+<area shape="rect" id="Node000002" href="$unity_8h.html" title=" " alt="" coords="287,225,348,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,106,345,153,333,183,325,212,320,211,328,182,340,151,372,103"/>
+<area shape="rect" id="Node000010" href="$power_sensors_config_update_8h.html" title=" " alt="" coords="507,152,699,177"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="502,102,573,143,570,147,500,106"/>
+<area shape="rect" id="Node000018" href="$mock__laser_data_8h.html" title=" " alt="" coords="355,152,482,177"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="421,104,421,138,416,138,416,104"/>
+<area shape="rect" id="Node000003" href="$unity__internals_8h.html" title=" " alt="" coords="209,299,327,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,253,286,289,282,286,307,249"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,372,77,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,327,92,370,90,365,231,321"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="102,372,165,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="248,326,169,368,166,363,245,322"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="189,372,257,397"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="263,326,240,362,235,359,258,323"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="281,372,346,397"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="278,323,301,359,296,362,273,326"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="371,372,435,397"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="291,322,370,363,367,368,288,326"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="459,372,520,397"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="304,321,447,367,445,372,303,327"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="351,299,430,324"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="587,180,421,293,418,288,584,175"/>
+<area shape="rect" id="Node000012" href="$power_sensors_8h.html" title=" " alt="" coords="571,225,685,251"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="609,177,622,212,617,213,604,179"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="805,299,925,324"/>
+<area shape="poly" id="edge17_Node000010_Node000016" title=" " alt="" coords="625,175,834,290,832,295,622,180"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="376,225,464,251"/>
+<area shape="poly" id="edge18_Node000010_Node000017" title=" " alt="" coords="574,180,464,223,462,218,572,175"/>
+<area shape="poly" id="edge12_Node000012_Node000011" title=" " alt="" coords="591,253,443,297,441,292,589,248"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="455,299,583,324"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="612,253,550,293,547,289,609,248"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="607,299,699,324"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="635,250,647,285,642,287,630,252"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="723,299,781,324"/>
+<area shape="poly" id="edge15_Node000012_Node000015" title=" " alt="" coords="649,248,721,289,719,294,647,253"/>
+<area shape="poly" id="edge16_Node000012_Node000016" title=" " alt="" coords="667,248,815,292,813,297,665,253"/>
+<area shape="poly" id="edge20_Node000018_Node000002" title=" " alt="" coords="404,180,347,219,344,215,401,175"/>
+<area shape="poly" id="edge21_Node000018_Node000017" title=" " alt="" coords="422,178,422,212,417,212,416,178"/>
+</map>

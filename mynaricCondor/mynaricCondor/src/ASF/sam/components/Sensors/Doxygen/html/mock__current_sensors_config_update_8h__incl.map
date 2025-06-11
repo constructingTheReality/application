@@ -1,0 +1,27 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_currentSensorsConfigUpdate.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_currentSensorsConfigUpdate.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,5,561,104"/>
+<area shape="rect" id="Node000002" href="$unity_8h.html" title=" " alt="" coords="283,152,344,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,106,332,142,327,139,354,102"/>
+<area shape="rect" id="Node000010" href="$current_sensors_config_update_8h.html" title=" " alt="" coords="391,152,590,177"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="437,102,473,140,469,144,433,106"/>
+<area shape="rect" id="Node000003" href="$unity__internals_8h.html" title=" " alt="" coords="209,225,327,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="308,179,285,215,280,212,304,176"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,299,77,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,253,92,297,90,292,231,248"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="102,299,165,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="248,253,169,294,166,290,245,248"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="189,299,257,324"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="263,252,240,289,235,286,258,250"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="281,299,346,324"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="278,250,301,286,296,289,273,252"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="371,299,435,324"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="291,248,370,290,367,294,288,253"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="459,299,520,324"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="304,248,447,294,445,299,303,253"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="351,225,430,251"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="476,180,420,219,417,215,473,175"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="455,225,575,251"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="497,177,509,211,504,213,492,179"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="599,225,687,251"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="516,175,607,217,605,222,514,180"/>
+</map>

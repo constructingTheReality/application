@@ -1,0 +1,15 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.h">
+<area shape="rect" id="Node000001" title="powerReadChannel header file." alt="" coords="563,5,867,89"/>
+<area shape="rect" id="Node000002" href="$mock__power_read_channel_8h.html" title=" " alt="" coords="244,137,539,236"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,97,506,140,504,135,605,92"/>
+<area shape="rect" id="Node000006" href="$power_read_channel_8c.html" title="powerReadChannel.c source file" alt="" coords="563,145,867,229"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="718,103,718,144,713,144,713,103"/>
+<area shape="rect" id="Node000007" href="$power_sensors_8c.html" title=" " alt="" coords="891,145,1166,229"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="822,92,936,142,934,147,820,97"/>
+<area shape="rect" id="Node000003" href="$test__power_sensors_8c.html" title="test file for powerSensorsConfigUpdate.c (creating a file with this name is resulting in an unknown e..." alt="" coords="5,284,220,383"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,245,207,286,205,282,285,240"/>
+<area shape="rect" id="Node000004" href="$mock__power_read_channel_8c.html" title=" " alt="" coords="244,284,539,383"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="394,250,394,284,389,284,389,250"/>
+<area shape="rect" id="Node000005" href="$test__power_sensors__runner_8c.html" title=" " alt="" coords="563,284,857,383"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="511,239,605,281,602,286,509,244"/>
+</map>

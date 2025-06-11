@@ -1,0 +1,9 @@
+<map id="ePowerReadOffsetChannelRun_CMockReturnMemThruPtr_pusExternalOffset1" name="ePowerReadOffsetChannelRun_CMockReturnMemThruPtr_pusExternalOffset1">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,260,71"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="313,5,506,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,29,299,25,299,31,260,34"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a7a60479d86c12fa24499c516365f5c71" title=" " alt="" coords="308,55,511,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,52,295,55,294,60,260,57"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="559,55,720,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="511,65,545,65,545,70,511,70"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="eCurrentSensorsBoosterConfigUpdate" name="eCurrentSensorsBoosterConfigUpdate">
+<area shape="rect" id="Node000001" title="set the current intercept scaling factor for the booster" alt="" coords="5,23,205,63"/>
+<area shape="rect" id="Node000002" href="$current_sensors_config_update_8c.html#ac507fb6083cdf8891c523923af36a9e3" title=" " alt="" coords="253,31,472,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,41,240,41,240,46,205,46"/>
+<area shape="rect" id="Node000003" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="520,31,695,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,41,506,41,506,46,472,46"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="743,5,936,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="694,31,729,27,729,33,695,36"/>
+<area shape="rect" id="Node000005" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="759,55,920,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="695,50,745,55,745,60,694,55"/>
+</map>

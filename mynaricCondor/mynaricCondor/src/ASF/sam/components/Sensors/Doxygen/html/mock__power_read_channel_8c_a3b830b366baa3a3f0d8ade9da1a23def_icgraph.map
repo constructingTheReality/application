@@ -1,0 +1,7 @@
+<map id="CMockExpectParameters_ePowerReadOffsetChannelRun" name="CMockExpectParameters_ePowerReadOffsetChannelRun">
+<area shape="rect" id="Node000001" title=" " alt="" coords="283,39,488,81"/>
+<area shape="rect" id="Node000002" href="$mock__power_read_channel_8c.html#a4207e02c2d57ef13cfed56a9b40c2c65" title=" " alt="" coords="21,5,219,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,48,219,42,220,37,267,43"/>
+<area shape="rect" id="Node000003" href="$mock__power_read_channel_8c.html#a5944a2efa9828cf5771a7b75edba98c4" title=" " alt="" coords="5,72,235,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,77,235,82,235,76,267,72"/>
+</map>

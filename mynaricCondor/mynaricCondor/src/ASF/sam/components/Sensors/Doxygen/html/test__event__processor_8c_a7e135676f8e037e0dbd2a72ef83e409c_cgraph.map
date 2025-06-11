@@ -1,0 +1,9 @@
+<map id="test_givenNewDataIsAvailable_whenTheDisplayHasUpdated_thenTheEventIsComplete" name="test_givenNewDataIsAvailable_whenTheDisplayHasUpdated_thenTheEventIsComplete">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,19,199,77"/>
+<area shape="rect" id="Node000002" href="$event__processor_8c.html#ab6d73895a0010faeaf7ddf0eee24a974" title=" " alt="" coords="259,5,419,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,33,243,28,244,33,200,39"/>
+<area shape="rect" id="Node000004" href="$event__processor_8c.html#ae764507cd003774bd368b2785bb8566b" title=" " alt="" coords="247,56,431,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,57,232,61,231,67,199,63"/>
+<area shape="rect" id="Node000003" href="$display_8h.html#a0aa9daa96db07abd80cd2a8e6d0afc44" title=" " alt="" coords="479,5,614,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,16,463,16,463,21,419,21"/>
+</map>

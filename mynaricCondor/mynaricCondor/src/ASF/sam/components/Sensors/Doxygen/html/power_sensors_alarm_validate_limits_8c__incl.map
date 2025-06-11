@@ -1,0 +1,15 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsAlarmValidateLimits.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsAlarmValidateLimits.c">
+<area shape="rect" id="Node000001" title="Validate the values of the booster alarm limits." alt="" coords="174,5,438,104"/>
+<area shape="rect" id="Node000002" href="$power_sensors_alarm_validate_limits_8h.html" title="Non monolithic filter." alt="" coords="213,152,399,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,105,309,138,303,138,303,105"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,240,84,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,195,97,239,95,233,243,189"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,240,223,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="274,194,200,235,198,231,271,190"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="248,240,364,265"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="309,192,309,226,303,226,303,192"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="388,240,504,265"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="341,190,414,231,412,235,338,194"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="528,240,644,265"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="374,189,532,234,531,239,372,195"/>
+</map>

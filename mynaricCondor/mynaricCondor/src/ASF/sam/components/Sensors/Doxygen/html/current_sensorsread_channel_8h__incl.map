@@ -1,0 +1,16 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsreadChannel.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsreadChannel.h">
+<area shape="rect" id="Node000001" title="currentSensorsreadChannel header file." alt="" coords="6,5,301,112"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="43,235,120,261"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,115,29,136,12,161,9,178,16,195,30,211,47,224,44,228,26,214,11,198,4,179,7,159,25,133,49,111"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="295,235,351,261"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,111,277,133,300,159,315,189,322,219,317,220,310,190,295,161,273,137,247,115"/>
+<area shape="rect" id="Node000004" href="$current_sensors_8h.html" title=" " alt="" coords="165,160,286,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,111,212,145,207,148,185,114"/>
+<area shape="rect" id="Node000006" href="$_current_sensing_8h.html" title="Library to calculate a current according to a current sensing signal input." alt="" coords="22,160,141,187"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="122,114,100,148,95,145,118,111"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="202,190,122,230,119,225,199,185"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="244,185,296,223,293,228,241,189"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="180,235,271,261"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="228,187,228,219,223,219,223,187"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="84,187,84,219,79,219,79,187"/>
+</map>

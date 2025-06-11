@@ -1,0 +1,21 @@
+<map id="ePowerSensorUpdate" name="ePowerSensorUpdate">
+<area shape="rect" id="Node000001" title="Update critical power of the laser." alt="" coords="5,101,152,128"/>
+<area shape="rect" id="Node000002" href="$power_read_channel_8c.html#aa4add1c588cb94612707620e3f3ef520" title="get temperature value for a specific channel" alt="" coords="221,19,386,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,98,199,60,236,48,238,53,201,65,110,103"/>
+<area shape="rect" id="Node000004" href="$power_read_channel_8c.html#aa894f8700120f30e5d3a63ffecd61ca1" title="get the offset in raw data. this info will be used for calculate the power in the other channels." alt="" coords="204,75,403,101"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,103,188,99,189,104,152,109"/>
+<area shape="rect" id="Node000006" href="$power_sensors_booster_alarm_8c.html#a481d21045f682e4e3880254cb6fb2998" title=" " alt="" coords="200,127,407,153"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="152,120,184,124,184,129,152,126"/>
+<area shape="rect" id="Node000009" href="$power_sensors_lna_alarm_8c.html#a43e9079ef81445f2e5497f17fd63d167" title=" " alt="" coords="212,177,395,204"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="110,126,201,163,225,170,223,175,199,168,108,131"/>
+<area shape="rect" id="Node000003" href="$_current_sensing_8h.html#abdb76ae25a26fd7cef081e89e8b6c7db" title="Get the power of the current sensing input in mW." alt="" coords="462,5,647,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,28,446,26,446,32,386,33"/>
+<area shape="rect" id="Node000005" href="$_current_sensing_8h.html#ae8cb75e0317815d3c99429a727bd5b59" title="Get the power of the current sensing input in mW." alt="" coords="455,72,653,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,84,439,84,439,89,403,90"/>
+<area shape="rect" id="Node000007" href="$power_sensors_alarm_validate_limits_8c.html#a268655ca851e1b8ecf08f07bb95a5023" title="Validate the Input Alarm Limits." alt="" coords="464,123,644,165"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="407,139,449,140,448,145,407,144"/>
+<area shape="rect" id="Node000008" href="$power_sensors_alarm_validate_limits_8c.html#a258925ea28197e4a09bd5757fcff009c" title="Validate the Output Alarm Limits." alt="" coords="459,189,650,232"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="364,151,408,163,472,182,470,187,406,168,363,156"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="378,174,448,161,449,166,379,179"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="396,195,443,199,443,204,395,201"/>
+</map>

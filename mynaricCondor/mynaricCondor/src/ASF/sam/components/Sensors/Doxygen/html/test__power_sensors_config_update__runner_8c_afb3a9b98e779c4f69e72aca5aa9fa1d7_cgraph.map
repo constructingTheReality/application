@@ -1,0 +1,7 @@
+<map id="resetTest" name="resetTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,81,57"/>
+<area shape="rect" id="Node000002" href="$_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__foo_8c.html#a95c834d6178047ce9e1bce7cbfea2836" title=" " alt="" coords="139,5,194,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,34,123,25,124,30,82,39"/>
+<area shape="rect" id="Node000003" href="$_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__foo_8c.html#a9909011e5fea0c018842eec4d93d0662" title=" " alt="" coords="129,56,204,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,49,114,56,113,61,81,54"/>
+</map>

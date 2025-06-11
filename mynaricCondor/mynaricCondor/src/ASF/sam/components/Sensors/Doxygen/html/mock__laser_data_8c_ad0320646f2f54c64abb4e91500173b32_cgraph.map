@@ -1,0 +1,9 @@
+<map id="vLaserSetCurrentAlarm_CMockIgnoreArg_bAlarmExist" name="vLaserSetCurrentAlarm_CMockIgnoreArg_bAlarmExist">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,208,65"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="261,5,453,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,31,245,27,246,33,208,36"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a7a60479d86c12fa24499c516365f5c71" title=" " alt="" coords="256,56,458,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,52,241,55,240,60,208,57"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="506,56,666,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="458,67,490,67,490,72,458,72"/>
+</map>

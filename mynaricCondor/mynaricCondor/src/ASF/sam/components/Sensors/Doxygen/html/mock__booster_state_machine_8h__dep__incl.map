@@ -1,0 +1,9 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_boosterStateMachine.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_boosterStateMachine.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,5,543,104"/>
+<area shape="rect" id="Node000002" href="$test__power_sensors_8c.html" title="test file for powerSensorsConfigUpdate.c (creating a file with this name is resulting in an unknown e..." alt="" coords="5,152,220,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,113,208,154,205,150,287,108"/>
+<area shape="rect" id="Node000003" href="$mock__booster_state_machine_8c.html" title=" " alt="" coords="245,152,543,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="397,118,397,152,391,152,391,118"/>
+<area shape="rect" id="Node000004" href="$test__power_sensors__runner_8c.html" title=" " alt="" coords="568,152,863,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="515,107,609,149,607,154,513,112"/>
+</map>

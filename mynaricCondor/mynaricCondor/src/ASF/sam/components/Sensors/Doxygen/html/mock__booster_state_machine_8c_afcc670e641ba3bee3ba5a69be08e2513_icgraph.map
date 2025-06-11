@@ -1,0 +1,7 @@
+<map id="CMockExpectParameters_vBoosterStateMachineInit" name="CMockExpectParameters_vBoosterStateMachineInit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="222,39,397,81"/>
+<area shape="rect" id="Node000002" href="$mock__booster_state_machine_8c.html#a71f4c511f40e56bfc3ecbb7557a265ba" title=" " alt="" coords="5,5,174,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,47,174,42,175,37,207,42"/>
+<area shape="rect" id="Node000003" href="$mock__booster_state_machine_8c.html#a8ec3a82698d975bfb606d034de62693d" title=" " alt="" coords="5,72,174,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,78,175,83,174,78,206,73"/>
+</map>

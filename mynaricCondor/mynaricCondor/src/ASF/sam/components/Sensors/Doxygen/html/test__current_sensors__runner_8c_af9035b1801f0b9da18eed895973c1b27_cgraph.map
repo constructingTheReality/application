@@ -1,0 +1,37 @@
+<map id="test_5_1_eCurrentSensorUpdate_eCurrentSensorsReadChannelRunFailure_Fail" name="test_5_1_eCurrentSensorUpdate_eCurrentSensorsReadChannelRunFailure_Fail">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,99,299,139"/>
+<area shape="rect" id="Node000002" href="$current_sensors_v2_8c.html#ae20a43e48fb44f44437096b8342c5f79" title="Update critical currents of the laser." alt="" coords="616,185,769,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,136,526,169,603,181,602,186,525,175,295,141"/>
+<area shape="rect" id="Node000010" href="$current_sensors_8c.html#a9a85ca60c578193fb77cfcd4b3519561" title="Init the current scaling internal channels for HPA." alt="" coords="347,5,525,45"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="213,96,360,47,362,52,215,101"/>
+<area shape="rect" id="Node000013" href="$current_sensors_8c.html#a1d2c9528ed1e1e8bb1ca8999f9bbb0f3" title="Init the current scaling internal channels for LNA." alt="" coords="347,69,525,109"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="299,101,333,97,333,103,299,106"/>
+<area shape="rect" id="Node000016" href="$current_sensors_8c.html#a1cda315b492179bf67ff0cc02cf0bf08" title="Init the current scaling internal channels." alt="" coords="348,184,524,224"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="220,136,356,177,355,183,219,141"/>
+<area shape="rect" id="Node000003" href="$current_sensors_common_alarm_8c.html#a15cf7457d6aeb14ad8f30d20e8f80d8c" title=" " alt="" coords="860,309,1088,334"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="712,208,776,251,817,275,861,295,884,302,882,308,859,300,815,279,773,255,709,212"/>
+<area shape="rect" id="Node000004" href="$current_sensors_hpa_alarm_8c.html#a310f0d1b4a533547de969c1f2bb03c2e" title=" " alt="" coords="875,161,1073,186"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="769,188,861,180,861,186,770,193"/>
+<area shape="rect" id="Node000005" href="$current_sensors_lna_alarm_8c.html#abb8b4cd637d2cd2aa927133561b74a92" title=" " alt="" coords="875,210,1073,235"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="770,202,862,210,861,215,769,207"/>
+<area shape="rect" id="Node000006" href="$current_sensors_read_channel_8c.html#a85c46064daefd0c494784e3b436fcbb1" title="get current value for a specific channel" alt="" coords="865,259,1083,285"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="733,207,861,245,896,254,894,259,859,251,732,213"/>
+<area shape="rect" id="Node000007" href="$mock__laser_data_8c.html#afde4bcc28d4b6e77c27c0bfe793e2e53" title=" " alt="" coords="892,111,1056,137"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="735,182,859,147,899,137,900,142,861,152,736,187"/>
+<area shape="rect" id="Node000008" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="1136,38,1329,63"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1047,109,1087,98,1111,86,1135,74,1162,65,1163,70,1137,78,1113,91,1089,102,1049,114"/>
+<area shape="rect" id="Node000009" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="1152,87,1313,113"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="1056,114,1138,106,1139,111,1057,119"/>
+<area shape="rect" id="Node000011" href="$current_sensors_update_database_8c.html#aa44c34357f4fe90d788c6cc6e828bafe" title=" " alt="" coords="573,13,812,38"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="525,23,559,23,559,28,525,28"/>
+<area shape="rect" id="Node000012" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="887,13,1061,38"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="812,23,873,23,873,28,812,28"/>
+<area shape="poly" id="edge12_Node000012_Node000008" title=" " alt="" coords="1062,31,1122,37,1122,42,1061,37"/>
+<area shape="poly" id="edge13_Node000012_Node000009" title=" " alt="" coords="1046,35,1089,48,1113,61,1137,74,1160,81,1158,86,1135,78,1111,66,1087,53,1045,41"/>
+<area shape="rect" id="Node000014" href="$current_sensors_update_database_8c.html#a789b788c25633fff789698b44e8a6d05" title=" " alt="" coords="575,70,811,95"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="525,84,561,83,561,89,526,90"/>
+<area shape="rect" id="Node000015" href="$mock__laser_data_8c.html#a8d710388e55b44e04f911e6d240a502e" title=" " alt="" coords="899,62,1049,87"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="811,77,885,75,885,80,811,82"/>
+<area shape="poly" id="edge17_Node000015_Node000008" title=" " alt="" coords="1049,65,1122,58,1123,64,1050,70"/>
+<area shape="poly" id="edge18_Node000015_Node000009" title=" " alt="" coords="1050,79,1138,88,1138,93,1049,85"/>
+</map>

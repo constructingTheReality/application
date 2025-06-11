@@ -1,0 +1,7 @@
+<map id="CMockExpectParameters_eCurrentSensorsReadChannelRun" name="CMockExpectParameters_eCurrentSensorsReadChannelRun">
+<area shape="rect" id="Node000001" title=" " alt="" coords="307,37,533,77"/>
+<area shape="rect" id="Node000002" href="$mock__current_sensorsread_channel_8c.html#a579b06f8a89c978f0eeb379eb1aced97" title=" " alt="" coords="34,5,230,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,46,230,39,231,34,293,41"/>
+<area shape="rect" id="Node000003" href="$mock__current_sensorsread_channel_8c.html#a9f705d98647d0721e4ac1341a7a85528" title=" " alt="" coords="5,69,259,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="293,74,259,78,258,73,293,69"/>
+</map>

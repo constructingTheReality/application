@@ -1,0 +1,31 @@
+<map id="CMock_Guts_MemFreeAll" name="CMock_Guts_MemFreeAll">
+<area shape="rect" id="Node000001" title=" " alt="" coords="602,197,776,224"/>
+<area shape="rect" id="Node000002" href="$mock__booster_state_machine_8c.html#ab4240e694361b84d7f27f8154863d1d9" title=" " alt="" coords="343,5,527,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="669,186,622,123,589,90,553,62,525,49,528,44,555,58,593,86,626,120,673,183"/>
+<area shape="rect" id="Node000004" href="$build_2test_2mocks_2mock__laser_data_8c.html#ae00d6c4161b083424e16b25112420212" title=" " alt="" coords="351,72,519,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="661,189,613,149,553,113,518,101,520,96,555,108,616,145,665,185"/>
+<area shape="rect" id="Node000006" href="$mock__lna_state_machine_8c.html#a6f20b4c7f4c0f9eac51fa384cb4add43" title=" " alt="" coords="356,123,514,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="620,195,513,167,514,162,621,190"/>
+<area shape="rect" id="Node000008" href="$mock__power_read_channel_8c.html#a5d436e11d1a8fa5f65260ed7177a9578" title=" " alt="" coords="349,189,521,232"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="587,213,521,213,521,208,587,208"/>
+<area shape="rect" id="Node000010" href="$mock__power_sensors_8c.html#a89bba5b911edf67e6096c624eab6e23a" title=" " alt="" coords="338,256,532,283"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="620,231,555,247,504,258,502,253,553,241,618,226"/>
+<area shape="rect" id="Node000012" href="$mock__power_sensors_config_update_8c.html#a16d4d8bef84f0c78495b666daff17968" title=" " alt="" coords="325,307,545,349"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="659,235,611,267,555,297,525,309,523,304,553,292,609,262,656,231"/>
+<area shape="rect" id="Node000014" href="$mock__power_sensors_update_database_8c.html#a70355e966363b216db9c48d4df443b4b" title=" " alt="" coords="316,373,554,416"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="673,239,626,302,593,335,555,364,533,375,530,371,553,359,589,331,622,298,669,235"/>
+<area shape="rect" id="Node000003" href="$mock__booster_state_machine_8c.html#ab5939f24f7bbc1d9701c4f5ab365cc3b" title=" " alt="" coords="33,13,240,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,29,241,29,241,24,328,24"/>
+<area shape="rect" id="Node000005" href="$build_2test_2mocks_2mock__laser_data_8c.html#a0ac00e94be3d129c899975053e74ba31" title=" " alt="" coords="67,72,206,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="335,88,207,88,207,83,335,83"/>
+<area shape="rect" id="Node000007" href="$mock__lna_state_machine_8c.html#adb173c566b2d2898261b1fec8d236dc4" title=" " alt="" coords="46,131,227,157"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="341,147,228,147,228,141,341,141"/>
+<area shape="rect" id="Node000009" href="$mock__power_read_channel_8c.html#ab49314f0d0f6003f37b087f847957e89" title=" " alt="" coords="39,197,234,224"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="334,213,235,213,235,208,334,208"/>
+<area shape="rect" id="Node000011" href="$mock__power_sensors_8c.html#a4f1c89499ab32c18715d7994728d46c5" title=" " alt="" coords="53,256,220,283"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="322,272,220,272,220,267,322,267"/>
+<area shape="rect" id="Node000013" href="$mock__power_sensors_config_update_8c.html#abc2cee463b14b38bb954f6f078babeb5" title=" " alt="" coords="15,315,258,341"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="309,331,258,331,258,325,309,325"/>
+<area shape="rect" id="Node000015" href="$mock__power_sensors_update_database_8c.html#a2196e01a6a8db1282232de4bb80b0cda" title=" " alt="" coords="5,381,268,408"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="300,397,268,397,268,392,300,392"/>
+</map>

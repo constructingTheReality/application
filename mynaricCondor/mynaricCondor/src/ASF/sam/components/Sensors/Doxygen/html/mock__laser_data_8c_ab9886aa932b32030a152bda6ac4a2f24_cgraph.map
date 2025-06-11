@@ -1,0 +1,7 @@
+<map id="bCanPort1IsSelected" name="bCanPort1IsSelected">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,149,57"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="197,5,389,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,33,181,29,181,34,150,38"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="213,56,373,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,50,197,55,197,61,149,55"/>
+</map>

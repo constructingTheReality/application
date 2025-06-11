@@ -1,0 +1,11 @@
+<map id="ePowerSensorsConfigUpdateCommon_CMockExpectAndReturn" name="ePowerSensorsConfigUpdateCommon_CMockExpectAndReturn">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,73,229,113"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="305,5,499,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,70,277,39,314,31,315,36,278,45,177,75"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a15d51ffb4affbacc256f9569f46b7371" title=" " alt="" coords="319,55,485,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,80,305,73,305,79,230,85"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a70143d967ec301bbce3efb6b59a90e5e" title=" " alt="" coords="323,104,481,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,99,309,106,309,112,229,105"/>
+<area shape="rect" id="Node000005" href="$mock__power_sensors_config_update_8c.html#a60a8c7ba71d5f486f3ac3a2d8cc63665" title=" " alt="" coords="277,154,527,194"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="184,110,278,138,313,148,311,153,277,143,183,115"/>
+</map>

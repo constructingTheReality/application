@@ -1,0 +1,17 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsUpdateDatabase.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsUpdateDatabase.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,5,1032,104"/>
+<area shape="rect" id="Node000002" href="$mock__current_sensors_update_database_8h.html" title=" " alt="" coords="245,152,605,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="749,104,583,155,581,149,747,99"/>
+<area shape="rect" id="Node000006" href="$current_sensors_v2_8c.html" title=" " alt="" coords="629,152,877,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="841,116,803,153,799,150,837,112"/>
+<area shape="rect" id="Node000007" href="$current_sensors_8c.html" title=" " alt="" coords="901,159,1183,243"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="957,112,1003,157,999,161,953,116"/>
+<area shape="rect" id="Node000008" href="$current_sensors_update_database_8c.html" title=" " alt="" coords="1207,152,1477,251"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1046,101,1196,149,1207,153,1206,158,1195,155,1044,106"/>
+<area shape="rect" id="Node000003" href="$test__current_sensors_8c.html" title=" " alt="" coords="5,299,220,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="309,259,218,301,216,296,307,254"/>
+<area shape="rect" id="Node000004" href="$mock__current_sensors_update_database_8c.html" title=" " alt="" coords="245,299,605,397"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="427,265,427,298,422,298,422,265"/>
+<area shape="rect" id="Node000005" href="$test__current_sensors__runner_8c.html" title=" " alt="" coords="629,299,930,397"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="557,253,662,296,660,301,555,258"/>
+</map>

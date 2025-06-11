@@ -1,0 +1,15 @@
+<map id="ePowerSensorUpdate" name="ePowerSensorUpdate">
+<area shape="rect" id="Node000001" title="Update critical power of the laser." alt="" coords="5,95,152,121"/>
+<area shape="rect" id="Node000002" href="$power_read_channel_8c.html#aa4add1c588cb94612707620e3f3ef520" title="get temperature value for a specific channel" alt="" coords="221,17,386,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,92,199,55,227,46,229,51,201,60,110,97"/>
+<area shape="rect" id="Node000004" href="$power_read_channel_8c.html#aa894f8700120f30e5d3a63ffecd61ca1" title="get the offset in raw data. this info will be used for calculate the power in the other channels." alt="" coords="204,69,403,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,97,188,93,189,98,152,102"/>
+<area shape="rect" id="Node000006" href="$power_sensors_booster_alarm_8c.html#a481d21045f682e4e3880254cb6fb2998" title=" " alt="" coords="200,120,407,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="152,114,184,117,184,123,152,119"/>
+<area shape="rect" id="Node000007" href="$power_sensors_lna_alarm_8c.html#a43e9079ef81445f2e5497f17fd63d167" title=" " alt="" coords="212,171,395,197"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="110,119,201,156,225,163,223,169,199,161,108,124"/>
+<area shape="rect" id="Node000003" href="$_current_sensing_8h.html#abdb76ae25a26fd7cef081e89e8b6c7db" title="Get the power of the current sensing input in mW." alt="" coords="462,5,647,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,27,446,26,446,31,386,32"/>
+<area shape="rect" id="Node000005" href="$_current_sensing_8h.html#ae8cb75e0317815d3c99429a727bd5b59" title="Get the power of the current sensing input in mW." alt="" coords="455,72,653,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,81,439,81,439,87,403,86"/>
+</map>

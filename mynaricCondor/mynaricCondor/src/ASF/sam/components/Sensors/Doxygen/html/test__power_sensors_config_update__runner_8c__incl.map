@@ -1,0 +1,22 @@
+<map id="UnitTestFramework/build/test/runners/test_powerSensorsConfigUpdate_runner.c" name="UnitTestFramework/build/test/runners/test_powerSensorsConfigUpdate_runner.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="63,5,273,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,187,106,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,67,75,87,54,113,50,128,51,143,62,173,57,174,46,144,45,127,50,111,71,83,99,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="64,112,136,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,66,121,101,117,98,144,63"/>
+<area shape="rect" id="Node000004" href="$mock__power_sensors_8h.html" title=" " alt="" coords="159,112,313,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,63,219,98,215,101,188,66"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="337,112,463,139"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="244,62,354,104,352,109,242,67"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="209,142,119,182,117,177,207,137"/>
+<area shape="rect" id="Node000005" href="$power_sensors_8h.html" title=" " alt="" coords="179,187,293,213"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="239,139,239,171,233,171,233,139"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,261,83,288"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="203,216,93,258,91,253,202,211"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="107,261,234,288"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="227,216,194,252,190,248,223,212"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="259,261,346,288"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="250,212,283,248,279,252,246,216"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="371,261,427,288"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="265,211,357,252,355,257,263,216"/>
+</map>

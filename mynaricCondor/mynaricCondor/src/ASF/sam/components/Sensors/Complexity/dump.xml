@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sourcemonitor_metrics>
+  <project version="3.5">
+    <project_name>sensorsIntegration</project_name>
+    <project_directory>C:\myWorks\mynaric\Application\embedded\mynaricApp_Embedded\mynaricCondor\mynaricCondor\src\ASF\sam\components\Sensors</project_directory>
+    <project_language>C</project_language>
+    <ignore_headers_footers>false</ignore_headers_footers>
+    <export_raw_numbers>false</export_raw_numbers>
+    <checkpoints checkpoint_count="1">
+      <metric_names name_count="13">
+        <metric_name id="M0" type="number">Lines</metric_name>
+        <metric_name id="M1" type="number">Statements</metric_name>
+        <metric_name id="M2" type="percent" divisor="M1">Percent Branch Statements</metric_name>
+        <metric_name id="M3" type="percent" divisor="M0">Percent Lines with Comments</metric_name>
+        <metric_name id="M4" type="number">Functions</metric_name>
+        <metric_name id="M5" type="average" divisor="M4">Average Statements per Function</metric_name>
+        <metric_name id="M6" type="string">Line Number of Most Complex Function</metric_name>
+        <metric_name id="M7" type="string">Name of Most Complex Function</metric_name>
+        <metric_name id="M8" type="maximum">Complexity of Most Complex Function</metric_name>
+        <metric_name id="M9" type="string">Line Number of Deepest Block</metric_name>
+        <metric_name id="M10" type="maximum">Maximum Block Depth</metric_name>
+        <metric_name id="M11" type="average" values="block_depths">Average Block Depth</metric_name>
+        <metric_name id="M12" type="average">Average Complexity</metric_name>
+      </metric_names>
+      <checkpoint checkpoint_name="Checkpoint5" checkpoint_date="2024-08-23" ignore_blank_lines="true" modified_complexity="false">
+        <files file_count="32">
+          <file file_name="currentSensors.c">
+            <metrics metric_count="13">
+              <metric id="M0">454</metric>
+              <metric id="M1">109</metric>
+              <metric id="M2">1.8</metric>
+              <metric id="M3">70.0</metric>
+              <metric id="M4">6</metric>
+              <metric id="M5">14.0</metric>
+              <metric id="M6">142</metric>
+              <metric id="M7">eCurrentSensorUpdate()</metric>
+              <metric id="M8">3</metric>
+              <metric id="M9">168</metric>
+              <metric id="M10">3</metric>
+              <metric id="M11">0.84</metric>
+              <metric id="M12">1.33</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">21</block_depth>
+              <block_depth level="1">85</block_depth>
+              <block_depth level="2">2</block_depth>
+              <block_depth level="3">1</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsBackfacetAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">25</metric>
+              <metric id="M1">17</metric>
+              <metric id="M2">17.6</metric>
+              <metric id="M3">24.0</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">15.0</metric>
+              <metric id="M6">9</metric>
+              <metric id="M7">eCurrentSensorsBackfacetAlarmRun()</metric>
+              <metric id="M8">6</metric>
+              <metric id="M9">19</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.41</metric>
+              <metric id="M12">6.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">6</block_depth>
+              <block_depth level="2">9</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsCommonAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">35</metric>
+              <metric id="M1">19</metric>
+              <metric id="M2">10.5</metric>
+              <metric id="M3">40.0</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">17.0</metric>
+              <metric id="M6">10</metric>
+              <metric id="M7">eCurrentSensorsCommonAlarmRun()</metric>
+              <metric id="M8">9</metric>
+              <metric id="M9">21</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.47</metric>
+              <metric id="M12">9.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">6</block_depth>
+              <block_depth level="2">11</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsConfigUpdate.c">
+            <metrics metric_count="13">
+              <metric id="M0">42</metric>
+              <metric id="M1">27</metric>
+              <metric id="M2">7.4</metric>
+              <metric id="M3">16.7</metric>
+              <metric id="M4">2</metric>
+              <metric id="M5">12.0</metric>
+              <metric id="M6">10</metric>
+              <metric id="M7">eCurrentSensorsConfigUpdateHpa()</metric>
+              <metric id="M8">2</metric>
+              <metric id="M9">20</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.41</metric>
+              <metric id="M12">2.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">3</block_depth>
+              <block_depth level="1">10</block_depth>
+              <block_depth level="2">14</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsHpaAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">42</metric>
+              <metric id="M1">29</metric>
+              <metric id="M2">3.4</metric>
+              <metric id="M3">21.4</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">27.0</metric>
+              <metric id="M6">10</metric>
+              <metric id="M7">eCurrentSensorsHpaAlarmRun()</metric>
+              <metric id="M8">6</metric>
+              <metric id="M9">27</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.52</metric>
+              <metric id="M12">6.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">10</block_depth>
+              <block_depth level="2">17</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsLnaAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">40</metric>
+              <metric id="M1">25</metric>
+              <metric id="M2">12.0</metric>
+              <metric id="M3">32.5</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">23.0</metric>
+              <metric id="M6">11</metric>
+              <metric id="M7">eCurrentSensorsLnaAlarmRun()</metric>
+              <metric id="M8">6</metric>
+              <metric id="M9">26</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.36</metric>
+              <metric id="M12">6.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">12</block_depth>
+              <block_depth level="2">11</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsReadChannel.c">
+            <metrics metric_count="13">
+              <metric id="M0">42</metric>
+              <metric id="M1">13</metric>
+              <metric id="M2">30.8</metric>
+              <metric id="M3">45.2</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">10.0</metric>
+              <metric id="M6">21</metric>
+              <metric id="M7">eCurrentSensorsReadChannelRun()</metric>
+              <metric id="M8">5</metric>
+              <metric id="M9">36</metric>
+              <metric id="M10">3</metric>
+              <metric id="M11">1.38</metric>
+              <metric id="M12">5.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">3</block_depth>
+              <block_depth level="1">4</block_depth>
+              <block_depth level="2">4</block_depth>
+              <block_depth level="3">2</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsUpdateDatabase.c">
+            <metrics metric_count="13">
+              <metric id="M0">43</metric>
+              <metric id="M1">27</metric>
+              <metric id="M2">7.4</metric>
+              <metric id="M3">30.2</metric>
+              <metric id="M4">2</metric>
+              <metric id="M5">12.0</metric>
+              <metric id="M6">12</metric>
+              <metric id="M7">eCurrentSensorsUpdateDatabaseLna()</metric>
+              <metric id="M8">2</metric>
+              <metric id="M9">20</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.56</metric>
+              <metric id="M12">2.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">3</block_depth>
+              <block_depth level="1">6</block_depth>
+              <block_depth level="2">18</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerReadChannel.c">
+            <metrics metric_count="13">
+              <metric id="M0">63</metric>
+              <metric id="M1">31</metric>
+              <metric id="M2">16.1</metric>
+              <metric id="M3">28.6</metric>
+              <metric id="M4">2</metric>
+              <metric id="M5">13.5</metric>
+              <metric id="M6">22</metric>
+              <metric id="M7">ePowerReadOffsetChannelRun()</metric>
+              <metric id="M8">7</metric>
+              <metric id="M9">41</metric>
+              <metric id="M10">3</metric>
+              <metric id="M11">1.52</metric>
+              <metric id="M12">4.50</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">4</block_depth>
+              <block_depth level="1">10</block_depth>
+              <block_depth level="2">14</block_depth>
+              <block_depth level="3">3</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensors.c">
+            <metrics metric_count="13">
+              <metric id="M0">308</metric>
+              <metric id="M1">173</metric>
+              <metric id="M2">4.6</metric>
+              <metric id="M3">19.8</metric>
+              <metric id="M4">7</metric>
+              <metric id="M5">20.6</metric>
+              <metric id="M6">191</metric>
+              <metric id="M7">ePowerSensorUpdate()</metric>
+              <metric id="M8">9</metric>
+              <metric id="M9">256</metric>
+              <metric id="M10">3</metric>
+              <metric id="M11">1.01</metric>
+              <metric id="M12">2.14</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">25</block_depth>
+              <block_depth level="1">123</block_depth>
+              <block_depth level="2">24</block_depth>
+              <block_depth level="3">1</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsAlarmValidateLimits.c">
+            <metrics metric_count="13">
+              <metric id="M0">92</metric>
+              <metric id="M1">35</metric>
+              <metric id="M2">17.1</metric>
+              <metric id="M3">28.3</metric>
+              <metric id="M4">2</metric>
+              <metric id="M5">16.0</metric>
+              <metric id="M6">27</metric>
+              <metric id="M7">ePowerSensorValidateInputLimits()</metric>
+              <metric id="M8">10</metric>
+              <metric id="M9">35</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.43</metric>
+              <metric id="M12">10.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">3</block_depth>
+              <block_depth level="1">14</block_depth>
+              <block_depth level="2">18</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsBoosterAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">77</metric>
+              <metric id="M1">32</metric>
+              <metric id="M2">3.1</metric>
+              <metric id="M3">45.5</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">30.0</metric>
+              <metric id="M6">11</metric>
+              <metric id="M7">ePowerSensorBoosterAlarmRun()</metric>
+              <metric id="M8">10</metric>
+              <metric id="M9">34</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.44</metric>
+              <metric id="M12">10.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">14</block_depth>
+              <block_depth level="2">16</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsConfigUpdate.c">
+            <metrics metric_count="13">
+              <metric id="M0">96</metric>
+              <metric id="M1">67</metric>
+              <metric id="M2">4.5</metric>
+              <metric id="M3">17.7</metric>
+              <metric id="M4">3</metric>
+              <metric id="M5">20.7</metric>
+              <metric id="M6">84</metric>
+              <metric id="M7">ePowerSensorsConfigUpdateBooster()</metric>
+              <metric id="M8">5</metric>
+              <metric id="M9">18</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.69</metric>
+              <metric id="M12">3.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">5</block_depth>
+              <block_depth level="1">11</block_depth>
+              <block_depth level="2">51</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsLnaAlarm.c">
+            <metrics metric_count="13">
+              <metric id="M0">66</metric>
+              <metric id="M1">35</metric>
+              <metric id="M2">5.7</metric>
+              <metric id="M3">56.1</metric>
+              <metric id="M4">1</metric>
+              <metric id="M5">33.0</metric>
+              <metric id="M6">11</metric>
+              <metric id="M7">ePowerSensorLnaAlarmRun()</metric>
+              <metric id="M8">10</metric>
+              <metric id="M9">62</metric>
+              <metric id="M10">3</metric>
+              <metric id="M11">1.57</metric>
+              <metric id="M12">10.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">2</block_depth>
+              <block_depth level="1">13</block_depth>
+              <block_depth level="2">18</block_depth>
+              <block_depth level="3">2</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsUpdateDatabase.c">
+            <metrics metric_count="13">
+              <metric id="M0">97</metric>
+              <metric id="M1">66</metric>
+              <metric id="M2">4.5</metric>
+              <metric id="M3">19.6</metric>
+              <metric id="M4">3</metric>
+              <metric id="M5">20.7</metric>
+              <metric id="M6">80</metric>
+              <metric id="M7">ePowerSensorsUpdateDatabaseBooster()</metric>
+              <metric id="M8">5</metric>
+              <metric id="M9">17</metric>
+              <metric id="M10">2</metric>
+              <metric id="M11">1.71</metric>
+              <metric id="M12">3.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">4</block_depth>
+              <block_depth level="1">11</block_depth>
+              <block_depth level="2">51</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="CurrentSensing.h">
+            <metrics metric_count="13">
+              <metric id="M0">73</metric>
+              <metric id="M1">15</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">74.0</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">29</metric>
+              <metric id="M10">1</metric>
+              <metric id="M11">0.27</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">11</block_depth>
+              <block_depth level="1">4</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensors.h">
+            <metrics metric_count="13">
+              <metric id="M0">96</metric>
+              <metric id="M1">15</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">62.5</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">59</metric>
+              <metric id="M10">1</metric>
+              <metric id="M11">0.13</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">13</block_depth>
+              <block_depth level="1">2</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsBackfacetAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">13</metric>
+              <metric id="M1">6</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">53.8</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">6</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsCommonAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">21</metric>
+              <metric id="M1">13</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">38.1</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">13</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsConfigUpdate.h">
+            <metrics metric_count="13">
+              <metric id="M0">20</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">65.0</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsHpaAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">17</metric>
+              <metric id="M1">8</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">52.9</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">8</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsLnaAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">15</metric>
+              <metric id="M1">8</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">46.7</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">8</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsreadChannel.h">
+            <metrics metric_count="13">
+              <metric id="M0">36</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">80.6</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="currentSensorsUpdateDatabase.h">
+            <metrics metric_count="13">
+              <metric id="M0">14</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">50.0</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerReadChannel.h">
+            <metrics metric_count="13">
+              <metric id="M0">43</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">83.7</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensors.h">
+            <metrics metric_count="13">
+              <metric id="M0">122</metric>
+              <metric id="M1">29</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">62.3</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">77</metric>
+              <metric id="M10">1</metric>
+              <metric id="M11">0.07</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">27</block_depth>
+              <block_depth level="1">2</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsAlarmValidateLimits.h">
+            <metrics metric_count="13">
+              <metric id="M0">43</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">83.7</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsBoosterAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">17</metric>
+              <metric id="M1">10</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">41.2</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">10</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsConfigUpdate.h">
+            <metrics metric_count="13">
+              <metric id="M0">21</metric>
+              <metric id="M1">8</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">61.9</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">8</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsLnaAlarm.h">
+            <metrics metric_count="13">
+              <metric id="M0">17</metric>
+              <metric id="M1">10</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">41.2</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">10</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsLnaAlarmValidateLimits.h">
+            <metrics metric_count="13">
+              <metric id="M0">13</metric>
+              <metric id="M1">7</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">46.2</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">7</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+          <file file_name="powerSensorsUpdateDatabase.h">
+            <metrics metric_count="13">
+              <metric id="M0">15</metric>
+              <metric id="M1">8</metric>
+              <metric id="M2">0.0</metric>
+              <metric id="M3">46.7</metric>
+              <metric id="M4">0</metric>
+              <metric id="M5">0.0</metric>
+              <metric id="M6"></metric>
+              <metric id="M7"></metric>
+              <metric id="M8">0</metric>
+              <metric id="M9">0</metric>
+              <metric id="M10">0</metric>
+              <metric id="M11">0.00</metric>
+              <metric id="M12">0.00</metric>
+            </metrics>
+            <block_depths depth_count="10">
+              <block_depth level="0">8</block_depth>
+              <block_depth level="1">0</block_depth>
+              <block_depth level="2">0</block_depth>
+              <block_depth level="3">0</block_depth>
+              <block_depth level="4">0</block_depth>
+              <block_depth level="5">0</block_depth>
+              <block_depth level="6">0</block_depth>
+              <block_depth level="7">0</block_depth>
+              <block_depth level="8">0</block_depth>
+              <block_depth level="9+">0</block_depth>
+            </block_depths>
+          </file>
+        </files>
+      </checkpoint>
+    </checkpoints>
+  </project>
+</sourcemonitor_metrics>

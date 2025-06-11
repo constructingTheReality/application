@@ -1,0 +1,9 @@
+<map id="ePowerSensorsConfigUpdateCommon_CMockReturnMemThruPtr_pxLocalPowerInputScaling" name="ePowerSensorsConfigUpdateCommon_CMockReturnMemThruPtr_pxLocalPowerInputScaling">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,236,71"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="289,5,482,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,30,275,26,276,31,236,35"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a7a60479d86c12fa24499c516365f5c71" title=" " alt="" coords="284,55,487,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,51,270,54,270,60,236,56"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="535,55,696,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,65,521,65,521,70,487,70"/>
+</map>

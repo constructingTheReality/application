@@ -1,0 +1,22 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="270,5,565,104"/>
+<area shape="rect" id="Node000002" href="$cmock__internals_8h.html" title=" " alt="" coords="303,152,431,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,105,380,141,376,138,392,103"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="453,372,521,397"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="433,104,445,151,485,358,480,359,440,153,428,105"/>
+<area shape="rect" id="Node000003" href="$unity_8h.html" title=" " alt="" coords="317,225,379,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,178,357,213,352,212,361,177"/>
+<area shape="rect" id="Node000004" href="$unity__internals_8h.html" title=" " alt="" coords="252,299,369,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="344,252,325,288,321,285,339,250"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,372,77,397"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="268,327,92,373,90,368,267,321"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="102,372,165,397"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="283,326,176,369,174,364,281,322"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="340,322,446,364,444,369,338,326"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="189,372,254,397"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="298,326,248,365,245,361,295,322"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="279,372,343,397"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="313,324,313,358,308,358,308,324"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="367,372,428,397"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="326,322,374,361,371,365,323,326"/>
+</map>

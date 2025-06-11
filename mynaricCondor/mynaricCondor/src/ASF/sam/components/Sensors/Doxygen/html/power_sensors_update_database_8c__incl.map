@@ -1,0 +1,20 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsUpdateDatabase.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsUpdateDatabase.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="107,5,371,104"/>
+<area shape="rect" id="Node000002" href="$power_sensors_update_database_8h.html" title=" " alt="" coords="134,152,345,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,104,242,138,237,138,237,104"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,299,84,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,180,73,292,70,288,222,175"/>
+<area shape="rect" id="Node000004" href="$power_sensors_8h.html" title=" " alt="" coords="182,225,297,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,178,242,212,237,212,237,178"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="321,225,409,251"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="261,175,334,216,331,221,258,180"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="209,253,90,296,88,291,207,248"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="109,299,237,324"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="230,253,195,290,191,287,226,249"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="261,299,353,324"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="252,249,289,287,285,290,249,253"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="377,299,435,324"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="267,248,367,291,365,296,265,253"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="459,299,579,324"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="285,248,461,293,460,298,284,253"/>
+</map>

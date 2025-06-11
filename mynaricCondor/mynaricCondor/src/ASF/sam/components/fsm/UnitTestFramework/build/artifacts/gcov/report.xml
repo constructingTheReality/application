@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testsuites tests="71" failures="0" time="1.127">
+  <testsuite name="test_boosterAccSm" tests="7" failures="0" skipped="0" errors="0" time="0.235">
+    <testcase name="test_1_1_eBoosterAccSmRun_InvalidParam_Fail" time="0.000"/>
+    <testcase name="test_1_2_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_IncreasingCurrent_test1_Success" time="0.000"/>
+    <testcase name="test_1_3_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_IncreasingCurrent_test2_Success" time="0.000"/>
+    <testcase name="test_1_4_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_DecreasingCurrent_test1_Success" time="0.000"/>
+    <testcase name="test_1_5_eBoosterAccSmRun_usStepsNumberHpa1_GreaterThanZero_DecreasingCurrent_test2_Success" time="0.000"/>
+    <testcase name="test_1_6_eBoosterAccSmRun_OneStepLeft_Success" time="0.000"/>
+    <testcase name="test_1_7_eBoosterAccSmRun_ZeroSteps_Success" time="0.000"/>
+  </testsuite>
+  <testsuite name="test_boosterApcStateMachine" tests="43" failures="0" skipped="0" errors="0" time="0.346">
+    <testcase name="test_4_1_vHpaApcStateMachineInit_Success" time="0.000"/>
+    <testcase name="test_5_1_vHpaApcStateMachineUpdate_SM_enable_NotEqualTo_prev_SM_enable_Success" time="0.000"/>
+    <testcase name="test_5_2_vHpaApcStateMachineUpdate_MM1_enable_NotEqualTo_prev_MM1_enable_Success" time="0.000"/>
+    <testcase name="test_5_3_vHpaApcStateMachineUpdate_MM2_enable_NotEqualTo_prev_MM2_enable_Success" time="0.000"/>
+    <testcase name="test_5_4_vHpaApcStateMachineUpdate_MM1_MM2_and_SM_enable_NotEqualTo_prev_enable_Success" time="0.000"/>
+    <testcase name="test_5_5_vHpaApcStateMachineUpdate_lastSetpoint_notEqualTo_newSetpoint_Success" time="0.000"/>
+    <testcase name="test_5_6_vHpaApcStateMachineUpdate_isRising_setToFalse" time="0.000"/>
+    <testcase name="test_6_1_eHpaApcStateInitFunction_setPointTooLow_HPA1_Enabled_Success" time="0.000"/>
+    <testcase name="test_6_2_eHpaApcStateInitFunction_setPointTooLow_HPA1_notEnabled_Success" time="0.000"/>
+    <testcase name="test_6_3_eHpaApcStateInitFunction_setPointAboveThreshold_HPA1_notEnabled_Success" time="0.000"/>
+    <testcase name="test_6_4_eHpaApcStateInitFunction_setPointAboveThreshold_HPA1_Enabled_Success" time="0.000"/>
+    <testcase name="test_7_1_eHpaApcStateSmFunction_SM1_Disabled_currentNotLowEnoughToShutdownDiode_Success" time="0.000"/>
+    <testcase name="test_7_2_eHpaApcStateSmFunction_SM1_Disabled_currentLowEnoughToShutdownDiode_Success" time="0.000"/>
+    <testcase name="test_7_3_eHpaApcStateSmFunction_SM1_Enabled_newCurrentUnderNominalValue_Success" time="0.000"/>
+    <testcase name="test_7_4_eHpaApcStateSmFunction_SM1_Enabled_newCurrentOverNominalValue_MM1Enabled_Success" time="0.000"/>
+    <testcase name="test_7_5_eHpaApcStateSmFunction_SM1_Enabled_newCurrentOverNominalValue_MM1Disabled_MM2Enabled_Success" time="0.000"/>
+    <testcase name="test_7_6_eHpaApcStateSmFunction_SM1_Enabled_newCurrentOverNominalValue_MM1Disabled_MM2Disabled_Success" time="0.000"/>
+    <testcase name="test_8_1_eHpaApcStateMm1_InitFunction_SM1_disabled_shutdownDiode_Success" time="0.000"/>
+    <testcase name="test_8_2_eHpaApcStateMm1_InitFunction_MM1_disabled_shutdownDiode_Success" time="0.000"/>
+    <testcase name="test_8_3_eHpaApcStateMm1_InitFunction_MM1_and_SM1_disabled_cantShutdownDiodeYet_Success" time="0.000"/>
+    <testcase name="test_8_4_eHpaApcStateMm1_InitFunction_MM1_and_SM1_enabled_Success" time="0.000"/>
+    <testcase name="test_8_5_eHpaApcStateMm1_InitFunction_MM1_and_MM2_disabled_Success" time="0.000"/>
+    <testcase name="test_9_1_eHpaApcStateMm1_ControlFunction_moveToMM1Init_Success" time="0.000"/>
+    <testcase name="test_9_2_eHpaApcStateMm1_ControlFunction_moveToMM2Init_Success" time="0.000"/>
+    <testcase name="test_9_3_eHpaApcStateMm1_ControlFunction_remainInMM1Control_test1_Success" time="0.000"/>
+    <testcase name="test_9_4_eHpaApcStateMm1_ControlFunction_remainInMM1Control_test2_Success" time="0.000"/>
+    <testcase name="test_9_5_eHpaApcStateMm1_ControlFunction_remainInMM1Control_test3_Success" time="0.000"/>
+    <testcase name="test_10_1_eHpaApcStateMm2_InitFunction_MoveToMM2Control_Success" time="0.000"/>
+    <testcase name="test_10_2_eHpaApcStateMm2_InitFunction_RemainInMM2Init_Success" time="0.000"/>
+    <testcase name="test_10_3_eHpaApcStateMm2_InitFunction_moveToSmApc_Success" time="0.000"/>
+    <testcase name="test_11_1_eHpaApcStateMm2_ControlFunction_SM1_AndOr_MM2_disabled_Success" time="0.000"/>
+    <testcase name="test_11_2_eHpaApcStateMm2_ControlFunction_currentDecreasing_notReadyForMM1_Success" time="0.000"/>
+    <testcase name="test_11_3_eHpaApcStateMm2_ControlFunction_currentDecreasing_ReadyForMM1_Success" time="0.000"/>
+    <testcase name="test_11_4_eHpaApcStateMm2_ControlFunction_currentIncreasing_readyForMM1MM2_Success" time="0.000"/>
+    <testcase name="test_11_5_eHpaApcStateMm2_ControlFunction_currentIncreasing_notReadyForMM1MM2_Success" time="0.000"/>
+    <testcase name="test_12_1_eHpaApcStateMm1Mm2_InitFunction_SM1_PumpDisabled_Success" time="0.000"/>
+    <testcase name="test_12_2_eHpaApcStateMm1Mm2_InitFunction_MM1_PumpDisabled_Success" time="0.000"/>
+    <testcase name="test_12_3_eHpaApcStateMm1Mm2_InitFunction_MM2_PumpDisabled_Success" time="0.000"/>
+    <testcase name="test_12_4_eHpaApcStateMm1Mm2_InitFunction_pumpsAllEnabled_Success" time="0.000"/>
+    <testcase name="test_13_1_eHpaApcStateMm1Mm2_ControlFunction_variousPumpsDisabled_Success" time="0.000"/>
+    <testcase name="test_13_2_eHpaApcStateMm1Mm2_ControlFunction_currentIsRising_Success" time="0.000"/>
+    <testcase name="test_13_3_eHpaApcStateMm1Mm2_ControlFunction_currentIsNotRising_Success" time="0.000"/>
+    <testcase name="test_13_4_eHpaApcStateMm1Mm2_ControlFunction_currentIsNotRising_currentLessthanMaxMM2Current_Success" time="0.000"/>
+  </testsuite>
+  <testsuite name="test_moveCurrentToSetpoint" tests="10" failures="0" skipped="0" errors="0" time="0.297">
+    <testcase name="test_1_1_eShiftCurrentTowardsSetpoint_InvalidParams_Fail" time="0.000"/>
+    <testcase name="test_1_2_eShiftCurrentTowardsSetpoint_Increase_fullAndPartialSteps_test1_Success" time="0.000"/>
+    <testcase name="test_1_3_eShiftCurrentTowardsSetpoint_Increase_fullAndPartialSteps_test2_Success" time="0.000"/>
+    <testcase name="test_1_4_eShiftCurrentTowardsSetpoint_Increase_OnlyFullSteps_Success" time="0.000"/>
+    <testcase name="test_1_5_eShiftCurrentTowardsSetpoint_noStepsNeeded_Success" time="0.000"/>
+    <testcase name="test_1_6_eShiftCurrentTowardsSetpoint_tooManyStepsCalculated_Success" time="0.000"/>
+    <testcase name="test_1_7_eShiftCurrentTowardsSetpoint_Decrease_onlyFullSteps_Success" time="0.000"/>
+    <testcase name="test_1_8_eShiftCurrentTowardsSetpoint_Decrease_fullAndPartialSteps_Success" time="0.000"/>
+    <testcase name="test_1_9_eShiftCurrentTowardsSetpoint_Decrease_onlyPartialSteps_Success" time="0.000"/>
+    <testcase name="test_1_10_eShiftCurrentTowardsSetpoint_Increase_onlyPartialSteps_Success" time="0.000"/>
+  </testsuite>
+  <testsuite name="test_trajectoryCalculator" tests="11" failures="0" skipped="0" errors="0" time="0.249">
+    <testcase name="test_1_1_vTrajectoryCalculatorRun_InvalidParams_Fail" time="0.000"/>
+    <testcase name="test_1_2_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test1_Success" time="0.000"/>
+    <testcase name="test_1_3_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test2_Success" time="0.000"/>
+    <testcase name="test_1_4_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test3_Success" time="0.000"/>
+    <testcase name="test_1_5_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test4_Success" time="0.000"/>
+    <testcase name="test_1_6_vTrajectoryCalculatorRun_SetpointEqualToCurrent_Success" time="0.000"/>
+    <testcase name="test_1_7_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test1_Success" time="0.000"/>
+    <testcase name="test_1_8_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test2_Success" time="0.000"/>
+    <testcase name="test_1_9_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test3_Success" time="0.000"/>
+    <testcase name="test_1_10_vTrajectoryCalculatorRun_SetpointLessThanCurrent_test4_Success" time="0.000"/>
+    <testcase name="test_1_11_vTrajectoryCalculatorRun_SetpointGreaterThanCurrent_test5_Success" time="0.000"/>
+  </testsuite>
+</testsuites>

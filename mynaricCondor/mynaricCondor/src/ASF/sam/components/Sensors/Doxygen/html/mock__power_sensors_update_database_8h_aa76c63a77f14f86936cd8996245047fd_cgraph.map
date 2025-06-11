@@ -1,0 +1,9 @@
+<map id="ePowerSensorsUpdateDatabaseBooster_CMockIgnoreArg_pxLosValues" name="ePowerSensorsUpdateDatabaseBooster_CMockIgnoreArg_pxLosValues">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,257,63"/>
+<area shape="rect" id="Node000002" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="310,5,503,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,29,296,26,296,31,258,34"/>
+<area shape="rect" id="Node000003" href="$cmock_8c.html#a7a60479d86c12fa24499c516365f5c71" title=" " alt="" coords="305,55,508,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="258,52,292,55,291,60,257,57"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="556,55,717,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="508,65,542,65,542,70,508,70"/>
+</map>

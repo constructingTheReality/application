@@ -1,0 +1,11 @@
+<map id="test_6_1_ePowerSensorsConfigUpdateBooster_InvalidParams_Fail" name="test_6_1_ePowerSensorsConfigUpdateBooster_InvalidParams_Fail">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,228,63"/>
+<area shape="rect" id="Node000002" href="$power_sensors_config_update_8c.html#aa1cbba11c4cc25e0d37faad019f82b90" title=" " alt="" coords="276,23,467,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,41,262,41,262,46,228,46"/>
+<area shape="rect" id="Node000003" href="$mock__laser_data_8c.html#afc0c707e993b28911685043ab06302cc" title=" " alt="" coords="515,31,689,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="467,41,501,41,501,46,467,46"/>
+<area shape="rect" id="Node000004" href="$cmock_8c.html#a81357dde09fc71b89c8e9ed3a2a65094" title=" " alt="" coords="737,5,931,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="689,31,724,27,724,33,690,36"/>
+<area shape="rect" id="Node000005" href="$cmock_8c.html#a24a222978890f2650776c474a757ced9" title=" " alt="" coords="753,55,915,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="690,50,740,55,739,60,689,55"/>
+</map>

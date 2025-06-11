@@ -1,0 +1,7 @@
+<map id="CMockExpectParameters_ePowerSensorUpdate" name="CMockExpectParameters_ePowerSensorUpdate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="283,39,453,81"/>
+<area shape="rect" id="Node000002" href="$mock__power_sensors_8c.html#aa942711602826889aef705f3ed8b361d" title=" " alt="" coords="34,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,49,206,41,207,36,267,44"/>
+<area shape="rect" id="Node000003" href="$mock__power_sensors_8c.html#a129186f845b58e937991941ce6a82526" title=" " alt="" coords="5,72,235,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,76,236,80,235,75,267,71"/>
+</map>

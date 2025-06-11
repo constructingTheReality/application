@@ -1,0 +1,34 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_boosterStateMachine.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_boosterStateMachine.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,5,346,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,71,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,106,68,146,65,142,124,102"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,152,159,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,105,144,142,140,139,163,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="157,445,229,471"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,104,199,237,199,313,196,432,191,432,194,313,194,237,194,104"/>
+<area shape="rect" id="Node000005" href="$cmock_8h.html" title=" " alt="" coords="497,152,569,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="347,101,485,145,483,150,346,106"/>
+<area shape="rect" id="Node000014" href="$mock__booster_state_machine_8h.html" title=" " alt="" coords="234,152,429,177"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="259,102,308,141,304,145,255,106"/>
+<area shape="rect" id="Node000006" href="$cmock__internals_8h.html" title=" " alt="" coords="469,225,597,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="535,178,535,212,530,212,530,178"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="603,445,671,471"/>
+<area shape="poly" id="edge14_Node000005_Node000010" title=" " alt="" coords="557,175,586,195,611,224,633,279,642,336,644,390,642,432,637,431,639,390,637,337,627,280,606,227,582,199,554,180"/>
+<area shape="rect" id="Node000007" href="$unity_8h.html" title=" " alt="" coords="383,299,445,324"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="515,253,447,294,444,289,512,248"/>
+<area shape="rect" id="Node000008" href="$unity__internals_8h.html" title=" " alt="" coords="355,372,473,397"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="417,324,417,358,411,358,411,324"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="379,400,242,444,240,439,378,395"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="427,445,489,471"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="424,396,446,432,441,435,419,399"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="451,395,590,439,589,444,449,400"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="513,445,579,471"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="436,395,514,436,511,441,434,400"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="253,445,317,471"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="394,400,319,441,317,436,392,395"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="341,445,402,471"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="409,399,387,435,383,432,405,396"/>
+<area shape="poly" id="edge16_Node000014_Node000007" title=" " alt="" coords="316,180,299,194,283,212,275,231,275,240,279,249,297,269,320,284,371,301,369,306,318,289,294,273,274,252,270,241,270,230,279,209,295,190,313,175"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="288,225,444,251"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="339,176,357,212,352,214,335,179"/>
+</map>

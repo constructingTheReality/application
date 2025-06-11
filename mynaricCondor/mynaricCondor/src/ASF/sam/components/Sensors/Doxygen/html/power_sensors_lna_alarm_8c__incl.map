@@ -1,0 +1,24 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsLnaAlarm.c" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsLnaAlarm.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,5,460,112"/>
+<area shape="rect" id="Node000002" href="$power_sensors_lna_alarm_8h.html" title=" " alt="" coords="243,160,413,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,112,331,144,325,144,325,112"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,325,83,352"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,190,236,210,180,237,120,277,71,317,67,313,117,273,177,232,234,205,288,185"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="107,325,221,352"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="290,190,250,208,213,236,188,273,173,311,168,309,183,271,209,233,247,204,287,185"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="546,243,673,269"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="373,185,551,235,550,241,371,190"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="245,325,360,352"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="288,189,253,208,238,221,226,236,220,256,226,276,243,298,264,315,261,319,239,302,222,279,215,256,222,233,234,217,250,203,285,185"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="385,325,500,352"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="369,185,404,204,421,217,434,233,443,252,448,272,449,310,444,310,442,273,438,254,430,236,417,221,401,208,366,190"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="525,325,640,352"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="362,185,409,205,459,232,515,273,561,313,557,317,512,277,456,237,406,210,360,190"/>
+<area shape="rect" id="Node000009" href="$power_sensors_alarm_validate_limits_8h.html" title="Non monolithic filter." alt="" coords="236,235,420,277"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="331,187,331,219,325,219,325,187"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="256,281,98,325,97,320,254,275"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="287,280,205,321,202,316,285,276"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="324,279,314,311,309,309,319,277"/>
+<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="359,276,414,314,411,318,356,280"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="394,275,529,318,527,323,393,280"/>
+</map>

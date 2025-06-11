@@ -1,0 +1,5 @@
+<map id="ePowerReadOffsetChannelRun" name="ePowerReadOffsetChannelRun">
+<area shape="rect" id="Node000001" title="get the offset in raw data. this info will be used for calculate the power in the other channels." alt="" coords="5,5,204,32"/>
+<area shape="rect" id="Node000002" href="$_current_sensing_8h.html#ae8cb75e0317815d3c99429a727bd5b59" title="Get the power of the current sensing input in mW." alt="" coords="252,5,450,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,16,236,16,236,21,204,21"/>
+</map>

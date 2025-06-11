@@ -1,0 +1,31 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock_internals.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock_internals.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2075,5,2370,119"/>
+<area shape="rect" id="Node000002" href="$cmock_8h.html" title=" " alt="" coords="2075,167,2370,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2225,132,2225,167,2220,167,2220,132"/>
+<area shape="rect" id="Node000003" href="$mock__booster_state_machine_8c.html" title=" " alt="" coords="5,313,304,412"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2061,223,1668,233,1165,251,674,279,471,296,316,316,305,318,304,313,316,311,470,291,674,273,1165,246,1668,228,2061,218"/>
+<area shape="rect" id="Node000004" href="$mock__current_sensors_config_update_8c.html" title=" " alt="" coords="328,313,669,412"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="2061,220,1797,224,1453,238,1263,251,1068,267,873,289,682,316,670,318,669,313,681,311,872,284,1067,262,1263,245,1453,233,1797,219,2061,214"/>
+<area shape="rect" id="Node000005" href="$mock__current_sensors_update_database_8c.html" title=" " alt="" coords="693,313,1053,412"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="2062,225,1861,235,1612,252,1338,278,1066,316,1054,318,1053,313,1065,311,1338,273,1611,247,1861,230,2061,220"/>
+<area shape="rect" id="Node000006" href="$mock__current_sensorsread_channel_8c.html" title=" " alt="" coords="1077,313,1413,412"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="2062,233,1765,264,1595,287,1426,316,1414,318,1413,313,1425,311,1594,282,1764,259,2061,227"/>
+<area shape="rect" id="Node000007" href="$mock__laser_data_8c.html" title=" " alt="" coords="1438,313,1733,412"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="2062,248,1908,279,1745,316,1734,319,1732,314,1743,311,1907,274,2061,243"/>
+<area shape="rect" id="Node000008" href="$mock__lna_state_machine_8c.html" title=" " alt="" coords="1757,313,2051,412"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="2105,274,2012,316,2009,311,2103,269"/>
+<area shape="rect" id="Node000009" href="$mock__power_read_channel_8c.html" title=" " alt="" coords="2075,313,2370,412"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="2225,279,2225,313,2220,313,2220,279"/>
+<area shape="rect" id="Node000010" href="$mock__power_sensors_config_update_8c.html" title=" " alt="" coords="2394,313,2729,412"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="2349,268,2449,311,2447,316,2347,273"/>
+<area shape="rect" id="Node000011" href="$mock__power_sensors_update_database_8c.html" title=" " alt="" coords="2753,313,3108,412"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="2384,242,2557,273,2742,311,2753,313,2752,319,2741,316,2556,278,2383,247"/>
+<area shape="rect" id="Node000012" href="$test__current_sensors__runner_8c.html" title=" " alt="" coords="3132,313,3433,412"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="2384,223,2539,235,2724,252,2923,277,3120,311,3132,313,3131,318,3120,316,2923,282,2724,257,2539,240,2384,228"/>
+<area shape="rect" id="Node000013" href="$test__for_power_sensors_config_updat__runner_8c.html" title=" " alt="" coords="3457,313,3839,412"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="2384,219,2596,229,2861,246,3153,273,3446,311,3458,313,3457,318,3445,316,3153,278,2861,251,2595,234,2384,225"/>
+<area shape="rect" id="Node000014" href="$test__power_sensors__runner_8c.html" title=" " alt="" coords="3863,313,4158,412"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="2384,219,2723,231,3146,251,3554,277,3723,293,3851,311,3864,313,3863,318,3850,316,3722,298,3554,283,3145,256,2723,237,2384,225"/>
+<area shape="rect" id="Node000015" href="$cmock_8c.html" title=" " alt="" coords="4182,313,4477,412"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="2384,218,2785,227,3300,245,3804,272,4013,290,4171,311,4182,313,4181,318,4170,316,4012,295,3804,278,3300,250,2784,232,2383,223"/>
+</map>

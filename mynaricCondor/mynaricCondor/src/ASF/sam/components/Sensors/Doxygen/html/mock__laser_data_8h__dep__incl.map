@@ -1,0 +1,17 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_laserData.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock_laserData.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="743,5,1037,104"/>
+<area shape="rect" id="Node000002" href="$test__current_sensors_8c.html" title=" " alt="" coords="5,152,220,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="729,72,493,101,362,125,233,155,221,158,219,153,232,149,361,119,492,96,728,66"/>
+<area shape="rect" id="Node000003" href="$test__for_power_sensors_config_updat_8c.html" title=" " alt="" coords="245,152,479,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="730,93,613,121,492,155,480,158,479,153,491,149,611,116,729,87"/>
+<area shape="rect" id="Node000004" href="$test__power_sensors_8c.html" title="test file for powerSensorsConfigUpdate.c (creating a file with this name is resulting in an unknown e..." alt="" coords="504,152,719,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="786,113,706,154,703,150,784,108"/>
+<area shape="rect" id="Node000005" href="$mock__laser_data_8c.html" title=" " alt="" coords="743,152,1037,251"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="893,118,893,152,887,152,887,118"/>
+<area shape="rect" id="Node000006" href="$test__current_sensors__runner_8c.html" title=" " alt="" coords="1062,152,1363,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1011,107,1106,149,1104,154,1009,112"/>
+<area shape="rect" id="Node000007" href="$test__for_power_sensors_config_updat__runner_8c.html" title=" " alt="" coords="1387,152,1769,251"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1051,84,1376,149,1388,152,1387,157,1375,155,1050,89"/>
+<area shape="rect" id="Node000008" href="$test__power_sensors__runner_8c.html" title=" " alt="" coords="1793,152,2088,251"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1051,62,1206,73,1389,91,1586,116,1781,149,1794,152,1793,157,1780,155,1585,121,1388,96,1205,78,1051,67"/>
+</map>

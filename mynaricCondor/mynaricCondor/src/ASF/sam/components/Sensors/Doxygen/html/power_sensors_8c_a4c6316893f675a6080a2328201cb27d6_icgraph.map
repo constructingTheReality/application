@@ -1,0 +1,31 @@
+<map id="ePowerSensorsFactoryInitBoosterChannels" name="ePowerSensorsFactoryInitBoosterChannels">
+<area shape="rect" id="Node000001" title="Init the power sensors &#45; HPA section &#45; with factory &#45; emergency&#45; values. In case nvm fail." alt="" coords="435,343,609,383"/>
+<area shape="rect" id="Node000002" href="$test__power_sensors_8c.html#a15da2dbea25481473e25dd5e368bc003" title=" " alt="" coords="140,5,351,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="511,330,496,277,471,212,434,146,411,115,385,89,349,66,352,62,388,85,415,112,439,143,475,210,501,275,516,328"/>
+<area shape="rect" id="Node000004" href="$test__power_sensors_8c.html#ac37ca8de175c511af0e47fd95792d58a" title=" " alt="" coords="104,99,387,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="505,331,486,293,460,249,426,205,385,167,367,156,369,152,388,163,430,201,464,246,491,290,510,329"/>
+<area shape="rect" id="Node000005" href="$test__power_sensors_8c.html#a141387d5e52ebf62265bbeedac0cc26a" title=" " alt="" coords="135,178,355,233"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="492,334,445,289,416,266,385,246,355,233,357,228,388,242,419,261,449,285,496,330"/>
+<area shape="rect" id="Node000006" href="$test__power_sensors_8c.html#a96a9dd95876aebd29de264354cd4fd54" title=" " alt="" coords="123,257,367,311"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="441,341,386,325,346,314,348,309,387,320,442,336"/>
+<area shape="rect" id="Node000007" href="$test__power_sensors_8c.html#a0efd8e5240bbfcde1846293a2feba7c3" title=" " alt="" coords="143,335,347,390"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="421,365,347,365,347,360,421,360"/>
+<area shape="rect" id="Node000008" href="$test__power_sensors_8c.html#a7af679b1cec900386a8ed54a6267621a" title=" " alt="" coords="143,414,347,469"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="439,389,387,404,343,416,342,411,386,399,438,384"/>
+<area shape="rect" id="Node000009" href="$test__power_sensors_8c.html#acde7d543425181d81c596d65f3dd7b07" title=" " alt="" coords="143,493,347,547"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="496,395,448,440,419,463,388,482,349,499,346,495,385,478,416,458,445,436,492,391"/>
+<area shape="rect" id="Node000010" href="$test__power_sensors_8c.html#aa3fed1afa92fd10544dec273e77c660a" title=" " alt="" coords="143,571,347,626"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="509,396,490,434,464,479,430,523,388,561,349,582,346,577,385,556,426,519,459,476,486,432,505,394"/>
+<area shape="rect" id="Node000011" href="$test__power_sensors_8c.html#ace981537150d192eb2d6ca76fec11b6e" title=" " alt="" coords="130,650,361,705"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="516,397,501,450,476,515,439,582,416,613,388,639,362,656,359,652,385,635,412,609,435,579,471,513,496,448,511,395"/>
+<area shape="rect" id="Node000003" href="$test__power_sensors__runner_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,350,56,375"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,70,106,89,82,120,64,155,51,193,42,231,35,301,34,350,29,350,29,301,37,231,46,192,59,153,78,117,102,85,126,66"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="109,164,106,167,87,188,72,212,51,265,40,314,35,350,30,350,35,313,46,263,67,210,83,185,102,163,106,160"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="124,234,106,246,81,271,62,299,39,351,34,349,57,297,77,267,102,242,122,230"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="123,318,105,325,53,352,51,347,103,320,121,313"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="129,365,56,365,56,360,129,360"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="129,414,103,404,52,378,54,373,105,399,131,409"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="130,498,102,482,77,457,57,428,34,377,39,374,62,425,81,454,106,478,132,494"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="129,579,102,561,83,539,68,514,46,462,35,412,30,376,35,375,40,411,51,460,72,512,87,536,106,557,132,575"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="117,651,102,639,77,608,59,572,45,534,37,495,29,424,29,376,34,376,34,424,42,494,51,532,64,570,82,605,106,635,120,647"/>
+</map>

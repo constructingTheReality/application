@@ -1,0 +1,7 @@
+<map id="eCurrentSensorsReadChannelRun" name="eCurrentSensorsReadChannelRun">
+<area shape="rect" id="Node000001" title="get current value for a specific channel" alt="" coords="5,35,224,61"/>
+<area shape="rect" id="Node000002" href="$_current_sensing_8h.html#a884434ebc42d5003dc1bc022dd39a6f5" title="Get the current of the current sensing input in mA." alt="" coords="272,5,472,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,33,256,29,256,34,225,38"/>
+<area shape="rect" id="Node000003" href="$_current_sensing_8h.html#af6e85b5350d92607f1eab18d1d66b4e5" title=" " alt="" coords="276,56,468,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,58,261,62,260,67,224,63"/>
+</map>

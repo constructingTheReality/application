@@ -1,0 +1,9 @@
+<map id="UnitTestFramework/build/test/mocks/mock_powerSensors.h" name="UnitTestFramework/build/test/mocks/mock_powerSensors.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="234,5,461,48"/>
+<area shape="rect" id="Node000002" href="$test__power_sensors_config_update_8c.html" title="test file for powerSensorsConfigUpdate.c" alt="" coords="5,104,210,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,57,160,106,158,101,281,52"/>
+<area shape="rect" id="Node000003" href="$mock__power_sensors_8c.html" title=" " alt="" coords="234,104,461,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,63,350,104,345,104,345,63"/>
+<area shape="rect" id="Node000004" href="$test__power_sensors_config_update__runner_8c.html" title=" " alt="" coords="484,96,694,155"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="414,52,518,93,516,98,413,57"/>
+</map>

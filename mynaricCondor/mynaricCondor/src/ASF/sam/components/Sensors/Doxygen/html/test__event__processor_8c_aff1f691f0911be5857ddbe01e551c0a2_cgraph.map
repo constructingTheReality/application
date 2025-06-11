@@ -1,0 +1,8 @@
+<map id="test_whenTheDeviceIsReset_thenTheStatusLedIsTurnedOff" name="test_whenTheDeviceIsReset_thenTheStatusLedIsTurnedOff">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,204,48"/>
+<area shape="rect" id="Node000002" href="$display_8c.html#ace29b0b5f6128f04d1800a81a37ad248" title=" " alt="" coords="428,13,594,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,24,412,24,412,29,204,29"/>
+<area shape="rect" id="Node000003" href="$event__processor_8c.html#ae1d8acf4a49fc2dd494f7838a3d290c9" title=" " alt="" coords="252,39,380,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,36,237,40,236,45,204,41"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="380,41,412,37,413,42,381,46"/>
+</map>

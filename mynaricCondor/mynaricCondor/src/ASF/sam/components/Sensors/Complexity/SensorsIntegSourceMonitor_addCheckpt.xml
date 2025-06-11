@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- =======================================================================
+ Examples of typical SourceMonitor command line script commands.
+======================================================================== -->
+
+ 
+
+<sourcemonitor_commands>
+
+ 
+
+   <!-- ===================================================================
+
+    The write_log element value is used for execution of commands in this
+
+    file, not the log errors flag set in SourceMonitor's options dialog.
+
+    If this element is missing, command progress and errors will be written
+
+    to the SourceMonitor log file.
+
+    =================================================================== -->
+
+ 
+
+   <write_log>true</write_log>
+
+ 
+
+   <!-- ===============================================================
+
+    This command is typical for the case where a project exists and you
+
+    want to create a new checkpoint and export its metrics.
+
+   ================================================================ -->
+
+ 
+
+   <command>
+
+ 
+
+       <project_file>C:\myWorks\mynaric\Application\embedded\mynaricApp_Embedded\mynaricCondor\mynaricCondor\src\ASF\sam\components\Sensors\Complexity\sensorsIntegration.smp</project_file>
+
+ 
+
+       <!-- ===============================================================
+
+        If you do not specify a checkpoint name, a name will be created for
+
+        you in the form "CheckpointN" where N is the next higher number not
+
+        already present in an auto-generated checkpoint name in this
+
+        project.
+
+       ================================================================ -->
+
+ 
+
+       <export>
+
+           <export_file>C:\myWorks\mynaric\Application\embedded\mynaricApp_Embedded\mynaricCondor\mynaricCondor\src\ASF\sam\components\Sensors\Complexity\dump.xml</export_file>
+
+           <export_type>2 (checkpoint details as XML)</export_type>
+
+       </export>
+
+
+
+
+ 
+
+       <!-- ===============================================================
+
+        When the </command> tag is encountered, the checkpoint is created,
+
+        the metrics for all files in the new checkpoint are exported as
+
+        XML, and then the new checkpoint is deleted from the project.
+
+        However, if any errors occur in the command's specification, an
+
+        error message will be logged (if logging is enabled) and the
+
+        execution of the command will be aborted.
+
+       ================================================================ -->
+
+ 
+
+   </command>
+
+
+
+
+</sourcemonitor_commands>
+
+ 
+ 

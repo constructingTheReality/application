@@ -1,0 +1,17 @@
+<map id="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsReadChannel.h" name="C:/myWorks/mynaric/Application/embedded/mynaricApp_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsReadChannel.h">
+<area shape="rect" id="Node000001" title="currentSensorsreadChannel header file." alt="" coords="737,5,1008,104"/>
+<area shape="rect" id="Node000002" href="$mock__current_sensorsread_channel_8h.html" title=" " alt="" coords="245,152,581,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="725,105,567,154,565,149,723,100"/>
+<area shape="rect" id="Node000006" href="$current_sensors_v2_8c.html" title=" " alt="" coords="605,152,853,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="817,116,779,153,775,150,813,112"/>
+<area shape="rect" id="Node000007" href="$current_sensors_8c.html" title=" " alt="" coords="877,159,1159,243"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="933,112,979,157,975,161,929,116"/>
+<area shape="rect" id="Node000008" href="$current_sensors_read_channel_8c.html" title="currentSensorsReadChannel source file" alt="" coords="1183,152,1453,251"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1022,101,1172,149,1183,153,1182,158,1171,155,1020,106"/>
+<area shape="rect" id="Node000003" href="$test__current_sensors_8c.html" title=" " alt="" coords="5,299,220,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,259,214,301,212,296,299,254"/>
+<area shape="rect" id="Node000004" href="$mock__current_sensorsread_channel_8c.html" title=" " alt="" coords="245,299,581,397"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="415,265,415,298,410,298,410,265"/>
+<area shape="rect" id="Node000005" href="$test__current_sensors__runner_8c.html" title=" " alt="" coords="605,299,906,397"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="541,254,642,296,640,301,539,259"/>
+</map>
