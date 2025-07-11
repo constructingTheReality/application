@@ -448,8 +448,7 @@ void eBoosterLoopStateAccFunction(void)
 	if( bConditionsToResetBooster == eTrue )
 	{
 		eBoosterState 	= eBoosterLoopStateDisable ;
-		//eResetRequest = DO_NOTHING;
-		//eBoosterApcStateGetDataSetResetRequest( eResetRequest);	
+	
 	}
 	
 	/* if we change from acc to apc */	
@@ -468,33 +467,6 @@ void eBoosterLoopStateAccFunction(void)
 		bWavelengthIs1536		= cPumpSm1StatusDefinition.bSm1WavelengthIs1536;
 		bEnable				= (eBool_t)(cPumpSm1StatusDefinition.cPumpSm1StatusFlags.PumpSm1BitAssignment.bEnableHpa1);
 		
-		/*if( bEnable == eTrue)
-		{
-			vBoosterAccEnableOnSm1(bEnable);
-		}*/
-		
-		
-		//todo : check safe in the sp in current
-		/*  hpa sm */
-		/*if(usLastSetpointHpa1 != usSetpointInPwmHpa1)
-		{
-			//bIsInAcc				= (pxAmplifierDescriptor->c402StatusDefinition.xAlarmAndStatusRegister.AlarmsAndStatusRegisterBitAssignment.bLnaMode == 0)? eTrue : eFalse;
-			fCurrentHpaSm1			= cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent;
-			//pxAmplifierDescriptor->c401StatusDefinition.fLaserPump1BoosterCurrent;
-			ePwmToCurrentConversion_Hpa1( bWavelengthIs1536, usSetpointInPwmHpa1, &usSetpointInmAHpa1 );
-			vTrajectoryCalculatorRun( eTrue, usSetpointInmAHpa1, fCurrentHpaSm1,  &usStepsNumberHpa1, &bIncreaseHpa1);
-			usStepsNumberHpa1 = usStepsNumberHpa1 + 1;			
-			usCurrentRead			= (uint16_t)fCurrentHpaSm1;	
-		}*/
-		/*
-		vBoosterSetupAcc( eSM ,	usLastSetpointHpa1	,	cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent,
-						  usSetpointInPwmHpa1		,	&usSetpointInmAHpa1		, eTrue,
-						  &usStepsNumberHpa1		,	&bIncreaseHpa1			, bWavelengthIs1536, eTrue);
-					
-		usCurrentRead			= (uint16_t)cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent;					
-		
-		vBoosterAccRun(  eSM,&usStepsNumberHpa1, bIncreaseHpa1, usSetpointInmAHpa1, usCurrentRead, bEnable);*/
-		
 		
 		vBoosterAccManager( eSM ,	usLastSetpointHpa1	,	cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent, bEnable,
 							usSetpointInPwmHpa1		,	&usSetpointInmAHpa1		, eTrue,
@@ -504,53 +476,10 @@ void eBoosterLoopStateAccFunction(void)
 		/*  hpa mm1 */	
 		usSetpointInPwmMmHpa1 = (cPumpMm1StatusDefinition.cPumpMm1StatusFlags.PumpMm1BitAssignment.bEnableMMHpa1 == 1)?  cPumpMm1StatusDefinition.usLaserPumpMm1AccSetpoint : 0;	
 		bEnable				= (eBool_t)(cPumpMm1StatusDefinition.cPumpMm1StatusFlags.PumpMm1BitAssignment.bEnableMMHpa1);	
-		//fNominalCurrentSm1 = 350;
-		/*if( bEnable == eTrue)
-		{
-			vBoosterAccEnableOnMm1(bEnable);
-		}*/
-//#ifdef DEMO_MASOUR_VERSION
-		//	usSetpointInPwmMmHpa1 = 130;
-		//	bEnable = eTrue;
-/*
-for(int i=0; i<60000; i++)
-{
-	
-}*/
-
-//#endif		
+		
+		
 		bHpaReadyForSecondStep = (cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent > fNominalCurrentSm1 )? eTrue : eFalse;  //pxBoosterParameters->xHpaPowersConfig.fHpaMinOutPowerForNextSteps
 		bHpaReadyForSecondStep = eTrue;
-		//test
-		//usSetpointInPwmMmHpa1 = pxAmplifierDescriptor->c406PacketControlDefinition.fSetCurrentOnLaserPump3OnBoosterInAcc;
-		/*if( bHpaReadyForSecondStep == eFalse )
-		{
-			vAccControlLaserUpdateHpaMm1( 0 );
-			vAccControlLaserUpdateHpaMm2( 0 );
-		}*/
-		
-		//else //if( (usLastSetpointMmHpa1 != usSetpointInPwmMmHpa1) )// && ( bHpaReadyForSecondStep == eTrue   ) )
-		//{
-			/*fCurrentMmHpa1			=  cPumpMm1StatusDefinition.fLaserPumpMm1BoosterCurrent;
-			
-			
-			
-			ePwmToCurrentConversion_MmHpa1( bWavelengthIs1536, usSetpointInPwmMmHpa1, &usSetpointInmAMmHpa1 );
-			
-			vTrajectoryCalculatorRun( eFalse, usSetpointInmAMmHpa1, fCurrentMmHpa1,  &usStepsNumberMmHpa1, &bIncreaseMmHpa1);
-			usStepsNumberMmHpa1 = usStepsNumberMmHpa1 + 1;
-			usCurrentMm1Read			= (uint16_t)fCurrentMmHpa1;*/
-			
-	/*	vBoosterSetupAcc(	eMM1 ,	usLastSetpointMmHpa1	,	cPumpMm1StatusDefinition.fLaserPumpMm1BoosterCurrent,
-							usSetpointInPwmMmHpa1		,	&usSetpointInmAMmHpa1		, eFalse,
-							&usStepsNumberMmHpa1		,	&bIncreaseMmHpa1			, bWavelengthIs1536 , bHpaReadyForSecondStep);
-								
-		usCurrentMm1Read			= (uint16_t)cPumpMm1StatusDefinition.fLaserPumpMm1BoosterCurrent;
-					
-			
-	//	}
-		
-		vBoosterAccRun(  eMM1,&usStepsNumberMmHpa1, bIncreaseMmHpa1, usSetpointInmAMmHpa1, usCurrentMm1Read, bEnable);*/
 		
 		
 		vBoosterAccManager( eMM1 ,	usLastSetpointMmHpa1	,	cPumpMm1StatusDefinition.fLaserPumpMm1BoosterCurrent, bEnable,
@@ -562,36 +491,6 @@ for(int i=0; i<60000; i++)
 		/*  hpa mm2 */
 		usSetpointInPwmMmHpa2 = (cPumpMm2StatusDefinition.cPumpMm2StatusFlags.Pump2BitAssignment.bEnableMMHpa2 == 1)? cPumpMm2StatusDefinition.usLaserPumpMm2AccSetpoint : 0;	
 		bEnable				= (eBool_t)(cPumpMm2StatusDefinition.cPumpMm2StatusFlags.Pump2BitAssignment.bEnableMMHpa2);
-	/*	if( bEnable == eTrue)
-		{
-			vBoosterAccEnableOnMm2(bEnable);
-		}*/
-
-		//bHpaReadyForSecondStep = (pxAmplifierDescriptor->c401StatusDefinition.fLaserPump1BoosterCurrent > 500 )? eTrue : eFalse;  //pxBoosterParameters->xHpaPowersConfig.fHpaMinOutPowerForNextSteps
-		//bHpaReadyForSecondStep = eTrue;
-		//test
-		//usSetpointInPwmMmHpa1 = pxAmplifierDescriptor->c406PacketControlDefinition.fSetCurrentOnLaserPump3OnBoosterInAcc;
-		
-		/*
-		if( (usLastSetpointMmHpa2 != usSetpointInPwmMmHpa2) && ( bHpaReadyForSecondStep == eTrue   ) )
-		{
-			fCurrentMmHpa2			= cPumpMm2StatusDefinition.fLaserPumpMm2BoosterCurrent; //pxAmplifierDescriptor->c401StatusDefinition.fLaserPump3BoosterCurrent;
-			
-			ePwmToCurrentConversion_MmHpa2( bWavelengthIs1536, usSetpointInPwmMmHpa2, &usSetpointInmAMmHpa2 );
-			
-			vTrajectoryCalculatorRun( eFalse, usSetpointInmAMmHpa2, fCurrentMmHpa2,  &usStepsNumberMmHpa2, &bIncreaseMmHpa2);
-			usStepsNumberMmHpa2 = usStepsNumberMmHpa2 + 1;
-			usCurrentMm2Read			= (uint16_t)fCurrentMmHpa2;
-			
-		}*/
-		
-	/*	vBoosterSetupAcc(	eMM2 ,	usLastSetpointMmHpa2	,	cPumpMm2StatusDefinition.fLaserPumpMm2BoosterCurrent,
-							usSetpointInPwmMmHpa2		,	&usSetpointInmAMmHpa2		, eFalse,
-							&usStepsNumberMmHpa2		,	&bIncreaseMmHpa2			, bWavelengthIs1536, bHpaReadyForSecondStep);
-					
-		usCurrentMm2Read			= (uint16_t)cPumpMm2StatusDefinition.fLaserPumpMm2BoosterCurrent;
-					
-		vBoosterAccRun(  eMM2,&usStepsNumberMmHpa2, bIncreaseMmHpa2, usSetpointInmAMmHpa2, usCurrentMm2Read, bEnable);*/
 		
 		vBoosterAccManager( eMM2 ,	usLastSetpointMmHpa2	,	cPumpMm2StatusDefinition.fLaserPumpMm2BoosterCurrent, bEnable,
 							usSetpointInPwmMmHpa2		,	&usSetpointInmAMmHpa2		, eFalse,
