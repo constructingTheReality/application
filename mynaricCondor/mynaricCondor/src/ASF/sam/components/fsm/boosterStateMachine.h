@@ -106,5 +106,6 @@ void vResetHpaAlarms( void);
 eBool_t bBoosterGetStuckCondition(void);
 
 eBool_t bIsHpaReadyForReset(void);
+
 void vHpaReadyForReset(void);
 #endif /* BOOSTERSTATEMACHINE_H_ */

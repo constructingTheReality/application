@@ -64,7 +64,7 @@ static uint16_t			usLastSetpointMmHpa2 ;
 static eBool_t			bControlM1M2IsRising = eFalse;
 
 static float			fLastSetPointInDbm = 0;
-static eBool_t			bHpaIsReadyForReset = eFalse ; 
+static eBool_t			bPrivateHpaIsReadyForReset = eFalse ; 
 //static int power(int base, int power_n);
 /*---------------------------------------------------------------------------*/
 /*static int power(int base, int power_n)
@@ -94,6 +94,9 @@ void vHpaCriticalErrorDetected( void )
 	vBSPPwmSetOutputDuty( eHPA_MM_PWM_STP2,  0);
 	vBoosterAccEnableOnMm1( eFalse );
 	vBSPPwmSetOutputDuty( eHPA_MM_PWM_STP1,  0);
+	
+	///add delay here
+	
 	vBoosterAccEnableOnSm1( eFalse);
 	vBSPPwmSetOutputDuty( eHPA_SM_PWM_STP1,  0);
 	
@@ -241,14 +244,14 @@ eBool_t bBoosterGetStuckCondition(void)
 eBool_t bIsHpaReadyForReset(void)
 {
 	
-	return bHpaIsReadyForReset;
+	return bPrivateHpaIsReadyForReset;
 	
 }
 
 void vHpaReadyForReset(void)
 {
 	
-	bHpaIsReadyForReset =eTrue;
+	bPrivateHpaIsReadyForReset =eTrue;
 	
 }
 /*------------------------------------------------------------------------------*/
@@ -278,7 +281,7 @@ void eBoosterLoopStateDisableFunction(void)
 			eBoosterState =  eBoosterLoopStateStandby;	
 		}
 		
-		bHpaIsReadyForReset = eTrue;		
+		bPrivateHpaIsReadyForReset = eTrue;		
 	}
 }
 /*------------------------------------------------------------------------------*/
@@ -295,29 +298,28 @@ void eBoosterLoopStateStandbyFunction(void)
 	eBoosterApcStateGetDataGetResetRequest(&eResetRequest, &bConditionsToResetBooster, &bConditionsToResetLna);
 	eBoosterApcStateGetDataPowersAndOperationMode( &xBoosterPowers, &bEnable1Booster, &bEnable2Booster, &bEnable3Booster);
 	
-	#ifdef DEMO_MASOUR_VERSION
+//	#ifdef DEMO_MASOUR_VERSION
 //	bEnable1Booster = eTrue;
 //	bEnable2Booster =eTrue;
 //	xBoosterPowers.bHpaInAccmode = eTrue;
 //	bConditionsToResetBooster = eFalse;
-	#endif
-	
-	
-	if( (bEnable1Booster == eTrue) && ((bEnable2Booster==eTrue)||(bEnable3Booster==eTrue))  )
-	{
+//	#endif
 		//vEnableHpaSingleMode(bEnable1Booster);
 		//vEnableHpaMultiMode1(bEnable2Booster);
 		//vEnableHpaMultiMode2(bEnable3Booster);					
-		if( xBoosterPowers.bHpaInAccmode == eTrue )
-		{
-			eBoosterState =  eBoosterLoopStateAcc ;			
-		}
-		else
+	if( xBoosterPowers.bHpaInAccmode == eTrue )
+	{
+		eBoosterState =  eBoosterLoopStateAcc ;			
+	}
+	else
+	{
+		if( (bEnable1Booster == eTrue) && ((bEnable2Booster==eTrue)||(bEnable3Booster==eTrue))  )
 		{
 			eBoosterState =  eBoosterLoopStateApc ;			
 		}
-		bHpaIsReadyForReset = eFalse;				
 	}
+	bPrivateHpaIsReadyForReset = eFalse;				
+	
 	
 
 	if( bConditionsToResetBooster == eTrue )
@@ -490,13 +492,13 @@ void eBoosterLoopStateAccFunction(void)
 	//eBoosterApcStateGetDataPowersAndOperationMode( &xBoosterPowers);
 	eBoosterApcStateGetDataPowersAndOperationMode( &xBoosterPowers , &bEnable1Booster, &bEnable2Booster, &bEnable3Booster );
 	
-	#ifdef DEMO_MASOUR_VERSION
+	//#ifdef DEMO_MASOUR_VERSION
 //	cPumpSm1StatusDefinition.cPumpSm1StatusFlags.PumpSm1BitAssignment.bEnableHpa1 = 1;
 //	cPumpSm1StatusDefinition.usLaserPump1AccSetpoint = 980;
 //	cPumpMm1StatusDefinition.cPumpMm1StatusFlags.PumpMm1BitAssignment.bEnableMMHpa1 = 1;
 //	cPumpMm1StatusDefinition.usLaserPumpMm1AccSetpoint = 720; //360
 	
-	#endif 
+	//#endif 
 	
 	
 	if( xBoosterPowers.bHpaInAccmode == eFalse )
@@ -550,16 +552,16 @@ void eBoosterLoopStateAccFunction(void)
 		{
 			vBoosterAccEnableOnMm1(bEnable);
 		}*/
-#ifdef DEMO_MASOUR_VERSION
+//#ifdef DEMO_MASOUR_VERSION
 		//	usSetpointInPwmMmHpa1 = 130;
 		//	bEnable = eTrue;
-
+/*
 for(int i=0; i<60000; i++)
 {
 	
-}
+}*/
 
-#endif		
+//#endif		
 		bHpaReadyForSecondStep = (cPumpSm1StatusDefinition.fLaserPump1BoosterCurrent > fNominalCurrentSm1 )? eTrue : eFalse;  //pxBoosterParameters->xHpaPowersConfig.fHpaMinOutPowerForNextSteps
 		bHpaReadyForSecondStep = eTrue;
 		//test
