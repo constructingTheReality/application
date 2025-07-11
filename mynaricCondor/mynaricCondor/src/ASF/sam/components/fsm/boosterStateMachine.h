@@ -98,14 +98,25 @@ void vSetDisableHpa( void);
 **/
 void vResetHpaAlarms( void);
 /**
-* @brief      red stuck state 
+* @brief      ged stuck state 
 * @param[in]  none
 * @param[out] none
 * @return     none
 **/
 eBool_t bBoosterGetStuckCondition(void);
-
+/**
+* @brief      get if HPA could be reseted
+* @param[in]  none
+* @param[out] none
+* @return     none
+**/
 eBool_t bIsHpaReadyForReset(void);
-
+/**
+* @brief      set if HPA could be reseted
+* @param[in]  none
+* @param[out] none
+* @return     none
+**/
 void vHpaReadyForReset(void);
+
 #endif /* BOOSTERSTATEMACHINE_H_ */
