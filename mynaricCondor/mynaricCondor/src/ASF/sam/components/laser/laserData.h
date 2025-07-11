@@ -21,7 +21,7 @@
 #include "ControlAlarm.h"
 #include "canDictionary.h"
 #include "currentSensors.h"
-#include "CurrentSensing.h"
+//#include "CurrentSensing.h"
 #include "CurrentControl.h"
 #include "temperature.h"
 #include "PowerSensors.h"
@@ -44,6 +44,15 @@
 #define  MEMORY_INIT_COMMON_ADDRESS			( 20 )
 #define  MEMORY_INIT_LNA_ADDRESS			( 500 )
 #define  MEMORY_INIT_BOOSTER_ADDRESS		( 2500 )
+
+#define  MEMORY_INIT_COMMON_ADDRESS2		( 4000 )
+#define  MEMORY_INIT_LNA_ADDRESS2			( 4500 )
+#define  MEMORY_INIT_BOOSTER_ADDRESS2		( 6500 )
+
+#define  MEMORY_INIT_COMMON_ADDRESS3		( 8500 )
+#define  MEMORY_INIT_LNA_ADDRESS3			( 10000 )
+#define  MEMORY_INIT_BOOSTER_ADDRESS3		( 12500 )
+
 
 //#define DEMO_VERSION						
 //#define DEMO_MASOUR_VERSION
