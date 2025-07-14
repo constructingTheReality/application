@@ -1,0 +1,70 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_currentSensors.c
+:successes:
+- :test: test_5_1_eCurrentSensorUpdate_eCurrentSensorsReadChannelRunFailure_Fail
+  :line: 69
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_2_eCurrentSensorUpdate_eCurrentSensorsLnaAlarmRunFailure_Fail
+  :line: 122
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_3_eCurrentSensorUpdate_eCurrentSensorsHpaAlarmRunFailure_Fail
+  :line: 276
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_4_eCurrentSensorUpdate_NoAlarms_Success
+  :line: 432
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_5_eCurrentSensorUpdate_LnaCurrentLow_LnaAlarmRaised_Success
+  :line: 642
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_6_eCurrentSensorUpdate_LnaCurrentHigh_LnaAlarmRaised_Success
+  :line: 866
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_7_eCurrentSensorUpdate_HpaCurrent1Low_HpaAlarmRaised_Success
+  :line: 1074
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_8_eCurrentSensorUpdate_HpaCurrent1High_HpaAlarmRaised_Success
+  :line: 1283
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_9_eCurrentSensorUpdate_HpaCurrent2Low_HpaAlarmRaised_Success
+  :line: 1493
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_10_eCurrentSensorUpdate_HpaCurrent2High_HpaAlarmRaised_Success
+  :line: 1702
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_11_eCurrentSensorUpdate_HpaCurrent3Low_HpaAlarmRaised_Success
+  :line: 1913
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_12_eCurrentSensorUpdate_HpaCurrent3High_HpaAlarmRaised_Success
+  :line: 2123
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_13_eCurrentSensorUpdate_CommonAlarmFlagsNotRaised_Success
+  :line: 2337
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_14_eCurrentSensorUpdate_CommonAlarmFlagsRaised_Success
+  :line: 2553
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 14
+  :passed: 14
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.5617930000007618

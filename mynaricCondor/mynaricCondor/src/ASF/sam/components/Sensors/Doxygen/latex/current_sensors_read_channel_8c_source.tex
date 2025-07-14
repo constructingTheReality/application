@@ -1,0 +1,41 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/current\+Sensors\+Read\+Channel.c}
+\hypertarget{current_sensors_read_channel_8c_source}{}\label{current_sensors_read_channel_8c_source}\mbox{\hyperlink{current_sensors_read_channel_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00015}00015\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_read_channel_8h}{currentSensorsReadChannel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00018}\mbox{\hyperlink{current_sensors_read_channel_8c_a862981301c7cab03f35596978e29f62c}{00018}}\ xCurrentInputScaling\_t\ *\mbox{\hyperlink{current_sensors_read_channel_8c_a862981301c7cab03f35596978e29f62c}{pxLocalxCurrentInputScaling}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00020}00020\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00021}\mbox{\hyperlink{current_sensors_read_channel_8c_a85c46064daefd0c494784e3b436fcbb1}{00021}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_read_channel_8c_a85c46064daefd0c494784e3b436fcbb1}{eCurrentSensorsReadChannelRun}}(handle\_t\ xStream,\ uint16\_t\ usOffset,\ \textcolor{keywordtype}{float}\ fSlope,\ \textcolor{keywordtype}{float}\ fIntercept,\ \textcolor{keywordtype}{float}\ *pfCurrentReadedInMa,\ uint16\_t\ *pusCurrentRaw)}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00024}00024\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//float\ fPowerReaded\ =0.0f;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00027}00027\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00028}00028\ \ \ \ \ \textcolor{comment}{/*\ list\ 14\ \ external\ 7\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}(\ xStream\ ==\ eAdcExternalLnaSm\_ld\_Bfm)}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetCurrentmAWithOffset(\ xStream,\ fSlope,\ fIntercept,\ usOffset\ ,\ \ pfCurrentReadedInMa,\ pusCurrentRaw\ );}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//list\ (internal)\ ch\ 0,1,2\ ,\ 3,\ 4,\ 5,\ 6\ ,\ 7,\ 8,\ 9,\ 10\ \ ,\ (external)\ list:\ 11,\ 12,13,\ 16,15}}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetCurrentmA(\ xStream,\ fSlope,\ fIntercept,\ pfCurrentReadedInMa,pusCurrentRaw\ );}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00047}00047\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};\ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_read_channel_8c_source_l00049}00049\ \}}
+
+\end{DoxyCode}

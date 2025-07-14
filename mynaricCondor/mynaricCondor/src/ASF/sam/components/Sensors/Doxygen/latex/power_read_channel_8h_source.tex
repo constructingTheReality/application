@@ -1,0 +1,26 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Read\+Channel.h}
+\hypertarget{power_read_channel_8h_source}{}\label{power_read_channel_8h_source}\mbox{\hyperlink{power_read_channel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00015}00015\ \textcolor{comment}{/*\ Header\ guard\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00016}00016\ \textcolor{preprocessor}{\#ifndef\ POWERREADCHANNEL\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ POWERREADCHANNEL\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00018}00018\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}mpblibs.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}glue.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{power_sensors_8h}{powerSensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00022}00022\ \textcolor{comment}{/*\ Define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00023}00023\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00024}00024\ \textcolor{comment}{/*\ Exported\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00025}00025\ \textcolor{comment}{/*\ Exported\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00026}00026\ \textcolor{comment}{/*\ Global\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00027}00027\ \textcolor{comment}{/*\ Exported\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00035}00035\ eMpbError\_t\ \mbox{\hyperlink{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1}{ePowerReadOffsetChannelRun}}(\ uint16\_t\ *pusInternalOffset,\ uint16\_t\ *pusExternalOffset\ ,\ uint16\_t\ *pusExternalOffset1\ \ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00044}00044\ eMpbError\_t\ \mbox{\hyperlink{power_read_channel_8h_acdb1c09066c33f53244861da8d347e80}{ePowerReadChannelRun}}(handle\_t\ xStream,\ uint16\_t\ usOffset,\ \textcolor{keywordtype}{float}\ fSlope,\ \textcolor{keywordtype}{float}\ fIntercept,\ \textcolor{keywordtype}{float}\ *pfPowerReaded,\ uint16\_t\ *pusPowerRaw);}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ POWERREADCHANNEL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

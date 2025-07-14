@@ -1,0 +1,548 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/runners/test\+\_\+current\+Sensors\+\_\+runner.c File Reference}
+\hypertarget{test__current_sensors__runner_8c}{}\label{test__current_sensors__runner_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/runners/test\_currentSensors\_runner.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/runners/test\_currentSensors\_runner.c}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}cmock.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+current\+Sensors\+Update\+Database.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+current\+Sensors\+Config\+Update.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+current\+Sensorsread\+Channel.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+laser\+Data.\+h"{}}\newline
+Include dependency graph for test\+\_\+current\+Sensors\+\_\+runner.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836}{set\+Up}} (void)
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662}{tear\+Down}} (void)
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_af9035b1801f0b9da18eed895973c1b27}{test\+\_\+5\+\_\+1\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a91f690ab0ff8680ce1383b56e3bd05cb}{test\+\_\+5\+\_\+2\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Lna\+Alarm\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a5ce2510c630e6baf8fe454c9e10b834f}{test\+\_\+5\+\_\+3\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Hpa\+Alarm\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a825434ca8977c77072cb6dab541af410}{test\+\_\+5\+\_\+4\+\_\+e\+Current\+Sensor\+Update\+\_\+\+No\+Alarms\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_acae4031c53f2bbc323cba971aaa05d24}{test\+\_\+5\+\_\+5\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Lna\+Current\+Low\+\_\+\+Lna\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a7420c441f4028d288b5886f945d1bf4b}{test\+\_\+5\+\_\+6\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Lna\+Current\+High\+\_\+\+Lna\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a57f40a60233bb272e2475f7219112904}{test\+\_\+5\+\_\+7\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current1\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_ac1afb95967d5b53a6fa173d29370c141}{test\+\_\+5\+\_\+8\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current1\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_ace16ea08eed767adb14bf7abaa59f4d0}{test\+\_\+5\+\_\+9\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current2\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a9b76d1ee65901bf64141d24201813215}{test\+\_\+5\+\_\+10\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current2\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a94c0f763c9fe7506b15cdf044df3d872}{test\+\_\+5\+\_\+11\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current3\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_a620b9cae0a0d2d1dd222b5a1a0a73afe}{test\+\_\+5\+\_\+12\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current3\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_ab6451ac3966fd0e4e6de689f39f61cd4}{test\+\_\+5\+\_\+13\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Common\+Alarm\+Flags\+Not\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_aaed46b30096b7c435ec15b0899c766d9}{test\+\_\+5\+\_\+14\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Common\+Alarm\+Flags\+Raised\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7}{reset\+Test}} (void)
+\item 
+void \mbox{\hyperlink{test__current_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2}{verify\+Test}} (void)
+\item 
+int \mbox{\hyperlink{test__current_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__current_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b}{Global\+Expect\+Count}}
+\item 
+int \mbox{\hyperlink{test__current_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330}{Global\+Verify\+Order}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{test__current_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf}{Global\+Order\+Error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__current_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!main@{main}}
+\index{main@{main}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00105}{105}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!resetTest@{resetTest}}
+\index{resetTest@{resetTest}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{resetTest()}{resetTest()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7} 
+void reset\+Test (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00062}{62}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{test__current_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!setUp@{setUp}}
+\index{setUp@{setUp}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836} 
+void set\+Up (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00047}{47}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{test__current_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662} 
+void tear\+Down (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00059}{59}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{test__current_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a9b76d1ee65901bf64141d24201813215}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success@{test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success}}
+\index{test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success@{test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success()}{test\_5\_10\_eCurrentSensorUpdate\_HpaCurrent2High\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a9b76d1ee65901bf64141d24201813215} 
+void test\+\_\+5\+\_\+10\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current2\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l01702}{1702}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a9b76d1ee65901bf64141d24201813215_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{test__current_sensors__runner_8c_a9b76d1ee65901bf64141d24201813215_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a94c0f763c9fe7506b15cdf044df3d872}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success@{test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success}}
+\index{test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success@{test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success()}{test\_5\_11\_eCurrentSensorUpdate\_HpaCurrent3Low\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a94c0f763c9fe7506b15cdf044df3d872} 
+void test\+\_\+5\+\_\+11\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current3\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l01913}{1913}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a94c0f763c9fe7506b15cdf044df3d872_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{test__current_sensors__runner_8c_a94c0f763c9fe7506b15cdf044df3d872_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a620b9cae0a0d2d1dd222b5a1a0a73afe}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success@{test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success}}
+\index{test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success@{test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success()}{test\_5\_12\_eCurrentSensorUpdate\_HpaCurrent3High\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a620b9cae0a0d2d1dd222b5a1a0a73afe} 
+void test\+\_\+5\+\_\+12\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current3\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l02123}{2123}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a620b9cae0a0d2d1dd222b5a1a0a73afe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{test__current_sensors__runner_8c_a620b9cae0a0d2d1dd222b5a1a0a73afe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_ab6451ac3966fd0e4e6de689f39f61cd4}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success@{test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success}}
+\index{test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success@{test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success()}{test\_5\_13\_eCurrentSensorUpdate\_CommonAlarmFlagsNotRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_ab6451ac3966fd0e4e6de689f39f61cd4} 
+void test\+\_\+5\+\_\+13\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Common\+Alarm\+Flags\+Not\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l02337}{2337}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_ab6451ac3966fd0e4e6de689f39f61cd4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{test__current_sensors__runner_8c_ab6451ac3966fd0e4e6de689f39f61cd4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_aaed46b30096b7c435ec15b0899c766d9}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success@{test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success}}
+\index{test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success@{test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success()}{test\_5\_14\_eCurrentSensorUpdate\_CommonAlarmFlagsRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_aaed46b30096b7c435ec15b0899c766d9} 
+void test\+\_\+5\+\_\+14\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Common\+Alarm\+Flags\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l02553}{2553}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_aaed46b30096b7c435ec15b0899c766d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{test__current_sensors__runner_8c_aaed46b30096b7c435ec15b0899c766d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_af9035b1801f0b9da18eed895973c1b27}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail@{test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail}}
+\index{test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail@{test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail()}{test\_5\_1\_eCurrentSensorUpdate\_eCurrentSensorsReadChannelRunFailure\_Fail()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_af9035b1801f0b9da18eed895973c1b27} 
+void test\+\_\+5\+\_\+1\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00069}{69}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_af9035b1801f0b9da18eed895973c1b27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_af9035b1801f0b9da18eed895973c1b27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a91f690ab0ff8680ce1383b56e3bd05cb}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail@{test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail}}
+\index{test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail@{test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail()}{test\_5\_2\_eCurrentSensorUpdate\_eCurrentSensorsLnaAlarmRunFailure\_Fail()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a91f690ab0ff8680ce1383b56e3bd05cb} 
+void test\+\_\+5\+\_\+2\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Lna\+Alarm\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00122}{122}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a91f690ab0ff8680ce1383b56e3bd05cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a91f690ab0ff8680ce1383b56e3bd05cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a5ce2510c630e6baf8fe454c9e10b834f}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail@{test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail}}
+\index{test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail@{test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail()}{test\_5\_3\_eCurrentSensorUpdate\_eCurrentSensorsHpaAlarmRunFailure\_Fail()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a5ce2510c630e6baf8fe454c9e10b834f} 
+void test\+\_\+5\+\_\+3\+\_\+e\+Current\+Sensor\+Update\+\_\+e\+Current\+Sensors\+Hpa\+Alarm\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00276}{276}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a5ce2510c630e6baf8fe454c9e10b834f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a5ce2510c630e6baf8fe454c9e10b834f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a825434ca8977c77072cb6dab541af410}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success@{test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success}}
+\index{test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success@{test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success()}{test\_5\_4\_eCurrentSensorUpdate\_NoAlarms\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a825434ca8977c77072cb6dab541af410} 
+void test\+\_\+5\+\_\+4\+\_\+e\+Current\+Sensor\+Update\+\_\+\+No\+Alarms\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00432}{432}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a825434ca8977c77072cb6dab541af410_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{test__current_sensors__runner_8c_a825434ca8977c77072cb6dab541af410_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_acae4031c53f2bbc323cba971aaa05d24}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success@{test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success}}
+\index{test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success@{test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success()}{test\_5\_5\_eCurrentSensorUpdate\_LnaCurrentLow\_LnaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_acae4031c53f2bbc323cba971aaa05d24} 
+void test\+\_\+5\+\_\+5\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Lna\+Current\+Low\+\_\+\+Lna\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00642}{642}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_acae4031c53f2bbc323cba971aaa05d24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{test__current_sensors__runner_8c_acae4031c53f2bbc323cba971aaa05d24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a7420c441f4028d288b5886f945d1bf4b}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success@{test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success}}
+\index{test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success@{test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success()}{test\_5\_6\_eCurrentSensorUpdate\_LnaCurrentHigh\_LnaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a7420c441f4028d288b5886f945d1bf4b} 
+void test\+\_\+5\+\_\+6\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Lna\+Current\+High\+\_\+\+Lna\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l00866}{866}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a7420c441f4028d288b5886f945d1bf4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{test__current_sensors__runner_8c_a7420c441f4028d288b5886f945d1bf4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_a57f40a60233bb272e2475f7219112904}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success@{test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success}}
+\index{test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success@{test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success()}{test\_5\_7\_eCurrentSensorUpdate\_HpaCurrent1Low\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a57f40a60233bb272e2475f7219112904} 
+void test\+\_\+5\+\_\+7\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current1\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l01074}{1074}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_a57f40a60233bb272e2475f7219112904_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{test__current_sensors__runner_8c_a57f40a60233bb272e2475f7219112904_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_ac1afb95967d5b53a6fa173d29370c141}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success@{test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success}}
+\index{test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success@{test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success()}{test\_5\_8\_eCurrentSensorUpdate\_HpaCurrent1High\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_ac1afb95967d5b53a6fa173d29370c141} 
+void test\+\_\+5\+\_\+8\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current1\+High\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l01283}{1283}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_ac1afb95967d5b53a6fa173d29370c141_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{test__current_sensors__runner_8c_ac1afb95967d5b53a6fa173d29370c141_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_ace16ea08eed767adb14bf7abaa59f4d0}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success@{test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success}}
+\index{test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success@{test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success()}{test\_5\_9\_eCurrentSensorUpdate\_HpaCurrent2Low\_HpaAlarmRaised\_Success()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_ace16ea08eed767adb14bf7abaa59f4d0} 
+void test\+\_\+5\+\_\+9\+\_\+e\+Current\+Sensor\+Update\+\_\+\+Hpa\+Current2\+Low\+\_\+\+Hpa\+Alarm\+Raised\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors_8c_source_l01493}{1493}} of file \mbox{\hyperlink{test__current_sensors_8c_source}{test\+\_\+current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__current_sensors__runner_8c_ace16ea08eed767adb14bf7abaa59f4d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{test__current_sensors__runner_8c_ace16ea08eed767adb14bf7abaa59f4d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__current_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!verifyTest@{verifyTest}}
+\index{verifyTest@{verifyTest}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{verifyTest()}{verifyTest()}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2} 
+void verify\+Test (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00071}{71}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{test__current_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!GlobalExpectCount@{GlobalExpectCount}}
+\index{GlobalExpectCount@{GlobalExpectCount}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalExpectCount}{GlobalExpectCount}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b} 
+int Global\+Expect\+Count}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00011}{11}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{test__current_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!GlobalOrderError@{GlobalOrderError}}
+\index{GlobalOrderError@{GlobalOrderError}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalOrderError}{GlobalOrderError}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf} 
+char\texorpdfstring{$\ast$}{*} Global\+Order\+Error}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00013}{13}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{test__current_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330}\index{test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}!GlobalVerifyOrder@{GlobalVerifyOrder}}
+\index{GlobalVerifyOrder@{GlobalVerifyOrder}!test\_currentSensors\_runner.c@{test\_currentSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalVerifyOrder}{GlobalVerifyOrder}}
+{\footnotesize\ttfamily \label{test__current_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330} 
+int Global\+Verify\+Order}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00012}{12}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+

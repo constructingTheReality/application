@@ -1,0 +1,15 @@
+\chapter{ceedling-\/colour-\/report}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e}{}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e}\index{ceedling-\/colour-\/report@{ceedling-\/colour-\/report}}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e_autotoc_md88}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e_autotoc_md88}
+The colour\+\_\+report replaces the normal ceedling "{}pretty"{} output with a colorized variant, in order to make the results easier to read from a standard command line. This is very useful on developer machines, but can occasionally cause problems with parsing on CI servers.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e_autotoc_md89}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2colour__report_2_r_e_a_d_m_e_autotoc_md89}
+Enable the plugin in your project.\+yml by adding {\ttfamily colour\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ colour\_report}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,34 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_currentSensorsBackfacetAlarm.c
+:successes:
+- :test: test_4_1_eCurrentSensorsBackfacetAlarmRun_InvalidParams_Fail
+  :line: 48
+  :message: ''
+  :unity_test_time: 0
+- :test: test_4_2_eCurrentSensorsBackfacetAlarmRun_NoError_Success
+  :line: 89
+  :message: ''
+  :unity_test_time: 0
+- :test: test_4_3_eCurrentSensorsBackfacetAlarmRun_LnaError_Success
+  :line: 110
+  :message: ''
+  :unity_test_time: 0
+- :test: test_4_4_eCurrentSensorsBackfacetAlarmRun_HpaError_Success
+  :line: 131
+  :message: ''
+  :unity_test_time: 0
+- :test: test_4_5_eCurrentSensorsBackfacetAlarmRun_HpaAndLnaError_Success
+  :line: 152
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 5
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.36045309999462916

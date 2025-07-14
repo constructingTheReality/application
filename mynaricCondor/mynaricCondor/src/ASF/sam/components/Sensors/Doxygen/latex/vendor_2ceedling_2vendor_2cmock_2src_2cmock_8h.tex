@@ -1,0 +1,230 @@
+\doxysection{Unit\+Test\+Framework/vendor/ceedling/vendor/cmock/src/cmock.h File Reference}
+\hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h}{}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h}\index{UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.h@{UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.h}}
+{\ttfamily \#include "{}cmock\+\_\+internals.\+h"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for cmock.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{CMOCK\+\_\+\+VERSION\+\_\+\+MAJOR}}~2
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{CMOCK\+\_\+\+VERSION\+\_\+\+MINOR}}~5
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{CMOCK\+\_\+\+VERSION\+\_\+\+BUILD}}~4
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a9f86cafc77b75d1f944968d7cffc4628}{CMOCK\+\_\+\+VERSION}}~((\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{CMOCK\+\_\+\+VERSION\+\_\+\+MAJOR}} $<$$<$ 16) \texorpdfstring{$\vert$}{|} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{CMOCK\+\_\+\+VERSION\+\_\+\+MINOR}} $<$$<$ 8) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{CMOCK\+\_\+\+VERSION\+\_\+\+BUILD}})
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}~size\+\_\+t
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\+\_\+\+GUTS\+\_\+\+NONE}}~(0)
+\item 
+\#define \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(a)~/\texorpdfstring{$\ast$}{*} ignore \texorpdfstring{$\ast$}{*}/
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a70143d967ec301bbce3efb6b59a90e5e}{CMock\+\_\+\+Guts\+\_\+\+Mem\+New}} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} size)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a15d51ffb4affbacc256f9569f46b7371}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Chain}} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} root\+\_\+index, \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} obj\+\_\+index)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_adaf54414b5da37d4bc7b513cb95c796f}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Next}} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} previous\+\_\+item\+\_\+index) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(pure)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2}{CMock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain}} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} root\+\_\+index) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(pure)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a673352e5980e14be44748a3c3cdbb121}{CMock\+\_\+\+Guts\+\_\+\+Get\+Address\+For}} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} index) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(pure)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2bbad52fb9fe073084b72cd4ab285895}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity}} (void) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(const)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a35f545e26035f08a3b157b63716d1cba}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free}} (void) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(pure)
+\item 
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_abae018795510cea82cf43da53bb701e6}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used}} (void) \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}{CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR}}(pure)
+\item 
+void \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a348bc07d37efc57ac52128cd99ee7c72}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All}} (void)
+\item 
+void \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa8a20fa157f61e9e1379170847287cc9}{CMock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a11c266b156e7f66efe80277ad956a152} 
+\index{cmock.h@{cmock.h}!CMOCK\_FUNCTION\_ATTR@{CMOCK\_FUNCTION\_ATTR}}
+\index{CMOCK\_FUNCTION\_ATTR@{CMOCK\_FUNCTION\_ATTR}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_FUNCTION\_ATTR}{CMOCK\_FUNCTION\_ATTR}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+FUNCTION\+\_\+\+ATTR(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~/\texorpdfstring{$\ast$}{*} ignore \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00028}{28}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a69da4d21581a8e97542a164b7d28b30a}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a69da4d21581a8e97542a164b7d28b30a} 
+\index{cmock.h@{cmock.h}!CMOCK\_GUTS\_NONE@{CMOCK\_GUTS\_NONE}}
+\index{CMOCK\_GUTS\_NONE@{CMOCK\_GUTS\_NONE}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_GUTS\_NONE}{CMOCK\_GUTS\_NONE}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+GUTS\+\_\+\+NONE~(0)}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00023}{23}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041} 
+\index{cmock.h@{cmock.h}!CMOCK\_MEM\_INDEX\_TYPE@{CMOCK\_MEM\_INDEX\_TYPE}}
+\index{CMOCK\_MEM\_INDEX\_TYPE@{CMOCK\_MEM\_INDEX\_TYPE}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_INDEX\_TYPE}{CMOCK\_MEM\_INDEX\_TYPE}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE~size\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00020}{20}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a9f86cafc77b75d1f944968d7cffc4628}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a9f86cafc77b75d1f944968d7cffc4628} 
+\index{cmock.h@{cmock.h}!CMOCK\_VERSION@{CMOCK\_VERSION}}
+\index{CMOCK\_VERSION@{CMOCK\_VERSION}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_VERSION}{CMOCK\_VERSION}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+VERSION~((\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{CMOCK\+\_\+\+VERSION\+\_\+\+MAJOR}} $<$$<$ 16) \texorpdfstring{$\vert$}{|} (\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{CMOCK\+\_\+\+VERSION\+\_\+\+MINOR}} $<$$<$ 8) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{CMOCK\+\_\+\+VERSION\+\_\+\+BUILD}})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00015}{15}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_ae263da631f6c5db5c9d6dbf4271be365} 
+\index{cmock.h@{cmock.h}!CMOCK\_VERSION\_BUILD@{CMOCK\_VERSION\_BUILD}}
+\index{CMOCK\_VERSION\_BUILD@{CMOCK\_VERSION\_BUILD}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_VERSION\_BUILD}{CMOCK\_VERSION\_BUILD}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+VERSION\+\_\+\+BUILD~4}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00014}{14}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf} 
+\index{cmock.h@{cmock.h}!CMOCK\_VERSION\_MAJOR@{CMOCK\_VERSION\_MAJOR}}
+\index{CMOCK\_VERSION\_MAJOR@{CMOCK\_VERSION\_MAJOR}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_VERSION\_MAJOR}{CMOCK\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+VERSION\+\_\+\+MAJOR~2}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00012}{12}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52} 
+\index{cmock.h@{cmock.h}!CMOCK\_VERSION\_MINOR@{CMOCK\_VERSION\_MINOR}}
+\index{CMOCK\_VERSION\_MINOR@{CMOCK\_VERSION\_MINOR}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_VERSION\_MINOR}{CMOCK\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define CMOCK\+\_\+\+VERSION\+\_\+\+MINOR~5}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source_l00013}{13}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_source}{cmock.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a673352e5980e14be44748a3c3cdbb121}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a673352e5980e14be44748a3c3cdbb121} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_GetAddressFor@{CMock\_Guts\_GetAddressFor}}
+\index{CMock\_Guts\_GetAddressFor@{CMock\_Guts\_GetAddressFor}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_GetAddressFor()}{CMock\_Guts\_GetAddressFor()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} CMock\+\_\+\+Guts\+\_\+\+Get\+Address\+For (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00158}{158}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2bbad52fb9fe073084b72cd4ab285895}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2bbad52fb9fe073084b72cd4ab285895} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemBytesCapacity@{CMock\_Guts\_MemBytesCapacity}}
+\index{CMock\_Guts\_MemBytesCapacity@{CMock\_Guts\_MemBytesCapacity}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemBytesCapacity()}{CMock\_Guts\_MemBytesCapacity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a35f545e26035f08a3b157b63716d1cba}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a35f545e26035f08a3b157b63716d1cba} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemBytesFree@{CMock\_Guts\_MemBytesFree}}
+\index{CMock\_Guts\_MemBytesFree@{CMock\_Guts\_MemBytesFree}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemBytesFree()}{CMock\_Guts\_MemBytesFree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00181}{181}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_abae018795510cea82cf43da53bb701e6}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_abae018795510cea82cf43da53bb701e6} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemBytesUsed@{CMock\_Guts\_MemBytesUsed}}
+\index{CMock\_Guts\_MemBytesUsed@{CMock\_Guts\_MemBytesUsed}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemBytesUsed()}{CMock\_Guts\_MemBytesUsed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00189}{189}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a15d51ffb4affbacc256f9569f46b7371}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a15d51ffb4affbacc256f9569f46b7371} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemChain@{CMock\_Guts\_MemChain}}
+\index{CMock\_Guts\_MemChain@{CMock\_Guts\_MemChain}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemChain()}{CMock\_Guts\_MemChain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{root\+\_\+index,  }\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{obj\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00074}{74}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemEndOfChain@{CMock\_Guts\_MemEndOfChain}}
+\index{CMock\_Guts\_MemEndOfChain@{CMock\_Guts\_MemEndOfChain}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemEndOfChain()}{CMock\_Guts\_MemEndOfChain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{root\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00140}{140}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a348bc07d37efc57ac52128cd99ee7c72}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a348bc07d37efc57ac52128cd99ee7c72} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemFreeAll@{CMock\_Guts\_MemFreeAll}}
+\index{CMock\_Guts\_MemFreeAll@{CMock\_Guts\_MemFreeAll}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemFreeAll()}{CMock\_Guts\_MemFreeAll()}}
+{\footnotesize\ttfamily void CMock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00197}{197}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa8a20fa157f61e9e1379170847287cc9}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aa8a20fa157f61e9e1379170847287cc9} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemFreeFinal@{CMock\_Guts\_MemFreeFinal}}
+\index{CMock\_Guts\_MemFreeFinal@{CMock\_Guts\_MemFreeFinal}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemFreeFinal()}{CMock\_Guts\_MemFreeFinal()}}
+{\footnotesize\ttfamily void CMock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00205}{205}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a70143d967ec301bbce3efb6b59a90e5e}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_a70143d967ec301bbce3efb6b59a90e5e} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemNew@{CMock\_Guts\_MemNew}}
+\index{CMock\_Guts\_MemNew@{CMock\_Guts\_MemNew}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemNew()}{CMock\_Guts\_MemNew()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00036}{36}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_adaf54414b5da37d4bc7b513cb95c796f}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_adaf54414b5da37d4bc7b513cb95c796f} 
+\index{cmock.h@{cmock.h}!CMock\_Guts\_MemNext@{CMock\_Guts\_MemNext}}
+\index{CMock\_Guts\_MemNext@{CMock\_Guts\_MemNext}!cmock.h@{cmock.h}}
+\doxysubsubsection{\texorpdfstring{CMock\_Guts\_MemNext()}{CMock\_Guts\_MemNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}} CMock\+\_\+\+Guts\+\_\+\+Mem\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}}]{previous\+\_\+item\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source_l00118}{118}} of file \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock_8c_source}{cmock.\+c}}.
+

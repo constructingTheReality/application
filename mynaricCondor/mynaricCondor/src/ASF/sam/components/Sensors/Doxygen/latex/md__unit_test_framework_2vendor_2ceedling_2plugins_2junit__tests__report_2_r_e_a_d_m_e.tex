@@ -1,0 +1,27 @@
+\chapter{junit\+\_\+tests\+\_\+report}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e}{}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e}\index{junit\_tests\_report@{junit\_tests\_report}}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md61}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md61}
+The junit\+\_\+tests\+\_\+report plugin creates an XML file of test results in JUnit format, which is handy for Continuous Integration build servers or as input into other reporting tools. The XML file is output to the appropriate {\ttfamily \texorpdfstring{$<$}{<}build\+\_\+root\texorpdfstring{$>$}{>}/artifacts/} directory (e.\+g. {\ttfamily artifacts/test/} for test tasks, {\ttfamily artifacts/gcov/} for gcov, or {\ttfamily artifacts/bullseye/} for bullseye runs).\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md62}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md62}
+Enable the plugin in your project.\+yml by adding {\ttfamily junit\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ junit\_tests\_report}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md63}{}\doxysection{\texorpdfstring{Configuration}{Configuration}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2junit__tests__report_2_r_e_a_d_m_e_autotoc_md63}
+Optionally configure the output / artifact filename in your project.\+yml with the {\ttfamily artifact\+\_\+filename} configuration option. The default filename is {\ttfamily report.\+xml}.
+
+You can also configure the path that this artifact is stored. This can be done by setting {\ttfamily path}. The default is that it will be placed in a subfolder under the {\ttfamily build} directory.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:junit\_tests\_report:}
+\DoxyCodeLine{\ \ :artifact\_filename:\ report\_junit.xml}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,151 @@
+\doxysection{fake\+Source\+File.\+c}
+\hypertarget{fake_source_file_8c_source}{}\label{fake_source_file_8c_source}\mbox{\hyperlink{fake_source_file_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00002}00002\ \textcolor{comment}{\ *\ powerSensorsConfigUpdate.c}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00004}00004\ \textcolor{comment}{\ *\ Created:\ 6/12/2024\ 10:46:01\ AM}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00005}00005\ \textcolor{comment}{\ *\ \ Author:\ j.castano}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00006}00006\ \textcolor{comment}{\ */}\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00007}00007\ \textcolor{comment}{//\#include\ "{}powerSensorsConfigUpdate.h"{}}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_current_sensing_8h}{CurrentSensing.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fake_source_file_8h}{fakeSourceFile.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00011}00011\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00012}\mbox{\hyperlink{fake_source_file_8c_a04126d70b92f32e58b8e91ff89dc05bd}{00012}}\ eMpbError\_t\ \mbox{\hyperlink{fake_source_file_8c_a04126d70b92f32e58b8e91ff89dc05bd}{ePowerSensorsConfigUpdateCommon}}(\mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}}\ *\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}})}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00014}00014\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ xCommonControlParameters\_t\ *pxCommonControlParameters;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ pxCommonControlParameters\ =\ \mbox{\hyperlink{build_2test_2mocks_2mock__laser_data_8c_ad6a5fa3ee2c4cfdaeb42ada068072dee}{vGetpxCommonControlParameters}}();}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternal\_PdReference].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ =\ pxCommonControlParameters-\/>xInputScalingCommonControlExternalAdc.xExternalPdReference.fIntercept\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternal\_PdReference].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ =\ pxCommonControlParameters-\/>xInputScalingCommonControlExternalAdc.xExternalPdReference.fSlope\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternal\_PdReference1].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ =\ pxCommonControlParameters-\/>xInputScalingCommonControlExternalAdc.xExternalPdReference1.fIntercept\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternal\_PdReference1].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ =\ pxCommonControlParameters-\/>xInputScalingCommonControlExternalAdc.xExternalPdReference1.fSlope\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00034}00034\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00035}\mbox{\hyperlink{fake_source_file_8c_a91754bb1244a14141384990d029b085a}{00035}}\ eMpbError\_t\ \mbox{\hyperlink{fake_source_file_8c_a91754bb1244a14141384990d029b085a}{ePowerSensorsConfigUpdateLna}}(\mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}}\ *\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}})}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00037}00037\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ xLnaParameters\_t\ *pxLnaParameters;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ pxLnaParameters\ =\ \mbox{\hyperlink{build_2test_2mocks_2mock__laser_data_8c_a8d710388e55b44e04f911e6d240a502e}{vGetpxLnaParameters}}();}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaInputPower\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaInputPower\_1536.fIntercept\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaInputPower\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaInputPower\_1536.fSlope\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaInputPower\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaInputPower\_1553.fIntercept\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaInputPower\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaInputPower\_1553.fSlope\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaOutputPower1\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaOutputPower1\_1536.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaOutputPower1\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaOutputPower1\_1536.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xLocalPowerInputScaling[eExternalLnaOutputPower1\_1553].fIntercept\ =\ pxLnaParameters-\/>xInputScalingLnaExternalAdc.xExternalLnaOutputPower1\_1553.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xLocalPowerInputScaling[eExternalLnaOutputPower1\_1553].fSlope\ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaExternalAdc.xExternalLnaOutputPower1\_1553.fSlope;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaOutputPower2\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaOutputPower2\_1553.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalLnaOutputPower2\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaOutputPower2\_1553.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xLocalPowerInputScaling[eExternalLnaBackFacet].fIntercept\ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaSm\_ld\_Bfm.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xLocalPowerInputScaling[eExternalLnaBackFacet].fSlope\ \ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaSm\_ld\_Bfm.fSlope;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ internal\ }}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalLnaOutputPower1].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalLnaOutputPower1.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalLnaOutputPower1].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalLnaOutputPower1.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalLnaOutputPower2].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalLnaOutputPower2.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalLnaOutputPower2].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalLnaOutputPower2.fSlope\ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalPdReference].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ \ \ \ \ \ =\ \ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalPdReference.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eInternalPdReference].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxLnaParameters-\/>xInputScalingLnaAdc.xInternalPdReference.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00084}00084\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00085}\mbox{\hyperlink{fake_source_file_8c_aa1cbba11c4cc25e0d37faad019f82b90}{00085}}\ eMpbError\_t\ \mbox{\hyperlink{fake_source_file_8c_aa1cbba11c4cc25e0d37faad019f82b90}{ePowerSensorsConfigUpdateBooster}}(\mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}}\ *\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ xHpaLimitsConfig\_t\ *pxHpaLimitsConfig,\ xHpaPowersConfig\_t\ *pxHpaPowersConfig,\ xLosValues\_t\ *pxLosValues)}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00086}00086\ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00087}00087\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00088}00088\ \ \ \ \ eBool\_t\ bValidPointers\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00089}00089\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00090}00090\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00091}00091\ \ \ \ \ bValidPointers\ =\ ((\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}\ !=\ NULL)\ \&\&\ (pxHpaLimitsConfig\ !=\ NULL)\ \&\&\ (pxHpaPowersConfig\ !=\ NULL)\ \&\&\ (pxLosValues!=\ NULL)\ );}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{if}(bValidPointers\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ xBoosterParameters\_t\ *pxBoosterParameters;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ pxBoosterParameters\ =\ \mbox{\hyperlink{build_2test_2mocks_2mock__laser_data_8c_afc0c707e993b28911685043ab06302cc}{vGetpxBoosterParameters}}(\ );}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaInputPower\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaInputPower\_1536.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaInputPower\_1536].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaInputPower\_1536.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaInputPower\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaInputPower\_1553.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaInputPower\_1553].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaInputPower\_1553.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1536\_lm].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1536\_lm.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1536\_lm].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1536\_lm.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1536\_hm].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1536\_hm.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1536\_hm].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1536\_hm.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1553\_lm].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1553\_lm.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1553\_lm].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1553\_lm.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1553\_hm].\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}}\ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1553\_hm.fIntercept;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}[eExternalHpaOutputPower\_1553\_hm].\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}}\ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaOutputPower\_1553\_hm.fSlope;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xPowerInputScalingExternalHpaSm\_ld\_Bfm.fIntercept\ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaSm\_ld\_Bfm.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{//xPowerInputScalingExternalHpaSm\_ld\_Bfm.fSlope\ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaSm\_ld\_Bfm.fSlope;}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ pxLosValues-\/>fLosClear\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xLosHpaValues.fLosClear;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ pxLosValues-\/>fLosSet\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ pxBoosterParameters-\/>xLosHpaValues.fLosSet;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMaxHpaCurrentSM\_mA\ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMaxHpaCurrentSM\_mA;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usNominalCurrentPourcentage\_sM\ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usNominalCurrentPourcentage\_sM;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMaxHpaCurrentMM1\_mA\ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMaxHpaCurrentMM1\_mA;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMaxHpaCurrentMM2\_mA\ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMaxHpaCurrentMM2\_mA;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMaxHpaCurrentStageMM1\_mA\ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMaxHpaCurrentStageMM1\_mA;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMaxHpaCurrentStageMM2\_mA\ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMaxHpaCurrentStageMM2\_mA;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMax\_Lh\_level\_raw\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMax\_Lh\_level\_raw\ \ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ pxHpaLimitsConfig-\/>usMin\_Hh\_level\_raw\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaLimitsConfig.usMin\_Hh\_level\_raw\ \ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ pxHpaPowersConfig-\/>fHpaBackFacetMin\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaPowersConfig.fHpaBackFacetMin;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ pxHpaPowersConfig-\/>fHpaBackFacetMax\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxBoosterParameters-\/>xHpaPowersConfig.fHpaBackFacetMax\ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00139}00139\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00140}00140\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_test2_2test__power_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{fake_source_file_8c_source_l00146}00146\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+
+\end{DoxyCode}

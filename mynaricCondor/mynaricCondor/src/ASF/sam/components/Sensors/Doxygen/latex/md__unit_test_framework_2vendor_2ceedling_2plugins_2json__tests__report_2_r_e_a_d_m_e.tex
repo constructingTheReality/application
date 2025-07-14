@@ -1,0 +1,27 @@
+\chapter{json\+\_\+tests\+\_\+report}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e}{}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e}\index{json\_tests\_report@{json\_tests\_report}}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md58}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md58}
+The json\+\_\+tests\+\_\+report plugin creates a JSON file of test results, which is handy for Continuous Integration build servers or as input into other reporting tools. The JSON file is output to the appropriate {\ttfamily \texorpdfstring{$<$}{<}build\+\_\+root\texorpdfstring{$>$}{>}/artifacts/} directory (e.\+g. {\ttfamily artifacts/test/} for test tasks, {\ttfamily artifacts/gcov/} for gcov, or {\ttfamily artifacts/bullseye/} for bullseye runs).\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md59}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md59}
+Enable the plugin in your project.\+yml by adding {\ttfamily json\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ json\_tests\_report}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md60}{}\doxysection{\texorpdfstring{Configuration}{Configuration}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2json__tests__report_2_r_e_a_d_m_e_autotoc_md60}
+Optionally configure the output / artifact filename in your project.\+yml with the {\ttfamily artifact\+\_\+filename} configuration option. The default filename is {\ttfamily report.\+json}.
+
+You can also configure the path that this artifact is stored. This can be done by setting {\ttfamily path}. The default is that it will be placed in a subfolder under the {\ttfamily build} directory.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:json\_tests\_report:}
+\DoxyCodeLine{\ \ :artifact\_filename:\ report\_spectuluarly.json}
+
+\end{DoxyCode}
+ 

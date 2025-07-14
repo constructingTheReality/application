@@ -1,0 +1,1460 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/mocks/mock\+\_\+booster\+State\+Machine.c File Reference}
+\hypertarget{mock__booster_state_machine_8c}{}\label{mock__booster_state_machine_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_boosterStateMachine.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_boosterStateMachine.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include "{}cmock.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+booster\+State\+Machine.\+h"{}}\newline
+Include dependency graph for mock\+\_\+booster\+State\+Machine.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_hpa_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_apc_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_hpa___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_reset_hpa_alarms___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__b_booster_get_stuck_condition___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct {\bfseries mock\+\_\+booster\+State\+Machine\+Instance}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_ad1f8dd2954b0ea2bd7f36e69c0cbc435}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aef655d3b5a911dd6900dd62827f55fa8}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a6246ba1e2c69fd14bb4079a7e5080c92}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a61ccfd1ab8abda1a775222612a9a1374}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_hpa_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a742f70e68acb35d35f5bfd351f358d07}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a76416f4998114452da905ddb1b399479}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_ae3923640e0dbb21b4924e4417dd38b3f}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_apc_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a650469f5e4c4acf7f24baac545eabb3a}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_hpa___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aa648725c1cd2e8406c4d64929bda12e3}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_reset_hpa_alarms___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a68b293253ff1ce1121cb5fcb97d05daf}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__b_booster_get_stuck_condition___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a0d373c447cf6eb4c9a0b2ae13a17d287}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a502b2ca853c1e82091688797c9f9dd36}{mock\+\_\+booster\+State\+Machine\+\_\+\+Verify}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ab5939f24f7bbc1d9701c4f5ab365cc3b}{mock\+\_\+booster\+State\+Machine\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ab4240e694361b84d7f27f8154863d1d9}{mock\+\_\+booster\+State\+Machine\+\_\+\+Destroy}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a5b63ca09901cfc1cac51abdc50ed0d20}{e\+Booster\+Loop\+State\+Disable\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae8a5811eb3b722fa1efdc3e05ed388d4}{e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aa8c89640d1db6eb85ef6a3122651e86b}{e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aae5fd5cbb7849d768fe48ee95edcd8e5}{e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a6f3f7d00f9256b9f1b9cd08be26dea27}{e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a51aabc43f5140d9b8e4891457da5cce5}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a8165b82032e38de49a1b4cbcfc4616fe}{e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a51aabc43f5140d9b8e4891457da5cce5}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a388ffd642304eb4539f685ab24110384}{e\+Booster\+Loop\+State\+Standby\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a0dc40defa863622681894754abe390b0}{e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a47f9c3758ce0f232aa6d1a0481489832}{e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a2cda492d9606a4f7d31b857430a40db2}{e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_accb6131bdf9787f4bf6049223fd7fc6d}{e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a26d2e485b48997d3ed9fae3982ba3690}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a6cc568e00d160f525533584a89dcf332}{e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a26d2e485b48997d3ed9fae3982ba3690}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_afd95162b336c62771b95ee7dac61f0cd}{e\+Booster\+Loop\+State\+Apc\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a0972a40d660f55f07dab789aa87ed318}{e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae161ed31e6274bebd34028d5a9f960ac}{e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae5b9e3b32be3f231175e082b911cff36}{e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a0fd7444b90590c2c7da9ded16bbbc2af}{e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_aa8757840cee74f444ba4d8a199313346}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a67397d448f8cb2f5d0c065911c87302f}{e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_aa8757840cee74f444ba4d8a199313346}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a84b7af36c891fcaaec84476a0e0027e7}{e\+Booster\+Loop\+State\+Acc\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a9f2f8db43ee9ff34a2b0cd0f14b7bb9e}{e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_af8efaf98785be9432402364843e5ae7a}{e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a14f50012b8595989d4e4789fa187404e}{e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a46f77cecdaf83d403e5721428a327385}{e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_af95171e312b30a5db6916613e469f09a}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ac3aaa08094b0269e6398a50555f6ab72}{e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_af95171e312b30a5db6916613e469f09a}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ad871052e9b70c459a91d77b2710ffd98}{v\+Hpa\+Critical\+Error\+Detected}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a4b0a8b44e5f576fa79bb6ccf55f946ba}{v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a235fc3f6a7b85493110d2316dad0491a}{v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aa1c1e1e90ce3d823398cab79e328f52d}{v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ab3afe6ef2159d74b7ece7d85494a22d8}{v\+Hpa\+Critical\+Error\+Detected\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_add20cdabd4129fa899bb92b75aece34d}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ab768e6b92570d60cfa4048c675860b04}{v\+Hpa\+Critical\+Error\+Detected\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_add20cdabd4129fa899bb92b75aece34d}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_afdddb15563ae660d95b205b975af06ac}{v\+Booster\+State\+Machine\+Init}} (x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}px\+Laser\+Beam\+Descriptor)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_afcc670e641ba3bee3ba5a69be08e2513}{CMock\+Expect\+Parameters\+\_\+v\+Booster\+State\+Machine\+Init}} (\mbox{\hyperlink{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \texorpdfstring{$\ast$}{*}cmock\+\_\+call\+\_\+instance, x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}px\+Laser\+Beam\+Descriptor, int px\+Laser\+Beam\+Descriptor\+\_\+\+Depth)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae22e4ac14302665c5976bd514d2943d2}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a887a3368b13b6897a443c6db1b4f5d1d}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a55923f6d57eb45713ae4f667a7014939}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect\+Any\+Args}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a71f4c511f40e56bfc3ecbb7557a265ba}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}px\+Laser\+Beam\+Descriptor)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a348146657ea33440ea4d881cbbe9b6ea}{v\+Booster\+State\+Machine\+Init\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_aa51f80480a9ccc3d3aa47cc8c941d3f1}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a626fb1374eb1f0d9aad2ebd5caf1ea82}{v\+Booster\+State\+Machine\+Init\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_aa51f80480a9ccc3d3aa47cc8c941d3f1}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a8ec3a82698d975bfb606d034de62693d}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect\+With\+Array}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}px\+Laser\+Beam\+Descriptor, int px\+Laser\+Beam\+Descriptor\+\_\+\+Depth)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a5b44e29bc0f0471a9cbab7b84066e8a9}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Laser\+Beam\+Descriptor}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}px\+Laser\+Beam\+Descriptor, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a614c56a75408a03d6d4644d7baea2355}{v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Laser\+Beam\+Descriptor}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a1d1d28fe510374c4d72a9e7242ff0fe0}{v\+Booster\+State\+Machine\+Update}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ad7d5fd90e8fc19cb4a52baf8a220f62f}{v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a8e1e486e7d7b819e4254c880357c254a}{v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a4eff82e1e9abecbc0f248c17c1811670}{v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a4eee0268322b62672f02d03778128e2a}{v\+Booster\+State\+Machine\+Update\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_af9307502a892aee5923a82313884b6ba}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a39cf8a9d8f0751fcee1bf417ec09806d}{v\+Booster\+State\+Machine\+Update\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_af9307502a892aee5923a82313884b6ba}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALLBACK}} Callback)
+\item 
+e\+Booster\+State\+\_\+t \mbox{\hyperlink{mock__booster_state_machine_8c_a3477291c2acdfbc1e122738a00a749d9}{e\+Booster\+Report\+State}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a12a05cbb7c2d475948f678b2f6bab8d7}{e\+Booster\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Booster\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a0f9e81a4be357812d1454a0a627ac0fc}{e\+Booster\+Report\+State\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a60f57def095c060bc8dab8b7a2df5531}{e\+Booster\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Booster\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ad0ce460cdb7739d7bfe956ff58398163}{e\+Booster\+Report\+State\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_afa70930cca9f01048a7867aecdbe1261}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a463ab62582a141c75055ffd716260dc8}{e\+Booster\+Report\+State\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_afa70930cca9f01048a7867aecdbe1261}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+e\+Hpa\+Apc\+State\+\_\+t \mbox{\hyperlink{mock__booster_state_machine_8c_ae06b6aad979c0f326c9888b3d6a7b1ae}{e\+Booster\+Apc\+Report\+State}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aa03be753771aebb96cc46735f334bb6a}{e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Hpa\+Apc\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae6eadd793d1534280719c63e2f21ecdc}{e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a4cf75d8b86d5197a4cabc80d3828c166}{e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Hpa\+Apc\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a03d066ee54420d4411225e36f540f89d}{e\+Booster\+Apc\+Report\+State\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a68d2b2c0cda06e7c3e8629c53fdb9287}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_ae7493b0a24ebf9b580b975f58bdf9147}{e\+Booster\+Apc\+Report\+State\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a68d2b2c0cda06e7c3e8629c53fdb9287}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a7101400f86ad2f1b1e4dc7b4ad7bc88c}{v\+Set\+Disable\+Hpa}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a1a87d1667de3163d881fc361cca3deb1}{v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a5d8ca3520ae246efec04cb7b43dcb018}{v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a498201f7fdb99318f7f1effe29f3646e}{v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a1c457f7a3202c56af0c7a4dd9962b3cc}{v\+Set\+Disable\+Hpa\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a461a473392e28b3f7a631b00e79ba536}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a5554bae6b87de8276e746460d70f19e5}{v\+Set\+Disable\+Hpa\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a461a473392e28b3f7a631b00e79ba536}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a401f15d383dfc09eb96fcb8b3d3b402e}{v\+Reset\+Hpa\+Alarms}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a47462c3dcb24033aa5707cb7412b9b7c}{v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aa7e9ff2c13857af60f5f1eba025a4cd5}{v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_aa50b1b13668d21423886c35114e1307a}{v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a9285a52c8aece9ed2edba302dbdf4c78}{v\+Reset\+Hpa\+Alarms\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a9c15848c8213f8e229697f809c93e228}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a3d90b568221ade5ecc3a33b97f260158}{v\+Reset\+Hpa\+Alarms\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_a9c15848c8213f8e229697f809c93e228}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALLBACK}} Callback)
+\item 
+e\+Bool\+\_\+t \mbox{\hyperlink{mock__booster_state_machine_8c_a74753540a72376f8c4efd12e95f97146}{b\+Booster\+Get\+Stuck\+Condition}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_abf8992c03f7a264c5123d83213f7b3d3}{b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Bool\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a1ed7518ac7eb35fbb4f48a37c6d842c5}{b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a25c7ae8c85e96f2668282487ca4b81cd}{b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Bool\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a7c8603b5be8261bb818ef79e970ffe12}{b\+Booster\+Get\+Stuck\+Condition\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__booster_state_machine_8h_ad1f8f89bbb5ad420e25b8b364b45166f}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__booster_state_machine_8c_a0ec0923631e4ff48fe6d28ee9a9b5f62}{b\+Booster\+Get\+Stuck\+Condition\+\_\+\+Stub}} (\mbox{\hyperlink{mock__booster_state_machine_8h_ad1f8f89bbb5ad420e25b8b364b45166f}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALLBACK}} Callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+jmp\+\_\+buf \mbox{\hyperlink{mock__booster_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5}{Abort\+Frame}}
+\item 
+int \mbox{\hyperlink{mock__booster_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b}{Global\+Expect\+Count}}
+\item 
+int \mbox{\hyperlink{mock__booster_state_machine_8c_ac2b7788e16200424c9d7090905c05330}{Global\+Verify\+Order}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mock__booster_state_machine_8c_a0d373c447cf6eb4c9a0b2ae13a17d287}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE@{CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE}}
+\index{CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE@{CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE}{CMOCK\_bBoosterGetStuckCondition\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0d373c447cf6eb4c9a0b2ae13a17d287} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__b_booster_get_stuck_condition___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a0d373c447cf6eb4c9a0b2ae13a17d287}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a650469f5e4c4acf7f24baac545eabb3a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE@{CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE@{CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE}{CMOCK\_eBoosterApcReportState\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a650469f5e4c4acf7f24baac545eabb3a} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_apc_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a650469f5e4c4acf7f24baac545eabb3a}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a61ccfd1ab8abda1a775222612a9a1374}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE}{CMOCK\_eBoosterLoopStateAccFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a61ccfd1ab8abda1a775222612a9a1374} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a61ccfd1ab8abda1a775222612a9a1374}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a6246ba1e2c69fd14bb4079a7e5080c92}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE}{CMOCK\_eBoosterLoopStateApcFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a6246ba1e2c69fd14bb4079a7e5080c92} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a6246ba1e2c69fd14bb4079a7e5080c92}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_ad1f8dd2954b0ea2bd7f36e69c0cbc435}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE}{CMOCK\_eBoosterLoopStateDisableFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ad1f8dd2954b0ea2bd7f36e69c0cbc435} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_ad1f8dd2954b0ea2bd7f36e69c0cbc435}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_aef655d3b5a911dd6900dd62827f55fa8}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE@{CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE}{CMOCK\_eBoosterLoopStateStandbyFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aef655d3b5a911dd6900dd62827f55fa8} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aef655d3b5a911dd6900dd62827f55fa8}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_ae3923640e0dbb21b4924e4417dd38b3f}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_eBoosterReportState\_CALL\_INSTANCE@{CMOCK\_eBoosterReportState\_CALL\_INSTANCE}}
+\index{CMOCK\_eBoosterReportState\_CALL\_INSTANCE@{CMOCK\_eBoosterReportState\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eBoosterReportState\_CALL\_INSTANCE}{CMOCK\_eBoosterReportState\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae3923640e0dbb21b4924e4417dd38b3f} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_booster_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_ae3923640e0dbb21b4924e4417dd38b3f}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE@{CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE}}
+\index{CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE@{CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE}{CMOCK\_vBoosterStateMachineInit\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a76416f4998114452da905ddb1b399479}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE@{CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE}}
+\index{CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE@{CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE}{CMOCK\_vBoosterStateMachineUpdate\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a76416f4998114452da905ddb1b399479} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_booster_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a76416f4998114452da905ddb1b399479}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a742f70e68acb35d35f5bfd351f358d07}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE@{CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE}}
+\index{CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE@{CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE}{CMOCK\_vHpaCriticalErrorDetected\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a742f70e68acb35d35f5bfd351f358d07} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_hpa_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a742f70e68acb35d35f5bfd351f358d07}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_a68b293253ff1ce1121cb5fcb97d05daf}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE@{CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE}}
+\index{CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE@{CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE}{CMOCK\_vResetHpaAlarms\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a68b293253ff1ce1121cb5fcb97d05daf} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_reset_hpa_alarms___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_a68b293253ff1ce1121cb5fcb97d05daf}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__booster_state_machine_8c_aa648725c1cd2e8406c4d64929bda12e3}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMOCK\_vSetDisableHpa\_CALL\_INSTANCE@{CMOCK\_vSetDisableHpa\_CALL\_INSTANCE}}
+\index{CMOCK\_vSetDisableHpa\_CALL\_INSTANCE@{CMOCK\_vSetDisableHpa\_CALL\_INSTANCE}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vSetDisableHpa\_CALL\_INSTANCE}{CMOCK\_vSetDisableHpa\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa648725c1cd2e8406c4d64929bda12e3} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_hpa___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__booster_state_machine_8c_aa648725c1cd2e8406c4d64929bda12e3}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mock__booster_state_machine_8c_a74753540a72376f8c4efd12e95f97146}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition@{bBoosterGetStuckCondition}}
+\index{bBoosterGetStuckCondition@{bBoosterGetStuckCondition}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition()}{bBoosterGetStuckCondition()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a74753540a72376f8c4efd12e95f97146} 
+e\+Bool\+\_\+t b\+Booster\+Get\+Stuck\+Condition (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01239}{1239}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a74753540a72376f8c4efd12e95f97146_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a7c8603b5be8261bb818ef79e970ffe12}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition\_AddCallback@{bBoosterGetStuckCondition\_AddCallback}}
+\index{bBoosterGetStuckCondition\_AddCallback@{bBoosterGetStuckCondition\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition\_AddCallback()}{bBoosterGetStuckCondition\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a7c8603b5be8261bb818ef79e970ffe12} 
+void b\+Booster\+Get\+Stuck\+Condition\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_ad1f8f89bbb5ad420e25b8b364b45166f}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01312}{1312}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a25c7ae8c85e96f2668282487ca4b81cd}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition\_CMockExpectAndReturn@{bBoosterGetStuckCondition\_CMockExpectAndReturn}}
+\index{bBoosterGetStuckCondition\_CMockExpectAndReturn@{bBoosterGetStuckCondition\_CMockExpectAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition\_CMockExpectAndReturn()}{bBoosterGetStuckCondition\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a25c7ae8c85e96f2668282487ca4b81cd} 
+void b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Bool\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01297}{1297}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a25c7ae8c85e96f2668282487ca4b81cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_abf8992c03f7a264c5123d83213f7b3d3}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition\_CMockIgnoreAndReturn@{bBoosterGetStuckCondition\_CMockIgnoreAndReturn}}
+\index{bBoosterGetStuckCondition\_CMockIgnoreAndReturn@{bBoosterGetStuckCondition\_CMockIgnoreAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition\_CMockIgnoreAndReturn()}{bBoosterGetStuckCondition\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_abf8992c03f7a264c5123d83213f7b3d3} 
+void b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Bool\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01276}{1276}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_abf8992c03f7a264c5123d83213f7b3d3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a1ed7518ac7eb35fbb4f48a37c6d842c5}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition\_CMockStopIgnore@{bBoosterGetStuckCondition\_CMockStopIgnore}}
+\index{bBoosterGetStuckCondition\_CMockStopIgnore@{bBoosterGetStuckCondition\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition\_CMockStopIgnore()}{bBoosterGetStuckCondition\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a1ed7518ac7eb35fbb4f48a37c6d842c5} 
+void b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01290}{1290}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a1ed7518ac7eb35fbb4f48a37c6d842c5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a0ec0923631e4ff48fe6d28ee9a9b5f62}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!bBoosterGetStuckCondition\_Stub@{bBoosterGetStuckCondition\_Stub}}
+\index{bBoosterGetStuckCondition\_Stub@{bBoosterGetStuckCondition\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{bBoosterGetStuckCondition\_Stub()}{bBoosterGetStuckCondition\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0ec0923631e4ff48fe6d28ee9a9b5f62} 
+void b\+Booster\+Get\+Stuck\+Condition\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_ad1f8f89bbb5ad420e25b8b364b45166f}{CMOCK\+\_\+b\+Booster\+Get\+Stuck\+Condition\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01319}{1319}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_afcc670e641ba3bee3ba5a69be08e2513}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!CMockExpectParameters\_vBoosterStateMachineInit@{CMockExpectParameters\_vBoosterStateMachineInit}}
+\index{CMockExpectParameters\_vBoosterStateMachineInit@{CMockExpectParameters\_vBoosterStateMachineInit}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMockExpectParameters\_vBoosterStateMachineInit()}{CMockExpectParameters\_vBoosterStateMachineInit()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_afcc670e641ba3bee3ba5a69be08e2513} 
+void CMock\+Expect\+Parameters\+\_\+v\+Booster\+State\+Machine\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8c_aafb9a2d887c1ef3b337cd7c85cf06b0a}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \texorpdfstring{$\ast$}{*}}]{cmock\+\_\+call\+\_\+instance}{, }\item[{x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Laser\+Beam\+Descriptor}{, }\item[{int}]{px\+Laser\+Beam\+Descriptor\+\_\+\+Depth}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00768}{768}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_afcc670e641ba3bee3ba5a69be08e2513_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ae06b6aad979c0f326c9888b3d6a7b1ae}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState@{eBoosterApcReportState}}
+\index{eBoosterApcReportState@{eBoosterApcReportState}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState()}{eBoosterApcReportState()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae06b6aad979c0f326c9888b3d6a7b1ae} 
+e\+Hpa\+Apc\+State\+\_\+t e\+Booster\+Apc\+Report\+State (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01014}{1014}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ae06b6aad979c0f326c9888b3d6a7b1ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a03d066ee54420d4411225e36f540f89d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState\_AddCallback@{eBoosterApcReportState\_AddCallback}}
+\index{eBoosterApcReportState\_AddCallback@{eBoosterApcReportState\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState\_AddCallback()}{eBoosterApcReportState\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a03d066ee54420d4411225e36f540f89d} 
+void e\+Booster\+Apc\+Report\+State\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a68d2b2c0cda06e7c3e8629c53fdb9287}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01087}{1087}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a4cf75d8b86d5197a4cabc80d3828c166}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState\_CMockExpectAndReturn@{eBoosterApcReportState\_CMockExpectAndReturn}}
+\index{eBoosterApcReportState\_CMockExpectAndReturn@{eBoosterApcReportState\_CMockExpectAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState\_CMockExpectAndReturn()}{eBoosterApcReportState\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a4cf75d8b86d5197a4cabc80d3828c166} 
+void e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Hpa\+Apc\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01072}{1072}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a4cf75d8b86d5197a4cabc80d3828c166_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_aa03be753771aebb96cc46735f334bb6a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState\_CMockIgnoreAndReturn@{eBoosterApcReportState\_CMockIgnoreAndReturn}}
+\index{eBoosterApcReportState\_CMockIgnoreAndReturn@{eBoosterApcReportState\_CMockIgnoreAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState\_CMockIgnoreAndReturn()}{eBoosterApcReportState\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa03be753771aebb96cc46735f334bb6a} 
+void e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Hpa\+Apc\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01051}{1051}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_aa03be753771aebb96cc46735f334bb6a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ae6eadd793d1534280719c63e2f21ecdc}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState\_CMockStopIgnore@{eBoosterApcReportState\_CMockStopIgnore}}
+\index{eBoosterApcReportState\_CMockStopIgnore@{eBoosterApcReportState\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState\_CMockStopIgnore()}{eBoosterApcReportState\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae6eadd793d1534280719c63e2f21ecdc} 
+void e\+Booster\+Apc\+Report\+State\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01065}{1065}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ae6eadd793d1534280719c63e2f21ecdc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ae7493b0a24ebf9b580b975f58bdf9147}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterApcReportState\_Stub@{eBoosterApcReportState\_Stub}}
+\index{eBoosterApcReportState\_Stub@{eBoosterApcReportState\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterApcReportState\_Stub()}{eBoosterApcReportState\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae7493b0a24ebf9b580b975f58bdf9147} 
+void e\+Booster\+Apc\+Report\+State\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a68d2b2c0cda06e7c3e8629c53fdb9287}{CMOCK\+\_\+e\+Booster\+Apc\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01094}{1094}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a84b7af36c891fcaaec84476a0e0027e7}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction@{eBoosterLoopStateAccFunction}}
+\index{eBoosterLoopStateAccFunction@{eBoosterLoopStateAccFunction}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction()}{eBoosterLoopStateAccFunction()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a84b7af36c891fcaaec84476a0e0027e7} 
+void e\+Booster\+Loop\+State\+Acc\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00580}{580}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a84b7af36c891fcaaec84476a0e0027e7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a46f77cecdaf83d403e5721428a327385}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction\_AddCallback@{eBoosterLoopStateAccFunction\_AddCallback}}
+\index{eBoosterLoopStateAccFunction\_AddCallback@{eBoosterLoopStateAccFunction\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction\_AddCallback()}{eBoosterLoopStateAccFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a46f77cecdaf83d403e5721428a327385} 
+void e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_af95171e312b30a5db6916613e469f09a}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00635}{635}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a14f50012b8595989d4e4789fa187404e}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction\_CMockExpect@{eBoosterLoopStateAccFunction\_CMockExpect}}
+\index{eBoosterLoopStateAccFunction\_CMockExpect@{eBoosterLoopStateAccFunction\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction\_CMockExpect()}{eBoosterLoopStateAccFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a14f50012b8595989d4e4789fa187404e} 
+void e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00622}{622}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a14f50012b8595989d4e4789fa187404e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a9f2f8db43ee9ff34a2b0cd0f14b7bb9e}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction\_CMockIgnore@{eBoosterLoopStateAccFunction\_CMockIgnore}}
+\index{eBoosterLoopStateAccFunction\_CMockIgnore@{eBoosterLoopStateAccFunction\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction\_CMockIgnore()}{eBoosterLoopStateAccFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a9f2f8db43ee9ff34a2b0cd0f14b7bb9e} 
+void e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00612}{612}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_af8efaf98785be9432402364843e5ae7a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction\_CMockStopIgnore@{eBoosterLoopStateAccFunction\_CMockStopIgnore}}
+\index{eBoosterLoopStateAccFunction\_CMockStopIgnore@{eBoosterLoopStateAccFunction\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction\_CMockStopIgnore()}{eBoosterLoopStateAccFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_af8efaf98785be9432402364843e5ae7a} 
+void e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00617}{617}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ac3aaa08094b0269e6398a50555f6ab72}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateAccFunction\_Stub@{eBoosterLoopStateAccFunction\_Stub}}
+\index{eBoosterLoopStateAccFunction\_Stub@{eBoosterLoopStateAccFunction\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateAccFunction\_Stub()}{eBoosterLoopStateAccFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ac3aaa08094b0269e6398a50555f6ab72} 
+void e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_af95171e312b30a5db6916613e469f09a}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00642}{642}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_afd95162b336c62771b95ee7dac61f0cd}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction@{eBoosterLoopStateApcFunction}}
+\index{eBoosterLoopStateApcFunction@{eBoosterLoopStateApcFunction}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction()}{eBoosterLoopStateApcFunction()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_afd95162b336c62771b95ee7dac61f0cd} 
+void e\+Booster\+Loop\+State\+Apc\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00511}{511}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_afd95162b336c62771b95ee7dac61f0cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a0fd7444b90590c2c7da9ded16bbbc2af}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction\_AddCallback@{eBoosterLoopStateApcFunction\_AddCallback}}
+\index{eBoosterLoopStateApcFunction\_AddCallback@{eBoosterLoopStateApcFunction\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction\_AddCallback()}{eBoosterLoopStateApcFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0fd7444b90590c2c7da9ded16bbbc2af} 
+void e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_aa8757840cee74f444ba4d8a199313346}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00566}{566}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ae5b9e3b32be3f231175e082b911cff36}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction\_CMockExpect@{eBoosterLoopStateApcFunction\_CMockExpect}}
+\index{eBoosterLoopStateApcFunction\_CMockExpect@{eBoosterLoopStateApcFunction\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction\_CMockExpect()}{eBoosterLoopStateApcFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae5b9e3b32be3f231175e082b911cff36} 
+void e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00553}{553}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ae5b9e3b32be3f231175e082b911cff36_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a0972a40d660f55f07dab789aa87ed318}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction\_CMockIgnore@{eBoosterLoopStateApcFunction\_CMockIgnore}}
+\index{eBoosterLoopStateApcFunction\_CMockIgnore@{eBoosterLoopStateApcFunction\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction\_CMockIgnore()}{eBoosterLoopStateApcFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0972a40d660f55f07dab789aa87ed318} 
+void e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00543}{543}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ae161ed31e6274bebd34028d5a9f960ac}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction\_CMockStopIgnore@{eBoosterLoopStateApcFunction\_CMockStopIgnore}}
+\index{eBoosterLoopStateApcFunction\_CMockStopIgnore@{eBoosterLoopStateApcFunction\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction\_CMockStopIgnore()}{eBoosterLoopStateApcFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae161ed31e6274bebd34028d5a9f960ac} 
+void e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00548}{548}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a67397d448f8cb2f5d0c065911c87302f}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateApcFunction\_Stub@{eBoosterLoopStateApcFunction\_Stub}}
+\index{eBoosterLoopStateApcFunction\_Stub@{eBoosterLoopStateApcFunction\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateApcFunction\_Stub()}{eBoosterLoopStateApcFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a67397d448f8cb2f5d0c065911c87302f} 
+void e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_aa8757840cee74f444ba4d8a199313346}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00573}{573}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a5b63ca09901cfc1cac51abdc50ed0d20}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction@{eBoosterLoopStateDisableFunction}}
+\index{eBoosterLoopStateDisableFunction@{eBoosterLoopStateDisableFunction}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction()}{eBoosterLoopStateDisableFunction()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a5b63ca09901cfc1cac51abdc50ed0d20} 
+void e\+Booster\+Loop\+State\+Disable\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00373}{373}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a5b63ca09901cfc1cac51abdc50ed0d20_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a6f3f7d00f9256b9f1b9cd08be26dea27}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction\_AddCallback@{eBoosterLoopStateDisableFunction\_AddCallback}}
+\index{eBoosterLoopStateDisableFunction\_AddCallback@{eBoosterLoopStateDisableFunction\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction\_AddCallback()}{eBoosterLoopStateDisableFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a6f3f7d00f9256b9f1b9cd08be26dea27} 
+void e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a51aabc43f5140d9b8e4891457da5cce5}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00428}{428}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_aae5fd5cbb7849d768fe48ee95edcd8e5}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction\_CMockExpect@{eBoosterLoopStateDisableFunction\_CMockExpect}}
+\index{eBoosterLoopStateDisableFunction\_CMockExpect@{eBoosterLoopStateDisableFunction\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction\_CMockExpect()}{eBoosterLoopStateDisableFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aae5fd5cbb7849d768fe48ee95edcd8e5} 
+void e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00415}{415}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_aae5fd5cbb7849d768fe48ee95edcd8e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ae8a5811eb3b722fa1efdc3e05ed388d4}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction\_CMockIgnore@{eBoosterLoopStateDisableFunction\_CMockIgnore}}
+\index{eBoosterLoopStateDisableFunction\_CMockIgnore@{eBoosterLoopStateDisableFunction\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction\_CMockIgnore()}{eBoosterLoopStateDisableFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae8a5811eb3b722fa1efdc3e05ed388d4} 
+void e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00405}{405}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_aa8c89640d1db6eb85ef6a3122651e86b}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction\_CMockStopIgnore@{eBoosterLoopStateDisableFunction\_CMockStopIgnore}}
+\index{eBoosterLoopStateDisableFunction\_CMockStopIgnore@{eBoosterLoopStateDisableFunction\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction\_CMockStopIgnore()}{eBoosterLoopStateDisableFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa8c89640d1db6eb85ef6a3122651e86b} 
+void e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00410}{410}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a8165b82032e38de49a1b4cbcfc4616fe}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateDisableFunction\_Stub@{eBoosterLoopStateDisableFunction\_Stub}}
+\index{eBoosterLoopStateDisableFunction\_Stub@{eBoosterLoopStateDisableFunction\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateDisableFunction\_Stub()}{eBoosterLoopStateDisableFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a8165b82032e38de49a1b4cbcfc4616fe} 
+void e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a51aabc43f5140d9b8e4891457da5cce5}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00435}{435}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a388ffd642304eb4539f685ab24110384}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction@{eBoosterLoopStateStandbyFunction}}
+\index{eBoosterLoopStateStandbyFunction@{eBoosterLoopStateStandbyFunction}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction()}{eBoosterLoopStateStandbyFunction()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a388ffd642304eb4539f685ab24110384} 
+void e\+Booster\+Loop\+State\+Standby\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00442}{442}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a388ffd642304eb4539f685ab24110384_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_accb6131bdf9787f4bf6049223fd7fc6d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction\_AddCallback@{eBoosterLoopStateStandbyFunction\_AddCallback}}
+\index{eBoosterLoopStateStandbyFunction\_AddCallback@{eBoosterLoopStateStandbyFunction\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction\_AddCallback()}{eBoosterLoopStateStandbyFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_accb6131bdf9787f4bf6049223fd7fc6d} 
+void e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a26d2e485b48997d3ed9fae3982ba3690}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00497}{497}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a2cda492d9606a4f7d31b857430a40db2}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction\_CMockExpect@{eBoosterLoopStateStandbyFunction\_CMockExpect}}
+\index{eBoosterLoopStateStandbyFunction\_CMockExpect@{eBoosterLoopStateStandbyFunction\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction\_CMockExpect()}{eBoosterLoopStateStandbyFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a2cda492d9606a4f7d31b857430a40db2} 
+void e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00484}{484}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a2cda492d9606a4f7d31b857430a40db2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a0dc40defa863622681894754abe390b0}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction\_CMockIgnore@{eBoosterLoopStateStandbyFunction\_CMockIgnore}}
+\index{eBoosterLoopStateStandbyFunction\_CMockIgnore@{eBoosterLoopStateStandbyFunction\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction\_CMockIgnore()}{eBoosterLoopStateStandbyFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0dc40defa863622681894754abe390b0} 
+void e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00474}{474}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a47f9c3758ce0f232aa6d1a0481489832}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction\_CMockStopIgnore@{eBoosterLoopStateStandbyFunction\_CMockStopIgnore}}
+\index{eBoosterLoopStateStandbyFunction\_CMockStopIgnore@{eBoosterLoopStateStandbyFunction\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction\_CMockStopIgnore()}{eBoosterLoopStateStandbyFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a47f9c3758ce0f232aa6d1a0481489832} 
+void e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00479}{479}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a6cc568e00d160f525533584a89dcf332}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterLoopStateStandbyFunction\_Stub@{eBoosterLoopStateStandbyFunction\_Stub}}
+\index{eBoosterLoopStateStandbyFunction\_Stub@{eBoosterLoopStateStandbyFunction\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterLoopStateStandbyFunction\_Stub()}{eBoosterLoopStateStandbyFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a6cc568e00d160f525533584a89dcf332} 
+void e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a26d2e485b48997d3ed9fae3982ba3690}{CMOCK\+\_\+e\+Booster\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00504}{504}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a3477291c2acdfbc1e122738a00a749d9}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState@{eBoosterReportState}}
+\index{eBoosterReportState@{eBoosterReportState}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState()}{eBoosterReportState()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a3477291c2acdfbc1e122738a00a749d9} 
+e\+Booster\+State\+\_\+t e\+Booster\+Report\+State (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00927}{927}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a3477291c2acdfbc1e122738a00a749d9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ad0ce460cdb7739d7bfe956ff58398163}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState\_AddCallback@{eBoosterReportState\_AddCallback}}
+\index{eBoosterReportState\_AddCallback@{eBoosterReportState\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState\_AddCallback()}{eBoosterReportState\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ad0ce460cdb7739d7bfe956ff58398163} 
+void e\+Booster\+Report\+State\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_afa70930cca9f01048a7867aecdbe1261}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01000}{1000}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a60f57def095c060bc8dab8b7a2df5531}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState\_CMockExpectAndReturn@{eBoosterReportState\_CMockExpectAndReturn}}
+\index{eBoosterReportState\_CMockExpectAndReturn@{eBoosterReportState\_CMockExpectAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState\_CMockExpectAndReturn()}{eBoosterReportState\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a60f57def095c060bc8dab8b7a2df5531} 
+void e\+Booster\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Booster\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00985}{985}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a60f57def095c060bc8dab8b7a2df5531_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a12a05cbb7c2d475948f678b2f6bab8d7}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState\_CMockIgnoreAndReturn@{eBoosterReportState\_CMockIgnoreAndReturn}}
+\index{eBoosterReportState\_CMockIgnoreAndReturn@{eBoosterReportState\_CMockIgnoreAndReturn}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState\_CMockIgnoreAndReturn()}{eBoosterReportState\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a12a05cbb7c2d475948f678b2f6bab8d7} 
+void e\+Booster\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Booster\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00964}{964}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a12a05cbb7c2d475948f678b2f6bab8d7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a0f9e81a4be357812d1454a0a627ac0fc}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState\_CMockStopIgnore@{eBoosterReportState\_CMockStopIgnore}}
+\index{eBoosterReportState\_CMockStopIgnore@{eBoosterReportState\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState\_CMockStopIgnore()}{eBoosterReportState\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a0f9e81a4be357812d1454a0a627ac0fc} 
+void e\+Booster\+Report\+State\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00978}{978}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{mock__booster_state_machine_8c_a0f9e81a4be357812d1454a0a627ac0fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a463ab62582a141c75055ffd716260dc8}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!eBoosterReportState\_Stub@{eBoosterReportState\_Stub}}
+\index{eBoosterReportState\_Stub@{eBoosterReportState\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eBoosterReportState\_Stub()}{eBoosterReportState\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a463ab62582a141c75055ffd716260dc8} 
+void e\+Booster\+Report\+State\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_afa70930cca9f01048a7867aecdbe1261}{CMOCK\+\_\+e\+Booster\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01007}{1007}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ab4240e694361b84d7f27f8154863d1d9}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!mock\_boosterStateMachine\_Destroy@{mock\_boosterStateMachine\_Destroy}}
+\index{mock\_boosterStateMachine\_Destroy@{mock\_boosterStateMachine\_Destroy}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_boosterStateMachine\_Destroy()}{mock\_boosterStateMachine\_Destroy()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ab4240e694361b84d7f27f8154863d1d9} 
+void mock\+\_\+booster\+State\+Machine\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00365}{365}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ab4240e694361b84d7f27f8154863d1d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ab4240e694361b84d7f27f8154863d1d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ab5939f24f7bbc1d9701c4f5ab365cc3b}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!mock\_boosterStateMachine\_Init@{mock\_boosterStateMachine\_Init}}
+\index{mock\_boosterStateMachine\_Init@{mock\_boosterStateMachine\_Init}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_boosterStateMachine\_Init()}{mock\_boosterStateMachine\_Init()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ab5939f24f7bbc1d9701c4f5ab365cc3b} 
+void mock\+\_\+booster\+State\+Machine\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00360}{360}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ab5939f24f7bbc1d9701c4f5ab365cc3b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a502b2ca853c1e82091688797c9f9dd36}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!mock\_boosterStateMachine\_Verify@{mock\_boosterStateMachine\_Verify}}
+\index{mock\_boosterStateMachine\_Verify@{mock\_boosterStateMachine\_Verify}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_boosterStateMachine\_Verify()}{mock\_boosterStateMachine\_Verify()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a502b2ca853c1e82091688797c9f9dd36} 
+void mock\+\_\+booster\+State\+Machine\+\_\+\+Verify (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00198}{198}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_afdddb15563ae660d95b205b975af06ac}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit@{vBoosterStateMachineInit}}
+\index{vBoosterStateMachineInit@{vBoosterStateMachineInit}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit()}{vBoosterStateMachineInit()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_afdddb15563ae660d95b205b975af06ac} 
+void v\+Booster\+State\+Machine\+Init (\begin{DoxyParamCaption}\item[{x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Laser\+Beam\+Descriptor}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00718}{718}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_afdddb15563ae660d95b205b975af06ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a348146657ea33440ea4d881cbbe9b6ea}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_AddCallback@{vBoosterStateMachineInit\_AddCallback}}
+\index{vBoosterStateMachineInit\_AddCallback@{vBoosterStateMachineInit\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_AddCallback()}{vBoosterStateMachineInit\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a348146657ea33440ea4d881cbbe9b6ea} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_aa51f80480a9ccc3d3aa47cc8c941d3f1}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00814}{814}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a71f4c511f40e56bfc3ecbb7557a265ba}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockExpect@{vBoosterStateMachineInit\_CMockExpect}}
+\index{vBoosterStateMachineInit\_CMockExpect@{vBoosterStateMachineInit\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockExpect()}{vBoosterStateMachineInit\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a71f4c511f40e56bfc3ecbb7557a265ba} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Laser\+Beam\+Descriptor}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00800}{800}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a71f4c511f40e56bfc3ecbb7557a265ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a55923f6d57eb45713ae4f667a7014939}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockExpectAnyArgs@{vBoosterStateMachineInit\_CMockExpectAnyArgs}}
+\index{vBoosterStateMachineInit\_CMockExpectAnyArgs@{vBoosterStateMachineInit\_CMockExpectAnyArgs}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockExpectAnyArgs()}{vBoosterStateMachineInit\_CMockExpectAnyArgs()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a55923f6d57eb45713ae4f667a7014939} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect\+Any\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00786}{786}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a55923f6d57eb45713ae4f667a7014939_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a8ec3a82698d975bfb606d034de62693d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockExpectWithArray@{vBoosterStateMachineInit\_CMockExpectWithArray}}
+\index{vBoosterStateMachineInit\_CMockExpectWithArray@{vBoosterStateMachineInit\_CMockExpectWithArray}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockExpectWithArray()}{vBoosterStateMachineInit\_CMockExpectWithArray()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a8ec3a82698d975bfb606d034de62693d} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Expect\+With\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Laser\+Beam\+Descriptor}{, }\item[{int}]{px\+Laser\+Beam\+Descriptor\+\_\+\+Depth}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00828}{828}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a8ec3a82698d975bfb606d034de62693d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ae22e4ac14302665c5976bd514d2943d2}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockIgnore@{vBoosterStateMachineInit\_CMockIgnore}}
+\index{vBoosterStateMachineInit\_CMockIgnore@{vBoosterStateMachineInit\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockIgnore()}{vBoosterStateMachineInit\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ae22e4ac14302665c5976bd514d2943d2} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00776}{776}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a614c56a75408a03d6d4644d7baea2355}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor@{vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor}}
+\index{vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor@{vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor()}{vBoosterStateMachineInit\_CMockIgnoreArg\_pxLaserBeamDescriptor()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a614c56a75408a03d6d4644d7baea2355} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Laser\+Beam\+Descriptor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00851}{851}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a614c56a75408a03d6d4644d7baea2355_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a5b44e29bc0f0471a9cbab7b84066e8a9}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor@{vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor}}
+\index{vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor@{vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor()}{vBoosterStateMachineInit\_CMockReturnMemThruPtr\_pxLaserBeamDescriptor()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a5b44e29bc0f0471a9cbab7b84066e8a9} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Laser\+Beam\+Descriptor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Amplifier\+Descriptor\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Laser\+Beam\+Descriptor}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00842}{842}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a5b44e29bc0f0471a9cbab7b84066e8a9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a887a3368b13b6897a443c6db1b4f5d1d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_CMockStopIgnore@{vBoosterStateMachineInit\_CMockStopIgnore}}
+\index{vBoosterStateMachineInit\_CMockStopIgnore@{vBoosterStateMachineInit\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_CMockStopIgnore()}{vBoosterStateMachineInit\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a887a3368b13b6897a443c6db1b4f5d1d} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00781}{781}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a626fb1374eb1f0d9aad2ebd5caf1ea82}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineInit\_Stub@{vBoosterStateMachineInit\_Stub}}
+\index{vBoosterStateMachineInit\_Stub@{vBoosterStateMachineInit\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineInit\_Stub()}{vBoosterStateMachineInit\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a626fb1374eb1f0d9aad2ebd5caf1ea82} 
+void v\+Booster\+State\+Machine\+Init\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_aa51f80480a9ccc3d3aa47cc8c941d3f1}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Init\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00821}{821}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a1d1d28fe510374c4d72a9e7242ff0fe0}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate@{vBoosterStateMachineUpdate}}
+\index{vBoosterStateMachineUpdate@{vBoosterStateMachineUpdate}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate()}{vBoosterStateMachineUpdate()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a1d1d28fe510374c4d72a9e7242ff0fe0} 
+void v\+Booster\+State\+Machine\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00858}{858}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a1d1d28fe510374c4d72a9e7242ff0fe0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a4eee0268322b62672f02d03778128e2a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate\_AddCallback@{vBoosterStateMachineUpdate\_AddCallback}}
+\index{vBoosterStateMachineUpdate\_AddCallback@{vBoosterStateMachineUpdate\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate\_AddCallback()}{vBoosterStateMachineUpdate\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a4eee0268322b62672f02d03778128e2a} 
+void v\+Booster\+State\+Machine\+Update\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_af9307502a892aee5923a82313884b6ba}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00913}{913}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a4eff82e1e9abecbc0f248c17c1811670}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate\_CMockExpect@{vBoosterStateMachineUpdate\_CMockExpect}}
+\index{vBoosterStateMachineUpdate\_CMockExpect@{vBoosterStateMachineUpdate\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate\_CMockExpect()}{vBoosterStateMachineUpdate\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a4eff82e1e9abecbc0f248c17c1811670} 
+void v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00900}{900}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a4eff82e1e9abecbc0f248c17c1811670_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ad7d5fd90e8fc19cb4a52baf8a220f62f}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate\_CMockIgnore@{vBoosterStateMachineUpdate\_CMockIgnore}}
+\index{vBoosterStateMachineUpdate\_CMockIgnore@{vBoosterStateMachineUpdate\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate\_CMockIgnore()}{vBoosterStateMachineUpdate\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ad7d5fd90e8fc19cb4a52baf8a220f62f} 
+void v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00890}{890}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a8e1e486e7d7b819e4254c880357c254a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate\_CMockStopIgnore@{vBoosterStateMachineUpdate\_CMockStopIgnore}}
+\index{vBoosterStateMachineUpdate\_CMockStopIgnore@{vBoosterStateMachineUpdate\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate\_CMockStopIgnore()}{vBoosterStateMachineUpdate\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a8e1e486e7d7b819e4254c880357c254a} 
+void v\+Booster\+State\+Machine\+Update\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00895}{895}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a39cf8a9d8f0751fcee1bf417ec09806d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vBoosterStateMachineUpdate\_Stub@{vBoosterStateMachineUpdate\_Stub}}
+\index{vBoosterStateMachineUpdate\_Stub@{vBoosterStateMachineUpdate\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vBoosterStateMachineUpdate\_Stub()}{vBoosterStateMachineUpdate\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a39cf8a9d8f0751fcee1bf417ec09806d} 
+void v\+Booster\+State\+Machine\+Update\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_af9307502a892aee5923a82313884b6ba}{CMOCK\+\_\+v\+Booster\+State\+Machine\+Update\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00920}{920}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ad871052e9b70c459a91d77b2710ffd98}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected@{vHpaCriticalErrorDetected}}
+\index{vHpaCriticalErrorDetected@{vHpaCriticalErrorDetected}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected()}{vHpaCriticalErrorDetected()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ad871052e9b70c459a91d77b2710ffd98} 
+void v\+Hpa\+Critical\+Error\+Detected (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00649}{649}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ad871052e9b70c459a91d77b2710ffd98_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_ad871052e9b70c459a91d77b2710ffd98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_ab3afe6ef2159d74b7ece7d85494a22d8}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected\_AddCallback@{vHpaCriticalErrorDetected\_AddCallback}}
+\index{vHpaCriticalErrorDetected\_AddCallback@{vHpaCriticalErrorDetected\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected\_AddCallback()}{vHpaCriticalErrorDetected\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ab3afe6ef2159d74b7ece7d85494a22d8} 
+void v\+Hpa\+Critical\+Error\+Detected\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_add20cdabd4129fa899bb92b75aece34d}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00704}{704}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_aa1c1e1e90ce3d823398cab79e328f52d}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected\_CMockExpect@{vHpaCriticalErrorDetected\_CMockExpect}}
+\index{vHpaCriticalErrorDetected\_CMockExpect@{vHpaCriticalErrorDetected\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected\_CMockExpect()}{vHpaCriticalErrorDetected\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa1c1e1e90ce3d823398cab79e328f52d} 
+void v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00691}{691}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_aa1c1e1e90ce3d823398cab79e328f52d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a4b0a8b44e5f576fa79bb6ccf55f946ba}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected\_CMockIgnore@{vHpaCriticalErrorDetected\_CMockIgnore}}
+\index{vHpaCriticalErrorDetected\_CMockIgnore@{vHpaCriticalErrorDetected\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected\_CMockIgnore()}{vHpaCriticalErrorDetected\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a4b0a8b44e5f576fa79bb6ccf55f946ba} 
+void v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00681}{681}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a235fc3f6a7b85493110d2316dad0491a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected\_CMockStopIgnore@{vHpaCriticalErrorDetected\_CMockStopIgnore}}
+\index{vHpaCriticalErrorDetected\_CMockStopIgnore@{vHpaCriticalErrorDetected\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected\_CMockStopIgnore()}{vHpaCriticalErrorDetected\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a235fc3f6a7b85493110d2316dad0491a} 
+void v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00686}{686}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ab768e6b92570d60cfa4048c675860b04}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vHpaCriticalErrorDetected\_Stub@{vHpaCriticalErrorDetected\_Stub}}
+\index{vHpaCriticalErrorDetected\_Stub@{vHpaCriticalErrorDetected\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vHpaCriticalErrorDetected\_Stub()}{vHpaCriticalErrorDetected\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ab768e6b92570d60cfa4048c675860b04} 
+void v\+Hpa\+Critical\+Error\+Detected\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_add20cdabd4129fa899bb92b75aece34d}{CMOCK\+\_\+v\+Hpa\+Critical\+Error\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l00711}{711}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a401f15d383dfc09eb96fcb8b3d3b402e}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms@{vResetHpaAlarms}}
+\index{vResetHpaAlarms@{vResetHpaAlarms}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms()}{vResetHpaAlarms()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a401f15d383dfc09eb96fcb8b3d3b402e} 
+void v\+Reset\+Hpa\+Alarms (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01170}{1170}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a401f15d383dfc09eb96fcb8b3d3b402e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a9285a52c8aece9ed2edba302dbdf4c78}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms\_AddCallback@{vResetHpaAlarms\_AddCallback}}
+\index{vResetHpaAlarms\_AddCallback@{vResetHpaAlarms\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms\_AddCallback()}{vResetHpaAlarms\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a9285a52c8aece9ed2edba302dbdf4c78} 
+void v\+Reset\+Hpa\+Alarms\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a9c15848c8213f8e229697f809c93e228}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01225}{1225}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_aa50b1b13668d21423886c35114e1307a}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms\_CMockExpect@{vResetHpaAlarms\_CMockExpect}}
+\index{vResetHpaAlarms\_CMockExpect@{vResetHpaAlarms\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms\_CMockExpect()}{vResetHpaAlarms\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa50b1b13668d21423886c35114e1307a} 
+void v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01212}{1212}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_aa50b1b13668d21423886c35114e1307a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a47462c3dcb24033aa5707cb7412b9b7c}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms\_CMockIgnore@{vResetHpaAlarms\_CMockIgnore}}
+\index{vResetHpaAlarms\_CMockIgnore@{vResetHpaAlarms\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms\_CMockIgnore()}{vResetHpaAlarms\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a47462c3dcb24033aa5707cb7412b9b7c} 
+void v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01202}{1202}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_aa7e9ff2c13857af60f5f1eba025a4cd5}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms\_CMockStopIgnore@{vResetHpaAlarms\_CMockStopIgnore}}
+\index{vResetHpaAlarms\_CMockStopIgnore@{vResetHpaAlarms\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms\_CMockStopIgnore()}{vResetHpaAlarms\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_aa7e9ff2c13857af60f5f1eba025a4cd5} 
+void v\+Reset\+Hpa\+Alarms\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01207}{1207}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a3d90b568221ade5ecc3a33b97f260158}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vResetHpaAlarms\_Stub@{vResetHpaAlarms\_Stub}}
+\index{vResetHpaAlarms\_Stub@{vResetHpaAlarms\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vResetHpaAlarms\_Stub()}{vResetHpaAlarms\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a3d90b568221ade5ecc3a33b97f260158} 
+void v\+Reset\+Hpa\+Alarms\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a9c15848c8213f8e229697f809c93e228}{CMOCK\+\_\+v\+Reset\+Hpa\+Alarms\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01232}{1232}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a7101400f86ad2f1b1e4dc7b4ad7bc88c}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa@{vSetDisableHpa}}
+\index{vSetDisableHpa@{vSetDisableHpa}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa()}{vSetDisableHpa()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a7101400f86ad2f1b1e4dc7b4ad7bc88c} 
+void v\+Set\+Disable\+Hpa (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01101}{1101}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{mock__booster_state_machine_8c_a7101400f86ad2f1b1e4dc7b4ad7bc88c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a1c457f7a3202c56af0c7a4dd9962b3cc}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa\_AddCallback@{vSetDisableHpa\_AddCallback}}
+\index{vSetDisableHpa\_AddCallback@{vSetDisableHpa\_AddCallback}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa\_AddCallback()}{vSetDisableHpa\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a1c457f7a3202c56af0c7a4dd9962b3cc} 
+void v\+Set\+Disable\+Hpa\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a461a473392e28b3f7a631b00e79ba536}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01156}{1156}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a498201f7fdb99318f7f1effe29f3646e}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa\_CMockExpect@{vSetDisableHpa\_CMockExpect}}
+\index{vSetDisableHpa\_CMockExpect@{vSetDisableHpa\_CMockExpect}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa\_CMockExpect()}{vSetDisableHpa\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a498201f7fdb99318f7f1effe29f3646e} 
+void v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01143}{1143}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__booster_state_machine_8c_a498201f7fdb99318f7f1effe29f3646e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__booster_state_machine_8c_a1a87d1667de3163d881fc361cca3deb1}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa\_CMockIgnore@{vSetDisableHpa\_CMockIgnore}}
+\index{vSetDisableHpa\_CMockIgnore@{vSetDisableHpa\_CMockIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa\_CMockIgnore()}{vSetDisableHpa\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a1a87d1667de3163d881fc361cca3deb1} 
+void v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01133}{1133}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a5d8ca3520ae246efec04cb7b43dcb018}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa\_CMockStopIgnore@{vSetDisableHpa\_CMockStopIgnore}}
+\index{vSetDisableHpa\_CMockStopIgnore@{vSetDisableHpa\_CMockStopIgnore}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa\_CMockStopIgnore()}{vSetDisableHpa\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a5d8ca3520ae246efec04cb7b43dcb018} 
+void v\+Set\+Disable\+Hpa\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01138}{1138}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_a5554bae6b87de8276e746460d70f19e5}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!vSetDisableHpa\_Stub@{vSetDisableHpa\_Stub}}
+\index{vSetDisableHpa\_Stub@{vSetDisableHpa\_Stub}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableHpa\_Stub()}{vSetDisableHpa\_Stub()}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a5554bae6b87de8276e746460d70f19e5} 
+void v\+Set\+Disable\+Hpa\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__booster_state_machine_8h_a461a473392e28b3f7a631b00e79ba536}{CMOCK\+\_\+v\+Set\+Disable\+Hpa\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__booster_state_machine_8c_source_l01163}{1163}} of file \mbox{\hyperlink{mock__booster_state_machine_8c_source}{mock\+\_\+booster\+State\+Machine.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mock__booster_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!AbortFrame@{AbortFrame}}
+\index{AbortFrame@{AbortFrame}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{AbortFrame}{AbortFrame}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5} 
+jmp\+\_\+buf Abort\+Frame\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{mock__booster_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!GlobalExpectCount@{GlobalExpectCount}}
+\index{GlobalExpectCount@{GlobalExpectCount}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{GlobalExpectCount}{GlobalExpectCount}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b} 
+int Global\+Expect\+Count\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00011}{11}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{mock__booster_state_machine_8c_ac2b7788e16200424c9d7090905c05330}\index{mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}!GlobalVerifyOrder@{GlobalVerifyOrder}}
+\index{GlobalVerifyOrder@{GlobalVerifyOrder}!mock\_boosterStateMachine.c@{mock\_boosterStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{GlobalVerifyOrder}{GlobalVerifyOrder}}
+{\footnotesize\ttfamily \label{mock__booster_state_machine_8c_ac2b7788e16200424c9d7090905c05330} 
+int Global\+Verify\+Order\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00012}{12}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+

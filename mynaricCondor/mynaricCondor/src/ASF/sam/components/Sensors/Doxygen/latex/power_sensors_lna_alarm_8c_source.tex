@@ -1,0 +1,76 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Sensors\+Lna\+Alarm.c}
+\hypertarget{power_sensors_lna_alarm_8c_source}{}\label{power_sensors_lna_alarm_8c_source}\mbox{\hyperlink{power_sensors_lna_alarm_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00002}00002\ \textcolor{comment}{\ *\ powerSensorsLnaAlarm.c}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00004}00004\ \textcolor{comment}{\ *\ Created:\ 6/12/2024\ 1:01:37\ PM}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00005}00005\ \textcolor{comment}{\ *\ \ Author:\ j.castano}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00006}00006\ \textcolor{comment}{\ */}\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{power_sensors_lna_alarm_8h}{powerSensorsLnaAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00010}00010\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00011}\mbox{\hyperlink{power_sensors_lna_alarm_8c_a43e9079ef81445f2e5497f17fd63d167}{00011}}\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_lna_alarm_8c_a43e9079ef81445f2e5497f17fd63d167}{ePowerSensorLnaAlarmRun}}(\ MpbAlarmsAndStatusRegisterBitAssignment\_t\ *pMpbAlarmsAndStatusRegisterBitAssignment,\ c408StatusDefinition\_t\ c408StatusDefinition,\ \textcolor{keywordtype}{float}\ fInputPowerReaded\ ,\ \textcolor{keywordtype}{float}\ fOutputPowerReaded\ ,xAlarmAndStatusRegister\_t\ *pxAlarmRegister,\ eBool\_t*bLnaPowerCriticalAlarm)}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ eBool\_t\ bInputLowLimitAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ eBool\_t\ bInputHighLimitAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ eBool\_t\ bOutputLowLimitAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ eBool\_t\ bOutputHighLimitAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ eBool\_t\ bAddition\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ eBool\_t\ bCheckC408\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ eBool\_t\ bInputCheckC408\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ eBool\_t\ bOutputCheckC408\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ precision\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ bAddition\ =\ (\ pxAlarmRegister\ !=\ NULL)\ \&\&\ (\ bLnaPowerCriticalAlarm\ !=\ NULL)\ \&\&\ (pMpbAlarmsAndStatusRegisterBitAssignment\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(bAddition\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_a258925ea28197e4a09bd5757fcff009c}{ePowerSensorValidateOutputLimits}}(\&bOutputCheckC408,\ c408StatusDefinition.fLnaSetStatusAlarmHighLimitForPowerOutput,\ c408StatusDefinition.fLnaSetStatusAlarmLowLimitForPowerOutput,\ eFalse);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_a268655ca851e1b8ecf08f07bb95a5023}{ePowerSensorValidateInputLimits}}(\&bInputCheckC408,\ c408StatusDefinition.fLnaSetStatusAlarmHighLimitForPowerInput,\ c408StatusDefinition.fLnaSetStatusAlarmLowLimitForPowerInput,\ eFalse);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ bCheckC408\ =\ bOutputCheckC408\ \&\&\ bInputCheckC408;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ bInputLowLimitAlarm\ =\ mpb\_float1\_minor\_than\_float2(fInputPowerReaded,\ c408StatusDefinition.fLnaSetStatusAlarmLowLimitForPowerInput,\ precision);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ bInputHighLimitAlarm\ =\ mpb\_float1\_minor\_than\_float2(c408StatusDefinition.fLnaSetStatusAlarmHighLimitForPowerInput\ ,fInputPowerReaded,\ precision);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ bOutputLowLimitAlarm\ =\ mpb\_float1\_minor\_than\_float2(fOutputPowerReaded,\ c408StatusDefinition.fLnaSetStatusAlarmLowLimitForPowerOutput\ ,\ precision);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ bOutputHighLimitAlarm\ =\ mpb\_float1\_minor\_than\_float2(c408StatusDefinition.fLnaSetStatusAlarmHighLimitForPowerOutput,\ fOutputPowerReaded,\ precision);}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ bAddition\ =\ (bInputLowLimitAlarm\ ==\ eTrue)\ ||\ (\ bInputHighLimitAlarm\ ==\ eTrue\ )\ ;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ pxAlarmRegister-\/>AlarmsAndStatusRegisterBitAssignment.bLnaInputPowerLimitAlarmStatus\ =\ (uint8\_t)(bAddition)\ ;\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ bAddition\ =\ (\ bOutputLowLimitAlarm\ ==\ eTrue)\ ||\ \ (\ bOutputHighLimitAlarm==\ eTrue)\ \ \ ;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ pxAlarmRegister-\/>AlarmsAndStatusRegisterBitAssignment.bLnaOpticalPowerOutputLimitAlarmStatus\ =\ (uint8\_t)(bAddition)\ \ ;\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ bAddition\ =\ (\ bOutputHighLimitAlarm==\ eTrue)\ ||\ (\ bInputHighLimitAlarm==\ eTrue)\ ;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ bAddition\ ==\ eTrue\ \&\&\ bCheckC408\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxAlarmRegister-\/>AlarmsAndStatusRegisterBitAssignment.bLnaInternalCriticalErrorInPowerFlag\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *bLnaPowerCriticalAlarm\ =\ eTrue;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//pxAlarmRegister-\/>AlarmsAndStatusRegisterBitAssignment.bInternalCriticalErrorFlag\ =\ 1;}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ *bLnaPowerCriticalAlarm\ =\ (eBool\_t)(\ pxAlarmRegister-\/>AlarmsAndStatusRegisterBitAssignment.bLnaInternalCriticalErrorInPowerFlag)\ ;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ pMpbAlarmsAndStatusRegisterBitAssignment-\/>bLnaObLnaOutput\ PowerIsLow\ =\ (uint8\_t)(\ bInputLowLimitAlarm\ );}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ pMpbAlarmsAndStatusRegisterBitAssignment-\/>bLnaInputPowerIsTooHigh\ =\ (uint8\_t)(\ bInputHighLimitAlarm\ )\ ;}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ pMpbAlarmsAndStatusRegisterBitAssignment-\/>bLnaOutputPowerIsTooHigh\ =\ (uint8\_t)(\ bOutputHighLimitAlarm\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{power_sensors_lna_alarm_8c_source_l00071}00071\ \}}
+
+\end{DoxyCode}

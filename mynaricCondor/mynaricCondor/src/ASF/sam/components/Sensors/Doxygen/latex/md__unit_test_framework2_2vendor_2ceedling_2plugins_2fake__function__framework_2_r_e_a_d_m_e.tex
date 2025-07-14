@@ -1,0 +1,220 @@
+\chapter{A Fake Function Framework Plug-\/in for Ceedling}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e}{}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e}\index{A Fake Function Framework Plug-\/in for Ceedling@{A Fake Function Framework Plug-\/in for Ceedling}}
+\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md111}%
+\Hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md111}%
+ This is a plug-\/in for \href{https://github.com/ThrowTheSwitch/Ceedling}{\texttt{ Ceedling}} to use the \href{https://github.com/meekrosoft/fff}{\texttt{ Fake Function Framework}} for mocking instead of CMock.
+
+Using fff provides less strict mocking than CMock, and allows for more loosely-\/coupled tests. And, when tests fail -- since you get the actual line number of the failure -- it\textquotesingle{}s a lot easier to figure out what went wrong.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md112}{}\doxysection{\texorpdfstring{Installing the plug-\/in}{Installing the plug-\/in}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md112}
+To use the plugin you need to 1) get the contents of this repo and 2) configure your project to use it.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md113}{}\doxysubsection{\texorpdfstring{Get the source}{Get the source}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md113}
+The easiest way to get the source is to just clone this repo into the Ceedling plugin folder for your existing Ceedling project. (Don\textquotesingle{}t have a Ceedling project already? \href{http://www.electronvector.com/blog/try-embedded-test-driven-development-right-now-with-ceedling}{\texttt{ Here are instructions to create one.}}) From within {\ttfamily \texorpdfstring{$<$}{<}your-\/project\texorpdfstring{$>$}{>}/vendor/ceedling/plugins}, run\+:
+
+{\ttfamily git clone \href{https://github.com/ElectronVector/fake_function_framework.git}{\texttt{ https\+://github.\+com/\+Electron\+Vector/fake\+\_\+function\+\_\+framework.\+git}}}
+
+This will create a new folder named {\ttfamily fake\+\_\+function\+\_\+framework} in the plugins folder.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md114}{}\doxysubsection{\texorpdfstring{Enable the plug-\/in.}{Enable the plug-\/in.}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md114}
+The plug-\/in is enabled from within your project.\+yml file.
+
+In the {\ttfamily \+:plugins} configuration, add {\ttfamily fake\+\_\+function\+\_\+framework} to the list of enabled plugins\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :load\_paths:}
+\DoxyCodeLine{\ \ \ \ -\/\ vendor/ceedling/plugins}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ stdout\_pretty\_tests\_report}
+\DoxyCodeLine{\ \ \ \ -\/\ module\_generator}
+\DoxyCodeLine{\ \ \ \ -\/\ fake\_function\_framework}
+
+\end{DoxyCode}
+ {\itshape Note that you could put the plugin source in some other loaction. In that case you\textquotesingle{}d need to add a new path the {\ttfamily \+:load\+\_\+paths}.}\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md115}{}\doxysection{\texorpdfstring{How to use it}{How to use it}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md115}
+You use fff with Ceedling the same way you used to use CMock. Modules can still be generated with the default module generator\+: {\ttfamily rake module\+:create\mbox{[}my\+\_\+module\mbox{]}}. If you want to "{}mock"{} {\ttfamily some\+\_\+module.\+h} in your tests, just {\ttfamily \#include "{}mock\+\_\+some\+\_\+module.\+h"{}}. This creates a fake function for each of the functions defined in {\ttfamily some\+\_\+module.\+h}.
+
+The name of each fake is the original function name with an appended {\ttfamily \+\_\+fake}. For example, if we\textquotesingle{}re generating fakes for a stack module with {\ttfamily push} and {\ttfamily pop} functions, we would have the fakes {\ttfamily push\+\_\+fake} and {\ttfamily pop\+\_\+fake}. These fakes are linked into our test executable so that any time our unit under test calls {\ttfamily push} or {\ttfamily pop} our fakes are called instead.
+
+Each of these fakes is actually a structure containing information about how the function was called, and what it might return. We can use Unity to inspect these fakes in our tests, and verify the interactions of our units. There is also a global structure named {\ttfamily fff} which we can use to check the sequence of calls.
+
+The fakes can also be configured to return particular values, so you can exercise the unit under test however you want.
+
+The examples below explain how to use fff to test a variety of module interactions. Each example uses fakes for a "{}display"{} module, created from a display.\+h file with {\ttfamily \#include "{}mock\+\_\+display.\+h"{}}. The {\ttfamily display.\+h} file must exist and must contain the prototypes for the functions to be faked.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md116}{}\doxysubsection{\texorpdfstring{Test that a function was called once}{Test that a function was called once}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md116}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aff1f691f0911be5857ddbe01e551c0a2}{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_ae1d8acf4a49fc2dd494f7838a3d290c9}{event\_deviceReset}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,\ display\_turnOffStatusLed\_fake.call\_count);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md117}{}\doxysubsection{\texorpdfstring{Test that a function was NOT called}{Test that a function was NOT called}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md117}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae0402ad0b5090fc576a46cd6a37e3098}{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_ab67dfe66cdf6520c6a2fe56416ec49ee}{event\_powerReadingUpdate}}(4);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(0,\ display\_turnOnStatusLed\_fake.call\_count);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md118}{}\doxysection{\texorpdfstring{Test that a single function was called with the correct argument}{Test that a single function was called with the correct argument}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md118}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ab3dbd650a187ae78cbc203e26c7da3a5}{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_af0c058d318f845e4ad837756121715d9}{event\_volumeKnobMaxed}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,\ display\_setVolume\_fake.call\_count);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(11,\ display\_setVolume\_fake.arg0\_val);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md119}{}\doxysection{\texorpdfstring{Test that calls are made in a particular sequence}{Test that calls are made in a particular sequence}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md119}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae77b983df3ecc38c9338c8a1c1747199}{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_aea6c21cc8520a67d644f5eee64e266a9}{event\_modeSelectButtonPressed}}();}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_aea6c21cc8520a67d644f5eee64e266a9}{event\_modeSelectButtonPressed}}();}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_aea6c21cc8520a67d644f5eee64e266a9}{event\_modeSelectButtonPressed}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_a765240c346d79b58ef22d81982aced18}{TEST\_ASSERT\_EQUAL\_PTR}}((\textcolor{keywordtype}{void}*)\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2display_8h_a4f4309083204c27565cd4943c558bf35}{display\_setModeToMinimum}},\ fff.call\_history[0]);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_a765240c346d79b58ef22d81982aced18}{TEST\_ASSERT\_EQUAL\_PTR}}((\textcolor{keywordtype}{void}*)\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2display_8h_a3ecd07af6041cf61b0c60150b5866c84}{display\_setModeToMaximum}},\ fff.call\_history[1]);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_a765240c346d79b58ef22d81982aced18}{TEST\_ASSERT\_EQUAL\_PTR}}((\textcolor{keywordtype}{void}*)\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2display_8h_a80fe0f40254a3d87f017e7d4a3a75de4}{display\_setModeToAverage}},\ fff.call\_history[2]);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md120}{}\doxysection{\texorpdfstring{Fake a return value from a function}{Fake a return value from a function}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md120}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aaade2183eab43ecade551f4ce2710653}{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{\ \ \ \ display\_isError\_fake.return\_val\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_a07ad329255bf724d42e83d7288b20905}{event\_devicePoweredOn}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,\ display\_powerDown\_fake.call\_count);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md121}{}\doxysection{\texorpdfstring{Fake a function with a value returned by reference}{Fake a function with a value returned by reference}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md121}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a534f0b7275d9d4a29985cacf3e8342aa}{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ mockedEntry[]\ =\ \textcolor{stringliteral}{"{}sleep"{}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ return\_mock\_value(\textcolor{keywordtype}{char}\ *\ entry,\ \textcolor{keywordtype}{int}\ length)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ strlen(mockedEntry))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ strncpy(entry,\ mockedEntry,\ length);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ display\_getKeyboardEntry\_fake.custom\_fake\ =\ return\_mock\_value;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_a215d1e5ccd386376a8f2f7ca5de2d6fa}{event\_keyboardCheckTimerExpired}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,\ display\_powerDown\_fake.call\_count);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md122}{}\doxysection{\texorpdfstring{Fake a function with a function pointer parameter}{Fake a function with a function pointer parameter}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md122}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void}
+\DoxyCodeLine{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete(void)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ A\ mock\ function\ for\ capturing\ the\ callback\ handler\ function\ pointer.}
+\DoxyCodeLine{\ \ \ \ void(*registeredCallback)(void)\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ void\ mock\_display\_updateData(int\ data,\ void(*callback)(void))}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Save\ the\ callback\ function.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ registeredCallback\ =\ callback;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ display\_updateData\_fake.custom\_fake\ =\ mock\_display\_updateData;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ Given}
+\DoxyCodeLine{\ \ \ \ event\_newDataAvailable(10);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ When}
+\DoxyCodeLine{\ \ \ \ if\ (registeredCallback\ !=\ 0)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ registeredCallback();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ Then}
+\DoxyCodeLine{\ \ \ \ TEST\_ASSERT\_EQUAL(true,\ eventProcessor\_isLastEventComplete());}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md123}{}\doxysection{\texorpdfstring{Helper macros}{Helper macros}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md123}
+For convenience, there are also some helper macros that create new Unity-\/style asserts\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED(function)}}\+: Asserts that a function was called once.
+\item {\ttfamily \doxylink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_affc90aa528332c5c767fd7bd7542d525}{TEST\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+CALLED(function)}}\+: Asserts that a function was never called.
+\item {\ttfamily \doxylink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES(times, function)}}\+: Asserts that a function was called a particular number of times.
+\item {\ttfamily \doxylink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_af21f27d62b55519b5f72bb32724df80d}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+IN\+\_\+\+ORDER(order, function)}}\+: Asserts that a function was called in a particular order.
+\end{DoxyItemize}
+
+Here\textquotesingle{}s how you might use one of these instead of simply checking the call\+\_\+count value\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}}
+\DoxyCodeLine{\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aff1f691f0911be5857ddbe01e551c0a2}{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2event__processor_8c_ae1d8acf4a49fc2dd494f7838a3d290c9}{event\_deviceReset}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ how\ to\ directly\ use\ fff...}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,\ display\_turnOffStatusLed\_fake.call\_count);}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...and\ this\ is\ how\ to\ use\ the\ helper\ macro.}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1}{TEST\_ASSERT\_CALLED}}(\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2src_2display_8c_ace29b0b5f6128f04d1800a81a37ad248}{display\_turnOffStatusLed}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md124}{}\doxysection{\texorpdfstring{Test setup}{Test setup}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md124}
+All of the fake functions, and any fff global state are all reset automatically between each test.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md125}{}\doxysection{\texorpdfstring{CMock configuration}{CMock configuration}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md125}
+Use still use some of the CMock configuration options for setting things like the mock prefix, and for including additional header files in the mock files.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:cmock:}
+\DoxyCodeLine{\ \ \ \ :mock\_prefix:\ mock\_}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :includes:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ -\/}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :includes\_h\_pre\_orig\_header:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ -\/}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :includes\_h\_post\_orig\_header:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ -\/}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :includes\_c\_pre\_header:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ -\/}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :includes\_c\_post\_header:}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md126}{}\doxysection{\texorpdfstring{Running the tests}{Running the tests}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md126}
+There are unit and integration tests for the plug-\/in itself. These are run with the default {\ttfamily rake} task. The integration test runs the tests for the example project in examples/fff\+\_\+example. For the integration tests to succeed, this repository must be placed in a Ceedling tree in the plugins folder.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md127}{}\doxysection{\texorpdfstring{More examples}{More examples}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2fake__function__framework_2_r_e_a_d_m_e_autotoc_md127}
+There is an example project in examples/fff\+\_\+example. It shows how to use the plug-\/in with some full-\/size examples. 

@@ -1,0 +1,75 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/current\+Sensors\+Update\+Database.c}
+\hypertarget{current_sensors_update_database_8c_source}{}\label{current_sensors_update_database_8c_source}\mbox{\hyperlink{current_sensors_update_database_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00002}00002\ \textcolor{comment}{\ *\ currentSensorsUpdateDatabase.c}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00004}00004\ \textcolor{comment}{\ *\ Created:\ 6/18/2024\ 12:50:40\ PM}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00005}00005\ \textcolor{comment}{\ *\ \ Author:\ j.castano}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00006}00006\ \textcolor{comment}{\ */}\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_update_database_8h}{currentSensorsUpdateDatabase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00010}00010\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00012}\mbox{\hyperlink{current_sensors_update_database_8c_a789b788c25633fff789698b44e8a6d05}{00012}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_update_database_8c_a789b788c25633fff789698b44e8a6d05}{eCurrentSensorsUpdateDatabaseLna}}(\ xCurrentInputScaling\_t*\ pxLocalCurrentInputScaling)}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00014}00014\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}(pxLocalCurrentInputScaling\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ xLnaParameters\_t\ *pxLnaParameters\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ xLnaParameters\_t\ xLnaParametersl;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ pxLnaParameters\ =\ \mbox{\hyperlink{mock__laser_data_8c_a8d710388e55b44e04f911e6d240a502e}{vGetpxLnaParameters}}(\&xLnaParametersl);}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ pxLnaParameters-\/>xInputScalingLnaAdc.xExLnaSingleModeldCurrentMonitor.fIntercept\ =\ pxLocalCurrentInputScaling[eAdcExLnaSingleModeldCurrentMonitor].fIntercept;\ \textcolor{comment}{//xScalingExternalLnaSmLedCurrentMonitor.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ pxLnaParameters-\/>xInputScalingLnaAdc.xExLnaSingleModeldCurrentMonitor.fSlope\ \ \ \ \ =\ pxLocalCurrentInputScaling[eAdcExLnaSingleModeldCurrentMonitor].fSlope;\ \textcolor{comment}{//xScalingExternalLnaSmLedCurrentMonitor.fSlope;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00028}00028\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaSm\_ld\_Bfm.fIntercept\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ pxLocalCurrentInputScaling[eAdcExternalLnaSm\_ld\_Bfm].fIntercept;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ pxLnaParameters-\/>xInputScalingLnaAdc.xExternalLnaSm\_ld\_Bfm.fSlope\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ pxLocalCurrentInputScaling[eAdcExternalLnaSm\_ld\_Bfm].fSlope;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00033}00033\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00038}00038\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00039}\mbox{\hyperlink{current_sensors_update_database_8c_aa44c34357f4fe90d788c6cc6e828bafe}{00039}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_update_database_8c_aa44c34357f4fe90d788c6cc6e828bafe}{eCurrentSensorsUpdateDatabaseHpa}}(\ xCurrentInputScaling\_t*\ pxLocalCurrentInputScaling)}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00041}00041\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}(pxLocalCurrentInputScaling\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ xBoosterParameters\_t\ *pxBoosterParameters\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ pxBoosterParameters\ =\ \mbox{\hyperlink{mock__laser_data_8c_afc0c707e993b28911685043ab06302cc}{vGetpxBoosterParameters}}();}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaSingleModeld\_CurrentMonitor.fIntercept\ =\ \ pxLocalCurrentInputScaling[eAdcExHpaSingleModeld\_CurrentMonitor].fIntercept;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaSingleModeld\_CurrentMonitor.fSlope\ =\ pxLocalCurrentInputScaling[eAdcExHpaSingleModeld\_CurrentMonitor].fSlope;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaMultiModeld\_CurrentMonitor1.fIntercept\ =\ pxLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor1].fIntercept;\ \textcolor{comment}{//xScalingExternalHpaMmLedCurrentMonitor1.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaMultiModeld\_CurrentMonitor1.fSlope\ =\ pxLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor1].fSlope;\ \textcolor{comment}{//xScalingExternalHpaMmLedCurrentMonitor1.fSlope;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaMultiModeld\_CurrentMonitor2.fIntercept\ =\ pxLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor2].fIntercept;\ \textcolor{comment}{//xScalingExternalHpaMmLedCurrentMonitor2.fIntercept;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExHpaMultiModeld\_CurrentMonitor2.fSlope\ =\ pxLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor2].fSlope;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaSm\_ld\_Bfm.fIntercept\ =\ pxLocalCurrentInputScaling[eAdcExternalHpaSm\_ld\_Bfm].fIntercept;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ pxBoosterParameters-\/>xInputScalingBoosterExternalAdc.xExternalHpaSm\_ld\_Bfm.fSlope\ =\ pxLocalCurrentInputScaling[eAdcExternalHpaSm\_ld\_Bfm].fSlope;}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00066}00066\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_update_database_8c_source_l00070}00070\ \}}
+
+\end{DoxyCode}

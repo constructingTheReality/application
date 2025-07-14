@@ -1,0 +1,152 @@
+\doxysection{unity\+\_\+to\+\_\+junit.\+py}
+\hypertarget{unity__to__junit_8py_source}{}\label{unity__to__junit_8py_source}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/unity/auto/unity\_to\_junit.py@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/unity/auto/unity\_to\_junit.py}}
+\mbox{\hyperlink{unity__to__junit_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00001}\mbox{\hyperlink{namespaceunity__to__junit}{00001}}\ \textcolor{keyword}{import}\ sys}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00002}00002\ \textcolor{keyword}{import}\ os}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00003}00003\ \textcolor{keyword}{from}\ glob\ \textcolor{keyword}{import}\ glob}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00005}00005\ \textcolor{keyword}{from}\ pyparsing\ \textcolor{keyword}{import}\ *}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00006}00006\ \textcolor{keyword}{from}\ junit\_xml\ \textcolor{keyword}{import}\ TestSuite,\ TestCase}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00009}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary}{UnityTestSummary}}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00010}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_abdd362d5f799ad16b5d6700efe590290}{00010}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_abdd362d5f799ad16b5d6700efe590290}{\_\_init\_\_}}(self):}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00011}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ac97b78e7c161c178a23a3d1478f74aa5}{00011}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ac97b78e7c161c178a23a3d1478f74aa5}{report}}\ =\ \textcolor{stringliteral}{''}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00012}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ab7324491948254cde8946b74d8bca3bc}{00012}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ab7324491948254cde8946b74d8bca3bc}{total\_tests}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00013}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a5c7ba59d434acf5dafb8ec5fd28e9a1e}{00013}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a5c7ba59d434acf5dafb8ec5fd28e9a1e}{failures}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00014}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a973274447fb1c6eb9b27c5a54505bb69}{00014}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a973274447fb1c6eb9b27c5a54505bb69}{ignored}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00015}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a349ebe2a4ab69cba0bde36f53a5c1290}{00015}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a349ebe2a4ab69cba0bde36f53a5c1290}{targets}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00016}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ab4b8daf4b8ea9d39568719e1e320076f}{00016}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ab4b8daf4b8ea9d39568719e1e320076f}{root}}\ =\ \textcolor{keywordtype}{None}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00017}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{00017}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{test\_suites}}\ =\ dict()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00019}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a08060e0924949738f75a0cdd8b49cef4}{00019}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a08060e0924949738f75a0cdd8b49cef4}{run}}(self):}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Clean\ up\ result\ file\ names}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00021}00021\ \ \ \ \ \ \ \ \ results\ =\ []}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ target\ \textcolor{keywordflow}{in}\ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a349ebe2a4ab69cba0bde36f53a5c1290}{targets}}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ results.append(target.replace(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'},\ \textcolor{stringliteral}{'/'}))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Dig\ through\ each\ result\ file,\ looking\ for\ details\ on\ pass/fail:}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ result\_file\ \textcolor{keywordflow}{in}\ results:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ lines\ =\ list(map(\textcolor{keyword}{lambda}\ line:\ line.rstrip(),\ open(result\_file,\ \textcolor{stringliteral}{"{}r"{}}).read().split(\textcolor{stringliteral}{'\(\backslash\)n'})))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ len(lines)\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ Exception(\textcolor{stringliteral}{"{}Empty\ test\ result\ file:\ \%s"{}}\ \%\ result\_file)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ define\ an\ expression\ for\ your\ file\ reference}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ entry\_one\ =\ Combine(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oneOf(list(alphas))\ +\ \textcolor{stringliteral}{':/'}\ +}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Word(alphanums\ +\ \textcolor{stringliteral}{'\_-\/./'}))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ entry\_two\ =\ Word(printables\ +\ \textcolor{stringliteral}{'\ '},\ excludeChars=\textcolor{stringliteral}{':'})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ entry\ =\ entry\_one\ |\ entry\_two}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ delimiter\ =\ Literal(\textcolor{stringliteral}{':'}).suppress()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ tc\_result\_line\ =\ Group(entry.setResultsName(\textcolor{stringliteral}{'tc\_file\_name'})\ +\ delimiter\ +\ entry.setResultsName(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tc\_line\_nr'})\ +\ delimiter\ +\ entry.setResultsName(\textcolor{stringliteral}{'tc\_name'})\ +\ delimiter\ +\ entry.setResultsName(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tc\_status'})\ +\ Optional(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delimiter\ +\ entry.setResultsName(\textcolor{stringliteral}{'tc\_msg'}))).setResultsName(\textcolor{stringliteral}{"{}tc\_line"{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ eol\ =\ LineEnd().suppress()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ sol\ =\ LineStart().suppress()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ blank\_line\ =\ sol\ +\ eol}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ tc\_summary\_line\ =\ Group(Word(nums).setResultsName(\textcolor{stringliteral}{"{}num\_of\_tests"{}})\ +\ \textcolor{stringliteral}{"{}Tests"{}}\ +\ Word(nums).setResultsName(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}num\_of\_fail"{}})\ +\ \textcolor{stringliteral}{"{}Failures"{}}\ +\ Word(nums).setResultsName(\textcolor{stringliteral}{"{}num\_of\_ignore"{}})\ +\ \textcolor{stringliteral}{"{}Ignored"{}}).setResultsName(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}tc\_summary"{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ tc\_end\_line\ =\ Or(Literal(\textcolor{stringliteral}{"{}FAIL"{}}),\ Literal(\textcolor{stringliteral}{'Ok'})).setResultsName(\textcolor{stringliteral}{"{}tc\_result"{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ run\ it\ and\ see...}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ pp1\ =\ tc\_result\_line\ |\ Optional(tc\_summary\_line\ |\ tc\_end\_line)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ pp1.ignore(blank\_line\ |\ OneOrMore(\textcolor{stringliteral}{"{}-\/"{}}))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ list()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ l\ \textcolor{keywordflow}{in}\ lines:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.append((pp1.parseString(l)).asDict())}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ delete\ empty\ results}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ filter(\textcolor{keywordtype}{None},\ result)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ tc\_list\ =\ list()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ r\ \textcolor{keywordflow}{in}\ result:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{'tc\_line'}\ \textcolor{keywordflow}{in}\ r:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc\_line\ =\ r[\textcolor{stringliteral}{'tc\_line'}]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ get\ only\ the\ file\ name\ which\ will\ be\ used\ as\ the\ classname}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\_name\ =\ tmp\_tc\_line[\textcolor{stringliteral}{'tc\_file\_name'}].split(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}).pop().split(\textcolor{stringliteral}{'/'}).pop().rsplit(\textcolor{stringliteral}{'.'},\ 1)[0]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc\ =\ TestCase(name=tmp\_tc\_line[\textcolor{stringliteral}{'tc\_name'}],\ classname=file\_name)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{'tc\_status'}\ \textcolor{keywordflow}{in}\ tmp\_tc\_line:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ str(tmp\_tc\_line[\textcolor{stringliteral}{'tc\_status'}])\ ==\ \textcolor{stringliteral}{'IGNORE'}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{'tc\_msg'}\ \textcolor{keywordflow}{in}\ tmp\_tc\_line:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc.add\_skipped\_info(message=tmp\_tc\_line[\textcolor{stringliteral}{'tc\_msg'}],}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output=\textcolor{stringliteral}{r'[File]=\{0\},\ [Line]=\{1\}'}.format(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc\_line[\textcolor{stringliteral}{'tc\_file\_name'}],\ tmp\_tc\_line[\textcolor{stringliteral}{'tc\_line\_nr'}]))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc.add\_skipped\_info(message=\textcolor{stringliteral}{"{}\ "{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ str(tmp\_tc\_line[\textcolor{stringliteral}{'tc\_status'}])\ ==\ \textcolor{stringliteral}{'FAIL'}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{'tc\_msg'}\ \textcolor{keywordflow}{in}\ tmp\_tc\_line:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc.add\_failure\_info(message=tmp\_tc\_line[\textcolor{stringliteral}{'tc\_msg'}],}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output=\textcolor{stringliteral}{r'[File]=\{0\},\ [Line]=\{1\}'}.format(}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc\_line[\textcolor{stringliteral}{'tc\_file\_name'}],\ tmp\_tc\_line[\textcolor{stringliteral}{'tc\_line\_nr'}]))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\_tc.add\_failure\_info(message=\textcolor{stringliteral}{"{}\ "{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tc\_list.append((str(result\_file),\ tmp\_tc))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ k,\ v\ \textcolor{keywordflow}{in}\ tc\_list:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{test\_suites}}[k].append(v)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{except}\ KeyError:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{test\_suites}}[k]\ =\ [v]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ ts\ =\ []}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ suite\_name\ \textcolor{keywordflow}{in}\ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{test\_suites}}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ ts.append(TestSuite(suite\_name,\ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aafe87a02202f9198457a7ebddbf9e7a6}{test\_suites}}[suite\_name]))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(\textcolor{stringliteral}{'result.xml'},\ \textcolor{stringliteral}{'w'})\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ TestSuite.to\_file(f,\ ts,\ prettyprint=\textcolor{stringliteral}{'True'},\ encoding=\textcolor{stringliteral}{'utf-\/8'})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ac97b78e7c161c178a23a3d1478f74aa5}{report}}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00104}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a58bd940e6b9e304c16d20ca719cefa3e}{00104}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a58bd940e6b9e304c16d20ca719cefa3e}{set\_targets}}(self,\ target\_array):}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a349ebe2a4ab69cba0bde36f53a5c1290}{targets}}\ =\ target\_array}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00107}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aaa2afc574577fb3784871c9d7f434209}{00107}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_aaa2afc574577fb3784871c9d7f434209}{set\_root\_path}}(self,\ path):}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_ab4b8daf4b8ea9d39568719e1e320076f}{root}}\ =\ path}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00110}00110\ \ \ \ \ \textcolor{preprocessor}{@staticmethod}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00111}\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a2b10f04d11910485e3b6ecc06e823e20}{00111}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary_a2b10f04d11910485e3b6ecc06e823e20}{usage}}(err\_msg=None):}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\(\backslash\)nERROR:\ "{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ err\_msg:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ print(err\_msg)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\(\backslash\)nUsage:\ unity\_test\_summary.py\ result\_file\_directory/\ root\_path/"{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\ \ \ \ \ result\_file\_directory\ -\/\ The\ location\ of\ your\ results\ files."{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Defaults\ to\ current\ directory\ if\ not\ specified."{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Should\ end\ in\ /\ if\ specified."{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}\ \ \ \ \ root\_path\ -\/\ Helpful\ for\ producing\ more\ verbose\ output\ if\ using\ relative\ paths."{}})}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ sys.exit(1)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00123}00123\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{'\_\_main\_\_'}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00124}\mbox{\hyperlink{namespaceunity__to__junit_a0344bc35e417f905ee690ec56ca4cfd9}{00124}}\ \ \ \ \ uts\ =\ \mbox{\hyperlink{classunity__to__junit_1_1_unity_test_summary}{UnityTestSummary}}()}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ look\ in\ the\ specified\ or\ current\ directory\ for\ result\ files}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ len(sys.argv)\ >\ 1:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00128}\mbox{\hyperlink{namespaceunity__to__junit_a66e04a5d6da7f178e9e9c77ffffa67b2}{00128}}\ \ \ \ \ \ \ \ \ \ \ \ \ targets\_dir\ =\ sys.argv[1]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ targets\_dir\ =\ \textcolor{stringliteral}{'./'}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00131}\mbox{\hyperlink{namespaceunity__to__junit_aca9a7ee02fb8663e9e2971ca4052b0c6}{00131}}\ \ \ \ \ \ \ \ \ targets\ =\ list(map(\textcolor{keyword}{lambda}\ x:\ x.replace(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'},\ \textcolor{stringliteral}{'/'}),\ glob(targets\_dir\ +\ \textcolor{stringliteral}{'*.test*'})))}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ len(targets)\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ Exception(\textcolor{stringliteral}{"{}No\ *.testpass\ or\ *.testfail\ files\ found\ in\ '\%s'"{}}\ \%\ targets\_dir)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ uts.set\_targets(targets)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ set\ the\ root\ path}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ len(sys.argv)\ >\ 2:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00138}\mbox{\hyperlink{namespaceunity__to__junit_ab33cf7205359ee0f91488c87df1577a0}{00138}}\ \ \ \ \ \ \ \ \ \ \ \ \ root\_path\ =\ sys.argv[2]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ root\_path\ =\ os.path.split(\_\_file\_\_)[0]}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ uts.set\_root\_path(root\_path)}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ run\ the\ summarizer}}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ print(uts.run())}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00145}00145\ \ \ \ \ \textcolor{keywordflow}{except}\ Exception\ \textcolor{keyword}{as}\ e:}
+\DoxyCodeLine{\Hypertarget{unity__to__junit_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ UnityTestSummary.usage(e)}
+
+\end{DoxyCode}

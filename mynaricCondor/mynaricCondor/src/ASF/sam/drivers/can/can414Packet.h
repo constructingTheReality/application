@@ -46,17 +46,18 @@
 #define X2_414_UNIT_BASE_TEMPERATURE							( 90.0 )
 #define Y2_414_UNIT_BASE_TEMPERATURE							( 255.0)
 
-#define X1_414_POWER_SUPPLY_MONITOR								( 0.0)
-#define Y1_414_POWER_SUPPLY_MONITOR								( 0.0)
-#define X2_414_POWER_SUPPLY_MONITOR								( 28.0 )
-#define Y2_414_POWER_SUPPLY_MONITOR								( 255 )
+#define X1_414_BACKFACET_MONITOR								( 0.0)
+#define Y1_414_BACKFACET_MONITOR								( 0.0)
+#define X2_414_BACKFACET_MONITOR								( 28.0 )
+#define Y2_414_BACKFACET_MONITOR								( 255 )
 
 #define DEF_CAN_414_BOOSTER_OPTICAL_INPUT_POWER            ( 0 )
 #define DEF_CAN_414_BOOSTER_OPTICAL_OUTPUT_POWER           ( 10 )
 #define DEF_CAN_414_LNA_OPTICAL_INPUT_POWER		           ( 20 )
 #define DEF_CAN_414_LNA_OPTICAL_OUTPUT_POWER	           ( 30 )
 #define DEF_CAN_414_UNIT_BASE_TEMPERATURE		           ( 40 )
-#define DEF_CAN_414_POWER_SUPPLY_MONITOR		           ( 48 )
+#define DEF_CAN_414_BACKFACET_HPA_MONITOR		           ( 48 )
+#define DEF_CAN_414_BACKFACET_LNA_MONITOR		           ( 56 )
 
 /* Exported macro ----------------------------------------------------------- */
 /* Exported enum ------------------------------------------------------------ */
@@ -69,7 +70,9 @@ typedef struct
 	float						fLnaOpticalInputtPower;				/*Bit 20-29 */
 	float						fLnaOpticalOutputPower;				/*Bit 30-39 */
 	float						fUnitBaseTemperature;				/*Bit 40-47 */
-	float						fPowerSupplyMonitor;				/*Bit 48-55 */
+	float						fBackFacetHpaMonitorRaw ; 				/*Bit 48-55 */  //fPowerSupplyMonitor;
+	float						fBackFacetLnaMonitorRaw ; 				/*/*Bit 56-63 */  
+	
 	
 }c414StatusDefinition_t;
 

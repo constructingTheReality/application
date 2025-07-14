@@ -1,0 +1,94 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Sensors.h}
+\hypertarget{power_sensors_8h_source}{}\label{power_sensors_8h_source}\mbox{\hyperlink{power_sensors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00015}00015\ \textcolor{comment}{/*\ Header\ guard\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ POWERSENSORS\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ POWERSENSORS\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00019}00019\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}mpblibs.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}mpbLosDetector.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}LaserData.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}glue.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}currentSensing.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00025}00025\ \textcolor{comment}{/*\ Define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00026}\mbox{\hyperlink{power_sensors_8h_a70f08844311c6ebacee95e22db4fd66e}{00026}}\ \textcolor{preprocessor}{\#define\ \ LOS\_SET\_LIMIT\ \ (-\/10.5)}\textcolor{comment}{//(-\/49.0\ )\ \ /(\ 0.0000125893)\ }}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00027}\mbox{\hyperlink{power_sensors_8h_a1d6710721bdafa74609c124a2f34307b}{00027}}\ \textcolor{preprocessor}{\#define\ \ LOS\_CLEAR\_LIMIT\ \ \ (-\/4)}\textcolor{comment}{//(-\/51\ )\ //(\ 0.0000079433\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00029}\mbox{\hyperlink{power_sensors_8h_ab5451346c613314d211c4f2ae0303ac0}{00029}}\ \textcolor{preprocessor}{\#define\ MAX\_HPA\_CURRENT\_SM\_IN\_MA\ \ \ \ \ \ \ \ (\ 550\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00030}\mbox{\hyperlink{power_sensors_8h_ab1a97e545e956a8ea853f2c7f5a5eec7}{00030}}\ \textcolor{preprocessor}{\#define\ NOMINAL\_CURRENT\_SM\_IN\_POURCENTAGE\ \ (\ 75\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00031}\mbox{\hyperlink{power_sensors_8h_ab1d1d2140bd37c88b43a298d5fde0916}{00031}}\ \textcolor{preprocessor}{\#define\ MAX\_HPA\_CURRENT\_STAGE\_MM\_1\_IN\_MA\ \ \ \ \ \ \ \ (\ 1500\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00032}\mbox{\hyperlink{power_sensors_8h_ab998b623ce7b1b3b5d0a27b9af50e285}{00032}}\ \textcolor{preprocessor}{\#define\ MAX\_HPA\_CURRENT\_STAGE\_MM\_2\_IN\_MA\ \ \ \ \ \ \ \ (\ 1500\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00033}\mbox{\hyperlink{power_sensors_8h_af14c482b42ffa5be95954a7edf555eb8}{00033}}\ \textcolor{preprocessor}{\#define\ MAX\_HPA\_CURRENT\_MM\_1\_IN\_MA\ \ \ \ \ \ (\ 5000\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00034}\mbox{\hyperlink{power_sensors_8h_a497620aba759e702bc9d929449277e54}{00034}}\ \textcolor{preprocessor}{\#define\ MAX\_HPA\_CURRENT\_MM\_2\_IN\_MA\ \ \ \ \ \ (\ 5000\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00035}\mbox{\hyperlink{power_sensors_8h_a3655caba738289db024d1e61225b46f6}{00035}}\ \textcolor{preprocessor}{\#define\ MAX\_LH\_LEVEL\_IN\_RAW\ \ \ \ \ \ \ \ \ \ \ \ \ (\ 3900\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00036}\mbox{\hyperlink{power_sensors_8h_ab890ab05b918c54cf190c562f44cc311}{00036}}\ \textcolor{preprocessor}{\#define\ MIN\_HH\_LEVEL\_IN\_RAW\ \ \ \ \ \ \ \ \ \ \ \ \ (\ 690\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00038}\mbox{\hyperlink{power_sensors_8h_ab9749a3e276548e3fd50c6995f589f9c}{00038}}\ \textcolor{preprocessor}{\#define\ MAX\_BF\_IN\_MA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ 1500\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00039}\mbox{\hyperlink{power_sensors_8h_a14087138bc00b18b2013d1fe0298c5e4}{00039}}\ \textcolor{preprocessor}{\#define\ MIN\_BF\_IN\_MA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ 800\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00051}00051\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ PowerChannelConfigId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,slope\ Filter\ Constant\ \ \ \ \ \ ,intercept\ Filter\ Constant\ \ \ )\ \ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00052}\mbox{\hyperlink{power_sensors_8h_a250b7ddbe0443635698027e5e7215ba5}{00052}}\ \textcolor{preprocessor}{\#define\ LIST\_OF\_POWER\_CHANNELS\ \ \ \ X(\ \ \ \ eInternalPdReference\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00053}00053\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eInternalLnaOutputPower1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00054}00054\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eInternalLnaOutputPower2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00055}00055\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalLnaInputPower\_1536\ \ \ \ \ \ \ \ \ \ \ \ ,0.00000000187\ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00056}00056\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalLnaInputPower\_1553\ \ \ \ \ \ \ \ \ \ \ \ ,0.00000000187\ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalLnaOutputPower1\_1536\ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00058}00058\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalLnaOutputPower2\_1553\ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00059}00059\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaInputPower\_1536\ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00060}00060\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaInputPower\_1553\ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00061}00061\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaOutputPower\_1536\_lm\ \ \ \ \ \ \ \ ,0.000191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaOutputPower\_1536\_hm\ \ \ \ \ \ \ \ ,0.00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00063}00063\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaOutputPower\_1553\_lm\ \ \ \ \ \ \ \ ,0.000191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00064}00064\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternalHpaOutputPower\_1553\_hm\ \ \ \ \ \ \ \ ,0.00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00065}00065\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternal\_PdReference1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ \ \ eExternal\_PdReference\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00069}00069\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00070}00070\ \textcolor{comment}{/*//eInternalLnaOutputPower1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00071}00071\ \textcolor{comment}{//X(\ \ \ \ eInternalLnaOutputPower2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.0000189\ 042385552\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00072}00072\ \textcolor{comment}{/*\ Exported\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00076}\mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5ae}{00076}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00078}\mbox{\hyperlink{power_sensors_8h_aac28d9bde3c6205cd47910e902076ef0}{00078}}\ \textcolor{preprocessor}{\#define\ X(\ PowerChannelConfigId,\ slopeConstant,\ interceptConstant\ )\ PowerChannelConfigId,}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{power_sensors_8h_a250b7ddbe0443635698027e5e7215ba5}{LIST\_OF\_POWER\_CHANNELS}}\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00080}00080\ \textcolor{preprocessor}{\#undef\ X}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00081}\mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5aea58ae48cea9978f80ce478d900a45c0e8}{00081}}\ \ \ \ \ \mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5aea58ae48cea9978f80ce478d900a45c0e8}{eNumberOfPowerChannelConfigurations}},}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00083}00083\ \mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5ae}{ePowerChannelsScaling\_t}};\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00085}00085\ \textcolor{comment}{/*\ Exported\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00086}00086\ \textcolor{comment}{/*\ Global\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00088}00088\ \textcolor{comment}{/*\ Exported\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00097}00097\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_a09f78ae094b01c590c69201b2d369973}{ePowerSensorsFactoryInitCommonChannels}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00104}00104\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_a3567f467c372bf747ec2a51be0ba16c4}{ePowerSensorsFactoryInitLnaChannels}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00112}00112\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_a4c6316893f675a6080a2328201cb27d6}{ePowerSensorsFactoryInitBoosterChannels}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00120}00120\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_ad5f6eb8576eb41ca33fc33af2a03446e}{ePowerSensorsCommonConfigUpdate}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00127}00127\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_af5b153abbaf61bcd560e931412a5680d}{ePowerSensorsLnaConfigUpdate}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00134}00134\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_ab5988b4b7729e9e9b047b0f87d61989e}{ePowerSensorsBoosterConfigUpdate}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00141}00141\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_8h_abbfd3d79a28a89134ad3d5ea9ed06b0f}{ePowerSensorUpdate}}(\ eBool\_t\ *pbHpaPowerLosAlarm,\ eBool\_t\ *pbLnaPowerCriticalAlarm,\ eBool\_t\ *pbBoosterPowerCriticalAlarm\ );}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00146}00146\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_POWERSENSOR\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_8h_source_l00152}00152\ }
+
+\end{DoxyCode}

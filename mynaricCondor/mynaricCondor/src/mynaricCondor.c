@@ -345,7 +345,7 @@ int main(void)
 
 	//read nvm paramters
 
-		if(eTrue == bInitCommonMemoryImageFromNvm() )
+	if(eTrue == bInitCommonMemoryImageFromNvm() )
 	{ 
 		vCopyImageCommonNvm();	
 	}

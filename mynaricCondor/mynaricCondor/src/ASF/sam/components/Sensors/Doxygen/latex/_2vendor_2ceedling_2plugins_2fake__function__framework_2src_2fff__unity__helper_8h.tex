@@ -1,0 +1,70 @@
+\doxysection{Unit\+Test\+Framework2/vendor/ceedling/plugins/fake\+\_\+function\+\_\+framework/src/fff\+\_\+unity\+\_\+helper.h File Reference}
+\hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h}{}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h}\index{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/src/fff\_unity\_helper.h@{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/src/fff\_unity\_helper.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES}}(times\+\_\+,  function\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED}}(function\+\_\+)~\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES}}(1, function\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_affc90aa528332c5c767fd7bd7542d525}{TEST\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+CALLED}}(function\+\_\+)~\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES}}(0, function\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_af21f27d62b55519b5f72bb32724df80d}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+IN\+\_\+\+ORDER}}(order\+\_\+,  function\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1} 
+\index{fff\_unity\_helper.h@{fff\_unity\_helper.h}!TEST\_ASSERT\_CALLED@{TEST\_ASSERT\_CALLED}}
+\index{TEST\_ASSERT\_CALLED@{TEST\_ASSERT\_CALLED}!fff\_unity\_helper.h@{fff\_unity\_helper.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_ASSERT\_CALLED}{TEST\_ASSERT\_CALLED}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+ASSERT\+\_\+\+CALLED(\begin{DoxyParamCaption}\item[{}]{function\+\_\+ }\end{DoxyParamCaption})~\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES}}(1, function\+\_\+)}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00018}{18}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}{fff\+\_\+unity\+\_\+helper.\+h}}.
+
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_af21f27d62b55519b5f72bb32724df80d}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_af21f27d62b55519b5f72bb32724df80d} 
+\index{fff\_unity\_helper.h@{fff\_unity\_helper.h}!TEST\_ASSERT\_CALLED\_IN\_ORDER@{TEST\_ASSERT\_CALLED\_IN\_ORDER}}
+\index{TEST\_ASSERT\_CALLED\_IN\_ORDER@{TEST\_ASSERT\_CALLED\_IN\_ORDER}!fff\_unity\_helper.h@{fff\_unity\_helper.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_ASSERT\_CALLED\_IN\_ORDER}{TEST\_ASSERT\_CALLED\_IN\_ORDER}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+IN\+\_\+\+ORDER(\begin{DoxyParamCaption}\item[{}]{order\+\_\+,  }\item[{}]{function\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_aca40116d00f8dfa406b26a51079f679c}{TEST\_ASSERT\_EQUAL\_PTR\_MESSAGE}}((\textcolor{keywordtype}{void}\ *)\ function\_,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fff.call\_history[order\_],\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Function\ "{}}\ \#function\_\ \textcolor{stringliteral}{"{}\ not\ called\ in\ order\ "{}}\ \#order\_\ )}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00028}{28}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}{fff\+\_\+unity\+\_\+helper.\+h}}.
+
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182} 
+\index{fff\_unity\_helper.h@{fff\_unity\_helper.h}!TEST\_ASSERT\_CALLED\_TIMES@{TEST\_ASSERT\_CALLED\_TIMES}}
+\index{TEST\_ASSERT\_CALLED\_TIMES@{TEST\_ASSERT\_CALLED\_TIMES}!fff\_unity\_helper.h@{fff\_unity\_helper.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_ASSERT\_CALLED\_TIMES}{TEST\_ASSERT\_CALLED\_TIMES}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES(\begin{DoxyParamCaption}\item[{}]{times\+\_\+,  }\item[{}]{function\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_a967e59fb3e825d8341c41cb954e890c5}{TEST\_ASSERT\_EQUAL\_MESSAGE}}(times\_,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ function\_\ \#\#\ \_fake.call\_count,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Function\ "{}}\ \#function\_\ \textcolor{stringliteral}{"{}\ called\ the\ incorrect\ number\ of\ times."{}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00011}{11}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}{fff\+\_\+unity\+\_\+helper.\+h}}.
+
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_affc90aa528332c5c767fd7bd7542d525}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_affc90aa528332c5c767fd7bd7542d525} 
+\index{fff\_unity\_helper.h@{fff\_unity\_helper.h}!TEST\_ASSERT\_NOT\_CALLED@{TEST\_ASSERT\_NOT\_CALLED}}
+\index{TEST\_ASSERT\_NOT\_CALLED@{TEST\_ASSERT\_NOT\_CALLED}!fff\_unity\_helper.h@{fff\_unity\_helper.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_ASSERT\_NOT\_CALLED}{TEST\_ASSERT\_NOT\_CALLED}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+CALLED(\begin{DoxyParamCaption}\item[{}]{function\+\_\+ }\end{DoxyParamCaption})~\mbox{\hyperlink{vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{TEST\+\_\+\+ASSERT\+\_\+\+CALLED\+\_\+\+TIMES}}(0, function\+\_\+)}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00023}{23}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}{fff\+\_\+unity\+\_\+helper.\+h}}.
+

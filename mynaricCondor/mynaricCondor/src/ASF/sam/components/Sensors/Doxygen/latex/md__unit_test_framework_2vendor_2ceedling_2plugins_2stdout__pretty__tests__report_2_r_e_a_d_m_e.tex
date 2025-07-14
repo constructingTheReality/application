@@ -1,0 +1,15 @@
+\chapter{ceedling-\/pretty-\/tests-\/report}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e}{}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e}\index{ceedling-\/pretty-\/tests-\/report@{ceedling-\/pretty-\/tests-\/report}}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e_autotoc_md76}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e_autotoc_md76}
+The stdout\+\_\+pretty\+\_\+tests\+\_\+report is the default output of ceedling. Instead of showing most of the raw output of CMock, Ceedling, etc., it shows a simplified view. It also creates a nice summary at the end of execution which groups the results into ignored and failed tests.\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e_autotoc_md77}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2stdout__pretty__tests__report_2_r_e_a_d_m_e_autotoc_md77}
+Enable the plugin in your project.\+yml by adding {\ttfamily stdout\+\_\+pretty\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ stdout\_pretty\_tests\_report}
+
+\end{DoxyCode}
+ 

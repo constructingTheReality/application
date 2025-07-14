@@ -330,10 +330,6 @@ void eBoosterLoopStateApcFunction(void)
 	//eBoosterApcStateGetDataPowersAndOperationMode( &xBoosterPowers);
 	eBoosterApcStateGetDataPowersAndOperationMode( &xBoosterPowers , &bEnable1Booster, &bEnable2Booster, &bEnable3Booster );
 	
-//	cPumpSm1StatusDefinition.cPumpSm1StatusFlags.PumpSm1BitAssignment.bEnableHpa1  =  (cPumpSm1StatusDefinition.cPumpSm1StatusFlags.ulPumpSm1Value == 0x01)? eTrue:eFalse ; //xBoosterEnablePumps.bEnableHpa1 && (xBoosterStuckAlarmValues.bSm1IsStucked == eFalse) && ( xBoosterAlarmValues.bSm1OverHeat == eFalse ) && ( xBoosterAlarmValues.bSm1UnderHeat == eFalse ) ;
-//	cPumpMm1StatusDefinition.cPumpMm1StatusFlags.PumpMm1BitAssignment.bEnableMMHpa1  =  (cPumpMm1StatusDefinition.cPumpMm1StatusFlags.ulPumpMm1Value == 0x01)? eTrue:eFalse ; //xBoosterEnablePumps.bEnableMMHpa1 && (xBoosterStuckAlarmValues.bMm1IsStucked == eFalse) && ( xBoosterAlarmValues.bMm1OverHeat == eFalse ) && ( xBoosterAlarmValues.bMm1UnderHeat == eFalse );
-//	cPumpMm2StatusDefinition.cPumpMm2StatusFlags.Pump2BitAssignment.bEnableMMHpa2  =  (cPumpMm2StatusDefinition.cPumpMm2StatusFlags.ulPumpMm2Value == 0x01)? eTrue:eFalse ; //xBoosterEnablePumps.bEnableMMHpa2 && (xBoosterStuckAlarmValues.bMm2IsStucked == eFalse) && ( xBoosterAlarmValues.bMm2OverHeat == eFalse ) && ( xBoosterAlarmValues.bMm2UnderHeat == eFalse );		
-	
 	//fsetPointInMiliWatts				= pow(10, xBoosterCurrents.fValueConverted  ) ;
 
 	/* possible conditions to force a disable on apc. normal conditions. not alarms? */
@@ -347,12 +343,16 @@ void eBoosterLoopStateApcFunction(void)
 	if( bDisable == eTrue)
 	{
 		vHpaDisableSequence();		
-		vHpaApcStateMachineInit();		
-	//	eBoosterApcStateGetDataSetResetRequest( DO_NOTHING);
-	//	eBoosterState 	= eBoosterLoopStateDisable ;		
+		vHpaApcStateMachineInit();				
 	}
 		
-	/* manage for the enable / disable inputs */
+	/* manage for the enable / disable inputs
+	   The condition is true iff one of the MM1 or MM2 has changed its state.
+	   if this is true, we need to re-formulate the operation of the amp.
+	   the normal sequence is mm1 -> mm2 _> mm1 and mm2 
+	   if one of them are disabled, the other should work alone and try to reach the setpoint.
+	*/
+	
 	bEnableChange = ( 
 				//	(((eBool_t)(cPumpSm1StatusDefinition.cPumpSm1StatusFlags.PumpSm1BitAssignment.bEnableHpa1)) != bLastEnableSmHpa1 )  || 
 					(((eBool_t)(cPumpMm2StatusDefinition.cPumpMm2StatusFlags.Pump2BitAssignment.bEnableMMHpa2)) != bLastEnableHpa2) || 
@@ -368,7 +368,7 @@ void eBoosterLoopStateApcFunction(void)
 			vHpaApcStateMachineInit(); 			
 	}
 		
-	/* for each new trayectory, reset all the pid instances */	
+	/* for each new trayectory (setpoint), reset all the pid instances */	
 	bSetpointEqual =  mpb_float1_equal_to_float2(fLastSetPointInDbm, xBoosterPowers.fSetPointInDbm, 100);
 	
 	if( bSetpointEqual == eFalse  )/* || (fLastInputPower != fActualInputPowerInDbm)*/

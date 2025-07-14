@@ -1,0 +1,97 @@
+\doxysection{cmock\+\_\+internals.\+h}
+\hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source}{}\label{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source}\index{UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock\_internals.h@{UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock\_internals.h}}
+\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00001}00001\ \textcolor{comment}{/*\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00002}00002\ \textcolor{comment}{\ \ \ \ CMock\ Project\ -\/\ Automatic\ Mock\ Generation\ for\ C}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00003}00003\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2007\ Mike\ Karlesky,\ Mark\ VanderVoord,\ Greg\ Williams}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00004}00004\ \textcolor{comment}{\ \ \ \ [Released\ under\ MIT\ License.\ Please\ refer\ to\ license.txt\ for\ details]}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00005}00005\ \textcolor{comment}{==========================================\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_FRAMEWORK\_INTERNALS\_H}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ CMOCK\_FRAMEWORK\_INTERNALS\_H}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}unity.h"{}}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00012}00012\ \textcolor{comment}{/*\ These\ are\ constants\ that\ the\ generated\ mocks\ have\ access\ to\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00013}00013\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_ac00a03c1e594c9e1d9ff3ce4873642a0}{CMockStringOutOfMemory}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00014}00014\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a797fd9415cd8d0655c68e007f845d020}{CMockStringCalledMore}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00015}00015\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a6ac9ca0995f1b325857c4bdb5a898102}{CMockStringCalledLess}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00016}00016\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a16b2f46d690a118d6ca14abb35543481}{CMockStringCalledEarly}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00017}00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_aed2166361988847f5f63d13994f5de40}{CMockStringCalledLate}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00018}00018\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_acf9d38dd7d2872139cc1bc1bf1b19e70}{CMockStringCallOrder}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00019}00019\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_aa04f7531196fa48793136231a0468971}{CMockStringIgnPreExp}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00020}00020\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a784237bba66acd6aa8f05424ab203e50}{CMockStringPtrPreExp}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00021}00021\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_af6f94581b839661ce82bfd01f1c937a1}{CMockStringPtrIsNULL}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00022}00022\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_aeda885bf7d07126d0e1638f265d7514c}{CMockStringExpNULL}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00023}00023\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a89c88e09ebf68dff96e71a417b8733a5}{CMockStringMismatch}};}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00025}00025\ \textcolor{comment}{/*\ define\ CMOCK\_MEM\_DYNAMIC\ to\ grab\ memory\ as\ needed\ with\ malloc}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00026}00026\ \textcolor{comment}{\ *\ when\ you\ do\ that,\ CMOCK\_MEM\_SIZE\ is\ used\ for\ incremental\ size\ instead\ of\ total\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00027}00027\ \textcolor{preprocessor}{\#ifdef\ CMOCK\_MEM\_STATIC}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00028}00028\ \textcolor{preprocessor}{\#undef\ CMOCK\_MEM\_DYNAMIC}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00029}00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifdef\ CMOCK\_MEM\_DYNAMIC}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00035}00035\ \textcolor{comment}{/*\ this\ is\ used\ internally\ during\ pointer\ arithmetic.\ make\ sure\ this\ type\ is\ the\ same\ size\ as\ the\ target's\ pointer\ type\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00036}00036\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_PTR\_AS\_INT}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00037}00037\ \textcolor{preprocessor}{\#ifdef\ UNITY\_POINTER\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00038}00038\ \textcolor{preprocessor}{\#ifdef\ UNITY\_INT\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00039}00039\ \textcolor{preprocessor}{\#if\ UNITY\_POINTER\_WIDTH\ ==\ UNITY\_INT\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00040}00040\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_PTR\_AS\_INT\ unsigned\ int}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00043}00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00044}00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00046}00046\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_PTR\_AS\_INT}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00047}00047\ \textcolor{preprocessor}{\#ifdef\ UNITY\_POINTER\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00048}00048\ \textcolor{preprocessor}{\#ifdef\ UNITY\_LONG\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00049}00049\ \textcolor{preprocessor}{\#if\ UNITY\_POINTER\_WIDTH\ ==\ UNITY\_LONG\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00050}00050\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_PTR\_AS\_INT\ unsigned\ long}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00052}00052\ \textcolor{preprocessor}{\#if\ UNITY\_POINTER\_WIDTH\ >\ UNITY\_LONG\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00053}00053\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_PTR\_AS\_INT\ unsigned\ long\ long}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00059}00059\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_PTR\_AS\_INT}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00060}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{00060}}\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_PTR\_AS\_INT\ unsigned\ long}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00063}00063\ \textcolor{comment}{/*\ 0\ for\ no\ alignment,\ 1\ for\ 16-\/bit,\ 2\ for\ 32-\/bit,\ 3\ for\ 64-\/bit\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00064}00064\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_ALIGN}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00065}00065\ \textcolor{preprocessor}{\ \ \#ifdef\ UNITY\_LONG\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \#if\ (UNITY\_LONG\_WIDTH\ ==\ 16)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00067}00067\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ CMOCK\_MEM\_ALIGN\ (1)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \#elif\ (UNITY\_LONG\_WIDTH\ ==\ 32)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00069}00069\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ CMOCK\_MEM\_ALIGN\ (2)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00070}00070\ \textcolor{preprocessor}{\ \ \ \ \#elif\ (UNITY\_LONG\_WIDTH\ ==\ 64)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ CMOCK\_MEM\_ALIGN\ (3)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00072}00072\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00073}00073\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ CMOCK\_MEM\_ALIGN\ (2)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00074}00074\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00075}00075\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00076}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461}{00076}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ CMOCK\_MEM\_ALIGN\ (2)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00077}00077\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00078}00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00080}00080\ \textcolor{comment}{/*\ amount\ of\ memory\ to\ allow\ cmock\ to\ use\ in\ its\ internal\ heap\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00081}00081\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_SIZE}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00082}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}{00082}}\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_SIZE\ (32768)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00083}00083\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00085}00085\ \textcolor{comment}{/*\ automatically\ calculated\ defs\ for\ easier\ reading\ */}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00086}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{00086}}\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_ALIGN\_SIZE\ \ (CMOCK\_MEM\_INDEX\_TYPE)(1u\ <<\ CMOCK\_MEM\_ALIGN)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00087}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}{00087}}\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_ALIGN\_MASK\ \ (CMOCK\_MEM\_INDEX\_TYPE)(CMOCK\_MEM\_ALIGN\_SIZE\ -\/\ 1)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00088}\mbox{\hyperlink{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{00088}}\ \textcolor{preprocessor}{\#define\ CMOCK\_MEM\_INDEX\_SIZE\ \ (CMOCK\_MEM\_INDEX\_TYPE)(CMOCK\_MEM\_PTR\_AS\_INT)((sizeof(CMOCK\_MEM\_INDEX\_TYPE)\ >\ CMOCK\_MEM\_ALIGN\_SIZE)\ ?\ sizeof(CMOCK\_MEM\_INDEX\_TYPE)\ :\ CMOCK\_MEM\_ALIGN\_SIZE)}}
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{vendor_2ceedling_2vendor_2cmock_2src_2cmock__internals_8h_source_l00091}00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ end\ of\ CMOCK\_FRAMEWORK\_INTERNALS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

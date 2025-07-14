@@ -1,0 +1,97 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/current\+Sensorsread\+Channel.h File Reference}
+\hypertarget{current_sensorsread_channel_8h}{}\label{current_sensorsread_channel_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsreadChannel.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/currentSensorsreadChannel.h}}
+
+
+current\+Sensorsread\+Channel header file.  
+
+
+{\ttfamily \#include "{}mpblibs.\+h"{}}\newline
+{\ttfamily \#include "{}glue.\+h"{}}\newline
+{\ttfamily \#include "{}current\+Sensors.\+h"{}}\newline
+{\ttfamily \#include "{}current\+Sensing.\+h"{}}\newline
+Include dependency graph for current\+Sensorsread\+Channel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{current_sensorsread_channel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensorsread_channel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{current_sensorsread_channel_8h_a4806210ab871d09e3fc6505517e190ba}{e\+Current\+Sensors\+Read\+Channel\+Run}} (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, \mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}} x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw)
+\begin{DoxyCompactList}\small\item\em get current value for a specific channel ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+current\+Sensorsread\+Channel header file. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2024-\/05-\/30 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2024 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+Definition in file \mbox{\hyperlink{current_sensorsread_channel_8h_source}{current\+Sensorsread\+Channel.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{current_sensorsread_channel_8h_a4806210ab871d09e3fc6505517e190ba}\label{current_sensorsread_channel_8h_a4806210ab871d09e3fc6505517e190ba} 
+\index{currentSensorsreadChannel.h@{currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun@{eCurrentSensorsReadChannelRun}}
+\index{eCurrentSensorsReadChannelRun@{eCurrentSensorsReadChannelRun}!currentSensorsreadChannel.h@{currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun()}{eCurrentSensorsReadChannelRun()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensors\+Read\+Channel\+Run (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{uint16\+\_\+t}]{us\+Offset,  }\item[{\mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}}}]{x\+Current\+Input\+Scaling,  }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current\+Readed\+In\+Ma,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Current\+Raw }\end{DoxyParamCaption})}
+
+
+
+get current value for a specific channel ~\newline
+ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & the driver hardware number ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em pf\+Current\+Readed} & the current read in mA. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pus\+Current\+Raw} & the current reads in raw. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_read_channel_8c_source_l00021}{21}} of file \mbox{\hyperlink{current_sensors_read_channel_8c_source}{current\+Sensors\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensorsread_channel_8h_a4806210ab871d09e3fc6505517e190ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensorsread_channel_8h_a4806210ab871d09e3fc6505517e190ba_icgraph}
+\end{center}
+\end{figure}

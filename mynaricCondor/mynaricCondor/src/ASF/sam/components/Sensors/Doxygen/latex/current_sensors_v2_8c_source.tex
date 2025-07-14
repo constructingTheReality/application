@@ -1,0 +1,276 @@
+\doxysection{current\+Sensors\+V2.\+c}
+\hypertarget{current_sensors_v2_8c_source}{}\label{current_sensors_v2_8c_source}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/V2 Attempt Files/currentSensorsV2.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/V2 Attempt Files/currentSensorsV2.c}}
+\mbox{\hyperlink{current_sensors_v2_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00015}00015\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_8h}{currentSensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_read_channel_8h}{currentSensorsReadChannel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}projectDef.h"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_lna_alarm_8h}{currentSensorsLnaAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_hpa_alarm_8h}{currentSensorsHpaAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_common_alarm_8h}{currentSensorsCommonAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_backfacet_alarm_8h}{currentSensorsBackfacetAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_update_database_8h}{currentSensorsUpdateDatabase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_config_update_8h}{currentSensorsConfigUpdate.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00026}00026\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00027}\mbox{\hyperlink{current_sensors_v2_8c_aa0eb6699254338501e1a285193823531}{00027}}\ \textcolor{preprocessor}{\#define\ CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ eNumberOfChannelConfigurations\ )}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00028}\mbox{\hyperlink{current_sensors_v2_8c_a39ee27cf4da1722436dd479addff21fd}{00028}}\ \textcolor{preprocessor}{\#define\ OFFSET\_MIDDLE\_POINT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ 1500\ )}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00029}\mbox{\hyperlink{current_sensors_v2_8c_aed199496f072048326f77bcc59dd1ade}{00029}}\ \textcolor{preprocessor}{\#define\ MIN\_CURRENT\_IN\_CIRCUIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ 200\ )}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00030}00030\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00031}00031\ \textcolor{comment}{/*\ Private\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00032}00032\ \textcolor{comment}{/*\ Private\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00033}00033\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00035}00035\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fCurrentSlopeScaleConstant[\ \mbox{\hyperlink{current_sensors_8c_aa0eb6699254338501e1a285193823531}{CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS}}\ ]\ =}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ \#define\ X(\ CurrentChannelConfigId,\ slopeConstant,\ interceptConstant\ )\ \ \ slopeConstant,}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{current_sensors_8h_a603b5d74b9aa1d611615944a5caa86f4}{LIST\_OF\_CURRENT\_CHANNELS}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ \#undef\ X}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00040}00040\ \};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00042}00042\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fCurrentInterceptScaleConstant[\ \mbox{\hyperlink{current_sensors_8c_aa0eb6699254338501e1a285193823531}{CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS}}\ ]\ =}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00044}00044\ \textcolor{preprocessor}{\ \ \ \ \#define\ X(\ CurrentChannelConfigId,\ slopeConstant,\ interceptConstant\ )\ \ \ interceptConstant,}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{current_sensors_8h_a603b5d74b9aa1d611615944a5caa86f4}{LIST\_OF\_CURRENT\_CHANNELS}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00046}00046\ \textcolor{preprocessor}{\ \ \ \ \#undef\ X}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00047}00047\ \};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00049}00049\ \textcolor{keyword}{static}\ xCurrentInputScaling\_t\ xLocalCurrentInputScaling[\mbox{\hyperlink{current_sensors_8c_aa0eb6699254338501e1a285193823531}{CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS}}];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00051}00051\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{test__current_sensors_8c_a350221babc43f56667d8c0c175e50d02}{fCurrentReadedInMa}}[\mbox{\hyperlink{current_sensors_8c_aa0eb6699254338501e1a285193823531}{CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS}}];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00053}00053\ \textcolor{keyword}{static}\ uint16\_t\ \mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}}[\mbox{\hyperlink{current_sensors_8c_aa0eb6699254338501e1a285193823531}{CURRENT\_CONFIG\_NUMBER\_OF\_CHANNELS}}];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00056}00056\ \textcolor{comment}{/*\ External\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00057}00057\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00058}00058\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00059}00059\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00060}\mbox{\hyperlink{current_sensors_v2_8c_a1cda315b492179bf67ff0cc02cf0bf08}{00060}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{current_sensors_v2_8c_a1cda315b492179bf67ff0cc02cf0bf08}{vCurrentSensorsInitInternalChannels}}(\ \textcolor{keywordtype}{void}\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00063}00063\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrCurrentMonitorCH1].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrCurrentMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00064}00064\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrCurrentMonitorCH1].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrCurrentMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00066}00066\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrCurrentMonitorCH2].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrCurrentMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00067}00067\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrCurrentMonitorCH2].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrCurrentMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00069}00069\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrVoltageMonitorCH1].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrVoltageMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00070}00070\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrVoltageMonitorCH1].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrVoltageMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00072}00072\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrVoltageMonitorCH2].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrVoltageMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00073}00073\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal28VPwrVoltageMonitorCH2].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal28VPwrVoltageMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00075}00075\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal7VPwrVoltageMonitorCH1].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal7VPwrVoltageMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00076}00076\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal7VPwrVoltageMonitorCH1].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal7VPwrVoltageMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00078}00078\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal7VPwrVoltageMonitorCH2].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal7VPwrVoltageMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00079}00079\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal7VPwrVoltageMonitorCH2].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal7VPwrVoltageMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00080}00080\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00081}00081\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal3\_3VPower\_VoltageMonitor].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal3\_3VPower\_VoltageMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00082}00082\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal3\_3VPower\_VoltageMonitor].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal3\_3VPower\_VoltageMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00084}00084\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal3VPower\_VoltageMonitor].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal3VPower\_VoltageMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00085}00085\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternal3VPower\_VoltageMonitor].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternal3VPower\_VoltageMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00087}00087\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalPowerCurrentMonitor].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalPowerCurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00088}00088\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalPowerCurrentMonitor].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalPowerCurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00090}00090\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalCanPwrCurrentMonitorCH1].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalCanPwrCurrentMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00091}00091\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalCanPwrCurrentMonitorCH1].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalCanPwrCurrentMonitorCH1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00093}00093\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalCanPwrCurrentMonitorCH2].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalCanPwrCurrentMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00094}00094\ \ \ \ \ xLocalCurrentInputScaling[eAdcInternalCanPwrCurrentMonitorCH2].fSlope\ =\ fCurrentInterceptScaleConstant[\ eAdcInternalCanPwrCurrentMonitorCH2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00097}00097\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00098}\mbox{\hyperlink{current_sensors_v2_8c_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3}{00098}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{current_sensors_v2_8c_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3}{vCurrentSensorsFactoryInitLnaChannels}}(\ \textcolor{keywordtype}{void}\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00099}00099\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00100}00100\ \ \ \ \ xLocalCurrentInputScaling[eAdcExLnaSingleModeldCurrentMonitor].fIntercept\ \ \ =\ fCurrentInterceptScaleConstant[\ eAdcExLnaSingleModeldCurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00101}00101\ \ \ \ \ xLocalCurrentInputScaling[eAdcExLnaSingleModeldCurrentMonitor].fSlope\ \ \ =\ fCurrentSlopeScaleConstant[\ eAdcExLnaSingleModeldCurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00103}00103\ \ \ \ \ xLocalCurrentInputScaling[eAdcExternalLnaSm\_ld\_Bfm].fIntercept\ \ \ \ \ \ \ \ \ \ =\ fCurrentInterceptScaleConstant[\ eAdcExternalLnaSm\_ld\_Bfm\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00104}00104\ \ \ \ \ xLocalCurrentInputScaling[eAdcExternalLnaSm\_ld\_Bfm].fSlope\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ fCurrentSlopeScaleConstant[\ eAdcExternalLnaSm\_ld\_Bfm\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00105}00105\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{current_sensors_update_database_8c_a789b788c25633fff789698b44e8a6d05}{eCurrentSensorsUpdateDatabaseLna}}(\ \&xLocalCurrentInputScaling[0]);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00108}00108\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00109}\mbox{\hyperlink{current_sensors_v2_8c_a9a85ca60c578193fb77cfcd4b3519561}{00109}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{current_sensors_v2_8c_a9a85ca60c578193fb77cfcd4b3519561}{vCurrentSensorsFactoryInitBoosterChannels}}(\ \textcolor{keywordtype}{void}\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00110}00110\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00111}00111\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaSingleModeld\_CurrentMonitor].fIntercept\ =\ fCurrentInterceptScaleConstant[\ eAdcExHpaSingleModeld\_CurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00112}00112\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaSingleModeld\_CurrentMonitor].fSlope\ =\ fCurrentSlopeScaleConstant[\ eAdcExHpaSingleModeld\_CurrentMonitor\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00113}00113\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00114}00114\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor1].fIntercept\ \ \ \ \ \ =\ fCurrentInterceptScaleConstant[\ eAdcExHpaMultiModeld\_CurrentMonitor1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00115}00115\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor1].fSlope\ \ \ \ \ \ \ \ \ \ =\ fCurrentSlopeScaleConstant[\ eAdcExHpaMultiModeld\_CurrentMonitor1\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00116}00116\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00117}00117\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00118}00118\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor2].fIntercept\ \ \ \ \ \ =\ fCurrentInterceptScaleConstant[\ eAdcExHpaMultiModeld\_CurrentMonitor2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00119}00119\ \ \ \ \ xLocalCurrentInputScaling[eAdcExHpaMultiModeld\_CurrentMonitor2].fSlope\ \ \ \ \ \ \ \ \ \ =\ fCurrentSlopeScaleConstant[\ eAdcExHpaMultiModeld\_CurrentMonitor2\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00121}00121\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00122}00122\ \ \ \ \ xLocalCurrentInputScaling[eAdcExternalHpaSm\_ld\_Bfm].fIntercept\ \ \ \ \ \ =\ fCurrentInterceptScaleConstant[\ eAdcExternalHpaSm\_ld\_Bfm\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00123}00123\ \ \ \ \ xLocalCurrentInputScaling[eAdcExternalHpaSm\_ld\_Bfm].fSlope\ \ \ \ \ \ \ \ \ \ =\ fCurrentSlopeScaleConstant[\ eAdcExternalHpaSm\_ld\_Bfm\ ];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00124}00124\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{current_sensors_update_database_8c_aa44c34357f4fe90d788c6cc6e828bafe}{eCurrentSensorsUpdateDatabaseHpa}}(\ \&xLocalCurrentInputScaling[0]);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00126}00126\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00127}00127\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00128}\mbox{\hyperlink{current_sensors_v2_8c_ad3b4ccc82c00e613cc68cb2b56acf051}{00128}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_v2_8c_ad3b4ccc82c00e613cc68cb2b56acf051}{eCurrentSensorsLnaConfigUpdate}}(\ \textcolor{keywordtype}{void}\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00129}00129\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00130}00130\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00131}00131\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00132}00132\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_config_update_8c_a2bbf6f4d05e5a871a31fbb46b82a7275}{eCurrentSensorsConfigUpdateLna}}(\&xLocalCurrentInputScaling[0]);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00133}00133\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};\ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00135}00135\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00136}00136\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00137}\mbox{\hyperlink{current_sensors_v2_8c_a466deae2c4cf59603216b524f92ac98d}{00137}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_v2_8c_a466deae2c4cf59603216b524f92ac98d}{eCurrentSensorsBoosterConfigUpdate}}(\ \textcolor{keywordtype}{void}\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00138}00138\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00139}00139\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00140}00140\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_config_update_8c_ac507fb6083cdf8891c523923af36a9e3}{eCurrentSensorsConfigUpdateHpa}}(\&xLocalCurrentInputScaling[0]);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00142}00142\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00145}00145\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00147}00147\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00148}\mbox{\hyperlink{current_sensors_v2_8c_ae20a43e48fb44f44437096b8342c5f79}{00148}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_v2_8c_ae20a43e48fb44f44437096b8342c5f79}{eCurrentSensorUpdate}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00149}00149\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00150}00150\ \ \ \ \ \textcolor{comment}{/*\ \ FIX\ IDEAS}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00151}00151\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00152}00152\ \textcolor{comment}{\ \ \ \ *\ offset\ given\ as\ a\ parameter\ to\ this\ function\ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00153}00153\ \textcolor{comment}{\ \ \ \ *\ LNA\ high,\ LNA\ low,\ Booster\ high,\ Booster\ low\ given\ as\ params}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00154}00154\ \textcolor{comment}{\ \ \ \ *\ Common\ alarm:\ check\ 6\ values\ that\ are\ within\ the\ CAN\ against\ global\ variable\ limits\ :\ would\ be\ a\ lot\ of\ parameters\ to\ consider}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00155}00155\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00156}00156\ \textcolor{comment}{\ \ \ \ *\ reporting\ back\ alarms:\ within\ LNA}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00157}00157\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ pxAlarmRegister-\/>bLnaCurrentLimitAlarmStatus\ set\ to\ 1\ if\ high\ OR\ low\ is\ triggered}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00158}00158\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ pMpbAlarmsAndStatusRegisterBitAssignment-\/>bLnaCurrentHighAlarmStatus\ set\ to\ 1\ if\ HIGH\ is\ triggered}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00159}00159\ \textcolor{comment}{\ \ \ \ *\ HPA}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00160}00160\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ pxAlarmRegister-\/>bBoosterCurrentLimitAlarmStatus\ set\ to\ 1\ if\ high\ OR\ low\ is\ triggered\ (current\ 1)}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00161}00161\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ pxAlarmRegister-\/>bCurrentBoosterDriver2AlarmFlag\ set\ to\ 1\ if\ high\ OR\ low\ is\ triggered\ (current\ 2)}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00162}00162\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ pxAlarmRegister-\/>bCurrentBoosterDriver3AlarmFlag\ set\ to\ 1\ if\ high\ OR\ low\ is\ triggered\ (current\ 3)}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00163}00163\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ return\ 1\ in\ critical\ alarm\ if\ ANY\ of\ the\ three\ are\ triggered}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00164}00164\ \textcolor{comment}{\ \ \ \ *\ Common}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00165}00165\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalAdcError28vVmCh1TooLow}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00166}00166\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalAdcError3vPwrVmTooLow}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00167}00167\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalAdcError7vPwrVmCh2tooLow}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00168}00168\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalAdcErrorAdcPwrCmtooLow\ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00169}00169\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalAdcError28vCm\_TooLow}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00170}00170\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ c428StatusDefinition-\/>MpbAlarmsAndStatusRegisterBitAssignment.bInternalCAN\_PwrError\_TooLow\ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00171}00171\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00172}00172\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ each\ of\ these\ are\ set\ if\ various\ readings\ are\ below\ global\ variable\ limits}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00173}00173\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ return\ 1\ if\ any\ of\ them\ are\ flagged\ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00174}00174\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00177}00177\ \ \ \ \ xAmplifierDescriptor\_t\ *pxLaserBeamDescriptor;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00178}00178\ \ \ \ \ pxLaserBeamDescriptor\ =\ \mbox{\hyperlink{mock__laser_data_8c_afde4bcc28d4b6e77c27c0bfe793e2e53}{vGetxAmplifierDescriptor}}();}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00179}00179\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00180}00180\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00181}00181\ \ \ \ \ uint16\_t\ usOffset\ =\ 0;\ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00183}00183\ \ \ \ \ eBool\_t\ bLnaCurrentCriticalAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00184}00184\ \ \ \ \ eBool\_t\ bHpaCurrentAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00185}00185\ \ \ \ \ eBool\_t\ bInternalCurrentAlarm\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00187}00187\ \ \ \ \ usOffset\ =\ \ pxLaserBeamDescriptor-\/>xExternalAdcChannlesRaw.usAdcExPd\_Ref1\_raw;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00188}00188\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00189}00189\ \ \ \ \ \textcolor{comment}{/*\ read\ all\ the\ powers\ ,\ one\ by\ one\ */}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00190}00190\ \ \ \ \ \textcolor{keywordflow}{for}(\ uint8\_t\ ucI\ =\ eAdcInternal28VPwrCurrentMonitorCH1;\ ucI<\ \mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0aacff42f3b6140eef4d69b6f675344441}{eNumberOfChannelConfigurations}};\ ucI++\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00191}00191\ \ \ \ \ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_read_channel_8c_a85c46064daefd0c494784e3b436fcbb1}{eCurrentSensorsReadChannelRun}}(\ ucI,\ usOffset,\ \ xLocalCurrentInputScaling[ucI],\ \&\mbox{\hyperlink{test__current_sensors_8c_a350221babc43f56667d8c0c175e50d02}{fCurrentReadedInMa}}[ucI],\ \&\mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}}[ucI]);\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00197}00197\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00199}00199\ \ \ \ \ AlarmsAndStatusRegisterBitAssignment\_t\ *pxAlarmRegister\ =\ \ \ \&(pxLaserBeamDescriptor-\/>c402StatusDefinition.xAlarmAndStatusRegister.AlarmsAndStatusRegisterBitAssignment);\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00200}00200\ \ \ \ \ MpbAlarmsAndStatusRegisterBitAssignment\_t\ *pMpbAlarmsAndStatusRegisterBitAssignment\ =\ \ \ \&(pxLaserBeamDescriptor-\/>c428StatusDefinition.MpbAlarmsAndStatusRegisterBitAssignment);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00201}00201\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00202}00202\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ DEMO\_VERSION}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00203}00203\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00205}00205\ \ \ \ \ \textcolor{comment}{//\ NEED:\ get\ upper\ and\ lower\ limits\ from\ CAN}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00207}00207\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_lna_alarm_8c_abb8b4cd637d2cd2aa927133561b74a92}{eCurrentSensorsLnaAlarmRun}}(\ 1000\ *\ \mbox{\hyperlink{test__current_sensors_8c_a350221babc43f56667d8c0c175e50d02}{fCurrentReadedInMa}}[eAdcExLnaSingleModeldCurrentMonitor],}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pMpbAlarmsAndStatusRegisterBitAssignment,\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxLaserBeamDescriptor-\/>c409StatusDefinition,\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxLaserBeamDescriptor-\/>c401StatusDefinition.fLaserPump4LnaCurrent\ ,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxAlarmRegister,\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&bLnaCurrentCriticalAlarm);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00213}00213\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00214}00214\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00215}00215\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00219}00219\ \ \ \ \ \textcolor{comment}{//\ NOT\ EDITED\ UNDER\ HERE}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00220}00220\ \ \ \ \ \textcolor{keywordflow}{if}(bLnaCurrentCriticalAlarm\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00221}00221\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00222}00222\ \ \ \ \ \ \ \ \ \textcolor{comment}{//vLnaAlarmProtocolDetected();\ //\ trigger\ Lna\ alarm}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00223}00223\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00225}00225\ \ \ \ \ \textcolor{comment}{//\ NEED:\ Get\ upper\ and\ lower\ limits\ from\ CAN}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00226}00226\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_hpa_alarm_8c_a310f0d1b4a533547de969c1f2bb03c2e}{eCurrentSensorsHpaAlarmRun}}(\ pxLaserBeamDescriptor-\/>c409StatusDefinition,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxLaserBeamDescriptor-\/>c401StatusDefinition.fLaserPump1BoosterCurrent,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxLaserBeamDescriptor-\/>c401StatusDefinition.fLaserPump2BoosterCurrent,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxLaserBeamDescriptor-\/>c401StatusDefinition.fLaserPump3BoosterCurrent,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pxAlarmRegister,}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&bHpaCurrentAlarm);}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00234}00234\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00236}00236\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{if}(bHpaCurrentAlarm\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00239}00239\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger\ Hpa\ alarm}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00241}00241\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00243}00243\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00244}00244\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \mbox{\hyperlink{current_sensors_common_alarm_8c_a15cf7457d6aeb14ad8f30d20e8f80d8c}{eCurrentSensorsCommonAlarmRun}}(\ \&(pxLaserBeamDescriptor-\/>c423StatusDefinition),\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(pxLaserBeamDescriptor-\/>c428StatusDefinition),\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&bInternalCurrentAlarm\ );}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00248}00248\ \ \ \ \ \textcolor{keywordflow}{if}\ (bInternalCurrentAlarm\ ==\ eTrue)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00249}00249\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger\ both\ }}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00251}00251\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00253}00253\ \ \ \ \ \textcolor{comment}{//pxAlarmRegister-\/>bLnaCurrentLimitAlarmStatus\ =\ (\ (bLowLimitAlarm==eTrue)\ ||\ (bHighLimitAlarm==eTrue)\ )?\ 1:0;}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00254}00254\ \ \ \ \ \textcolor{comment}{//\ \ vLnaAlarmProtocolDetected();}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00255}00255\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00256}00256\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00257}00257\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00263}00263\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00264}\mbox{\hyperlink{current_sensors_v2_8c_aec2bf9f87435e246a3bc1c5355f99f40}{00264}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_v2_8c_aec2bf9f87435e246a3bc1c5355f99f40}{eCurrentSensingGetCurrentValue}}(\mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0}{eCurrentChannelsScaling\_t}}\ eChannel,\ \textcolor{keywordtype}{float}\ *fCurrentmA,\ uint16\_t\ *\mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}})}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00265}00265\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00266}00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (fCurrentmA\ ==\ NULL\ ||\ \mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}}\ ==\ NULL)}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00267}00267\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00268}00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00269}00269\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00271}00271\ \ \ \ \ \textcolor{keywordflow}{if}\ (eChannel\ <\ eAdcInternal28VPwrCurrentMonitorCH1\ ||\ eChannel\ >=\ \mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0aacff42f3b6140eef4d69b6f675344441}{eNumberOfChannelConfigurations}})}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00272}00272\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00273}00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00274}00274\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00276}00276\ \ \ \ \ *fCurrentmA\ =\ \mbox{\hyperlink{test__current_sensors_8c_a350221babc43f56667d8c0c175e50d02}{fCurrentReadedInMa}}[eChannel];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00277}00277\ \ \ \ \ *\mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}}\ =\ \mbox{\hyperlink{test__current_sensors_8c_a895cf0296582b1527a7c885095b72e1f}{usCurrentRaw}}[eChannel];}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00279}00279\ \ \ \ \ \textcolor{keywordflow}{return}\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00281}00281\ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_v2_8c_source_l00283}00283\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+
+\end{DoxyCode}

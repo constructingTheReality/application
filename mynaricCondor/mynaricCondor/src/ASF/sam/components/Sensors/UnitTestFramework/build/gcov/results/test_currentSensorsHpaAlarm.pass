@@ -1,0 +1,58 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_currentSensorsHpaAlarm.c
+:successes:
+- :test: test_2_1_eCurrentSensorsHpaAlarmRun_InvalidParams_Fail
+  :line: 45
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_2_eCurrentSensorsHpaAlarmRun_LowLimitEqualToHighLimit_Fail
+  :line: 70
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_3_eCurrentSensorsHpaAlarmRun_LowLimitGreaterThanHighLimit_Fail
+  :line: 88
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_4_eCurrentSensorsHpaAlarmRun_noAlarm_Success
+  :line: 106
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_5_eCurrentSensorsHpaAlarmRun_Current1LowAlarm_Success
+  :line: 126
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_6_eCurrentSensorsHpaAlarmRun_Current1HighAlarm_Success
+  :line: 146
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_7_eCurrentSensorsHpaAlarmRun_Current2LowAlarm_Success
+  :line: 167
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_8_eCurrentSensorsHpaAlarmRun_Current2HighAlarm_Success
+  :line: 188
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_9_eCurrentSensorsHpaAlarmRun_Current3LowAlarm_Success
+  :line: 209
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_10_eCurrentSensorsHpaAlarmRun_Current3HighAlarm_Success
+  :line: 230
+  :message: ''
+  :unity_test_time: 0
+- :test: test_2_11_eCurrentSensorsHpaAlarmRun_AllAlarmsRaised_Success
+  :line: 251
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 11
+  :passed: 11
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.4001401999994414

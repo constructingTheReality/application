@@ -188,7 +188,7 @@ eMpbError_t eCurrentSensorUpdate( eBool_t *pHpaCurrentAlarm, eBool_t *pLnaCurren
 	/*ch internal 1 */
 	pxLaserBeamDescriptor->c423StatusDefinition.f28V_PwrCurrentMonitor_Ch2 = fCurrentReadedInMa[eAdcInternal28VPwrCurrentMonitorCH2];
 	/*ch internal 2 */
-	pxLaserBeamDescriptor->c414StatusDefinition.fPowerSupplyMonitor = fCurrentReadedInMa[eAdcInternal28VPwrVoltageMonitorCH1];
+	//pxLaserBeamDescriptor->c414StatusDefinition.fPowerSupplyMonitor = fCurrentReadedInMa[eAdcInternal28VPwrVoltageMonitorCH1];
 	pxLaserBeamDescriptor->c423StatusDefinition.f28V_PwrVoltageMonitor_Ch1 = fCurrentReadedInMa[eAdcInternal28VPwrVoltageMonitorCH1];
 	/*ch internal 3 */
 	pxLaserBeamDescriptor->c423StatusDefinition.f28V_PwrVoltageMonitor_Ch2 = fCurrentReadedInMa[eAdcInternal28VPwrVoltageMonitorCH2];
@@ -221,7 +221,10 @@ eMpbError_t eCurrentSensorUpdate( eBool_t *pHpaCurrentAlarm, eBool_t *pLnaCurren
 	/*ch external 14 - ADC #7 */
 	pxLaserBeamDescriptor->xAnalogInputs.fExtern_LnaSmPowerBackFacetMonitor = 1000 * fCurrentReadedInMa[eAdcExternalLnaSm_ld_Bfm];
 	pxLaserBeamDescriptor->xExternalAdcChannlesRaw.usAdcExLnaSmld_Bfm_raw = usCurrentRaw[eAdcExternalLnaSm_ld_Bfm];
-	/*ch external 15 - ADC #22 */	
+	pxLaserBeamDescriptor->c414StatusDefinition.fBackFacetLnaMonitorRaw = 	usCurrentRaw[eAdcExternalLnaSm_ld_Bfm];
+	
+	/*ch external 15 - ADC #22 */
+	pxLaserBeamDescriptor->c414StatusDefinition.fBackFacetHpaMonitorRaw = 	usCurrentRaw[eAdcExternalHpaSm_ld_Bfm];
 	pxLaserBeamDescriptor->xAnalogInputs.fExtern_HpaSmCurrentBackFacetMonitor = 1000 * fCurrentReadedInMa[eAdcExternalHpaSm_ld_Bfm];
 	pxLaserBeamDescriptor->xExternalAdcChannlesRaw.usAdcExHpaSmld_Bfm_raw = usCurrentRaw[eAdcExternalHpaSm_ld_Bfm];
 

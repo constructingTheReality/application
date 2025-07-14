@@ -89,6 +89,7 @@ void vLnaStateMachineUpdate(void)
 	#ifdef DEMO_VERSION 
 	//	eLnaState = eLnaLoopStateidentification ;
 	#endif
+		//eLnaState = eLnaLoopStateidentification ;
 	
 	lnaStateTable[ eLnaState ] ();	
 }
@@ -554,7 +555,7 @@ void eLnaLoopStateIdentificationFunction(void)
 			}
 		}
 		*/
-	/*	
+		
 		bHpaSmLddEna = (eBool_t)pxAmplifierDescriptor->c406PacketControlDefinition.Status_406_Register.Status_406_RegisterBitAssignment.ucBoosterEnablePumpLaser1;
 		vBinaryOtputSetState( eOutputHpaSmLddEna, !bHpaSmLddEna );
 		
@@ -578,7 +579,7 @@ void eLnaLoopStateIdentificationFunction(void)
 	
 	ucHpaMmPwmStp2 = 4 *(uint32_t)pxAmplifierDescriptor->c406PacketControlDefinition.fSetCurrentOnLaserPump3OnBoosterInAcc ;
 	
-	vBSPPwmSetOutputDuty( eHPA_MM_PWM_STP2,  ucHpaMmPwmStp2);*/
+	vBSPPwmSetOutputDuty( eHPA_MM_PWM_STP2,  ucHpaMmPwmStp2);
 	
 //	ucLnaSmPwmStp = 4 *(uint32_t)pxAmplifierDescriptor->c406PacketControlDefinition.fSetGeneralSetpointOnLNA;
 

@@ -1,0 +1,15 @@
+\chapter{warnings-\/report}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e}{}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e}\index{warnings-\/report@{warnings-\/report}}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e_autotoc_md165}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e_autotoc_md165}
+The warnings\+\_\+report captures all warnings throughout the build process and collects them into a single report at the end of execution. It places all of this into a warnings file in the output artifact directory.\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e_autotoc_md166}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2warnings__report_2_r_e_a_d_m_e_autotoc_md166}
+Enable the plugin in your project.\+yml by adding {\ttfamily warnings\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ warnings\_report}
+
+\end{DoxyCode}
+ 

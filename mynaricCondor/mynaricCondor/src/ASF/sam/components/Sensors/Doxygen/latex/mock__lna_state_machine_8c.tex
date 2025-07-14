@@ -1,0 +1,1231 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/mocks/mock\+\_\+lna\+State\+Machine.c File Reference}
+\hypertarget{mock__lna_state_machine_8c}{}\label{mock__lna_state_machine_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_lnaStateMachine.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_lnaStateMachine.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include "{}cmock.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+lna\+State\+Machine.\+h"{}}\newline
+Include dependency graph for mock\+\_\+lna\+State\+Machine.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_identification_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_alarm_protocol_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_lna___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+struct {\bfseries mock\+\_\+lna\+State\+Machine\+Instance}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a75a45ba7ed1a7fd38a307d1cd5eb50b9}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_abec82bb6e75061eb33839172cc8e7859}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a0fc78ce8666d72ebdbe34ea5ed9b5cfd}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_aa6dfe4a67369794030fc4b402615d09c}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_identification_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a90c8a3ea56a3d13d02de8e8885708cf6}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a91937dcdf242d2fdd5b81e7da2891d2e}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_ac121d04af53b4ae5a32a8722d9404552}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_ae0df821fee3aabe65c36df7039e1b499}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_alarm_protocol_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a39388c4e97af89aceec075e6a11dcf76}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a4dfcb7e30c7f7c1815c3aefc644886c5}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\item 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_lna___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_aca5bcd8686c56fd4a66b9aed6e573396}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALL\+\_\+\+INSTANCE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a295f8ab61732c34efbdf924085b1b761}{mock\+\_\+lna\+State\+Machine\+\_\+\+Verify}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_adb173c566b2d2898261b1fec8d236dc4}{mock\+\_\+lna\+State\+Machine\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6f20b4c7f4c0f9eac51fa384cb4add43}{mock\+\_\+lna\+State\+Machine\+\_\+\+Destroy}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a95c4f56872b0ffac9826a029a6587325}{e\+Lna\+Loop\+State\+Disable\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a4f1c8ca19726dcf1e3884e077de80dc9}{e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a2ed22553421bb4eeb4ac6ef40d52292a}{e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a08c6e74f0143c616752092b89c101ca2}{e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a560c1c5c721e3c7de587e0b36d8cf8d5}{e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ac9f700d635f6c4555c002b37df01f00d}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a2223bb60f6837d1212baca8bcc98ce30}{e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ac9f700d635f6c4555c002b37df01f00d}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ad59a616cd29ae4bbd642280dca5227ab}{e\+Lna\+Loop\+State\+Standby\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a69a588c8128e5488400d94de58f869e4}{e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a7648ec15b9c7156223e95704d5413f8f}{e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a2dfb5121a3d39d9a9d4e80bed2c892e5}{e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_af5643705827711397c566014d769bb89}{e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a99975563192fb21e8982dbbf71d5cd17}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ab9d8445c7be54b63fa37be716467d40d}{e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a99975563192fb21e8982dbbf71d5cd17}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a7bf5d7e661d8db31eeee4aa0d866070a}{e\+Lna\+Loop\+State\+Apc\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a7446860df42535475bb71e96f2c795b9}{e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a43e97ac921f2213e62e643f7e5cb0d54}{e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a0860c339be3e6ab9a1a7b9d5a8119ae5}{e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a72bd937f738e6299ffe517fd24c95c45}{e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_aa4c74644fd1c5b83c6f220ce35a53047}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ad26dd5fb96cd2bd10ce6d442c794a962}{e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_aa4c74644fd1c5b83c6f220ce35a53047}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a2b01395d10864a5531b9d1bec180f76a}{e\+Lna\+Loop\+State\+Acc\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a94e72fab8786c4c5efdb608f1ed2c7c8}{e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a9de77da817db0642786fbb2d3bede170}{e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a921685109f7ebe2cf273602159bfcf55}{e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_aa041296c794a7f4e5288e327df98e841}{e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_aa9d163b4b6b5d3d32ad94652cb2685f2}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ab9bf1f66a02318357e4eb964f82920d0}{e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_aa9d163b4b6b5d3d32ad94652cb2685f2}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a0d793b99327888b0ea57408d23669486}{e\+Lna\+Loop\+State\+Identification\+Function}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ac784d5b8dd76d02a237298791ab201d9}{e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6d10587aecdf54e62ed2406e6d4d0878}{e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_aab2cdaec06265ace2b2237d6daea2593}{e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a188ad23d0001ee5ccfcb2490eb5add6e}{e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ad915af5e0c43199a43963afa5e22c50a}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a06acd795f5bf17631201d8015e9d6aee}{e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ad915af5e0c43199a43963afa5e22c50a}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a69c8d096f53b6b5c15e9a5c8c33ba739}{v\+Lna\+State\+Machine\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ade03feb5a421a24523e00e11a17a1fe4}{v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_af9d6337b62688f23c051a56936e48176}{v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a27b5ead6163007ed9872d38f4a088142}{v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a42435baafb46de7a79a365f42bc2b14b}{v\+Lna\+State\+Machine\+Init\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ab13dd10788257e1769ef00b57b835faf}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_af33c45ace41fa08cb6b4c20ca31fcdc4}{v\+Lna\+State\+Machine\+Init\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ab13dd10788257e1769ef00b57b835faf}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a1de8cb8a9468651af6af77d6d2a413c8}{v\+Lna\+State\+Machine\+Update}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a17e2393d091b24a922ac425222761085}{v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a528c3504032a8e5fa68da80720413847}{v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a491ef6675f3c54a96059b20e8289fb56}{v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_aadfcc92bb4d76c20fef787b031b26f41}{v\+Lna\+State\+Machine\+Update\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a37d892061bb509efa4e8de96a9f214ae}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a97226fa62edd062b7214cff8edfff92c}{v\+Lna\+State\+Machine\+Update\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a37d892061bb509efa4e8de96a9f214ae}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALLBACK}} Callback)
+\item 
+e\+Lna\+State\+\_\+t \mbox{\hyperlink{mock__lna_state_machine_8c_acee3de7f65c1ebbed270ed3d6226963d}{e\+Lna\+Report\+State}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_adac82fe392fca232e68ffa88a48f51a8}{e\+Lna\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Lna\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_add368f210373bb7c3828eea5c1289e5a}{e\+Lna\+Report\+State\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6cc7f789bb7b7ab86b33199f155afe63}{e\+Lna\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Lna\+State\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a37f831cd5a908199736d1a8d88f423e8}{e\+Lna\+Report\+State\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ac21d87dd954ac944b82ccc8dfab4f35f}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6e47b269def9638cb7545d26d0535688}{e\+Lna\+Report\+State\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ac21d87dd954ac944b82ccc8dfab4f35f}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6594b952360520039cbadc6275bcfe8f}{v\+Lna\+Alarm\+Protocol\+Detected}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a299bd8c27cf22e5e6a1e8a072ccf44a2}{v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a71ac404c85b62d6f16965747ba515349}{v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_abc36172a4bf762c29da44d5bf7538715}{v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_af21730cc6cda0fbefc4434a94a843f12}{v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ace980bfa5e8adf0abf11e676058a8cf4}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a3a788acd3c99d1c8704a0200a370b480}{v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_ace980bfa5e8adf0abf11e676058a8cf4}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ad6d2280690918084e4a3d9167a75e32f}{v\+Lna\+Critical\+Error\+Detected}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a7c4dedfcf87b2838462ba28e8a6c97f4}{v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a527f6991cfd16be9a24ba1dce262329e}{v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_aea75fdc7ac4ba52a002394138ca5b551}{v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a8d4e10dd513c6225285ff35aa464c2f3}{v\+Lna\+Critical\+Error\+Detected\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a7925643701a3005b1d4c700d8e985659}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a5fd72312db8edfe18b21ecec6c34093e}{v\+Lna\+Critical\+Error\+Detected\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a7925643701a3005b1d4c700d8e985659}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a3585f3068291fb9891507d94107ef25f}{v\+Set\+Disable\+Lna}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_ac53367e1767583a0b47385677c912a0b}{v\+Set\+Disable\+Lna\+\_\+\+CMock\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a64208691b25be226b10a14eaabbf6922}{v\+Set\+Disable\+Lna\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a3344cb5daad44e346dcfb236acbc0874}{v\+Set\+Disable\+Lna\+\_\+\+CMock\+Expect}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a8419670243c08c921fd4d618c94425bc}{v\+Set\+Disable\+Lna\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a59ac78de72d044f670f046479142af43}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__lna_state_machine_8c_a6b697a52d13a9441f6606eca3e497de8}{v\+Set\+Disable\+Lna\+\_\+\+Stub}} (\mbox{\hyperlink{mock__lna_state_machine_8h_a59ac78de72d044f670f046479142af43}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALLBACK}} Callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+jmp\+\_\+buf \mbox{\hyperlink{mock__lna_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5}{Abort\+Frame}}
+\item 
+int \mbox{\hyperlink{mock__lna_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b}{Global\+Expect\+Count}}
+\item 
+int \mbox{\hyperlink{mock__lna_state_machine_8c_ac2b7788e16200424c9d7090905c05330}{Global\+Verify\+Order}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mock__lna_state_machine_8c_aa6dfe4a67369794030fc4b402615d09c}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE}{CMOCK\_eLnaLoopStateAccFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aa6dfe4a67369794030fc4b402615d09c} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_acc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_aa6dfe4a67369794030fc4b402615d09c}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a0fc78ce8666d72ebdbe34ea5ed9b5cfd}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE}{CMOCK\_eLnaLoopStateApcFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a0fc78ce8666d72ebdbe34ea5ed9b5cfd} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_apc_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a0fc78ce8666d72ebdbe34ea5ed9b5cfd}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a75a45ba7ed1a7fd38a307d1cd5eb50b9}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE}{CMOCK\_eLnaLoopStateDisableFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a75a45ba7ed1a7fd38a307d1cd5eb50b9} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_disable_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a75a45ba7ed1a7fd38a307d1cd5eb50b9}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a90c8a3ea56a3d13d02de8e8885708cf6}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE}{CMOCK\_eLnaLoopStateIdentificationFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a90c8a3ea56a3d13d02de8e8885708cf6} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_identification_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a90c8a3ea56a3d13d02de8e8885708cf6}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_abec82bb6e75061eb33839172cc8e7859}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE@{CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE}{CMOCK\_eLnaLoopStateStandbyFunction\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_abec82bb6e75061eb33839172cc8e7859} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_loop_state_standby_function___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_abec82bb6e75061eb33839172cc8e7859}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_ae0df821fee3aabe65c36df7039e1b499}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_eLnaReportState\_CALL\_INSTANCE@{CMOCK\_eLnaReportState\_CALL\_INSTANCE}}
+\index{CMOCK\_eLnaReportState\_CALL\_INSTANCE@{CMOCK\_eLnaReportState\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eLnaReportState\_CALL\_INSTANCE}{CMOCK\_eLnaReportState\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ae0df821fee3aabe65c36df7039e1b499} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__e_lna_report_state___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_ae0df821fee3aabe65c36df7039e1b499}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a39388c4e97af89aceec075e6a11dcf76}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE@{CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE}}
+\index{CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE@{CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE}{CMOCK\_vLnaAlarmProtocolDetected\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a39388c4e97af89aceec075e6a11dcf76} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_alarm_protocol_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a39388c4e97af89aceec075e6a11dcf76}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a4dfcb7e30c7f7c1815c3aefc644886c5}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE@{CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE}}
+\index{CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE@{CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE}{CMOCK\_vLnaCriticalErrorDetected\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a4dfcb7e30c7f7c1815c3aefc644886c5} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_critical_error_detected___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a4dfcb7e30c7f7c1815c3aefc644886c5}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_a91937dcdf242d2fdd5b81e7da2891d2e}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE@{CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE}}
+\index{CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE@{CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE}{CMOCK\_vLnaStateMachineInit\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a91937dcdf242d2fdd5b81e7da2891d2e} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_init___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_a91937dcdf242d2fdd5b81e7da2891d2e}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_ac121d04af53b4ae5a32a8722d9404552}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE@{CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE}}
+\index{CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE@{CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE}{CMOCK\_vLnaStateMachineUpdate\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ac121d04af53b4ae5a32a8722d9404552} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_lna_state_machine_update___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_ac121d04af53b4ae5a32a8722d9404552}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+\Hypertarget{mock__lna_state_machine_8c_aca5bcd8686c56fd4a66b9aed6e573396}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!CMOCK\_vSetDisableLna\_CALL\_INSTANCE@{CMOCK\_vSetDisableLna\_CALL\_INSTANCE}}
+\index{CMOCK\_vSetDisableLna\_CALL\_INSTANCE@{CMOCK\_vSetDisableLna\_CALL\_INSTANCE}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_vSetDisableLna\_CALL\_INSTANCE}{CMOCK\_vSetDisableLna\_CALL\_INSTANCE}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aca5bcd8686c56fd4a66b9aed6e573396} 
+typedef struct \mbox{\hyperlink{struct___c_m_o_c_k__v_set_disable_lna___c_a_l_l___i_n_s_t_a_n_c_e}{\+\_\+\+CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALL\+\_\+\+INSTANCE}} \mbox{\hyperlink{mock__lna_state_machine_8c_aca5bcd8686c56fd4a66b9aed6e573396}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALL\+\_\+\+INSTANCE}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mock__lna_state_machine_8c_a2b01395d10864a5531b9d1bec180f76a}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction@{eLnaLoopStateAccFunction}}
+\index{eLnaLoopStateAccFunction@{eLnaLoopStateAccFunction}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction()}{eLnaLoopStateAccFunction()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a2b01395d10864a5531b9d1bec180f76a} 
+void e\+Lna\+Loop\+State\+Acc\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00542}{542}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a2b01395d10864a5531b9d1bec180f76a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_aa041296c794a7f4e5288e327df98e841}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction\_AddCallback@{eLnaLoopStateAccFunction\_AddCallback}}
+\index{eLnaLoopStateAccFunction\_AddCallback@{eLnaLoopStateAccFunction\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction\_AddCallback()}{eLnaLoopStateAccFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aa041296c794a7f4e5288e327df98e841} 
+void e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_aa9d163b4b6b5d3d32ad94652cb2685f2}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00597}{597}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a921685109f7ebe2cf273602159bfcf55}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction\_CMockExpect@{eLnaLoopStateAccFunction\_CMockExpect}}
+\index{eLnaLoopStateAccFunction\_CMockExpect@{eLnaLoopStateAccFunction\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction\_CMockExpect()}{eLnaLoopStateAccFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a921685109f7ebe2cf273602159bfcf55} 
+void e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00584}{584}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a921685109f7ebe2cf273602159bfcf55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a94e72fab8786c4c5efdb608f1ed2c7c8}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction\_CMockIgnore@{eLnaLoopStateAccFunction\_CMockIgnore}}
+\index{eLnaLoopStateAccFunction\_CMockIgnore@{eLnaLoopStateAccFunction\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction\_CMockIgnore()}{eLnaLoopStateAccFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a94e72fab8786c4c5efdb608f1ed2c7c8} 
+void e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00574}{574}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a9de77da817db0642786fbb2d3bede170}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction\_CMockStopIgnore@{eLnaLoopStateAccFunction\_CMockStopIgnore}}
+\index{eLnaLoopStateAccFunction\_CMockStopIgnore@{eLnaLoopStateAccFunction\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction\_CMockStopIgnore()}{eLnaLoopStateAccFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a9de77da817db0642786fbb2d3bede170} 
+void e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00579}{579}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ab9bf1f66a02318357e4eb964f82920d0}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateAccFunction\_Stub@{eLnaLoopStateAccFunction\_Stub}}
+\index{eLnaLoopStateAccFunction\_Stub@{eLnaLoopStateAccFunction\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateAccFunction\_Stub()}{eLnaLoopStateAccFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ab9bf1f66a02318357e4eb964f82920d0} 
+void e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_aa9d163b4b6b5d3d32ad94652cb2685f2}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Acc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00604}{604}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a7bf5d7e661d8db31eeee4aa0d866070a}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction@{eLnaLoopStateApcFunction}}
+\index{eLnaLoopStateApcFunction@{eLnaLoopStateApcFunction}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction()}{eLnaLoopStateApcFunction()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a7bf5d7e661d8db31eeee4aa0d866070a} 
+void e\+Lna\+Loop\+State\+Apc\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00473}{473}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a7bf5d7e661d8db31eeee4aa0d866070a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a72bd937f738e6299ffe517fd24c95c45}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction\_AddCallback@{eLnaLoopStateApcFunction\_AddCallback}}
+\index{eLnaLoopStateApcFunction\_AddCallback@{eLnaLoopStateApcFunction\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction\_AddCallback()}{eLnaLoopStateApcFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a72bd937f738e6299ffe517fd24c95c45} 
+void e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_aa4c74644fd1c5b83c6f220ce35a53047}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00528}{528}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a0860c339be3e6ab9a1a7b9d5a8119ae5}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction\_CMockExpect@{eLnaLoopStateApcFunction\_CMockExpect}}
+\index{eLnaLoopStateApcFunction\_CMockExpect@{eLnaLoopStateApcFunction\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction\_CMockExpect()}{eLnaLoopStateApcFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a0860c339be3e6ab9a1a7b9d5a8119ae5} 
+void e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00515}{515}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a0860c339be3e6ab9a1a7b9d5a8119ae5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a7446860df42535475bb71e96f2c795b9}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction\_CMockIgnore@{eLnaLoopStateApcFunction\_CMockIgnore}}
+\index{eLnaLoopStateApcFunction\_CMockIgnore@{eLnaLoopStateApcFunction\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction\_CMockIgnore()}{eLnaLoopStateApcFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a7446860df42535475bb71e96f2c795b9} 
+void e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00505}{505}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a43e97ac921f2213e62e643f7e5cb0d54}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction\_CMockStopIgnore@{eLnaLoopStateApcFunction\_CMockStopIgnore}}
+\index{eLnaLoopStateApcFunction\_CMockStopIgnore@{eLnaLoopStateApcFunction\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction\_CMockStopIgnore()}{eLnaLoopStateApcFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a43e97ac921f2213e62e643f7e5cb0d54} 
+void e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00510}{510}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ad26dd5fb96cd2bd10ce6d442c794a962}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateApcFunction\_Stub@{eLnaLoopStateApcFunction\_Stub}}
+\index{eLnaLoopStateApcFunction\_Stub@{eLnaLoopStateApcFunction\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateApcFunction\_Stub()}{eLnaLoopStateApcFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ad26dd5fb96cd2bd10ce6d442c794a962} 
+void e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_aa4c74644fd1c5b83c6f220ce35a53047}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Apc\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00535}{535}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a95c4f56872b0ffac9826a029a6587325}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction@{eLnaLoopStateDisableFunction}}
+\index{eLnaLoopStateDisableFunction@{eLnaLoopStateDisableFunction}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction()}{eLnaLoopStateDisableFunction()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a95c4f56872b0ffac9826a029a6587325} 
+void e\+Lna\+Loop\+State\+Disable\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00335}{335}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a95c4f56872b0ffac9826a029a6587325_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a560c1c5c721e3c7de587e0b36d8cf8d5}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction\_AddCallback@{eLnaLoopStateDisableFunction\_AddCallback}}
+\index{eLnaLoopStateDisableFunction\_AddCallback@{eLnaLoopStateDisableFunction\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction\_AddCallback()}{eLnaLoopStateDisableFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a560c1c5c721e3c7de587e0b36d8cf8d5} 
+void e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ac9f700d635f6c4555c002b37df01f00d}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00390}{390}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a08c6e74f0143c616752092b89c101ca2}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction\_CMockExpect@{eLnaLoopStateDisableFunction\_CMockExpect}}
+\index{eLnaLoopStateDisableFunction\_CMockExpect@{eLnaLoopStateDisableFunction\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction\_CMockExpect()}{eLnaLoopStateDisableFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a08c6e74f0143c616752092b89c101ca2} 
+void e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00377}{377}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a08c6e74f0143c616752092b89c101ca2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a4f1c8ca19726dcf1e3884e077de80dc9}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction\_CMockIgnore@{eLnaLoopStateDisableFunction\_CMockIgnore}}
+\index{eLnaLoopStateDisableFunction\_CMockIgnore@{eLnaLoopStateDisableFunction\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction\_CMockIgnore()}{eLnaLoopStateDisableFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a4f1c8ca19726dcf1e3884e077de80dc9} 
+void e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00367}{367}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a2ed22553421bb4eeb4ac6ef40d52292a}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction\_CMockStopIgnore@{eLnaLoopStateDisableFunction\_CMockStopIgnore}}
+\index{eLnaLoopStateDisableFunction\_CMockStopIgnore@{eLnaLoopStateDisableFunction\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction\_CMockStopIgnore()}{eLnaLoopStateDisableFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a2ed22553421bb4eeb4ac6ef40d52292a} 
+void e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00372}{372}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a2223bb60f6837d1212baca8bcc98ce30}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateDisableFunction\_Stub@{eLnaLoopStateDisableFunction\_Stub}}
+\index{eLnaLoopStateDisableFunction\_Stub@{eLnaLoopStateDisableFunction\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateDisableFunction\_Stub()}{eLnaLoopStateDisableFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a2223bb60f6837d1212baca8bcc98ce30} 
+void e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ac9f700d635f6c4555c002b37df01f00d}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Disable\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00397}{397}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a0d793b99327888b0ea57408d23669486}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction@{eLnaLoopStateIdentificationFunction}}
+\index{eLnaLoopStateIdentificationFunction@{eLnaLoopStateIdentificationFunction}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction()}{eLnaLoopStateIdentificationFunction()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a0d793b99327888b0ea57408d23669486} 
+void e\+Lna\+Loop\+State\+Identification\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00611}{611}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a0d793b99327888b0ea57408d23669486_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a188ad23d0001ee5ccfcb2490eb5add6e}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction\_AddCallback@{eLnaLoopStateIdentificationFunction\_AddCallback}}
+\index{eLnaLoopStateIdentificationFunction\_AddCallback@{eLnaLoopStateIdentificationFunction\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction\_AddCallback()}{eLnaLoopStateIdentificationFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a188ad23d0001ee5ccfcb2490eb5add6e} 
+void e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ad915af5e0c43199a43963afa5e22c50a}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00666}{666}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_aab2cdaec06265ace2b2237d6daea2593}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction\_CMockExpect@{eLnaLoopStateIdentificationFunction\_CMockExpect}}
+\index{eLnaLoopStateIdentificationFunction\_CMockExpect@{eLnaLoopStateIdentificationFunction\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction\_CMockExpect()}{eLnaLoopStateIdentificationFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aab2cdaec06265ace2b2237d6daea2593} 
+void e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00653}{653}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_aab2cdaec06265ace2b2237d6daea2593_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_ac784d5b8dd76d02a237298791ab201d9}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction\_CMockIgnore@{eLnaLoopStateIdentificationFunction\_CMockIgnore}}
+\index{eLnaLoopStateIdentificationFunction\_CMockIgnore@{eLnaLoopStateIdentificationFunction\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction\_CMockIgnore()}{eLnaLoopStateIdentificationFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ac784d5b8dd76d02a237298791ab201d9} 
+void e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00643}{643}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a6d10587aecdf54e62ed2406e6d4d0878}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction\_CMockStopIgnore@{eLnaLoopStateIdentificationFunction\_CMockStopIgnore}}
+\index{eLnaLoopStateIdentificationFunction\_CMockStopIgnore@{eLnaLoopStateIdentificationFunction\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction\_CMockStopIgnore()}{eLnaLoopStateIdentificationFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6d10587aecdf54e62ed2406e6d4d0878} 
+void e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00648}{648}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a06acd795f5bf17631201d8015e9d6aee}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateIdentificationFunction\_Stub@{eLnaLoopStateIdentificationFunction\_Stub}}
+\index{eLnaLoopStateIdentificationFunction\_Stub@{eLnaLoopStateIdentificationFunction\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateIdentificationFunction\_Stub()}{eLnaLoopStateIdentificationFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a06acd795f5bf17631201d8015e9d6aee} 
+void e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ad915af5e0c43199a43963afa5e22c50a}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Identification\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00673}{673}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ad59a616cd29ae4bbd642280dca5227ab}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction@{eLnaLoopStateStandbyFunction}}
+\index{eLnaLoopStateStandbyFunction@{eLnaLoopStateStandbyFunction}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction()}{eLnaLoopStateStandbyFunction()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ad59a616cd29ae4bbd642280dca5227ab} 
+void e\+Lna\+Loop\+State\+Standby\+Function (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00404}{404}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_ad59a616cd29ae4bbd642280dca5227ab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_af5643705827711397c566014d769bb89}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction\_AddCallback@{eLnaLoopStateStandbyFunction\_AddCallback}}
+\index{eLnaLoopStateStandbyFunction\_AddCallback@{eLnaLoopStateStandbyFunction\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction\_AddCallback()}{eLnaLoopStateStandbyFunction\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_af5643705827711397c566014d769bb89} 
+void e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a99975563192fb21e8982dbbf71d5cd17}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00459}{459}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a2dfb5121a3d39d9a9d4e80bed2c892e5}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction\_CMockExpect@{eLnaLoopStateStandbyFunction\_CMockExpect}}
+\index{eLnaLoopStateStandbyFunction\_CMockExpect@{eLnaLoopStateStandbyFunction\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction\_CMockExpect()}{eLnaLoopStateStandbyFunction\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a2dfb5121a3d39d9a9d4e80bed2c892e5} 
+void e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00446}{446}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a2dfb5121a3d39d9a9d4e80bed2c892e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a69a588c8128e5488400d94de58f869e4}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction\_CMockIgnore@{eLnaLoopStateStandbyFunction\_CMockIgnore}}
+\index{eLnaLoopStateStandbyFunction\_CMockIgnore@{eLnaLoopStateStandbyFunction\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction\_CMockIgnore()}{eLnaLoopStateStandbyFunction\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a69a588c8128e5488400d94de58f869e4} 
+void e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00436}{436}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a7648ec15b9c7156223e95704d5413f8f}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction\_CMockStopIgnore@{eLnaLoopStateStandbyFunction\_CMockStopIgnore}}
+\index{eLnaLoopStateStandbyFunction\_CMockStopIgnore@{eLnaLoopStateStandbyFunction\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction\_CMockStopIgnore()}{eLnaLoopStateStandbyFunction\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a7648ec15b9c7156223e95704d5413f8f} 
+void e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00441}{441}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ab9d8445c7be54b63fa37be716467d40d}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaLoopStateStandbyFunction\_Stub@{eLnaLoopStateStandbyFunction\_Stub}}
+\index{eLnaLoopStateStandbyFunction\_Stub@{eLnaLoopStateStandbyFunction\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaLoopStateStandbyFunction\_Stub()}{eLnaLoopStateStandbyFunction\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ab9d8445c7be54b63fa37be716467d40d} 
+void e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a99975563192fb21e8982dbbf71d5cd17}{CMOCK\+\_\+e\+Lna\+Loop\+State\+Standby\+Function\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00466}{466}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_acee3de7f65c1ebbed270ed3d6226963d}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState@{eLnaReportState}}
+\index{eLnaReportState@{eLnaReportState}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState()}{eLnaReportState()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_acee3de7f65c1ebbed270ed3d6226963d} 
+e\+Lna\+State\+\_\+t e\+Lna\+Report\+State (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00818}{818}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_acee3de7f65c1ebbed270ed3d6226963d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a37f831cd5a908199736d1a8d88f423e8}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState\_AddCallback@{eLnaReportState\_AddCallback}}
+\index{eLnaReportState\_AddCallback@{eLnaReportState\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState\_AddCallback()}{eLnaReportState\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a37f831cd5a908199736d1a8d88f423e8} 
+void e\+Lna\+Report\+State\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ac21d87dd954ac944b82ccc8dfab4f35f}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00891}{891}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a6cc7f789bb7b7ab86b33199f155afe63}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState\_CMockExpectAndReturn@{eLnaReportState\_CMockExpectAndReturn}}
+\index{eLnaReportState\_CMockExpectAndReturn@{eLnaReportState\_CMockExpectAndReturn}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState\_CMockExpectAndReturn()}{eLnaReportState\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6cc7f789bb7b7ab86b33199f155afe63} 
+void e\+Lna\+Report\+State\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Lna\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00876}{876}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a6cc7f789bb7b7ab86b33199f155afe63_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_adac82fe392fca232e68ffa88a48f51a8}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState\_CMockIgnoreAndReturn@{eLnaReportState\_CMockIgnoreAndReturn}}
+\index{eLnaReportState\_CMockIgnoreAndReturn@{eLnaReportState\_CMockIgnoreAndReturn}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState\_CMockIgnoreAndReturn()}{eLnaReportState\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_adac82fe392fca232e68ffa88a48f51a8} 
+void e\+Lna\+Report\+State\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Lna\+State\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00855}{855}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_adac82fe392fca232e68ffa88a48f51a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_add368f210373bb7c3828eea5c1289e5a}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState\_CMockStopIgnore@{eLnaReportState\_CMockStopIgnore}}
+\index{eLnaReportState\_CMockStopIgnore@{eLnaReportState\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState\_CMockStopIgnore()}{eLnaReportState\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_add368f210373bb7c3828eea5c1289e5a} 
+void e\+Lna\+Report\+State\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00869}{869}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_add368f210373bb7c3828eea5c1289e5a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a6e47b269def9638cb7545d26d0535688}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!eLnaReportState\_Stub@{eLnaReportState\_Stub}}
+\index{eLnaReportState\_Stub@{eLnaReportState\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{eLnaReportState\_Stub()}{eLnaReportState\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6e47b269def9638cb7545d26d0535688} 
+void e\+Lna\+Report\+State\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ac21d87dd954ac944b82ccc8dfab4f35f}{CMOCK\+\_\+e\+Lna\+Report\+State\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00898}{898}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a6f20b4c7f4c0f9eac51fa384cb4add43}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!mock\_lnaStateMachine\_Destroy@{mock\_lnaStateMachine\_Destroy}}
+\index{mock\_lnaStateMachine\_Destroy@{mock\_lnaStateMachine\_Destroy}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_lnaStateMachine\_Destroy()}{mock\_lnaStateMachine\_Destroy()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6f20b4c7f4c0f9eac51fa384cb4add43} 
+void mock\+\_\+lna\+State\+Machine\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00327}{327}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a6f20b4c7f4c0f9eac51fa384cb4add43_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a6f20b4c7f4c0f9eac51fa384cb4add43_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_adb173c566b2d2898261b1fec8d236dc4}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!mock\_lnaStateMachine\_Init@{mock\_lnaStateMachine\_Init}}
+\index{mock\_lnaStateMachine\_Init@{mock\_lnaStateMachine\_Init}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_lnaStateMachine\_Init()}{mock\_lnaStateMachine\_Init()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_adb173c566b2d2898261b1fec8d236dc4} 
+void mock\+\_\+lna\+State\+Machine\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00322}{322}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_adb173c566b2d2898261b1fec8d236dc4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a295f8ab61732c34efbdf924085b1b761}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!mock\_lnaStateMachine\_Verify@{mock\_lnaStateMachine\_Verify}}
+\index{mock\_lnaStateMachine\_Verify@{mock\_lnaStateMachine\_Verify}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{mock\_lnaStateMachine\_Verify()}{mock\_lnaStateMachine\_Verify()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a295f8ab61732c34efbdf924085b1b761} 
+void mock\+\_\+lna\+State\+Machine\+\_\+\+Verify (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00173}{173}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a6594b952360520039cbadc6275bcfe8f}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected@{vLnaAlarmProtocolDetected}}
+\index{vLnaAlarmProtocolDetected@{vLnaAlarmProtocolDetected}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected()}{vLnaAlarmProtocolDetected()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6594b952360520039cbadc6275bcfe8f} 
+void v\+Lna\+Alarm\+Protocol\+Detected (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00905}{905}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a6594b952360520039cbadc6275bcfe8f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_af21730cc6cda0fbefc4434a94a843f12}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected\_AddCallback@{vLnaAlarmProtocolDetected\_AddCallback}}
+\index{vLnaAlarmProtocolDetected\_AddCallback@{vLnaAlarmProtocolDetected\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected\_AddCallback()}{vLnaAlarmProtocolDetected\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_af21730cc6cda0fbefc4434a94a843f12} 
+void v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ace980bfa5e8adf0abf11e676058a8cf4}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00960}{960}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_abc36172a4bf762c29da44d5bf7538715}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected\_CMockExpect@{vLnaAlarmProtocolDetected\_CMockExpect}}
+\index{vLnaAlarmProtocolDetected\_CMockExpect@{vLnaAlarmProtocolDetected\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected\_CMockExpect()}{vLnaAlarmProtocolDetected\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_abc36172a4bf762c29da44d5bf7538715} 
+void v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00947}{947}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_abc36172a4bf762c29da44d5bf7538715_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a299bd8c27cf22e5e6a1e8a072ccf44a2}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected\_CMockIgnore@{vLnaAlarmProtocolDetected\_CMockIgnore}}
+\index{vLnaAlarmProtocolDetected\_CMockIgnore@{vLnaAlarmProtocolDetected\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected\_CMockIgnore()}{vLnaAlarmProtocolDetected\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a299bd8c27cf22e5e6a1e8a072ccf44a2} 
+void v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00937}{937}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a71ac404c85b62d6f16965747ba515349}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected\_CMockStopIgnore@{vLnaAlarmProtocolDetected\_CMockStopIgnore}}
+\index{vLnaAlarmProtocolDetected\_CMockStopIgnore@{vLnaAlarmProtocolDetected\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected\_CMockStopIgnore()}{vLnaAlarmProtocolDetected\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a71ac404c85b62d6f16965747ba515349} 
+void v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00942}{942}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a3a788acd3c99d1c8704a0200a370b480}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaAlarmProtocolDetected\_Stub@{vLnaAlarmProtocolDetected\_Stub}}
+\index{vLnaAlarmProtocolDetected\_Stub@{vLnaAlarmProtocolDetected\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaAlarmProtocolDetected\_Stub()}{vLnaAlarmProtocolDetected\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a3a788acd3c99d1c8704a0200a370b480} 
+void v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ace980bfa5e8adf0abf11e676058a8cf4}{CMOCK\+\_\+v\+Lna\+Alarm\+Protocol\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00967}{967}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ad6d2280690918084e4a3d9167a75e32f}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected@{vLnaCriticalErrorDetected}}
+\index{vLnaCriticalErrorDetected@{vLnaCriticalErrorDetected}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected()}{vLnaCriticalErrorDetected()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ad6d2280690918084e4a3d9167a75e32f} 
+void v\+Lna\+Critical\+Error\+Detected (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00974}{974}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_ad6d2280690918084e4a3d9167a75e32f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_ad6d2280690918084e4a3d9167a75e32f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a8d4e10dd513c6225285ff35aa464c2f3}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected\_AddCallback@{vLnaCriticalErrorDetected\_AddCallback}}
+\index{vLnaCriticalErrorDetected\_AddCallback@{vLnaCriticalErrorDetected\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected\_AddCallback()}{vLnaCriticalErrorDetected\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a8d4e10dd513c6225285ff35aa464c2f3} 
+void v\+Lna\+Critical\+Error\+Detected\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a7925643701a3005b1d4c700d8e985659}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01029}{1029}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_aea75fdc7ac4ba52a002394138ca5b551}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected\_CMockExpect@{vLnaCriticalErrorDetected\_CMockExpect}}
+\index{vLnaCriticalErrorDetected\_CMockExpect@{vLnaCriticalErrorDetected\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected\_CMockExpect()}{vLnaCriticalErrorDetected\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aea75fdc7ac4ba52a002394138ca5b551} 
+void v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01016}{1016}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_aea75fdc7ac4ba52a002394138ca5b551_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a7c4dedfcf87b2838462ba28e8a6c97f4}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected\_CMockIgnore@{vLnaCriticalErrorDetected\_CMockIgnore}}
+\index{vLnaCriticalErrorDetected\_CMockIgnore@{vLnaCriticalErrorDetected\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected\_CMockIgnore()}{vLnaCriticalErrorDetected\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a7c4dedfcf87b2838462ba28e8a6c97f4} 
+void v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01006}{1006}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a527f6991cfd16be9a24ba1dce262329e}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected\_CMockStopIgnore@{vLnaCriticalErrorDetected\_CMockStopIgnore}}
+\index{vLnaCriticalErrorDetected\_CMockStopIgnore@{vLnaCriticalErrorDetected\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected\_CMockStopIgnore()}{vLnaCriticalErrorDetected\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a527f6991cfd16be9a24ba1dce262329e} 
+void v\+Lna\+Critical\+Error\+Detected\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01011}{1011}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a5fd72312db8edfe18b21ecec6c34093e}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaCriticalErrorDetected\_Stub@{vLnaCriticalErrorDetected\_Stub}}
+\index{vLnaCriticalErrorDetected\_Stub@{vLnaCriticalErrorDetected\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaCriticalErrorDetected\_Stub()}{vLnaCriticalErrorDetected\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a5fd72312db8edfe18b21ecec6c34093e} 
+void v\+Lna\+Critical\+Error\+Detected\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a7925643701a3005b1d4c700d8e985659}{CMOCK\+\_\+v\+Lna\+Critical\+Error\+Detected\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01036}{1036}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a69c8d096f53b6b5c15e9a5c8c33ba739}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit@{vLnaStateMachineInit}}
+\index{vLnaStateMachineInit@{vLnaStateMachineInit}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit()}{vLnaStateMachineInit()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a69c8d096f53b6b5c15e9a5c8c33ba739} 
+void v\+Lna\+State\+Machine\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00680}{680}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a69c8d096f53b6b5c15e9a5c8c33ba739_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a42435baafb46de7a79a365f42bc2b14b}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit\_AddCallback@{vLnaStateMachineInit\_AddCallback}}
+\index{vLnaStateMachineInit\_AddCallback@{vLnaStateMachineInit\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit\_AddCallback()}{vLnaStateMachineInit\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a42435baafb46de7a79a365f42bc2b14b} 
+void v\+Lna\+State\+Machine\+Init\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ab13dd10788257e1769ef00b57b835faf}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00735}{735}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a27b5ead6163007ed9872d38f4a088142}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit\_CMockExpect@{vLnaStateMachineInit\_CMockExpect}}
+\index{vLnaStateMachineInit\_CMockExpect@{vLnaStateMachineInit\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit\_CMockExpect()}{vLnaStateMachineInit\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a27b5ead6163007ed9872d38f4a088142} 
+void v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00722}{722}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a27b5ead6163007ed9872d38f4a088142_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_ade03feb5a421a24523e00e11a17a1fe4}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit\_CMockIgnore@{vLnaStateMachineInit\_CMockIgnore}}
+\index{vLnaStateMachineInit\_CMockIgnore@{vLnaStateMachineInit\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit\_CMockIgnore()}{vLnaStateMachineInit\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ade03feb5a421a24523e00e11a17a1fe4} 
+void v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00712}{712}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_af9d6337b62688f23c051a56936e48176}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit\_CMockStopIgnore@{vLnaStateMachineInit\_CMockStopIgnore}}
+\index{vLnaStateMachineInit\_CMockStopIgnore@{vLnaStateMachineInit\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit\_CMockStopIgnore()}{vLnaStateMachineInit\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_af9d6337b62688f23c051a56936e48176} 
+void v\+Lna\+State\+Machine\+Init\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00717}{717}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_af33c45ace41fa08cb6b4c20ca31fcdc4}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineInit\_Stub@{vLnaStateMachineInit\_Stub}}
+\index{vLnaStateMachineInit\_Stub@{vLnaStateMachineInit\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineInit\_Stub()}{vLnaStateMachineInit\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_af33c45ace41fa08cb6b4c20ca31fcdc4} 
+void v\+Lna\+State\+Machine\+Init\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_ab13dd10788257e1769ef00b57b835faf}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Init\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00742}{742}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a1de8cb8a9468651af6af77d6d2a413c8}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate@{vLnaStateMachineUpdate}}
+\index{vLnaStateMachineUpdate@{vLnaStateMachineUpdate}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate()}{vLnaStateMachineUpdate()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a1de8cb8a9468651af6af77d6d2a413c8} 
+void v\+Lna\+State\+Machine\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00749}{749}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a1de8cb8a9468651af6af77d6d2a413c8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_aadfcc92bb4d76c20fef787b031b26f41}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate\_AddCallback@{vLnaStateMachineUpdate\_AddCallback}}
+\index{vLnaStateMachineUpdate\_AddCallback@{vLnaStateMachineUpdate\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate\_AddCallback()}{vLnaStateMachineUpdate\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_aadfcc92bb4d76c20fef787b031b26f41} 
+void v\+Lna\+State\+Machine\+Update\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a37d892061bb509efa4e8de96a9f214ae}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00804}{804}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a491ef6675f3c54a96059b20e8289fb56}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate\_CMockExpect@{vLnaStateMachineUpdate\_CMockExpect}}
+\index{vLnaStateMachineUpdate\_CMockExpect@{vLnaStateMachineUpdate\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate\_CMockExpect()}{vLnaStateMachineUpdate\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a491ef6675f3c54a96059b20e8289fb56} 
+void v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00791}{791}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a491ef6675f3c54a96059b20e8289fb56_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a17e2393d091b24a922ac425222761085}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate\_CMockIgnore@{vLnaStateMachineUpdate\_CMockIgnore}}
+\index{vLnaStateMachineUpdate\_CMockIgnore@{vLnaStateMachineUpdate\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate\_CMockIgnore()}{vLnaStateMachineUpdate\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a17e2393d091b24a922ac425222761085} 
+void v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00781}{781}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a528c3504032a8e5fa68da80720413847}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate\_CMockStopIgnore@{vLnaStateMachineUpdate\_CMockStopIgnore}}
+\index{vLnaStateMachineUpdate\_CMockStopIgnore@{vLnaStateMachineUpdate\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate\_CMockStopIgnore()}{vLnaStateMachineUpdate\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a528c3504032a8e5fa68da80720413847} 
+void v\+Lna\+State\+Machine\+Update\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00786}{786}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a97226fa62edd062b7214cff8edfff92c}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vLnaStateMachineUpdate\_Stub@{vLnaStateMachineUpdate\_Stub}}
+\index{vLnaStateMachineUpdate\_Stub@{vLnaStateMachineUpdate\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vLnaStateMachineUpdate\_Stub()}{vLnaStateMachineUpdate\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a97226fa62edd062b7214cff8edfff92c} 
+void v\+Lna\+State\+Machine\+Update\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a37d892061bb509efa4e8de96a9f214ae}{CMOCK\+\_\+v\+Lna\+State\+Machine\+Update\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l00811}{811}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a3585f3068291fb9891507d94107ef25f}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna@{vSetDisableLna}}
+\index{vSetDisableLna@{vSetDisableLna}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna()}{vSetDisableLna()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a3585f3068291fb9891507d94107ef25f} 
+void v\+Set\+Disable\+Lna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01043}{1043}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{mock__lna_state_machine_8c_a3585f3068291fb9891507d94107ef25f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_a8419670243c08c921fd4d618c94425bc}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna\_AddCallback@{vSetDisableLna\_AddCallback}}
+\index{vSetDisableLna\_AddCallback@{vSetDisableLna\_AddCallback}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna\_AddCallback()}{vSetDisableLna\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a8419670243c08c921fd4d618c94425bc} 
+void v\+Set\+Disable\+Lna\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a59ac78de72d044f670f046479142af43}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01098}{1098}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a3344cb5daad44e346dcfb236acbc0874}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna\_CMockExpect@{vSetDisableLna\_CMockExpect}}
+\index{vSetDisableLna\_CMockExpect@{vSetDisableLna\_CMockExpect}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna\_CMockExpect()}{vSetDisableLna\_CMockExpect()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a3344cb5daad44e346dcfb236acbc0874} 
+void v\+Set\+Disable\+Lna\+\_\+\+CMock\+Expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01085}{1085}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__lna_state_machine_8c_a3344cb5daad44e346dcfb236acbc0874_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__lna_state_machine_8c_ac53367e1767583a0b47385677c912a0b}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna\_CMockIgnore@{vSetDisableLna\_CMockIgnore}}
+\index{vSetDisableLna\_CMockIgnore@{vSetDisableLna\_CMockIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna\_CMockIgnore()}{vSetDisableLna\_CMockIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ac53367e1767583a0b47385677c912a0b} 
+void v\+Set\+Disable\+Lna\+\_\+\+CMock\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01075}{1075}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a64208691b25be226b10a14eaabbf6922}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna\_CMockStopIgnore@{vSetDisableLna\_CMockStopIgnore}}
+\index{vSetDisableLna\_CMockStopIgnore@{vSetDisableLna\_CMockStopIgnore}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna\_CMockStopIgnore()}{vSetDisableLna\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a64208691b25be226b10a14eaabbf6922} 
+void v\+Set\+Disable\+Lna\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01080}{1080}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_a6b697a52d13a9441f6606eca3e497de8}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!vSetDisableLna\_Stub@{vSetDisableLna\_Stub}}
+\index{vSetDisableLna\_Stub@{vSetDisableLna\_Stub}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{vSetDisableLna\_Stub()}{vSetDisableLna\_Stub()}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a6b697a52d13a9441f6606eca3e497de8} 
+void v\+Set\+Disable\+Lna\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__lna_state_machine_8h_a59ac78de72d044f670f046479142af43}{CMOCK\+\_\+v\+Set\+Disable\+Lna\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__lna_state_machine_8c_source_l01105}{1105}} of file \mbox{\hyperlink{mock__lna_state_machine_8c_source}{mock\+\_\+lna\+State\+Machine.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mock__lna_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!AbortFrame@{AbortFrame}}
+\index{AbortFrame@{AbortFrame}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{AbortFrame}{AbortFrame}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_add1ad6305e99da2ddf841e32dfbd8bd5} 
+jmp\+\_\+buf Abort\+Frame\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{mock__lna_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!GlobalExpectCount@{GlobalExpectCount}}
+\index{GlobalExpectCount@{GlobalExpectCount}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{GlobalExpectCount}{GlobalExpectCount}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_a719a4fcf367d1f23c73ec881194d299b} 
+int Global\+Expect\+Count\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00011}{11}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{mock__lna_state_machine_8c_ac2b7788e16200424c9d7090905c05330}\index{mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}!GlobalVerifyOrder@{GlobalVerifyOrder}}
+\index{GlobalVerifyOrder@{GlobalVerifyOrder}!mock\_lnaStateMachine.c@{mock\_lnaStateMachine.c}}
+\doxysubsubsection{\texorpdfstring{GlobalVerifyOrder}{GlobalVerifyOrder}}
+{\footnotesize\ttfamily \label{mock__lna_state_machine_8c_ac2b7788e16200424c9d7090905c05330} 
+int Global\+Verify\+Order\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{test__current_sensors__runner_8c_source_l00012}{12}} of file \mbox{\hyperlink{test__current_sensors__runner_8c_source}{test\+\_\+current\+Sensors\+\_\+runner.\+c}}.
+

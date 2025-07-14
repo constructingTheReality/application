@@ -1,0 +1,66 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_powerSensors.c
+:successes:
+- :test: test_3_1_ePowerSensorUpdate_eMpbPowerIn2ChannelsRunFailure_Fail
+  :line: 71
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_2_ePowerSensorUpdate_ePowerReadOffsetChannelRunFailure_Fail
+  :line: 229
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_3_ePowerSensorUpdate_ePowerReadChannelRunFailure_test1_Fail
+  :line: 248
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_4_ePowerSensorUpdate_ePowerReadChannelRunFailure_test2_Fail
+  :line: 290
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_5_ePowerSensorUpdate_boostChannel0_LnaChannel1_noAlarms_Success
+  :line: 438
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_6_ePowerSensorUpdate_boostChannel0_LnaChannel0_noAlarms_Success
+  :line: 647
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_7_ePowerSensorUpdate_boostChannel1_LnaChannel0_noAlarms_Success
+  :line: 857
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_8_ePowerSensorUpdate_boostChannel1_LnaChannel1_noAlarms_Success
+  :line: 1068
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_9_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_DueToLos_Success
+  :line: 1279
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_10_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_And_LnaAlarm_DueToPower_Success
+  :line: 1492
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_11_ePowerSensorUpdate_boostChannel1_LnaChannel1_ePowerSensorBoosterAlarmRunFailure_Fail
+  :line: 1717
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_12_ePowerSensorUpdate_boostChannel1_LnaChannel1_LnaAlarm_dueToPower_Success
+  :line: 1948
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_13_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_dueToPower_Success
+  :line: 2178
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 13
+  :passed: 13
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.4171289000005345

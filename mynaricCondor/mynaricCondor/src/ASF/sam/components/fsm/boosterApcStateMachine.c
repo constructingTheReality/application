@@ -118,6 +118,7 @@ eHpaApcState_t xReportHpaApcState(void)
 {
 	return eBoosterApcState;
 }
+/*------------------------------------------------------------------------------*/
 void eHpaApcStateInitFunction(void)
 {
 	eBool_t bEnable1Booster = eFalse;

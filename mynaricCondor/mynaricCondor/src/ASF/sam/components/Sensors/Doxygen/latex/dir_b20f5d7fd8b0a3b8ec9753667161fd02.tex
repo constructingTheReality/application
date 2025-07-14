@@ -1,0 +1,38 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/vendor/ceedling/plugins/json\+\_\+tests\+\_\+report Directory Reference}
+\hypertarget{dir_b20f5d7fd8b0a3b8ec9753667161fd02}{}\label{dir_b20f5d7fd8b0a3b8ec9753667161fd02}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/json\_tests\_report Directory Reference@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/json\_tests\_report Directory Reference}}
+Directory dependency graph for json\+\_\+tests\+\_\+report\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{dir_b20f5d7fd8b0a3b8ec9753667161fd02_dep}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{README.md_autotoc_md58}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{README.md_autotoc_md58}
+The json\+\_\+tests\+\_\+report plugin creates a JSON file of test results, which is handy for Continuous Integration build servers or as input into other reporting tools. The JSON file is output to the appropriate {\ttfamily \texorpdfstring{$<$}{<}build\+\_\+root\texorpdfstring{$>$}{>}/artifacts/} directory (e.\+g. {\ttfamily artifacts/test/} for test tasks, {\ttfamily artifacts/gcov/} for gcov, or {\ttfamily artifacts/bullseye/} for bullseye runs).\hypertarget{README.md_autotoc_md59}{}\doxysubsection{\texorpdfstring{Setup}{Setup}}\label{README.md_autotoc_md59}
+Enable the plugin in your project.\+yml by adding {\ttfamily json\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ json\_tests\_report}
+
+\end{DoxyCode}
+\hypertarget{README.md_autotoc_md60}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{README.md_autotoc_md60}
+Optionally configure the output / artifact filename in your project.\+yml with the {\ttfamily artifact\+\_\+filename} configuration option. The default filename is {\ttfamily report.\+json}.
+
+You can also configure the path that this artifact is stored. This can be done by setting {\ttfamily path}. The default is that it will be placed in a subfolder under the {\ttfamily build} directory.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:json\_tests\_report:}
+\DoxyCodeLine{\ \ :artifact\_filename:\ report\_spectuluarly.json}
+
+\end{DoxyCode}
+ 

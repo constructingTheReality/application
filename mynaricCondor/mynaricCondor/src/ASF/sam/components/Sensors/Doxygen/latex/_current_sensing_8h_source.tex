@@ -1,0 +1,45 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Current\+Sensing.h}
+\hypertarget{_current_sensing_8h_source}{}\label{_current_sensing_8h_source}\mbox{\hyperlink{_current_sensing_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00016}00016\ \textcolor{comment}{/*\ Header\ guard\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ \_\_CURRENT\_SENSING\_H}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ \_\_CURRENT\_SENSING\_H}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00020}00020\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}mpblibs.h"{}}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00023}00023\ \textcolor{comment}{/*\ Define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00024}00024\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00025}00025\ \textcolor{comment}{/*\ Exported\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00026}00026\ \textcolor{comment}{/*\ Exported\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00027}\mbox{\hyperlink{structx_current_input_scaling__t}{00027}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00029}\mbox{\hyperlink{structx_current_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{00029}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structx_current_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}};}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00030}\mbox{\hyperlink{structx_current_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{00030}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structx_current_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}};\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00031}00031\ \}\mbox{\hyperlink{structx_current_input_scaling__t}{xCurrentInputScaling\_t}};}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00033}\mbox{\hyperlink{structx_power_input_scaling__t}{00033}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00035}\mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{00035}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structx_power_input_scaling__t_a08bd351bca37cdb18cc98f3ddc12e349}{fIntercept}};}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00036}\mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{00036}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structx_power_input_scaling__t_a21a8dc139cfe330daef5ddc4b58d282d}{fSlope}};\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00038}\mbox{\hyperlink{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76}{00038}}\ \}\mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}},\ *\mbox{\hyperlink{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76}{pxPowerInputScaling\_t}};}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00040}00040\ \textcolor{comment}{/*\ Global\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00041}00041\ \textcolor{comment}{/*\ Exported\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00049}\mbox{\hyperlink{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5}{00049}}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5}{eCurrentSensingGetCurrentmA}}(\ handle\_t\ xStream,\ \mbox{\hyperlink{structx_current_input_scaling__t}{xCurrentInputScaling\_t}}\ xCurrentInputScaling\ ,\ \textcolor{keywordtype}{float}\ *pfCurrent\ ,\ uint16\_t\ *usCurrentRaw\ \ );}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00050}\mbox{\hyperlink{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5}{00050}}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5}{eCurrentSensingGetCurrentmAWithOffset}}(\ handle\_t\ xStream,\ \mbox{\hyperlink{structx_current_input_scaling__t}{xCurrentInputScaling\_t}}\ xCurrentInputScaling,\ uint16\_t\ usOffset\ ,\ \textcolor{keywordtype}{float}\ *pfCurrent,\ uint16\_t\ *usCurrentRaw\ );}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00057}\mbox{\hyperlink{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59}{00057}}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59}{eCurrentSensingGetPowermW}}(\ handle\_t\ xStream,\ \mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}}\ xPowerInputScaling,\ \textcolor{keywordtype}{float}\ *pfPower\ ,\ uint16\_t\ *usPowerRaw\ );}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00065}\mbox{\hyperlink{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db}{00065}}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db}{eCurrentSensingGetPowermWOffset}}(\ handle\_t\ xStream,\ \mbox{\hyperlink{structx_power_input_scaling__t}{xPowerInputScaling\_t}}\ xPowerInputScaling,\ uint16\_t\ usOffset\ ,\ \textcolor{keywordtype}{float}\ *pfPower\ ,\ uint16\_t\ *usPowerRaw);}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00073}\mbox{\hyperlink{_current_sensing_8h_a6b3c18e57ef5b4decc8ba8f54234bdbd}{00073}}\ \textcolor{keyword}{extern}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_a6b3c18e57ef5b4decc8ba8f54234bdbd}{eCurrentSensingAnalogReadmV}}(\ handle\_t\ xStream,\ \textcolor{keywordtype}{float}\ *pxVoltage,\ uint16\_t\ *usPowerRaw\ );}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00082}\mbox{\hyperlink{_current_sensing_8h_a79bea9e18fc735c4c35c289cfc51ae72}{00082}}\ \textcolor{keyword}{extern}\ eMpbError\_t\ \mbox{\hyperlink{_current_sensing_8h_a79bea9e18fc735c4c35c289cfc51ae72}{eCurrentSensingPowerAnalogReadmV}}(\ handle\_t\ xStream,\ \textcolor{keywordtype}{float}\ *pxVoltage,\ uint16\_t\ *usPowerRaw\ );}
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_current_sensing_8h_source_l00084}00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CURRENT\_SENSING\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

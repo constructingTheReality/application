@@ -1,0 +1,43 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/current\+Sensors\+Backfacet\+Alarm.c}
+\hypertarget{current_sensors_backfacet_alarm_8c_source}{}\label{current_sensors_backfacet_alarm_8c_source}\mbox{\hyperlink{current_sensors_backfacet_alarm_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00002}00002\ \textcolor{comment}{\ *\ currentSensorsBackfacetAlarm.c}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00004}00004\ \textcolor{comment}{\ *\ Created:\ 6/18/2024\ 12:20:51\ PM}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00005}00005\ \textcolor{comment}{\ *\ \ Author:\ j.castano}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00006}00006\ \textcolor{comment}{\ */}\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{current_sensors_backfacet_alarm_8h}{currentSensorsBackfacetAlarm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00009}\mbox{\hyperlink{current_sensors_backfacet_alarm_8c_af4c51a8d505c9165d0b9a93e7def94b1}{00009}}\ eMpbError\_t\ \mbox{\hyperlink{current_sensors_backfacet_alarm_8c_af4c51a8d505c9165d0b9a93e7def94b1}{eCurrentSensorsBackfacetAlarmRun}}(\ \textcolor{keywordtype}{float}\ fLnaBackfacetCurrentReaded,\ \textcolor{keywordtype}{float}\ fHpaBackfacetCurrentReaded,\ \textcolor{keywordtype}{float}\ fLnaBackfacetLimit,\ \textcolor{keywordtype}{float}\ \ fBackfacetHpaLimit,\ AlarmsAndStatusRegisterBitAssignment\_t\ *pAlarmsAndStatusRegisterBitAssignment\ ,\ eBool\_t\ *pLnaBackfacetCurrentCriticalAlarm,\ eBool\_t\ *pHpaBackfacetCurrentCriticalAlarm)}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ precision\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ eBool\_t\ bLnaBackfacetError\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ eBool\_t\ bHpaBackfacetError\ =\ eFalse;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if(pAlarmsAndStatusRegisterBitAssignment\ !=\ NULL)}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(pAlarmsAndStatusRegisterBitAssignment\ !=\ NULL\ \&\&\ pLnaBackfacetCurrentCriticalAlarm\ !=\ NULL\ \&\&\ pHpaBackfacetCurrentCriticalAlarm\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;\ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ bLnaBackfacetError\ =\ \ mpb\_float1\_minor\_than\_float2(fLnaBackfacetCurrentReaded\ ,\ fLnaBackfacetLimit,\ precision);}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ bHpaBackfacetError\ =\ \ mpb\_float1\_minor\_than\_float2(fHpaBackfacetCurrentReaded\ ,\ fBackfacetHpaLimit,\ precision);}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ pAlarmsAndStatusRegisterBitAssignment-\/>bHpaBackfacetCurrentErrorFlag\ =\ (bHpaBackfacetError\ ==\ eFalse)?\ 1:\ 0;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ pAlarmsAndStatusRegisterBitAssignment-\/>bLnaBackfacetCurrentErrorFlag\ =\ (bLnaBackfacetError\ ==\ eFalse)?\ 1:\ 0;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ *pHpaBackfacetCurrentCriticalAlarm\ =\ bHpaBackfacetError;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ *pLnaBackfacetCurrentCriticalAlarm\ =\ bLnaBackfacetError;}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{current_sensors_backfacet_alarm_8c_source_l00038}00038\ \}}
+
+\end{DoxyCode}

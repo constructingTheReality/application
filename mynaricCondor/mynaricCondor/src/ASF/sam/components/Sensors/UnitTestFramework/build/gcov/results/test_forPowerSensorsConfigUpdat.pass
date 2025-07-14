@@ -1,0 +1,38 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_forPowerSensorsConfigUpdat.c
+:successes:
+- :test: test_4_1_ePowerSensorsConfigUpdateCommon_InvalidParams_Fail
+  :line: 53
+  :message: ''
+  :unity_test_time: 0
+- :test: test_4_2_ePowerSensorsConfigUpdateCommon_Success
+  :line: 59
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_1_ePowerSensorsConfigUpdateLna_InvalidParams_Fail
+  :line: 81
+  :message: ''
+  :unity_test_time: 0
+- :test: test_5_2_ePowerSensorsConfigUpdateLna_Success
+  :line: 89
+  :message: ''
+  :unity_test_time: 0
+- :test: test_6_1_ePowerSensorsConfigUpdateBooster_InvalidParams_Fail
+  :line: 136
+  :message: ''
+  :unity_test_time: 0
+- :test: test_6_2_ePowerSensorsConfigUpdateBooster_Success
+  :line: 172
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 6
+  :passed: 6
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.3299265000023297

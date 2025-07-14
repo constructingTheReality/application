@@ -1,0 +1,219 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Current\+Sensing.h File Reference}
+\hypertarget{_current_sensing_8h}{}\label{_current_sensing_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/CurrentSensing.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/CurrentSensing.h}}
+
+
+Library to calculate a current according to a current sensing signal input.  
+
+
+{\ttfamily \#include "{}mpblibs.\+h"{}}\newline
+Include dependency graph for Current\+Sensing.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{_current_sensing_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_current_sensing_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76}{px\+Power\+Input\+Scaling\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5}{e\+Current\+Sensing\+Get\+CurrentmA}} (handle\+\_\+t x\+Stream, \mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}} x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Current\+Raw)
+\begin{DoxyCompactList}\small\item\em Get the current of the current sensing input in mA. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5}{e\+Current\+Sensing\+Get\+Currentm\+AWith\+Offset}} (handle\+\_\+t x\+Stream, \mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}} x\+Current\+Input\+Scaling, uint16\+\_\+t us\+Offset, float \texorpdfstring{$\ast$}{*}pf\+Current, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Current\+Raw)
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59}{e\+Current\+Sensing\+Get\+PowermW}} (handle\+\_\+t x\+Stream, \mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}} x\+Power\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Power, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Power\+Raw)
+\begin{DoxyCompactList}\small\item\em Get the power of the current sensing input in mW. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db}{e\+Current\+Sensing\+Get\+Powerm\+WOffset}} (handle\+\_\+t x\+Stream, \mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}} x\+Power\+Input\+Scaling, uint16\+\_\+t us\+Offset, float \texorpdfstring{$\ast$}{*}pf\+Power, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Power\+Raw)
+\begin{DoxyCompactList}\small\item\em Get the power of the current sensing input in mW. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_a6b3c18e57ef5b4decc8ba8f54234bdbd}{e\+Current\+Sensing\+Analog\+ReadmV}} (handle\+\_\+t x\+Stream, float \texorpdfstring{$\ast$}{*}px\+Voltage, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Power\+Raw)
+\begin{DoxyCompactList}\small\item\em Get the voltage of the current sensing input in mV. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{_current_sensing_8h_a79bea9e18fc735c4c35c289cfc51ae72}{e\+Current\+Sensing\+Power\+Analog\+ReadmV}} (handle\+\_\+t x\+Stream, float \texorpdfstring{$\ast$}{*}px\+Voltage, uint16\+\_\+t \texorpdfstring{$\ast$}{*}us\+Power\+Raw)
+\begin{DoxyCompactList}\small\item\em Get the voltage of the power sensing input in mV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Library to calculate a current according to a current sensing signal input. 
+
+\begin{DoxyAuthor}{Author}
+juan andres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 3/8/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2021 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+Definition in file \mbox{\hyperlink{_current_sensing_8h_source}{Current\+Sensing.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76}\label{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76} 
+\index{CurrentSensing.h@{CurrentSensing.h}!pxPowerInputScaling\_t@{pxPowerInputScaling\_t}}
+\index{pxPowerInputScaling\_t@{pxPowerInputScaling\_t}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{pxPowerInputScaling\_t}{pxPowerInputScaling\_t}}
+{\footnotesize\ttfamily typedef  struct \mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_current_sensing_8h_a32fd9d79cef4f30f8518bbd38de47a76}{px\+Power\+Input\+Scaling\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_current_sensing_8h_a6b3c18e57ef5b4decc8ba8f54234bdbd}\label{_current_sensing_8h_a6b3c18e57ef5b4decc8ba8f54234bdbd} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingAnalogReadmV@{eCurrentSensingAnalogReadmV}}
+\index{eCurrentSensingAnalogReadmV@{eCurrentSensingAnalogReadmV}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingAnalogReadmV()}{eCurrentSensingAnalogReadmV()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Analog\+ReadmV (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{float \texorpdfstring{$\ast$}{*}}]{px\+Voltage,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Power\+Raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Get the voltage of the current sensing input in mV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & Application specific peripheral channel identifier \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Voltage} & Pointer to store the voltage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+\Hypertarget{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5}\label{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingGetCurrentmA@{eCurrentSensingGetCurrentmA}}
+\index{eCurrentSensingGetCurrentmA@{eCurrentSensingGetCurrentmA}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingGetCurrentmA()}{eCurrentSensingGetCurrentmA()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Get\+CurrentmA (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{\mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}}}]{x\+Current\+Input\+Scaling,  }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Current\+Raw }\end{DoxyParamCaption})}
+
+
+
+Get the current of the current sensing input in mA. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & Application specific peripheral channel identifier \\
+\hline
+\mbox{\texttt{ out}}  & {\em pf\+Current} & Pointer to store the current \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_current_sensing_8h_a884434ebc42d5003dc1bc022dd39a6f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5}\label{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingGetCurrentmAWithOffset@{eCurrentSensingGetCurrentmAWithOffset}}
+\index{eCurrentSensingGetCurrentmAWithOffset@{eCurrentSensingGetCurrentmAWithOffset}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingGetCurrentmAWithOffset()}{eCurrentSensingGetCurrentmAWithOffset()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Get\+Currentm\+AWith\+Offset (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{\mbox{\hyperlink{structx_current_input_scaling__t}{x\+Current\+Input\+Scaling\+\_\+t}}}]{x\+Current\+Input\+Scaling,  }\item[{uint16\+\_\+t}]{us\+Offset,  }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Current\+Raw }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_current_sensing_8h_af6e85b5350d92607f1eab18d1d66b4e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59}\label{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingGetPowermW@{eCurrentSensingGetPowermW}}
+\index{eCurrentSensingGetPowermW@{eCurrentSensingGetPowermW}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingGetPowermW()}{eCurrentSensingGetPowermW()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Get\+PowermW (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{\mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}}}]{x\+Power\+Input\+Scaling,  }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Power\+Raw }\end{DoxyParamCaption})}
+
+
+
+Get the power of the current sensing input in mW. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & Application specific peripheral channel identifier \\
+\hline
+\mbox{\texttt{ out}}  & {\em pf\+Current} & Pointer to store the current \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_current_sensing_8h_ae8cb75e0317815d3c99429a727bd5b59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db}\label{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingGetPowermWOffset@{eCurrentSensingGetPowermWOffset}}
+\index{eCurrentSensingGetPowermWOffset@{eCurrentSensingGetPowermWOffset}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingGetPowermWOffset()}{eCurrentSensingGetPowermWOffset()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Get\+Powerm\+WOffset (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{\mbox{\hyperlink{structx_power_input_scaling__t}{x\+Power\+Input\+Scaling\+\_\+t}}}]{x\+Power\+Input\+Scaling,  }\item[{uint16\+\_\+t}]{us\+Offset,  }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Power\+Raw }\end{DoxyParamCaption})}
+
+
+
+Get the power of the current sensing input in mW. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & Application specific peripheral channel identifier \\
+\hline
+\mbox{\texttt{ out}}  & {\em pf\+Current} & Pointer to store the current \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_current_sensing_8h_abdb76ae25a26fd7cef081e89e8b6c7db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_current_sensing_8h_a79bea9e18fc735c4c35c289cfc51ae72}\label{_current_sensing_8h_a79bea9e18fc735c4c35c289cfc51ae72} 
+\index{CurrentSensing.h@{CurrentSensing.h}!eCurrentSensingPowerAnalogReadmV@{eCurrentSensingPowerAnalogReadmV}}
+\index{eCurrentSensingPowerAnalogReadmV@{eCurrentSensingPowerAnalogReadmV}!CurrentSensing.h@{CurrentSensing.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingPowerAnalogReadmV()}{eCurrentSensingPowerAnalogReadmV()}}
+{\footnotesize\ttfamily e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Power\+Analog\+ReadmV (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream,  }\item[{float \texorpdfstring{$\ast$}{*}}]{px\+Voltage,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{us\+Power\+Raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Get the voltage of the power sensing input in mV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & Application specific peripheral channel identifier \\
+\hline
+\mbox{\texttt{ out}}  & {\em px\+Voltage} & Pointer to store the voltage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}

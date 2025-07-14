@@ -1,0 +1,222 @@
+\doxysection{cmock.\+c}
+\hypertarget{cmock_8c_source}{}\label{cmock_8c_source}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock.c}}
+\mbox{\hyperlink{cmock_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00001}00001\ \textcolor{comment}{/*\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00002}00002\ \textcolor{comment}{\ \ \ \ CMock\ Project\ -\/\ Automatic\ Mock\ Generation\ for\ C}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00003}00003\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2007\ Mike\ Karlesky,\ Mark\ VanderVoord,\ Greg\ Williams}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00004}00004\ \textcolor{comment}{\ \ \ \ [Released\ under\ MIT\ License.\ Please\ refer\ to\ license.txt\ for\ details]}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00005}00005\ \textcolor{comment}{==========================================\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cmock_8h}{cmock.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00009}00009\ \textcolor{comment}{/*\ public\ constants\ to\ be\ used\ by\ mocks\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00010}\mbox{\hyperlink{cmock_8c_ac00a03c1e594c9e1d9ff3ce4873642a0}{00010}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_ac00a03c1e594c9e1d9ff3ce4873642a0}{CMockStringOutOfMemory}}\ =\ \textcolor{stringliteral}{"{}CMock\ has\ run\ out\ of\ memory.\ Please\ allocate\ more."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00011}\mbox{\hyperlink{cmock_8c_a797fd9415cd8d0655c68e007f845d020}{00011}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_a797fd9415cd8d0655c68e007f845d020}{CMockStringCalledMore}}\ \ =\ \textcolor{stringliteral}{"{}Called\ more\ times\ than\ expected."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00012}\mbox{\hyperlink{cmock_8c_a6ac9ca0995f1b325857c4bdb5a898102}{00012}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_a6ac9ca0995f1b325857c4bdb5a898102}{CMockStringCalledLess}}\ \ =\ \textcolor{stringliteral}{"{}Called\ fewer\ times\ than\ expected."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00013}\mbox{\hyperlink{cmock_8c_a16b2f46d690a118d6ca14abb35543481}{00013}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_a16b2f46d690a118d6ca14abb35543481}{CMockStringCalledEarly}}\ =\ \textcolor{stringliteral}{"{}Called\ earlier\ than\ expected."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00014}\mbox{\hyperlink{cmock_8c_aed2166361988847f5f63d13994f5de40}{00014}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_aed2166361988847f5f63d13994f5de40}{CMockStringCalledLate}}\ \ =\ \textcolor{stringliteral}{"{}Called\ later\ than\ expected."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00015}\mbox{\hyperlink{cmock_8c_acf9d38dd7d2872139cc1bc1bf1b19e70}{00015}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_acf9d38dd7d2872139cc1bc1bf1b19e70}{CMockStringCallOrder}}\ \ \ =\ \textcolor{stringliteral}{"{}Called\ out\ of\ order."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00016}\mbox{\hyperlink{cmock_8c_aa04f7531196fa48793136231a0468971}{00016}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_aa04f7531196fa48793136231a0468971}{CMockStringIgnPreExp}}\ \ \ =\ \textcolor{stringliteral}{"{}IgnoreArg\ called\ before\ Expect."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00017}\mbox{\hyperlink{cmock_8c_a784237bba66acd6aa8f05424ab203e50}{00017}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_a784237bba66acd6aa8f05424ab203e50}{CMockStringPtrPreExp}}\ \ \ =\ \textcolor{stringliteral}{"{}ReturnThruPtr\ called\ before\ Expect."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00018}\mbox{\hyperlink{cmock_8c_af6f94581b839661ce82bfd01f1c937a1}{00018}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_af6f94581b839661ce82bfd01f1c937a1}{CMockStringPtrIsNULL}}\ \ \ =\ \textcolor{stringliteral}{"{}Pointer\ is\ NULL."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00019}\mbox{\hyperlink{cmock_8c_aeda885bf7d07126d0e1638f265d7514c}{00019}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_aeda885bf7d07126d0e1638f265d7514c}{CMockStringExpNULL}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}Expected\ NULL."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00020}\mbox{\hyperlink{cmock_8c_a89c88e09ebf68dff96e71a417b8733a5}{00020}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{cmock_8c_a89c88e09ebf68dff96e71a417b8733a5}{CMockStringMismatch}}\ \ \ \ =\ \textcolor{stringliteral}{"{}Function\ called\ with\ unexpected\ argument\ value."{}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00022}00022\ \textcolor{comment}{/*\ private\ variables\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ CMOCK\_MEM\_DYNAMIC}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00024}00024\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ \ \ \ \ \ \ \ \ CMock\_Guts\_Buffer\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00025}00025\ \textcolor{keyword}{static}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \ \ CMock\_Guts\_BufferSize\ =\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00026}00026\ \textcolor{keyword}{static}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \ \ CMock\_Guts\_FreePtr\ =\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00027}00027\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00028}00028\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ CMock\_Guts\_Buffer[\mbox{\hyperlink{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}{CMOCK\_MEM\_SIZE}}\ +\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}}];}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00029}00029\ \textcolor{keyword}{static}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \ \ CMock\_Guts\_BufferSize\ =\ \mbox{\hyperlink{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}{CMOCK\_MEM\_SIZE}}\ +\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00030}00030\ \textcolor{keyword}{static}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \ \ CMock\_Guts\_FreePtr\ =\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00031}00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00033}00033\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00034}00034\ \textcolor{comment}{\ *\ CMock\_Guts\_MemNew}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00035}00035\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00036}\mbox{\hyperlink{cmock_8c_a70143d967ec301bbce3efb6b59a90e5e}{00036}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a70143d967ec301bbce3efb6b59a90e5e}{CMock\_Guts\_MemNew}}(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ size)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00038}00038\ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00040}00040\ \ \ \textcolor{comment}{/*\ verify\ arguments\ valid\ (we\ must\ be\ allocating\ space\ for\ at\ least\ 1\ byte,\ and\ the\ existing\ chain\ must\ be\ in\ memory\ somewhere)\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00041}00041\ \ \ \textcolor{keywordflow}{if}\ (size\ <\ 1)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00044}00044\ \ \ \textcolor{comment}{/*\ verify\ we\ have\ enough\ room\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00045}00045\ \ \ size\ =\ size\ +\ \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\_MEM\_INDEX\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00046}00046\ \ \ \textcolor{keywordflow}{if}\ (size\ \&\ \mbox{\hyperlink{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}{CMOCK\_MEM\_ALIGN\_MASK}})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00047}00047\ \ \ \ \ size\ =\ (size\ +\ \mbox{\hyperlink{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}{CMOCK\_MEM\_ALIGN\_MASK}})\ \&\ \string~\mbox{\hyperlink{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}{CMOCK\_MEM\_ALIGN\_MASK}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00048}00048\ \ \ \textcolor{keywordflow}{if}\ ((CMock\_Guts\_BufferSize\ -\/\ CMock\_Guts\_FreePtr)\ <\ size)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00049}00049\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00050}00050\ \textcolor{preprocessor}{\#ifndef\ CMOCK\_MEM\_DYNAMIC}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};\ \textcolor{comment}{/*\ nothing\ we\ can\ do;\ our\ static\ buffer\ is\ out\ of\ memory\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00052}00052\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{/*\ our\ dynamic\ buffer\ does\ not\ have\ enough\ room;\ request\ more\ via\ realloc()\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ new\_buffersize\ =\ CMock\_Guts\_BufferSize\ +\ \mbox{\hyperlink{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}{CMOCK\_MEM\_SIZE}}\ +\ size;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ new\_buffer\ =\ realloc(CMock\_Guts\_Buffer,\ (\textcolor{keywordtype}{size\_t})new\_buffersize);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_buffer\ ==\ NULL)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00057}00057\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};\ \textcolor{comment}{/*\ realloc()\ failed;\ out\ of\ memory\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00058}00058\ \ \ \ \ CMock\_Guts\_Buffer\ =\ new\_buffer;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00059}00059\ \ \ \ \ CMock\_Guts\_BufferSize\ =\ new\_buffersize;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00060}00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00061}00061\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00063}00063\ \ \ \textcolor{comment}{/*\ determine\ where\ we're\ putting\ this\ new\ block,\ and\ init\ its\ pointer\ to\ be\ the\ end\ of\ the\ line\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00064}00064\ \ \ index\ =\ CMock\_Guts\_FreePtr\ +\ \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\_MEM\_INDEX\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00065}00065\ \ \ *(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}*)(\&CMock\_Guts\_Buffer[CMock\_Guts\_FreePtr])\ =\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00066}00066\ \ \ CMock\_Guts\_FreePtr\ +=\ size;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00068}00068\ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00071}00071\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00072}00072\ \textcolor{comment}{\ *\ CMock\_Guts\_MemChain}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00073}00073\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00074}\mbox{\hyperlink{cmock_8c_a15d51ffb4affbacc256f9569f46b7371}{00074}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a15d51ffb4affbacc256f9569f46b7371}{CMock\_Guts\_MemChain}}(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ root\_index,\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ obj\_index)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00075}00075\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00076}00076\ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00077}00077\ \ \ \textcolor{keywordtype}{void}*\ root;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00078}00078\ \ \ \textcolor{keywordtype}{void}*\ obj;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00079}00079\ \ \ \textcolor{keywordtype}{void}*\ next;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00081}00081\ \ \ \textcolor{keywordflow}{if}\ (root\_index\ ==\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00082}00082\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00083}00083\ \ \ \ \ \textcolor{comment}{/*\ if\ there\ is\ no\ root\ currently,\ we\ return\ this\ object\ as\ the\ root\ of\ the\ chain\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ obj\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00085}00085\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00086}00086\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00087}00087\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{/*\ reject\ illegal\ nodes\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{if}\ ((root\_index\ <\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}})\ ||\ (root\_index\ >=\ CMock\_Guts\_FreePtr))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00090}00090\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00091}00091\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{if}\ ((obj\_index\ <\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}})\ ||\ (obj\_index\ >=\ CMock\_Guts\_FreePtr))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00095}00095\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00098}00098\ \ \ \ \ root\ =\ (\textcolor{keywordtype}{void}*)(\&CMock\_Guts\_Buffer[root\_index]);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00099}00099\ \ \ \ \ obj\ \ =\ (\textcolor{keywordtype}{void}*)(\&CMock\_Guts\_Buffer[obj\_index]);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00101}00101\ \ \ \ \ \textcolor{comment}{/*\ find\ the\ end\ of\ the\ existing\ chain\ and\ add\ us\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00102}00102\ \ \ \ \ next\ =\ root;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00104}00104\ \ \ \ \ \ \ index\ =\ *(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}*)((\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\_MEM\_PTR\_AS\_INT}})next\ -\/\ \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\_MEM\_INDEX\_SIZE}});}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00105}00105\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ CMock\_Guts\_FreePtr)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00107}00107\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ next\ =\ (\textcolor{keywordtype}{void}*)(\&CMock\_Guts\_Buffer[index]);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00109}00109\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (index\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00110}00110\ \ \ \ \ *(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}*)((\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\_MEM\_PTR\_AS\_INT}})next\ -\/\ \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\_MEM\_INDEX\_SIZE}})\ =\ (\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}})((\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\_MEM\_PTR\_AS\_INT}})obj\ -\/\ (\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\_MEM\_PTR\_AS\_INT}})CMock\_Guts\_Buffer);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{return}\ root\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00112}00112\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00115}00115\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00116}00116\ \textcolor{comment}{\ *\ CMock\_Guts\_MemNext}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00117}00117\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00118}\mbox{\hyperlink{cmock_8c_a24a222978890f2650776c474a757ced9}{00118}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a24a222978890f2650776c474a757ced9}{CMock\_Guts\_MemNext}}(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ previous\_item\_index)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00119}00119\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00120}00120\ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00121}00121\ \ \ \textcolor{keywordtype}{void}*\ previous\_item;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00123}00123\ \ \ \textcolor{comment}{/*\ There\ is\ nothing\ "{}next"{}\ if\ the\ pointer\ isn't\ from\ our\ buffer\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00124}00124\ \ \ \textcolor{keywordflow}{if}\ ((previous\_item\_index\ <\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}})\ ||\ (previous\_item\_index\ \ >=\ CMock\_Guts\_FreePtr))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00126}00126\ \ \ previous\_item\ =\ (\textcolor{keywordtype}{void}*)(\&CMock\_Guts\_Buffer[previous\_item\_index]);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00128}00128\ \ \ \textcolor{comment}{/*\ if\ the\ pointer\ is\ good,\ then\ use\ it\ to\ look\ up\ the\ next\ index}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00129}00129\ \textcolor{comment}{\ \ \ *\ (we\ know\ the\ first\ element\ always\ goes\ in\ zero,\ so\ NEXT\ must\ always\ be\ >\ 1)\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00130}00130\ \ \ index\ =\ *(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}*)((\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\_MEM\_PTR\_AS\_INT}})previous\_item\ -\/\ \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\_MEM\_INDEX\_SIZE}});}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00131}00131\ \ \ \textcolor{keywordflow}{if}\ ((index\ >\ 1)\ \&\&\ (index\ <\ CMock\_Guts\_FreePtr))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00133}00133\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00135}00135\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00137}00137\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00138}00138\ \textcolor{comment}{\ *\ CMock\_Guts\_MemEndOfChain}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00139}00139\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00140}\mbox{\hyperlink{cmock_8c_a7a60479d86c12fa24499c516365f5c71}{00140}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a7a60479d86c12fa24499c516365f5c71}{CMock\_Guts\_MemEndOfChain}}(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ root\_index)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00141}00141\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00142}00142\ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ index\ =\ root\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00143}00143\ \ \ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ next\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00145}00145\ \ \ \textcolor{keywordflow}{for}\ (next\_index\ =\ root\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00146}00146\ \ \ \ \ \ \ \ next\_index\ !=\ \mbox{\hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{CMOCK\_GUTS\_NONE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00147}00147\ \ \ \ \ \ \ \ next\_index\ =\ \mbox{\hyperlink{cmock_8c_a24a222978890f2650776c474a757ced9}{CMock\_Guts\_MemNext}}(index))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00148}00148\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00149}00149\ \ \ \ \ index\ =\ next\_index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00150}00150\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00152}00152\ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00153}00153\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00155}00155\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00156}00156\ \textcolor{comment}{\ *\ CMock\_GetAddressFor}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00157}00157\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00158}\mbox{\hyperlink{cmock_8c_a81357dde09fc71b89c8e9ed3a2a65094}{00158}}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{cmock_8c_a81357dde09fc71b89c8e9ed3a2a65094}{CMock\_Guts\_GetAddressFor}}(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ index)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00159}00159\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00160}00160\ \ \ \textcolor{keywordflow}{if}\ ((index\ >=\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}})\ \&\&\ (index\ <\ CMock\_Guts\_FreePtr))}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00161}00161\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{void}*)(\&CMock\_Guts\_Buffer[index]);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00163}00163\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00164}00164\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00165}00165\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00167}00167\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00168}00168\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00170}00170\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00171}00171\ \textcolor{comment}{\ *\ CMock\_Guts\_MemBytesCapacity}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00172}00172\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00173}\mbox{\hyperlink{cmock_8c_a3e78365b5bb3418708b1d87520740c8f}{00173}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a3e78365b5bb3418708b1d87520740c8f}{CMock\_Guts\_MemBytesCapacity}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00174}00174\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00175}00175\ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{sizeof}(CMock\_Guts\_Buffer)\ -\/\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}});}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00178}00178\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00179}00179\ \textcolor{comment}{\ *\ CMock\_Guts\_MemBytesFree}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00180}00180\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00181}\mbox{\hyperlink{cmock_8c_a6fa3015b0f3c2ffeb3f5063fbef14278}{00181}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_a6fa3015b0f3c2ffeb3f5063fbef14278}{CMock\_Guts\_MemBytesFree}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00182}00182\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00183}00183\ \ \ \textcolor{keywordflow}{return}\ CMock\_Guts\_BufferSize\ -\/\ CMock\_Guts\_FreePtr;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00186}00186\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00187}00187\ \textcolor{comment}{\ *\ CMock\_Guts\_MemBytesUsed}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00188}00188\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00189}\mbox{\hyperlink{cmock_8c_aba717672271fef7bf017b85053c00c58}{00189}}\ \mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\_MEM\_INDEX\_TYPE}}\ \mbox{\hyperlink{cmock_8c_aba717672271fef7bf017b85053c00c58}{CMock\_Guts\_MemBytesUsed}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00190}00190\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00191}00191\ \ \ \textcolor{keywordflow}{return}\ CMock\_Guts\_FreePtr\ -\/\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00192}00192\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00194}00194\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00195}00195\ \textcolor{comment}{\ *\ CMock\_Guts\_MemFreeAll}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00196}00196\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00197}\mbox{\hyperlink{cmock_8c_a348bc07d37efc57ac52128cd99ee7c72}{00197}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cmock_8c_a348bc07d37efc57ac52128cd99ee7c72}{CMock\_Guts\_MemFreeAll}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00198}00198\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00199}00199\ \ \ CMock\_Guts\_FreePtr\ =\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};\ \textcolor{comment}{/*\ skip\ the\ very\ beginning\ */}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00200}00200\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00202}00202\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00203}00203\ \textcolor{comment}{\ *\ CMock\_Guts\_MemFreeFinal}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00204}00204\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00205}\mbox{\hyperlink{cmock_8c_aa8a20fa157f61e9e1379170847287cc9}{00205}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cmock_8c_aa8a20fa157f61e9e1379170847287cc9}{CMock\_Guts\_MemFreeFinal}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00206}00206\ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00207}00207\ \ \ CMock\_Guts\_FreePtr\ =\ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\_MEM\_ALIGN\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00208}00208\ \textcolor{preprocessor}{\#ifdef\ CMOCK\_MEM\_DYNAMIC}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00209}00209\ \ \ \textcolor{keywordflow}{if}\ (CMock\_Guts\_Buffer)}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00210}00210\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00211}00211\ \ \ \ \ free(CMock\_Guts\_Buffer);}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00212}00212\ \ \ \ \ CMock\_Guts\_Buffer\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00213}00213\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00214}00214\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00215}00215\ \}}
+\DoxyCodeLine{\Hypertarget{cmock_8c_source_l00216}00216\ }
+
+\end{DoxyCode}

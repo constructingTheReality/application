@@ -1706,8 +1706,9 @@ void vLaserDataInit(void)
 	
 
 	
-	xAmplifierDescriptor.c414StatusDefinition.fPowerSupplyMonitor = 0.0f;
-	xAmplifierDescriptor.c414StatusDefinition.fUnitBaseTemperature = -40.0f;
+	xAmplifierDescriptor.c414StatusDefinition.fBackFacetHpaMonitorRaw = 0.0f;
+	xAmplifierDescriptor.c414StatusDefinition.fBackFacetLnaMonitorRaw = 0.0f;
+	//xAmplifierDescriptor.c414StatusDefinition.fUnitBaseTemperature = -40.0f;
 	
 
 	xAmplifierDescriptor.bPasswordIsCorrect = eFalse;

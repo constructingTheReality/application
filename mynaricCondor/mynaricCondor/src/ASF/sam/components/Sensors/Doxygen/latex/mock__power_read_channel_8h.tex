@@ -1,0 +1,1285 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/mocks/mock\+\_\+power\+Read\+Channel.h File Reference}
+\hypertarget{mock__power_read_channel_8h}{}\label{mock__power_read_channel_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_powerReadChannel.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_powerReadChannel.h}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Read\+Channel.\+h"{}}\newline
+Include dependency graph for mock\+\_\+power\+Read\+Channel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a16db712dd45f4c433e95b455c1d86f4d}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a7ef4f4570b5bb4643db3b6341b077092}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a1454af94daeb98adfdcf19fc23f83657}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a320eda39a2777a0a34933eeeb66cecc7}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+And\+Return}}(pus\+Internal\+Offset,  pus\+External\+Offset,  pus\+External\+Offset1,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a2279279974350629d25d57b0ef8959cf}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__power_read_channel_8c_a3bd70e88a5f97391b1fbe822498b8031}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a7d06f787d6ce8fd3be93a804e7f4da7b}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return}}(pus\+Internal\+Offset,  pus\+Internal\+Offset\+\_\+\+Depth,  pus\+External\+Offset,  pus\+External\+Offset\+\_\+\+Depth,  pus\+External\+Offset1,  pus\+External\+Offset1\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_afaf4ab777daf66e3183a8da76dfa6820}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Internal\+Offset}}(pus\+Internal\+Offset)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a67e4d1f6dd621555e02691325df72adc}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Internal\+Offset}}(pus\+Internal\+Offset,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a8a421e572650b79b9eb4e77b1f61f722}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Internal\+Offset}}(pus\+Internal\+Offset,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_ae25b90d90c98e7f0459b1a9ff4201b7e}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+External\+Offset}}(pus\+External\+Offset)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a9dbeb85a74885e21ca1a37ff8a86eda2}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+External\+Offset}}(pus\+External\+Offset,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aff6423fb8abbcbee910d27645f89031f}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset}}(pus\+External\+Offset,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a021b20d4b91fa92135233f5e0df0b9e1}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+External\+Offset1}}(pus\+External\+Offset1)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a9700bfa1b88ac68258d2cdabb999037c}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+External\+Offset1}}(pus\+External\+Offset1,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a8be0724377dd520fd878e148b369e1f1}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset1}}(pus\+External\+Offset1,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_af1dcb80ee0cda31a1776f692a079bd74}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Internal\+Offset}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a196c68a94f389e9a829a85a576917d91}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+External\+Offset}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a616db5ce0f8e238c100847d991aa9327}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+External\+Offset1}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a9c94a5c2bc0417947ef1be69e074d783}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aa492ccfa7b5849bf73d8ca624887948d}{e\+Power\+Read\+Channel\+Run\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aa32c8848ae8e67dec21aef11c635b233}{e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aa78dc3672a49b00af711e2ab062590c5}{e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+And\+Return}}(x\+Stream,  us\+Offset,  px\+Power\+Input\+Scaling,  pf\+Power\+Readed,  pus\+Power\+Raw,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a29a326badba024d2c1a42870ad584393}{e\+Power\+Read\+Channel\+Run\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__power_read_channel_8c_abfc1712415660b6191e42e312c23fc47}{e\+Power\+Read\+Channel\+Run\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a17ed8a13a9631f9be72aef49a4773614}{e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return}}(x\+Stream,  us\+Offset,  px\+Power\+Input\+Scaling,  px\+Power\+Input\+Scaling\+\_\+\+Depth,  pf\+Power\+Readed,  pf\+Power\+Readed\+\_\+\+Depth,  pus\+Power\+Raw,  pus\+Power\+Raw\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_afc2ad5ee8e61441385933ed7d22fdb74}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling}}(px\+Power\+Input\+Scaling)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_acec370bd21688d4b18f140aaa4fab8b6}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling}}(px\+Power\+Input\+Scaling,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a320c08a44f669e60bccafbaafa4cd7a3}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling}}(px\+Power\+Input\+Scaling,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a18f633629e7cb6e78e71491b90540a96}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pf\+Power\+Readed}}(pf\+Power\+Readed)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aef8f833ab0080dcf050d7ed67f5fc503}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pf\+Power\+Readed}}(pf\+Power\+Readed,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a9d8a61ca76983ae375dbba8d2275b2da}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Power\+Readed}}(pf\+Power\+Readed,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a7183ead750baf37cb0ee085d49a08c4f}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Power\+Raw}}(pus\+Power\+Raw)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_aef12a50a8b044eeee9dd54666217f25c}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Power\+Raw}}(pus\+Power\+Raw,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_afed6814b588d76fe74994e9d2cd9735c}{e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Power\+Raw}}(pus\+Power\+Raw,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a1a643f9eaa80f98c02d717e2da05f202}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Stream}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a1e55ab5466f9472525b06796240041af}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+us\+Offset}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_afbfe7737e584ac77d3f82529d459c933}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+px\+Power\+Input\+Scaling}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a7c6e250ef5028f86df7fff162230a53b}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pf\+Power\+Readed}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_read_channel_8h_a7c576852be5d9b7f26fd8161265e0c2c}{e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Power\+Raw}}()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}{CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK}}) (uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1, int cmock\+\_\+num\+\_\+calls)
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}{CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK}}) (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}px\+Power\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw, int cmock\+\_\+num\+\_\+calls)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ab49314f0d0f6003f37b087f847957e89}{mock\+\_\+power\+Read\+Channel\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a5d436e11d1a8fa5f65260ed7177a9578}{mock\+\_\+power\+Read\+Channel\+\_\+\+Destroy}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a285ce155907a951f50b271b8a81edb7b}{mock\+\_\+power\+Read\+Channel\+\_\+\+Verify}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ae3ec775d7e72fa90d3295aec25d09091}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a91a144ceedc075be9ca20f67f7e3100c}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_af3198b161e88cf1a29f39da64b95c557}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a4207e02c2d57ef13cfed56a9b40c2c65}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a06ffac5ac50b579a42918ff779a9c940}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}{CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a3bd70e88a5f97391b1fbe822498b8031}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub}} (\mbox{\hyperlink{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}{CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a5944a2efa9828cf5771a7b75edba98c4}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, int pus\+Internal\+Offset\+\_\+\+Depth, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, int pus\+External\+Offset\+\_\+\+Depth, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1, int pus\+External\+Offset1\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ab3636a776dd889ddd566794dc6dafc2b}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Internal\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a8cc9cb4a6bf96f67aed5b8c37d7a01ae}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a64d51c6f6a030bc5d03aa1f5c4f31533}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset1}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a9f0fca4321871e7990e7983c96014fed}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Internal\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a5d72de3825d0281e7e0a2dbf029e8933}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+External\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_af06826849dceb4f9b0ee34c7f8ecb64c}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+External\+Offset1}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a0cafb337873dd95e9cbd9845498a3e3d}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ac2d910ba7e7f980a6729a6414938b772}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a62610798f9a6469c3620f126258d2751}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_aaf219c21305b9c2f36d848ad86baaca1}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}px\+Power\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_adf41055fc9d30928e8e2936f67736769}{e\+Power\+Read\+Channel\+Run\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}{CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_abfc1712415660b6191e42e312c23fc47}{e\+Power\+Read\+Channel\+Run\+\_\+\+Stub}} (\mbox{\hyperlink{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}{CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a304f596d8b8bb9aa60b0a1f2d3d43ade}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}px\+Power\+Input\+Scaling, int px\+Power\+Input\+Scaling\+\_\+\+Depth, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, int pf\+Power\+Readed\+\_\+\+Depth, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw, int pus\+Power\+Raw\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a635ee5862bd94e340caf61e118c7df5f}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}px\+Power\+Input\+Scaling, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a77f1bb04c9d1852794f9816a87ae76f4}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Power\+Readed}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a5e5b6182c298b6cb2a8e0151d9c073e6}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Power\+Raw}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a51663cc7ea64293a827a18e16aafaf14}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Stream}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ae644bc8ecd76c051c4fd9c176dca06ff}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+us\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a79df2724796e094ec553b7427d48447d}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_a942d5c1b1ab2e28139cf73f465685bfc}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pf\+Power\+Readed}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_read_channel_8h_ad136209a6dbd7d57f862af593f25bcac}{e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Power\+Raw}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mock__power_read_channel_8h_aa78dc3672a49b00af711e2ab062590c5}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ExpectAndReturn@{ePowerReadChannelRun\_ExpectAndReturn}}
+\index{ePowerReadChannelRun\_ExpectAndReturn@{ePowerReadChannelRun\_ExpectAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ExpectAndReturn}{ePowerReadChannelRun\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aa78dc3672a49b00af711e2ab062590c5} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{x\+Stream}{, }\item[{}]{us\+Offset}{, }\item[{}]{px\+Power\+Input\+Scaling}{, }\item[{}]{pf\+Power\+Readed}{, }\item[{}]{pus\+Power\+Raw}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_aaf219c21305b9c2f36d848ad86baaca1}{ePowerReadChannelRun\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ xStream,\ usOffset,\ pxPowerInputScaling,\ pfPowerReaded,\ pusPowerRaw,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00065}{65}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_aa32c8848ae8e67dec21aef11c635b233}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ExpectAnyArgsAndReturn@{ePowerReadChannelRun\_ExpectAnyArgsAndReturn}}
+\index{ePowerReadChannelRun\_ExpectAnyArgsAndReturn@{ePowerReadChannelRun\_ExpectAnyArgsAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ExpectAnyArgsAndReturn}{ePowerReadChannelRun\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aa32c8848ae8e67dec21aef11c635b233} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a62610798f9a6469c3620f126258d2751}{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00063}{63}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a17ed8a13a9631f9be72aef49a4773614}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ExpectWithArrayAndReturn@{ePowerReadChannelRun\_ExpectWithArrayAndReturn}}
+\index{ePowerReadChannelRun\_ExpectWithArrayAndReturn@{ePowerReadChannelRun\_ExpectWithArrayAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ExpectWithArrayAndReturn}{ePowerReadChannelRun\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a17ed8a13a9631f9be72aef49a4773614} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{x\+Stream}{, }\item[{}]{us\+Offset}{, }\item[{}]{px\+Power\+Input\+Scaling}{, }\item[{}]{px\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{}]{pf\+Power\+Readed}{, }\item[{}]{pf\+Power\+Readed\+\_\+\+Depth}{, }\item[{}]{pus\+Power\+Raw}{, }\item[{}]{pus\+Power\+Raw\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a304f596d8b8bb9aa60b0a1f2d3d43ade}{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ xStream,\ usOffset,\ pxPowerInputScaling,\ pxPowerInputScaling\_Depth,\ pfPowerReaded,\ pfPowerReaded\_Depth,\ pusPowerRaw,\ pusPowerRaw\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00071}{71}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a9c94a5c2bc0417947ef1be69e074d783}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreAndReturn@{ePowerReadChannelRun\_IgnoreAndReturn}}
+\index{ePowerReadChannelRun\_IgnoreAndReturn@{ePowerReadChannelRun\_IgnoreAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreAndReturn}{ePowerReadChannelRun\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a9c94a5c2bc0417947ef1be69e074d783} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a0cafb337873dd95e9cbd9845498a3e3d}{ePowerReadChannelRun\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00059}{59}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a7c6e250ef5028f86df7fff162230a53b}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded@{ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded@{ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded}{ePowerReadChannelRun\_IgnoreArg\_pfPowerReaded}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a7c6e250ef5028f86df7fff162230a53b} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pf\+Power\+Readed(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a942d5c1b1ab2e28139cf73f465685bfc}{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00091}{91}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a7c576852be5d9b7f26fd8161265e0c2c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw@{ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw@{ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw}{ePowerReadChannelRun\_IgnoreArg\_pusPowerRaw}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a7c576852be5d9b7f26fd8161265e0c2c} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Power\+Raw(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ad136209a6dbd7d57f862af593f25bcac}{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00093}{93}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_afbfe7737e584ac77d3f82529d459c933}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling@{ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling@{ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling}{ePowerReadChannelRun\_IgnoreArg\_pxPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_afbfe7737e584ac77d3f82529d459c933} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+px\+Power\+Input\+Scaling(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a79df2724796e094ec553b7427d48447d}{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00089}{89}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a1e55ab5466f9472525b06796240041af}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreArg\_usOffset@{ePowerReadChannelRun\_IgnoreArg\_usOffset}}
+\index{ePowerReadChannelRun\_IgnoreArg\_usOffset@{ePowerReadChannelRun\_IgnoreArg\_usOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreArg\_usOffset}{ePowerReadChannelRun\_IgnoreArg\_usOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a1e55ab5466f9472525b06796240041af} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+us\+Offset(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ae644bc8ecd76c051c4fd9c176dca06ff}{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00087}{87}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a1a643f9eaa80f98c02d717e2da05f202}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_IgnoreArg\_xStream@{ePowerReadChannelRun\_IgnoreArg\_xStream}}
+\index{ePowerReadChannelRun\_IgnoreArg\_xStream@{ePowerReadChannelRun\_IgnoreArg\_xStream}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_IgnoreArg\_xStream}{ePowerReadChannelRun\_IgnoreArg\_xStream}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a1a643f9eaa80f98c02d717e2da05f202} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Stream(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a51663cc7ea64293a827a18e16aafaf14}{ePowerReadChannelRun\_CMockIgnoreArg\_xStream}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00085}{85}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_aef8f833ab0080dcf050d7ed67f5fc503}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded}{ePowerReadChannelRun\_ReturnArrayThruPtr\_pfPowerReaded}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aef8f833ab0080dcf050d7ed67f5fc503} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pf\+Power\+Readed(\begin{DoxyParamCaption}\item[{}]{pf\+Power\+Readed}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a77f1bb04c9d1852794f9816a87ae76f4}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded}}(\_\_LINE\_\_,\ pfPowerReaded,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pfPowerReaded))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00078}{78}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_aef12a50a8b044eeee9dd54666217f25c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw}{ePowerReadChannelRun\_ReturnArrayThruPtr\_pusPowerRaw}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aef12a50a8b044eeee9dd54666217f25c} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Power\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Power\+Raw}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a5e5b6182c298b6cb2a8e0151d9c073e6}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw}}(\_\_LINE\_\_,\ pusPowerRaw,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pusPowerRaw))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00082}{82}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_acec370bd21688d4b18f140aaa4fab8b6}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling}{ePowerReadChannelRun\_ReturnArrayThruPtr\_pxPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_acec370bd21688d4b18f140aaa4fab8b6} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{px\+Power\+Input\+Scaling}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a635ee5862bd94e340caf61e118c7df5f}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling}}(\_\_LINE\_\_,\ pxPowerInputScaling,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pxPowerInputScaling))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00074}{74}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a9d8a61ca76983ae375dbba8d2275b2da}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded}{ePowerReadChannelRun\_ReturnMemThruPtr\_pfPowerReaded}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a9d8a61ca76983ae375dbba8d2275b2da} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Power\+Readed(\begin{DoxyParamCaption}\item[{}]{pf\+Power\+Readed}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a77f1bb04c9d1852794f9816a87ae76f4}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded}}(\_\_LINE\_\_,\ pfPowerReaded,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00079}{79}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_afed6814b588d76fe74994e9d2cd9735c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw}{ePowerReadChannelRun\_ReturnMemThruPtr\_pusPowerRaw}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_afed6814b588d76fe74994e9d2cd9735c} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Power\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Power\+Raw}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a5e5b6182c298b6cb2a8e0151d9c073e6}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw}}(\_\_LINE\_\_,\ pusPowerRaw,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00083}{83}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a320c08a44f669e60bccafbaafa4cd7a3}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling}{ePowerReadChannelRun\_ReturnMemThruPtr\_pxPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a320c08a44f669e60bccafbaafa4cd7a3} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{px\+Power\+Input\+Scaling}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a635ee5862bd94e340caf61e118c7df5f}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling}}(\_\_LINE\_\_,\ pxPowerInputScaling,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00075}{75}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a18f633629e7cb6e78e71491b90540a96}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded}{ePowerReadChannelRun\_ReturnThruPtr\_pfPowerReaded}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a18f633629e7cb6e78e71491b90540a96} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pf\+Power\+Readed(\begin{DoxyParamCaption}\item[{}]{pf\+Power\+Readed}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a77f1bb04c9d1852794f9816a87ae76f4}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded}}(\_\_LINE\_\_,\ pfPowerReaded,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00077}{77}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a7183ead750baf37cb0ee085d49a08c4f}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw}{ePowerReadChannelRun\_ReturnThruPtr\_pusPowerRaw}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a7183ead750baf37cb0ee085d49a08c4f} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Power\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Power\+Raw}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a5e5b6182c298b6cb2a8e0151d9c073e6}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw}}(\_\_LINE\_\_,\ pusPowerRaw,\ \textcolor{keyword}{sizeof}(uint16\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00081}{81}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_afc2ad5ee8e61441385933ed7d22fdb74}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling}{ePowerReadChannelRun\_ReturnThruPtr\_pxPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_afc2ad5ee8e61441385933ed7d22fdb74} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{px\+Power\+Input\+Scaling}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a635ee5862bd94e340caf61e118c7df5f}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling}}(\_\_LINE\_\_,\ pxPowerInputScaling,\ \textcolor{keyword}{sizeof}(xPowerInputScaling\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00073}{73}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_aa492ccfa7b5849bf73d8ca624887948d}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_StopIgnore@{ePowerReadChannelRun\_StopIgnore}}
+\index{ePowerReadChannelRun\_StopIgnore@{ePowerReadChannelRun\_StopIgnore}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_StopIgnore}{ePowerReadChannelRun\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aa492ccfa7b5849bf73d8ca624887948d} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ac2d910ba7e7f980a6729a6414938b772}{ePowerReadChannelRun\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00061}{61}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a29a326badba024d2c1a42870ad584393}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_StubWithCallback@{ePowerReadChannelRun\_StubWithCallback}}
+\index{ePowerReadChannelRun\_StubWithCallback@{ePowerReadChannelRun\_StubWithCallback}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_StubWithCallback}{ePowerReadChannelRun\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a29a326badba024d2c1a42870ad584393} 
+\#define e\+Power\+Read\+Channel\+Run\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__power_read_channel_8c_abfc1712415660b6191e42e312c23fc47}{e\+Power\+Read\+Channel\+Run\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00070}{70}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a320eda39a2777a0a34933eeeb66cecc7}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ExpectAndReturn@{ePowerReadOffsetChannelRun\_ExpectAndReturn}}
+\index{ePowerReadOffsetChannelRun\_ExpectAndReturn@{ePowerReadOffsetChannelRun\_ExpectAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ExpectAndReturn}{ePowerReadOffsetChannelRun\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a320eda39a2777a0a34933eeeb66cecc7} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{pus\+Internal\+Offset}{, }\item[{}]{pus\+External\+Offset}{, }\item[{}]{pus\+External\+Offset1}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a4207e02c2d57ef13cfed56a9b40c2c65}{ePowerReadOffsetChannelRun\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ pusInternalOffset,\ pusExternalOffset,\ pusExternalOffset1,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00033}{33}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a1454af94daeb98adfdcf19fc23f83657}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn@{ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn}}
+\index{ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn@{ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn}{ePowerReadOffsetChannelRun\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a1454af94daeb98adfdcf19fc23f83657} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_af3198b161e88cf1a29f39da64b95c557}{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00031}{31}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a7d06f787d6ce8fd3be93a804e7f4da7b}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn@{ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn}}
+\index{ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn@{ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn}{ePowerReadOffsetChannelRun\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a7d06f787d6ce8fd3be93a804e7f4da7b} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{pus\+Internal\+Offset}{, }\item[{}]{pus\+Internal\+Offset\+\_\+\+Depth}{, }\item[{}]{pus\+External\+Offset}{, }\item[{}]{pus\+External\+Offset\+\_\+\+Depth}{, }\item[{}]{pus\+External\+Offset1}{, }\item[{}]{pus\+External\+Offset1\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a5944a2efa9828cf5771a7b75edba98c4}{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ pusInternalOffset,\ pusInternalOffset\_Depth,\ pusExternalOffset,\ pusExternalOffset\_Depth,\ pusExternalOffset1,\ pusExternalOffset1\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00039}{39}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a16db712dd45f4c433e95b455c1d86f4d}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_IgnoreAndReturn@{ePowerReadOffsetChannelRun\_IgnoreAndReturn}}
+\index{ePowerReadOffsetChannelRun\_IgnoreAndReturn@{ePowerReadOffsetChannelRun\_IgnoreAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_IgnoreAndReturn}{ePowerReadOffsetChannelRun\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a16db712dd45f4c433e95b455c1d86f4d} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ae3ec775d7e72fa90d3295aec25d09091}{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00027}{27}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a196c68a94f389e9a829a85a576917d91}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset}{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a196c68a94f389e9a829a85a576917d91} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+External\+Offset(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a5d72de3825d0281e7e0a2dbf029e8933}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00055}{55}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a616db5ce0f8e238c100847d991aa9327}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1}{ePowerReadOffsetChannelRun\_IgnoreArg\_pusExternalOffset1}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a616db5ce0f8e238c100847d991aa9327} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+External\+Offset1(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_af06826849dceb4f9b0ee34c7f8ecb64c}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00057}{57}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_af1dcb80ee0cda31a1776f692a079bd74}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset@{ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset}{ePowerReadOffsetChannelRun\_IgnoreArg\_pusInternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_af1dcb80ee0cda31a1776f692a079bd74} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Internal\+Offset(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a9f0fca4321871e7990e7983c96014fed}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00053}{53}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a9dbeb85a74885e21ca1a37ff8a86eda2}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset}{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a9dbeb85a74885e21ca1a37ff8a86eda2} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+External\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a8cc9cb4a6bf96f67aed5b8c37d7a01ae}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset}}(\_\_LINE\_\_,\ pusExternalOffset,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pusExternalOffset))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00046}{46}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a9700bfa1b88ac68258d2cdabb999037c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1}{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusExternalOffset1}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a9700bfa1b88ac68258d2cdabb999037c} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+External\+Offset1(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset1}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a64d51c6f6a030bc5d03aa1f5c4f31533}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1}}(\_\_LINE\_\_,\ pusExternalOffset1,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pusExternalOffset1))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00050}{50}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a67e4d1f6dd621555e02691325df72adc}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset}{ePowerReadOffsetChannelRun\_ReturnArrayThruPtr\_pusInternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a67e4d1f6dd621555e02691325df72adc} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Internal\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+Internal\+Offset}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ab3636a776dd889ddd566794dc6dafc2b}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset}}(\_\_LINE\_\_,\ pusInternalOffset,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pusInternalOffset))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00042}{42}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_aff6423fb8abbcbee910d27645f89031f}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset}{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aff6423fb8abbcbee910d27645f89031f} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a8cc9cb4a6bf96f67aed5b8c37d7a01ae}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset}}(\_\_LINE\_\_,\ pusExternalOffset,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00047}{47}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a8be0724377dd520fd878e148b369e1f1}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1}{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusExternalOffset1}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a8be0724377dd520fd878e148b369e1f1} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset1(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset1}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a64d51c6f6a030bc5d03aa1f5c4f31533}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1}}(\_\_LINE\_\_,\ pusExternalOffset1,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00051}{51}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a8a421e572650b79b9eb4e77b1f61f722}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset}{ePowerReadOffsetChannelRun\_ReturnMemThruPtr\_pusInternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a8a421e572650b79b9eb4e77b1f61f722} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Internal\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+Internal\+Offset}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ab3636a776dd889ddd566794dc6dafc2b}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset}}(\_\_LINE\_\_,\ pusInternalOffset,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00043}{43}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_ae25b90d90c98e7f0459b1a9ff4201b7e}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset}{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ae25b90d90c98e7f0459b1a9ff4201b7e} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+External\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a8cc9cb4a6bf96f67aed5b8c37d7a01ae}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset}}(\_\_LINE\_\_,\ pusExternalOffset,\ \textcolor{keyword}{sizeof}(uint16\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00045}{45}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a021b20d4b91fa92135233f5e0df0b9e1}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1}{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusExternalOffset1}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a021b20d4b91fa92135233f5e0df0b9e1} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+External\+Offset1(\begin{DoxyParamCaption}\item[{}]{pus\+External\+Offset1}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a64d51c6f6a030bc5d03aa1f5c4f31533}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1}}(\_\_LINE\_\_,\ pusExternalOffset1,\ \textcolor{keyword}{sizeof}(uint16\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00049}{49}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_afaf4ab777daf66e3183a8da76dfa6820}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset}{ePowerReadOffsetChannelRun\_ReturnThruPtr\_pusInternalOffset}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_afaf4ab777daf66e3183a8da76dfa6820} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Internal\+Offset(\begin{DoxyParamCaption}\item[{}]{pus\+Internal\+Offset}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_ab3636a776dd889ddd566794dc6dafc2b}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset}}(\_\_LINE\_\_,\ pusInternalOffset,\ \textcolor{keyword}{sizeof}(uint16\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00041}{41}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a7ef4f4570b5bb4643db3b6341b077092}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_StopIgnore@{ePowerReadOffsetChannelRun\_StopIgnore}}
+\index{ePowerReadOffsetChannelRun\_StopIgnore@{ePowerReadOffsetChannelRun\_StopIgnore}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_StopIgnore}{ePowerReadOffsetChannelRun\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a7ef4f4570b5bb4643db3b6341b077092} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_read_channel_8c_a91a144ceedc075be9ca20f67f7e3100c}{ePowerReadOffsetChannelRun\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00029}{29}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a2279279974350629d25d57b0ef8959cf}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_StubWithCallback@{ePowerReadOffsetChannelRun\_StubWithCallback}}
+\index{ePowerReadOffsetChannelRun\_StubWithCallback@{ePowerReadOffsetChannelRun\_StubWithCallback}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_StubWithCallback}{ePowerReadOffsetChannelRun\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a2279279974350629d25d57b0ef8959cf} 
+\#define e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__power_read_channel_8c_a3bd70e88a5f97391b1fbe822498b8031}{e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00038}{38}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!CMOCK\_ePowerReadChannelRun\_CALLBACK@{CMOCK\_ePowerReadChannelRun\_CALLBACK}}
+\index{CMOCK\_ePowerReadChannelRun\_CALLBACK@{CMOCK\_ePowerReadChannelRun\_CALLBACK}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_ePowerReadChannelRun\_CALLBACK}{CMOCK\_ePowerReadChannelRun\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK) (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}px\+Power\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00067}{67}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+\Hypertarget{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK@{CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK}}
+\index{CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK@{CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK}{CMOCK\_ePowerReadOffsetChannelRun\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK) (uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8h_source_l00035}{35}} of file \mbox{\hyperlink{mock__power_read_channel_8h_source}{mock\+\_\+power\+Read\+Channel.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mock__power_read_channel_8h_adf41055fc9d30928e8e2936f67736769}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_AddCallback@{ePowerReadChannelRun\_AddCallback}}
+\index{ePowerReadChannelRun\_AddCallback@{ePowerReadChannelRun\_AddCallback}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_AddCallback()}{ePowerReadChannelRun\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_adf41055fc9d30928e8e2936f67736769} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}{CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00536}{536}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+\Hypertarget{mock__power_read_channel_8h_aaf219c21305b9c2f36d848ad86baaca1}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockExpectAndReturn@{ePowerReadChannelRun\_CMockExpectAndReturn}}
+\index{ePowerReadChannelRun\_CMockExpectAndReturn@{ePowerReadChannelRun\_CMockExpectAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockExpectAndReturn()}{ePowerReadChannelRun\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_aaf219c21305b9c2f36d848ad86baaca1} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{handle\+\_\+t}]{x\+Stream}{, }\item[{uint16\+\_\+t}]{us\+Offset}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Power\+Input\+Scaling}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power\+Readed}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Power\+Raw}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00520}{520}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_aaf219c21305b9c2f36d848ad86baaca1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a62610798f9a6469c3620f126258d2751}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn@{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn}}
+\index{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn@{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn()}{ePowerReadChannelRun\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a62610798f9a6469c3620f126258d2751} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00505}{505}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a62610798f9a6469c3620f126258d2751_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a304f596d8b8bb9aa60b0a1f2d3d43ade}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockExpectWithArrayAndReturn@{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn}}
+\index{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn@{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn()}{ePowerReadChannelRun\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a304f596d8b8bb9aa60b0a1f2d3d43ade} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{handle\+\_\+t}]{x\+Stream}{, }\item[{uint16\+\_\+t}]{us\+Offset}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Power\+Input\+Scaling}{, }\item[{int}]{px\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power\+Readed}{, }\item[{int}]{pf\+Power\+Readed\+\_\+\+Depth}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Power\+Raw}{, }\item[{int}]{pus\+Power\+Raw\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00550}{550}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a304f596d8b8bb9aa60b0a1f2d3d43ade_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a0cafb337873dd95e9cbd9845498a3e3d}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreAndReturn@{ePowerReadChannelRun\_CMockIgnoreAndReturn}}
+\index{ePowerReadChannelRun\_CMockIgnoreAndReturn@{ePowerReadChannelRun\_CMockIgnoreAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreAndReturn()}{ePowerReadChannelRun\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a0cafb337873dd95e9cbd9845498a3e3d} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00484}{484}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a0cafb337873dd95e9cbd9845498a3e3d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a942d5c1b1ab2e28139cf73f465685bfc}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded@{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded@{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded()}{ePowerReadChannelRun\_CMockIgnoreArg\_pfPowerReaded()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a942d5c1b1ab2e28139cf73f465685bfc} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pf\+Power\+Readed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00613}{613}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a942d5c1b1ab2e28139cf73f465685bfc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ad136209a6dbd7d57f862af593f25bcac}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw@{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw@{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw()}{ePowerReadChannelRun\_CMockIgnoreArg\_pusPowerRaw()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ad136209a6dbd7d57f862af593f25bcac} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Power\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00620}{620}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ad136209a6dbd7d57f862af593f25bcac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a79df2724796e094ec553b7427d48447d}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling@{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling@{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling()}{ePowerReadChannelRun\_CMockIgnoreArg\_pxPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a79df2724796e094ec553b7427d48447d} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00606}{606}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a79df2724796e094ec553b7427d48447d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ae644bc8ecd76c051c4fd9c176dca06ff}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreArg\_usOffset@{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset}}
+\index{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset@{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset()}{ePowerReadChannelRun\_CMockIgnoreArg\_usOffset()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ae644bc8ecd76c051c4fd9c176dca06ff} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+us\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00599}{599}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ae644bc8ecd76c051c4fd9c176dca06ff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a51663cc7ea64293a827a18e16aafaf14}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockIgnoreArg\_xStream@{ePowerReadChannelRun\_CMockIgnoreArg\_xStream}}
+\index{ePowerReadChannelRun\_CMockIgnoreArg\_xStream@{ePowerReadChannelRun\_CMockIgnoreArg\_xStream}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockIgnoreArg\_xStream()}{ePowerReadChannelRun\_CMockIgnoreArg\_xStream()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a51663cc7ea64293a827a18e16aafaf14} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00592}{592}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a51663cc7ea64293a827a18e16aafaf14_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a77f1bb04c9d1852794f9816a87ae76f4}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded}}
+\index{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded()}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pfPowerReaded()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a77f1bb04c9d1852794f9816a87ae76f4} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Power\+Readed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power\+Readed}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00574}{574}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a77f1bb04c9d1852794f9816a87ae76f4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a5e5b6182c298b6cb2a8e0151d9c073e6}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw}}
+\index{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw()}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pusPowerRaw()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a5e5b6182c298b6cb2a8e0151d9c073e6} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Power\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Power\+Raw}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00583}{583}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a5e5b6182c298b6cb2a8e0151d9c073e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a635ee5862bd94e340caf61e118c7df5f}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling}}
+\index{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling@{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling()}{ePowerReadChannelRun\_CMockReturnMemThruPtr\_pxPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a635ee5862bd94e340caf61e118c7df5f} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Power\+Input\+Scaling}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00565}{565}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a635ee5862bd94e340caf61e118c7df5f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ac2d910ba7e7f980a6729a6414938b772}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_CMockStopIgnore@{ePowerReadChannelRun\_CMockStopIgnore}}
+\index{ePowerReadChannelRun\_CMockStopIgnore@{ePowerReadChannelRun\_CMockStopIgnore}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_CMockStopIgnore()}{ePowerReadChannelRun\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ac2d910ba7e7f980a6729a6414938b772} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00498}{498}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ac2d910ba7e7f980a6729a6414938b772_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_abfc1712415660b6191e42e312c23fc47}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadChannelRun\_Stub@{ePowerReadChannelRun\_Stub}}
+\index{ePowerReadChannelRun\_Stub@{ePowerReadChannelRun\_Stub}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun\_Stub()}{ePowerReadChannelRun\_Stub()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_abfc1712415660b6191e42e312c23fc47} 
+void e\+Power\+Read\+Channel\+Run\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_read_channel_8h_a15b37715d07147b96b34f93da1de54d5}{CMOCK\+\_\+e\+Power\+Read\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00543}{543}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+\Hypertarget{mock__power_read_channel_8h_a06ffac5ac50b579a42918ff779a9c940}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_AddCallback@{ePowerReadOffsetChannelRun\_AddCallback}}
+\index{ePowerReadOffsetChannelRun\_AddCallback@{ePowerReadOffsetChannelRun\_AddCallback}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_AddCallback()}{ePowerReadOffsetChannelRun\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a06ffac5ac50b579a42918ff779a9c940} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}{CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00293}{293}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+\Hypertarget{mock__power_read_channel_8h_a4207e02c2d57ef13cfed56a9b40c2c65}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockExpectAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectAndReturn}}
+\index{ePowerReadOffsetChannelRun\_CMockExpectAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockExpectAndReturn()}{ePowerReadOffsetChannelRun\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a4207e02c2d57ef13cfed56a9b40c2c65} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Internal\+Offset}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset1}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00277}{277}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a4207e02c2d57ef13cfed56a9b40c2c65_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_af3198b161e88cf1a29f39da64b95c557}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn}}
+\index{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn()}{ePowerReadOffsetChannelRun\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_af3198b161e88cf1a29f39da64b95c557} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00262}{262}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_af3198b161e88cf1a29f39da64b95c557_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a5944a2efa9828cf5771a7b75edba98c4}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn}}
+\index{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn@{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn()}{ePowerReadOffsetChannelRun\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a5944a2efa9828cf5771a7b75edba98c4} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Internal\+Offset}{, }\item[{int}]{pus\+Internal\+Offset\+\_\+\+Depth}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset}{, }\item[{int}]{pus\+External\+Offset\+\_\+\+Depth}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset1}{, }\item[{int}]{pus\+External\+Offset1\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00307}{307}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a5944a2efa9828cf5771a7b75edba98c4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ae3ec775d7e72fa90d3295aec25d09091}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn@{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn}}
+\index{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn@{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn()}{ePowerReadOffsetChannelRun\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ae3ec775d7e72fa90d3295aec25d09091} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00241}{241}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ae3ec775d7e72fa90d3295aec25d09091_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a5d72de3825d0281e7e0a2dbf029e8933}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset()}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a5d72de3825d0281e7e0a2dbf029e8933} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+External\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00356}{356}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a5d72de3825d0281e7e0a2dbf029e8933_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_af06826849dceb4f9b0ee34c7f8ecb64c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1()}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusExternalOffset1()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_af06826849dceb4f9b0ee34c7f8ecb64c} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+External\+Offset1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00363}{363}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_af06826849dceb4f9b0ee34c7f8ecb64c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a9f0fca4321871e7990e7983c96014fed}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset@{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset()}{ePowerReadOffsetChannelRun\_CMockIgnoreArg\_pusInternalOffset()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a9f0fca4321871e7990e7983c96014fed} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Internal\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00349}{349}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a9f0fca4321871e7990e7983c96014fed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a8cc9cb4a6bf96f67aed5b8c37d7a01ae}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset}}
+\index{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset()}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a8cc9cb4a6bf96f67aed5b8c37d7a01ae} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00331}{331}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a8cc9cb4a6bf96f67aed5b8c37d7a01ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a64d51c6f6a030bc5d03aa1f5c4f31533}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1}}
+\index{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1()}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusExternalOffset1()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a64d51c6f6a030bc5d03aa1f5c4f31533} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+External\+Offset1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset1}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00340}{340}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a64d51c6f6a030bc5d03aa1f5c4f31533_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ab3636a776dd889ddd566794dc6dafc2b}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset}}
+\index{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset@{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset()}{ePowerReadOffsetChannelRun\_CMockReturnMemThruPtr\_pusInternalOffset()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ab3636a776dd889ddd566794dc6dafc2b} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Internal\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Internal\+Offset}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00322}{322}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ab3636a776dd889ddd566794dc6dafc2b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a91a144ceedc075be9ca20f67f7e3100c}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_CMockStopIgnore@{ePowerReadOffsetChannelRun\_CMockStopIgnore}}
+\index{ePowerReadOffsetChannelRun\_CMockStopIgnore@{ePowerReadOffsetChannelRun\_CMockStopIgnore}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_CMockStopIgnore()}{ePowerReadOffsetChannelRun\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a91a144ceedc075be9ca20f67f7e3100c} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00255}{255}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a91a144ceedc075be9ca20f67f7e3100c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a3bd70e88a5f97391b1fbe822498b8031}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!ePowerReadOffsetChannelRun\_Stub@{ePowerReadOffsetChannelRun\_Stub}}
+\index{ePowerReadOffsetChannelRun\_Stub@{ePowerReadOffsetChannelRun\_Stub}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun\_Stub()}{ePowerReadOffsetChannelRun\_Stub()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a3bd70e88a5f97391b1fbe822498b8031} 
+void e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_read_channel_8h_a23e174663fee0ecc302795adaa2f7433}{CMOCK\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00300}{300}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+\Hypertarget{mock__power_read_channel_8h_a5d436e11d1a8fa5f65260ed7177a9578}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!mock\_powerReadChannel\_Destroy@{mock\_powerReadChannel\_Destroy}}
+\index{mock\_powerReadChannel\_Destroy@{mock\_powerReadChannel\_Destroy}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerReadChannel\_Destroy()}{mock\_powerReadChannel\_Destroy()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a5d436e11d1a8fa5f65260ed7177a9578} 
+void mock\+\_\+power\+Read\+Channel\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00134}{134}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a5d436e11d1a8fa5f65260ed7177a9578_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_a5d436e11d1a8fa5f65260ed7177a9578_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_ab49314f0d0f6003f37b087f847957e89}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!mock\_powerReadChannel\_Init@{mock\_powerReadChannel\_Init}}
+\index{mock\_powerReadChannel\_Init@{mock\_powerReadChannel\_Init}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerReadChannel\_Init()}{mock\_powerReadChannel\_Init()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_ab49314f0d0f6003f37b087f847957e89} 
+void mock\+\_\+power\+Read\+Channel\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00129}{129}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_read_channel_8h_ab49314f0d0f6003f37b087f847957e89_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_read_channel_8h_a285ce155907a951f50b271b8a81edb7b}\index{mock\_powerReadChannel.h@{mock\_powerReadChannel.h}!mock\_powerReadChannel\_Verify@{mock\_powerReadChannel\_Verify}}
+\index{mock\_powerReadChannel\_Verify@{mock\_powerReadChannel\_Verify}!mock\_powerReadChannel.h@{mock\_powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerReadChannel\_Verify()}{mock\_powerReadChannel\_Verify()}}
+{\footnotesize\ttfamily \label{mock__power_read_channel_8h_a285ce155907a951f50b271b8a81edb7b} 
+void mock\+\_\+power\+Read\+Channel\+\_\+\+Verify (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_read_channel_8c_source_l00097}{97}} of file \mbox{\hyperlink{mock__power_read_channel_8c_source}{mock\+\_\+power\+Read\+Channel.\+c}}.
+

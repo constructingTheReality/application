@@ -1,0 +1,76 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Read\+Channel.c}
+\hypertarget{power_read_channel_8c_source}{}\label{power_read_channel_8c_source}\mbox{\hyperlink{power_read_channel_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00015}00015\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{power_read_channel_8h}{powerReadChannel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00019}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{00019}}\ xPowerInputScaling\_t\ *\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00022}00022\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00023}\mbox{\hyperlink{power_read_channel_8c_aa894f8700120f30e5d3a63ffecd61ca1}{00023}}\ eMpbError\_t\ \mbox{\hyperlink{power_read_channel_8c_aa894f8700120f30e5d3a63ffecd61ca1}{ePowerReadOffsetChannelRun}}(\ uint16\_t\ *pusInternalOffset,\ uint16\_t\ *pusExternalOffset\ ,\ uint16\_t\ *pusExternalOffset1\ \ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00025}00025\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eInvalidParameter;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00027}00027\ \ \ \ \ eBool\_t\ bPointersAreValid\ =\ eFalse\ ;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00028}00028\ \ \ \ \ uint16\_t\ usOffset\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00030}00030\ \ \ \ \ bPointersAreValid\ =\ (pusInternalOffset\ !=\ NULL)\ \&\&\ (pusExternalOffset\ !=\ NULL)\ \&\&\ (pusExternalOffset1\ !=\ NULL)\ \ ;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}(\ bPointersAreValid\ ==\ eTrue\ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fPowerReaded;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ xPowerInputScaling\_t\ xPowerInputScaling\ ;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ xPowerInputScaling.fSlope\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ xPowerInputScaling.fIntercept\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetPowermW(\ eHandleAdcPdReference,\ xPowerInputScaling.fSlope,xPowerInputScaling.fIntercept\ ,\ \&fPowerReaded,\ \ \&usOffset\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ *pusInternalOffset\ \ =\ usOffset;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetPowermW(\ eHandleExternalPd\_ref1,\ xPowerInputScaling.fSlope,xPowerInputScaling.fIntercept,\ \ \&fPowerReaded,\ \&usOffset\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ *pusExternalOffset1\ \ =\ usOffset;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetPowermW(\ eHandleExternalPd\_Ref,\ xPowerInputScaling.fSlope,xPowerInputScaling.fIntercept\ ,\ \&fPowerReaded,\ \&usOffset\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ *pusExternalOffset\ \ =\ usOffset;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};\ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00065}00065\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00066}\mbox{\hyperlink{power_read_channel_8c_acdb1c09066c33f53244861da8d347e80}{00066}}\ eMpbError\_t\ \mbox{\hyperlink{power_read_channel_8c_acdb1c09066c33f53244861da8d347e80}{ePowerReadChannelRun}}(handle\_t\ xStream,\ uint16\_t\ usOffset,\ \textcolor{keywordtype}{float}\ fSlope,\ \textcolor{keywordtype}{float}\ fIntercept,\ \textcolor{keywordtype}{float}\ *pfPowerReaded,\ uint16\_t\ *pusPowerRaw)}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00067}00067\ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00069}00069\ \ \ \ \ eMpbError\_t\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ eSuccess;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//float\ fPowerReaded\ =0.0f;}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00073}00073\ \ \ \ \ xStream\ =\ \ \ xStream\ +\ eHandleAdcPdReference;}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ =\ \ eCurrentSensingGetPowermWOffset(\ xStream,\ fSlope,\ fIntercept,\ usOffset\ ,\ pfPowerReaded\ ,\ \ pusPowerRaw);}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}}\ !=\ eSuccess\ )}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ vMpblibsAssertParam(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{test__current_sensors_8c_a7e45006d3ac5dcd53da5667245cff877}{eMpbError}};}
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{power_read_channel_8c_source_l00084}00084\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,39 @@
+\doxysection{fff\+\_\+unity\+\_\+helper.\+h}
+\hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}{}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source}\index{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/src/fff\_unity\_helper.h@{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/src/fff\_unity\_helper.h}}
+\mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ fff\_unity\_helper\_H}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ fff\_unity\_helper\_H}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00004}00004\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ \ FFF\ helper\ macros\ for\ Unity.}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00006}00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00008}00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00009}00009\ \textcolor{comment}{\ \ \ \ Fail\ if\ the\ function\ was\ not\ called\ the\ expected\ number\ of\ times.}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00010}00010\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00011}\mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a77e70db5c9f2a7482308e7dae59f9182}{00011}}\ \textcolor{preprocessor}{\#define\ TEST\_ASSERT\_CALLED\_TIMES(times\_,\ function\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00012}00012\ \textcolor{preprocessor}{\ \ \ \ TEST\_ASSERT\_EQUAL\_MESSAGE(times\_,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00013}00013\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ function\_\ \#\#\ \_fake.call\_count,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00014}00014\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ "{}Function\ "{}\ \#function\_\ "{}\ called\ the\ incorrect\ number\ of\ times."{})}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00015}00015\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ \ Fail\ if\ the\ function\ was\ not\ called\ exactly\ once.}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00017}00017\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00018}\mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_a700b2bf57333b08698a494792c335bd1}{00018}}\ \textcolor{preprocessor}{\#define\ TEST\_ASSERT\_CALLED(function\_)\ TEST\_ASSERT\_CALLED\_TIMES(1,\ function\_)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00020}00020\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ \ Fail\ if\ the\ function\ was\ called\ 1\ or\ more\ times.}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00022}00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00023}\mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_affc90aa528332c5c767fd7bd7542d525}{00023}}\ \textcolor{preprocessor}{\#define\ TEST\_ASSERT\_NOT\_CALLED(function\_)\ TEST\_ASSERT\_CALLED\_TIMES(0,\ function\_)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00025}00025\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ \ Fail\ if\ the\ function\ was\ not\ called\ in\ this\ particular\ order.}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00027}00027\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00028}\mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_af21f27d62b55519b5f72bb32724df80d}{00028}}\ \textcolor{preprocessor}{\#define\ TEST\_ASSERT\_CALLED\_IN\_ORDER(order\_,\ function\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ TEST\_ASSERT\_EQUAL\_PTR\_MESSAGE((void\ *)\ function\_,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ fff.call\_history[order\_],\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ "{}Function\ "{}\ \#function\_\ "{}\ not\ called\ in\ order\ "{}\ \#order\_\ )}}
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2src_2fff__unity__helper_8h_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

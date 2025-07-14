@@ -1,0 +1,65 @@
+\doxysection{test\+\_\+power\+Sensors\+Config\+Update.\+c}
+\hypertarget{test__power_sensors_config_update_8c_source}{}\label{test__power_sensors_config_update_8c_source}\index{Tests/test\_powerSensorsConfigUpdate.c@{Tests/test\_powerSensorsConfigUpdate.c}}
+\mbox{\hyperlink{test__power_sensors_config_update_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00015}00015\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}unity.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{power_sensors_config_update_8h}{powerSensorsConfigUpdate.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00019}00019\ \textcolor{comment}{//\#include\ "{}mpbLibs.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mock__power_sensors_8h}{mock\_powerSensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}mock\_laserData.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00022}00022\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00023}00023\ \textcolor{comment}{\#include\ "{}powerSensorsUpdateDatabase.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00024}00024\ \textcolor{comment}{\#include\ "{}powerReadChannel.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00025}00025\ \textcolor{comment}{\#include\ "{}mpbPowerIn2Channels.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00026}00026\ \textcolor{comment}{\#include\ "{}powerSensorsBoosterAlarm.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00027}00027\ \textcolor{comment}{\#include\ "{}powerSensorsLnaAlarm.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00028}00028\ \textcolor{comment}{\#include\ "{}mock\_lnaStateMachine.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00029}00029\ \textcolor{comment}{\#include\ "{}dictionaryUtils.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00030}00030\ \textcolor{comment}{\#include\ "{}currentSensors.c"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00031}00031\ \textcolor{comment}{//\#include\ "{}boosterStateMachine.h"{}}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00032}00032\ \textcolor{comment}{//\#include\ "{}lnaStateMachine.h"{}\ }}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00033}00033\ \textcolor{comment}{\#include\ "{}mpbLosDetector.c"{}\ */}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00034}00034\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00035}00035\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00036}00036\ \textcolor{comment}{/*\ Private\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00037}00037\ \textcolor{comment}{/*\ Private\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00038}00038\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00039}00039\ \textcolor{comment}{//eMpbError\_t\ eMpbError;}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00041}00041\ \textcolor{comment}{/*\ External\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00042}00042\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00043}00043\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00044}00044\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00045}00045\ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00046}\mbox{\hyperlink{test__power_sensors_config_update_8c_a63326a1b70b6e3f070e51687798e02de}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{test__power_sensors_config_update_8c_a63326a1b70b6e3f070e51687798e02de}{setUp}}()}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00048}00048\ \ \ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00049}00049\ \ \ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00051}00051\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00052}\mbox{\hyperlink{test__power_sensors_config_update_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{test__power_sensors_config_update_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}{tearDown}}()}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00054}00054\ \ \ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00056}00056\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00058}00058\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00059}00059\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ePowerSensorsConfigUpdateCommon\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00060}00060\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00061}\mbox{\hyperlink{test__power_sensors_config_update_8c_a1440a7779ac56f47a3f355ce4a8c7da0}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{test__power_sensors_config_update_8c_a1440a7779ac56f47a3f355ce4a8c7da0}{test1}}()}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00062}00062\ \{}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00063}00063\ \ \ \mbox{\hyperlink{vendor_2ceedling_2vendor_2unity_2src_2unity_8h_af9e5695d6c7cf634206ea6d062cb54c9}{TEST\_ASSERT\_EQUAL}}(1,1);}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00065}00065\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00066}00066\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ePowerSensorsConfigUpdateLna\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00067}00067\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00069}00069\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00070}00070\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ePowerSensorsConfigUpdateBooster\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00071}00071\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{test__power_sensors_config_update_8c_source_l00072}00072\ }
+
+\end{DoxyCode}

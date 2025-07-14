@@ -1,0 +1,141 @@
+\doxysection{Unit\+Test\+Framework2/vendor/ceedling/plugins/fake\+\_\+function\+\_\+framework/examples/fff\+\_\+example/test/test\+\_\+event\+\_\+processor.c File Reference}
+\hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c}{}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c}\index{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/examples/fff\_example/test/test\_event\_processor.c@{UnitTestFramework2/vendor/ceedling/plugins/fake\_function\_framework/examples/fff\_example/test/test\_event\_processor.c}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}event\+\_\+processor.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+display.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for test\+\_\+event\+\_\+processor.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a95c834d6178047ce9e1bce7cbfea2836}{set\+Up}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a9909011e5fea0c018842eec4d93d0662}{tear\+Down}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aff1f691f0911be5857ddbe01e551c0a2}{test\+\_\+when\+The\+Device\+Is\+Reset\+\_\+then\+The\+Status\+Led\+Is\+Turned\+Off}} ()
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae0402ad0b5090fc576a46cd6a37e3098}{test\+\_\+when\+The\+Power\+Reading\+Is\+Less\+Than5\+\_\+then\+The\+Status\+Led\+Is\+Not\+Turned\+On}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ab3dbd650a187ae78cbc203e26c7da3a5}{test\+\_\+when\+The\+Volume\+Knob\+Is\+Maxed\+\_\+then\+Volume\+Display\+Is\+Set\+To11}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae77b983df3ecc38c9338c8a1c1747199}{test\+\_\+when\+The\+Mode\+Select\+Button\+Is\+Pressed\+\_\+then\+The\+Display\+Mode\+Is\+Cycled}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aaade2183eab43ecade551f4ce2710653}{test\+\_\+given\+The\+Display\+Has\+An\+Error\+\_\+when\+The\+Device\+Is\+Powered\+On\+\_\+then\+The\+Display\+Is\+Powered\+Down}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a534f0b7275d9d4a29985cacf3e8342aa}{test\+\_\+given\+The\+User\+Has\+Typed\+Sleep\+\_\+when\+It\+Is\+Time\+To\+Check\+The\+Keyboard\+\_\+the\+Display\+Is\+Powered\+Down}} (void)
+\item 
+void \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a7e135676f8e037e0dbd2a72ef83e409c}{test\+\_\+given\+New\+Data\+Is\+Available\+\_\+when\+The\+Display\+Has\+Updated\+\_\+then\+The\+Event\+Is\+Complete}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a95c834d6178047ce9e1bce7cbfea2836}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a95c834d6178047ce9e1bce7cbfea2836} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!setUp@{setUp}}
+\index{setUp@{setUp}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void set\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00006}{6}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a9909011e5fea0c018842eec4d93d0662}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a9909011e5fea0c018842eec4d93d0662} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void tear\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00010}{10}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a7e135676f8e037e0dbd2a72ef83e409c}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a7e135676f8e037e0dbd2a72ef83e409c} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete@{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete}}
+\index{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete@{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete()}{test\_givenNewDataIsAvailable\_whenTheDisplayHasUpdated\_thenTheEventIsComplete()}}
+{\footnotesize\ttfamily void test\+\_\+given\+New\+Data\+Is\+Available\+\_\+when\+The\+Display\+Has\+Updated\+\_\+then\+The\+Event\+Is\+Complete (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00133}{133}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aaade2183eab43ecade551f4ce2710653}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aaade2183eab43ecade551f4ce2710653} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown@{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown}}
+\index{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown@{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown()}{test\_givenTheDisplayHasAnError\_whenTheDeviceIsPoweredOn\_thenTheDisplayIsPoweredDown()}}
+{\footnotesize\ttfamily void test\+\_\+given\+The\+Display\+Has\+An\+Error\+\_\+when\+The\+Device\+Is\+Powered\+On\+\_\+then\+The\+Display\+Is\+Powered\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00085}{85}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a534f0b7275d9d4a29985cacf3e8342aa}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_a534f0b7275d9d4a29985cacf3e8342aa} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown@{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown}}
+\index{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown@{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown()}{test\_givenTheUserHasTypedSleep\_whenItIsTimeToCheckTheKeyboard\_theDisplayIsPoweredDown()}}
+{\footnotesize\ttfamily void test\+\_\+given\+The\+User\+Has\+Typed\+Sleep\+\_\+when\+It\+Is\+Time\+To\+Check\+The\+Keyboard\+\_\+the\+Display\+Is\+Powered\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00107}{107}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aff1f691f0911be5857ddbe01e551c0a2}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_aff1f691f0911be5857ddbe01e551c0a2} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff@{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff}}
+\index{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff@{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff()}{test\_whenTheDeviceIsReset\_thenTheStatusLedIsTurnedOff()}}
+{\footnotesize\ttfamily void test\+\_\+when\+The\+Device\+Is\+Reset\+\_\+then\+The\+Status\+Led\+Is\+Turned\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00017}{17}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae77b983df3ecc38c9338c8a1c1747199}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae77b983df3ecc38c9338c8a1c1747199} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled@{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled}}
+\index{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled@{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled()}{test\_whenTheModeSelectButtonIsPressed\_thenTheDisplayModeIsCycled()}}
+{\footnotesize\ttfamily void test\+\_\+when\+The\+Mode\+Select\+Button\+Is\+Pressed\+\_\+then\+The\+Display\+Mode\+Is\+Cycled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00064}{64}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae0402ad0b5090fc576a46cd6a37e3098}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ae0402ad0b5090fc576a46cd6a37e3098} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn@{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn}}
+\index{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn@{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn()}{test\_whenThePowerReadingIsLessThan5\_thenTheStatusLedIsNotTurnedOn()}}
+{\footnotesize\ttfamily void test\+\_\+when\+The\+Power\+Reading\+Is\+Less\+Than5\+\_\+then\+The\+Status\+Led\+Is\+Not\+Turned\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00032}{32}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ab3dbd650a187ae78cbc203e26c7da3a5}\label{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_ab3dbd650a187ae78cbc203e26c7da3a5} 
+\index{test\_event\_processor.c@{test\_event\_processor.c}!test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11@{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11}}
+\index{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11@{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11}!test\_event\_processor.c@{test\_event\_processor.c}}
+\doxysubsubsection{\texorpdfstring{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11()}{test\_whenTheVolumeKnobIsMaxed\_thenVolumeDisplayIsSetTo11()}}
+{\footnotesize\ttfamily void test\+\_\+when\+The\+Volume\+Knob\+Is\+Maxed\+\_\+then\+Volume\+Display\+Is\+Set\+To11 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source_l00047}{47}} of file \mbox{\hyperlink{_2vendor_2ceedling_2plugins_2fake__function__framework_2examples_2fff__example_2test_2test__event__processor_8c_source}{test\+\_\+event\+\_\+processor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 6

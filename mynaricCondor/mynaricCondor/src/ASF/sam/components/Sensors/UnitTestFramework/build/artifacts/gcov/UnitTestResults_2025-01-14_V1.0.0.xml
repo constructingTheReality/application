@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TestRun>
+	<FailedTests/>
+	<SuccessfulTests>
+		<Test id="1">
+			<Name>../Tests/test_currentSensors.c::test_5_1_eCurrentSensorUpdate_eCurrentSensorsReadChannelRunFailure_Fail</Name>
+		</Test>
+		<Test id="2">
+			<Name>../Tests/test_currentSensors.c::test_5_2_eCurrentSensorUpdate_eCurrentSensorsLnaAlarmRunFailure_Fail</Name>
+		</Test>
+		<Test id="3">
+			<Name>../Tests/test_currentSensors.c::test_5_3_eCurrentSensorUpdate_eCurrentSensorsHpaAlarmRunFailure_Fail</Name>
+		</Test>
+		<Test id="4">
+			<Name>../Tests/test_currentSensors.c::test_5_4_eCurrentSensorUpdate_NoAlarms_Success</Name>
+		</Test>
+		<Test id="5">
+			<Name>../Tests/test_currentSensors.c::test_5_5_eCurrentSensorUpdate_LnaCurrentLow_LnaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="6">
+			<Name>../Tests/test_currentSensors.c::test_5_6_eCurrentSensorUpdate_LnaCurrentHigh_LnaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="7">
+			<Name>../Tests/test_currentSensors.c::test_5_7_eCurrentSensorUpdate_HpaCurrent1Low_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="8">
+			<Name>../Tests/test_currentSensors.c::test_5_8_eCurrentSensorUpdate_HpaCurrent1High_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="9">
+			<Name>../Tests/test_currentSensors.c::test_5_9_eCurrentSensorUpdate_HpaCurrent2Low_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="10">
+			<Name>../Tests/test_currentSensors.c::test_5_10_eCurrentSensorUpdate_HpaCurrent2High_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="11">
+			<Name>../Tests/test_currentSensors.c::test_5_11_eCurrentSensorUpdate_HpaCurrent3Low_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="12">
+			<Name>../Tests/test_currentSensors.c::test_5_12_eCurrentSensorUpdate_HpaCurrent3High_HpaAlarmRaised_Success</Name>
+		</Test>
+		<Test id="13">
+			<Name>../Tests/test_currentSensors.c::test_5_13_eCurrentSensorUpdate_CommonAlarmFlagsNotRaised_Success</Name>
+		</Test>
+		<Test id="14">
+			<Name>../Tests/test_currentSensors.c::test_5_14_eCurrentSensorUpdate_CommonAlarmFlagsRaised_Success</Name>
+		</Test>
+		<Test id="15">
+			<Name>../Tests/test_currentSensorsBackfacetAlarm.c::test_4_1_eCurrentSensorsBackfacetAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="16">
+			<Name>../Tests/test_currentSensorsBackfacetAlarm.c::test_4_2_eCurrentSensorsBackfacetAlarmRun_NoError_Success</Name>
+		</Test>
+		<Test id="17">
+			<Name>../Tests/test_currentSensorsBackfacetAlarm.c::test_4_3_eCurrentSensorsBackfacetAlarmRun_LnaError_Success</Name>
+		</Test>
+		<Test id="18">
+			<Name>../Tests/test_currentSensorsBackfacetAlarm.c::test_4_4_eCurrentSensorsBackfacetAlarmRun_HpaError_Success</Name>
+		</Test>
+		<Test id="19">
+			<Name>../Tests/test_currentSensorsBackfacetAlarm.c::test_4_5_eCurrentSensorsBackfacetAlarmRun_HpaAndLnaError_Success</Name>
+		</Test>
+		<Test id="20">
+			<Name>../Tests/test_currentSensorsCommonAlarm.c::test_3_1_eCurrentSensorsHpaAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="21">
+			<Name>../Tests/test_currentSensorsCommonAlarm.c::test_3_2_eCurrentSensorsHpaAlarmRun_noAlarmsRaised_Success</Name>
+		</Test>
+		<Test id="22">
+			<Name>../Tests/test_currentSensorsCommonAlarm.c::test_3_3_eCurrentSensorsHpaAlarmRun_AllLowAlarmsRaised_Success</Name>
+		</Test>
+		<Test id="23">
+			<Name>../Tests/test_currentSensorsCommonAlarm.c::test_3_4_eCurrentSensorsHpaAlarmRun_someLowAlarmsRaised_Success</Name>
+		</Test>
+		<Test id="24">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_1_eCurrentSensorsHpaAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="25">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_2_eCurrentSensorsHpaAlarmRun_LowLimitEqualToHighLimit_Fail</Name>
+		</Test>
+		<Test id="26">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_3_eCurrentSensorsHpaAlarmRun_LowLimitGreaterThanHighLimit_Fail</Name>
+		</Test>
+		<Test id="27">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_4_eCurrentSensorsHpaAlarmRun_noAlarm_Success</Name>
+		</Test>
+		<Test id="28">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_5_eCurrentSensorsHpaAlarmRun_Current1LowAlarm_Success</Name>
+		</Test>
+		<Test id="29">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_6_eCurrentSensorsHpaAlarmRun_Current1HighAlarm_Success</Name>
+		</Test>
+		<Test id="30">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_7_eCurrentSensorsHpaAlarmRun_Current2LowAlarm_Success</Name>
+		</Test>
+		<Test id="31">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_8_eCurrentSensorsHpaAlarmRun_Current2HighAlarm_Success</Name>
+		</Test>
+		<Test id="32">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_9_eCurrentSensorsHpaAlarmRun_Current3LowAlarm_Success</Name>
+		</Test>
+		<Test id="33">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_10_eCurrentSensorsHpaAlarmRun_Current3HighAlarm_Success</Name>
+		</Test>
+		<Test id="34">
+			<Name>../Tests/test_currentSensorsHpaAlarm.c::test_2_11_eCurrentSensorsHpaAlarmRun_AllAlarmsRaised_Success</Name>
+		</Test>
+		<Test id="35">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_1_eCurrentSensorsLnaAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="36">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_2_eCurrentSensorsLnaAlarmRun_c409AlarmLowLimit_EqualTo_AlarmHighLimit_Fail</Name>
+		</Test>
+		<Test id="37">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_3_eCurrentSensorsLnaAlarmRun_c409AlarmLowLimit_GreaterThan_AlarmHighLimit_Fail</Name>
+		</Test>
+		<Test id="38">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_4_eCurrentSensorsLnaAlarmRun_NoAlarm_Success</Name>
+		</Test>
+		<Test id="39">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_5_eCurrentSensorsLnaAlarmRun_LowAlarm_Success</Name>
+		</Test>
+		<Test id="40">
+			<Name>../Tests/test_currentSensorsLnaAlarm.c::test_1_6_eCurrentSensorsLnaAlarmRun_HighAlarm_Success</Name>
+		</Test>
+		<Test id="41">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_4_1_ePowerSensorsConfigUpdateCommon_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="42">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_4_2_ePowerSensorsConfigUpdateCommon_Success</Name>
+		</Test>
+		<Test id="43">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_5_1_ePowerSensorsConfigUpdateLna_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="44">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_5_2_ePowerSensorsConfigUpdateLna_Success</Name>
+		</Test>
+		<Test id="45">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_6_1_ePowerSensorsConfigUpdateBooster_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="46">
+			<Name>../Tests/test_forPowerSensorsConfigUpdat.c::test_6_2_ePowerSensorsConfigUpdateBooster_Success</Name>
+		</Test>
+		<Test id="47">
+			<Name>../Tests/test_powerSensors.c::test_3_1_ePowerSensorUpdate_eMpbPowerIn2ChannelsRunFailure_Fail</Name>
+		</Test>
+		<Test id="48">
+			<Name>../Tests/test_powerSensors.c::test_3_2_ePowerSensorUpdate_ePowerReadOffsetChannelRunFailure_Fail</Name>
+		</Test>
+		<Test id="49">
+			<Name>../Tests/test_powerSensors.c::test_3_3_ePowerSensorUpdate_ePowerReadChannelRunFailure_test1_Fail</Name>
+		</Test>
+		<Test id="50">
+			<Name>../Tests/test_powerSensors.c::test_3_4_ePowerSensorUpdate_ePowerReadChannelRunFailure_test2_Fail</Name>
+		</Test>
+		<Test id="51">
+			<Name>../Tests/test_powerSensors.c::test_3_5_ePowerSensorUpdate_boostChannel0_LnaChannel1_noAlarms_Success</Name>
+		</Test>
+		<Test id="52">
+			<Name>../Tests/test_powerSensors.c::test_3_6_ePowerSensorUpdate_boostChannel0_LnaChannel0_noAlarms_Success</Name>
+		</Test>
+		<Test id="53">
+			<Name>../Tests/test_powerSensors.c::test_3_7_ePowerSensorUpdate_boostChannel1_LnaChannel0_noAlarms_Success</Name>
+		</Test>
+		<Test id="54">
+			<Name>../Tests/test_powerSensors.c::test_3_8_ePowerSensorUpdate_boostChannel1_LnaChannel1_noAlarms_Success</Name>
+		</Test>
+		<Test id="55">
+			<Name>../Tests/test_powerSensors.c::test_3_9_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_DueToLos_Success</Name>
+		</Test>
+		<Test id="56">
+			<Name>../Tests/test_powerSensors.c::test_3_10_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_And_LnaAlarm_DueToPower_Success</Name>
+		</Test>
+		<Test id="57">
+			<Name>../Tests/test_powerSensors.c::test_3_11_ePowerSensorUpdate_boostChannel1_LnaChannel1_ePowerSensorBoosterAlarmRunFailure_Fail</Name>
+		</Test>
+		<Test id="58">
+			<Name>../Tests/test_powerSensors.c::test_3_12_ePowerSensorUpdate_boostChannel1_LnaChannel1_LnaAlarm_dueToPower_Success</Name>
+		</Test>
+		<Test id="59">
+			<Name>../Tests/test_powerSensors.c::test_3_13_ePowerSensorUpdate_boostChannel1_LnaChannel1_BoosterAlarm_dueToPower_Success</Name>
+		</Test>
+		<Test id="60">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_1_ePowerSensorValidateOutputLimits_InvalidParam_Fail</Name>
+		</Test>
+		<Test id="61">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_2_ePowerSensorValidateOutputLimits_LimitsInRange_Booster_Success</Name>
+		</Test>
+		<Test id="62">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_3_ePowerSensorValidateOutputLimits_LimitsInRange_Booster_Test2_Success</Name>
+		</Test>
+		<Test id="63">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_4_ePowerSensorValidateOutputLimits_LimitsEqual_Booster_Success</Name>
+		</Test>
+		<Test id="64">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_5_ePowerSensorValidateOutputLimits_UpperLimitLessThanLowerLimit_Booster_Success</Name>
+		</Test>
+		<Test id="65">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_6_ePowerSensorValidateOutputLimits_UpperLimitTooHigh_Booster_Success</Name>
+		</Test>
+		<Test id="66">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_7_ePowerSensorValidateOutputLimits_UpperLimitTooLow_Booster_Success</Name>
+		</Test>
+		<Test id="67">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_8_ePowerSensorValidateOutputLimits_LowerLimitTooHigh_Booster_Success</Name>
+		</Test>
+		<Test id="68">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_9_ePowerSensorValidateOutputLimits_LowerLimitTooLow_Booster_Success</Name>
+		</Test>
+		<Test id="69">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_10_ePowerSensorValidateOutputLimits_LimitsInRange_Lna_Success</Name>
+		</Test>
+		<Test id="70">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_11_ePowerSensorValidateOutputLimits_LimitsInRange_Lna_Test2_Success</Name>
+		</Test>
+		<Test id="71">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_12_ePowerSensorValidateOutputLimits_LimitsEqual_Lna_Success</Name>
+		</Test>
+		<Test id="72">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_13_ePowerSensorValidateOutputLimits_UpperLimitLessThanLowerLimit_Lna_Success</Name>
+		</Test>
+		<Test id="73">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_14_ePowerSensorValidateOutputLimits_UpperLimitTooHigh_Lna_Success</Name>
+		</Test>
+		<Test id="74">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_15_ePowerSensorValidateOutputLimits_UpperLimitTooLow_Lna_Success</Name>
+		</Test>
+		<Test id="75">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_16_ePowerSensorValidateOutputLimits_LowerLimitTooHigh_Lna_Success</Name>
+		</Test>
+		<Test id="76">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_1_17_ePowerSensorValidateOutputLimits_LowerLimitTooLow_Lna_Success</Name>
+		</Test>
+		<Test id="77">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_1_ePowerSensorValidateInputLimits_InvalidParam_Fail</Name>
+		</Test>
+		<Test id="78">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_2_ePowerSensorValidateInputLimits_LimitsInRange_Booster_Success</Name>
+		</Test>
+		<Test id="79">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_3_ePowerSensorValidateInputLimits_LimitsInRange_Booster_Test2_Success</Name>
+		</Test>
+		<Test id="80">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_4_ePowerSensorValidateInputLimits_LimitsEqual_Booster_Success</Name>
+		</Test>
+		<Test id="81">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_5_ePowerSensorValidateInputLimits_UpperLimitLessThanLowerLimit_Booster_Success</Name>
+		</Test>
+		<Test id="82">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_6_ePowerSensorValidateInputLimits_UpperLimitTooHigh_Booster_Success</Name>
+		</Test>
+		<Test id="83">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_7_ePowerSensorValidateInputLimits_UpperLimitTooLow_Booster_Success</Name>
+		</Test>
+		<Test id="84">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_8_ePowerSensorValidateInputLimits_LowerLimitTooHigh_Booster_Success</Name>
+		</Test>
+		<Test id="85">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_9_ePowerSensorValidateInputLimits_LowerLimitTooLow_Booster_Success</Name>
+		</Test>
+		<Test id="86">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_10_ePowerSensorValidateInputLimits_LimitsInRange_Lna_Success</Name>
+		</Test>
+		<Test id="87">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_11_ePowerSensorValidateInputLimits_LimitsInRange_Lna_Test2_Success</Name>
+		</Test>
+		<Test id="88">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_12_ePowerSensorValidateInputLimits_LimitsEqual_Lna_Success</Name>
+		</Test>
+		<Test id="89">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_13_ePowerSensorValidateInputLimits_UpperLimitLessThanLowerLimit_Lna_Success</Name>
+		</Test>
+		<Test id="90">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_14_ePowerSensorValidateInputLimits_UpperLimitTooHigh_Lna_Success</Name>
+		</Test>
+		<Test id="91">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_15_ePowerSensorValidateInputLimits_UpperLimitTooLow_Lna_Success</Name>
+		</Test>
+		<Test id="92">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_16_ePowerSensorValidateInputLimits_LowerLimitTooHigh_Lna_Success</Name>
+		</Test>
+		<Test id="93">
+			<Name>../Tests/test_powerSensorsAlarmValidateLimits.c::test_2_17_ePowerSensorValidateInputLimits_LowerLimitTooLow_Lna_Success</Name>
+		</Test>
+		<Test id="94">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_1_ePowerSensorBoosterAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="95">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_2_ePowerSensorBoosterAlarmRun_NoAlarmSet_NoLos_Success</Name>
+		</Test>
+		<Test id="96">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_3_ePowerSensorBoosterAlarmRun_InputLowLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="97">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_4_ePowerSensorBoosterAlarmRun_InputHighLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="98">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_5_ePowerSensorBoosterAlarmRun_OutputLowLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="99">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_6_ePowerSensorBoosterAlarmRun_OutputHighLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="100">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_7_ePowerSensorBoosterAlarmRun_InputLow_And_OutputLowLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="101">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_8_ePowerSensorBoosterAlarmRun_InputHigh_And_OutputHighLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="102">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_9_ePowerSensorBoosterAlarmRun_InputHigh_And_OutputLowLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="103">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_10_ePowerSensorBoosterAlarmRun_InputLow_And_OutputHighLimitAlarm_NoLos_Success</Name>
+		</Test>
+		<Test id="104">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_11_ePowerSensorBoosterAlarmRun_NoAlarm_Los_Success</Name>
+		</Test>
+		<Test id="105">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_12_ePowerSensorBoosterAlarmRun_OutputLowLimitAlarm_Los_Success</Name>
+		</Test>
+		<Test id="106">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_13_ePowerSensorBoosterAlarmRun_OutputHighLimitAlarm_Los_Success</Name>
+		</Test>
+		<Test id="107">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_14_ePowerSensorBoosterAlarmRun_InputHighLimitAlarm_Los_Success</Name>
+		</Test>
+		<Test id="108">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_15_ePowerSensorBoosterAlarmRun_OutputHigh_And_InputHighLimitAlarm_Los_Success</Name>
+		</Test>
+		<Test id="109">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_16_ePowerSensorBoosterAlarmRun_HighInputLimitLessThanLowInputLimit_NoLos_Success</Name>
+		</Test>
+		<Test id="110">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_17_ePowerSensorBoosterAlarmRun_HighInputLimitEqualToLowInputLimit_NoLos_Success</Name>
+		</Test>
+		<Test id="111">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_18_ePowerSensorBoosterAlarmRun_HighOutputLimitLessThanLowOutputLimit_NoLos_Success</Name>
+		</Test>
+		<Test id="112">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_19_ePowerSensorBoosterAlarmRun_HighOutputEqualToLowOutputLimit_NoLos_Success</Name>
+		</Test>
+		<Test id="113">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_20_ePowerSensorBoosterAlarmRun_LowInputLimitBelowThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="114">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_21_ePowerSensorBoosterAlarmRun_LowInputLimitAboveThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="115">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_22_ePowerSensorBoosterAlarmRun_HighInputLimitBelowThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="116">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_23_ePowerSensorBoosterAlarmRun_HighInputLimitAboveThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="117">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_24_ePowerSensorBoosterAlarmRun_LowOutputLimitBelowThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="118">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_25_ePowerSensorBoosterAlarmRun_LowOutputLimitAboveThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="119">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_26_ePowerSensorBoosterAlarmRun_HighOutputLimitBelowThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="120">
+			<Name>../Tests/test_powerSensorsBoosterAlarm.c::test_1_27_ePowerSensorBoosterAlarmRun_HighOutputAboveBelowThreshold_NoLos_Success</Name>
+		</Test>
+		<Test id="121">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_1_ePowerSensorLnaAlarmRun_InvalidParams_Fail</Name>
+		</Test>
+		<Test id="122">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_2_ePowerSensorLnaAlarmRun_InputLowLimitAlarm_Success</Name>
+		</Test>
+		<Test id="123">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_3_ePowerSensorLnaAlarmRun_InputHighLimitAlarm_Success</Name>
+		</Test>
+		<Test id="124">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_4_ePowerSensorLnaAlarmRun_OutputHighLimitAlarm_Success</Name>
+		</Test>
+		<Test id="125">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_5_ePowerSensorLnaAlarmRun_OutputLowLimitAlarm_Success</Name>
+		</Test>
+		<Test id="126">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_6_ePowerSensorLnaAlarmRun_NoAlarm_Success</Name>
+		</Test>
+		<Test id="127">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_7_ePowerSensorLnaAlarmRun_OutputHigh_And_InputHighLimitAlarm_Success</Name>
+		</Test>
+		<Test id="128">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_8_ePowerSensorLnaAlarmRun_OutputLow_And_InputLowLimitAlarm_Success</Name>
+		</Test>
+		<Test id="129">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_9_ePowerSensorLnaAlarmRun_OutputHigh_And_InputLowLimitAlarm_Success</Name>
+		</Test>
+		<Test id="130">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_10_ePowerSensorLnaAlarmRun_OutputLow_And_InputHighLimitAlarm_Success</Name>
+		</Test>
+		<Test id="131">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_11_ePowerSensorLnaAlarmRun_LowInputLimitGreaterThanHighInputLimit_Success</Name>
+		</Test>
+		<Test id="132">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_12_ePowerSensorLnaAlarmRun_LowInputLimitEqualToHighInputLimit_Success</Name>
+		</Test>
+		<Test id="133">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_13_ePowerSensorLnaAlarmRun_LowOutputLimitGreaterThanHighOutputLimit_Success</Name>
+		</Test>
+		<Test id="134">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_14_ePowerSensorLnaAlarmRun_LowOutputLimitEqualToHighOutputLimit_Success</Name>
+		</Test>
+		<Test id="135">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_15_ePowerSensorLnaAlarmRun_LowInputLimitBelowLowThreshold_Success</Name>
+		</Test>
+		<Test id="136">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_16_ePowerSensorLnaAlarmRun_LowInputLimitAboveUpperThreshold_Success</Name>
+		</Test>
+		<Test id="137">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_17_ePowerSensorLnaAlarmRun_HighInputLimitBelowThreshold_Success</Name>
+		</Test>
+		<Test id="138">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_18_ePowerSensorLnaAlarmRun_HighInputLimitAboveThreshold_Success</Name>
+		</Test>
+		<Test id="139">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_19_ePowerSensorLnaAlarmRun_LowOutputLimitBelowThreshold_Success</Name>
+		</Test>
+		<Test id="140">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_20_ePowerSensorLnaAlarmRun_LowOutputLimitAboveThreshold_Success</Name>
+		</Test>
+		<Test id="141">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_21_ePowerSensorLnaAlarmRun_HighOutputLimitBelowThreshold_Success</Name>
+		</Test>
+		<Test id="142">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_22_ePowerSensorLnaAlarmRun_HighOutputLimitAboveThreshold_Success</Name>
+		</Test>
+		<Test id="143">
+			<Name>../Tests/test_powerSensorsLnaAlarm.c::test_2_23_ePowerSensorLnaAlarmRun_HighOutputLimitAboveThreshold_and_HighInputLimitAboveThreshold_Success</Name>
+		</Test>
+	</SuccessfulTests>
+	<IgnoredTests/>
+	<Statistics>
+		<Tests>143</Tests>
+		<Ignores>0</Ignores>
+		<FailuresTotal>0</FailuresTotal>
+		<Errors>0</Errors>
+		<Failures>0</Failures>
+	</Statistics>
+</TestRun>

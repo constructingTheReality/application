@@ -1,0 +1,35 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/vendor/ceedling/plugins/beep Directory Reference}
+\hypertarget{dir_636dff26abb563d7c92f0d684de45b04}{}\label{dir_636dff26abb563d7c92f0d684de45b04}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/beep Directory Reference@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/beep Directory Reference}}
+Directory dependency graph for beep\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{dir_636dff26abb563d7c92f0d684de45b04_dep}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This is a simple plugin that just beeps at the end of a build and/or test sequence. Are you getting too distracted surfing the internet, chatting with coworkers, or swordfighting while it\textquotesingle{}s building or testing? The friendly beep will let you know it\textquotesingle{}s time to pay attention again.
+
+This plugin has very few configuration options. At this time it can beep on completion of a task and/or on an error condition. For each of these, you can configure the method that it should beep.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:tools:}
+\DoxyCodeLine{\ \ :beep\_on\_done:\ :bell}
+\DoxyCodeLine{\ \ :beep\_on\_error:\ :bell}
+
+\end{DoxyCode}
+
+
+Each of these have the following options\+:
+
+
+\begin{DoxyItemize}
+\item \+:bell -\/ this option uses the ASCII bell character out stdout
+\item \+:speaker\+\_\+test -\/ this uses the linux speaker-\/test command if installed
+\end{DoxyItemize}
+
+Very likely, we\textquotesingle{}ll be adding to this list if people find this to be useful. 

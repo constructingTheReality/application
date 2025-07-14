@@ -1,0 +1,235 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/vendor/ceedling/vendor/cmock/src/cmock\+\_\+internals.h File Reference}
+\hypertarget{cmock__internals_8h}{}\label{cmock__internals_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock\_internals.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/vendor/cmock/src/cmock\_internals.h}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+Include dependency graph for cmock\+\_\+internals.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cmock__internals_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cmock__internals_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\+\_\+\+MEM\+\_\+\+PTR\+\_\+\+AS\+\_\+\+INT}}~unsigned long
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN}}~(2)
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}{CMOCK\+\_\+\+MEM\+\_\+\+SIZE}}~(32768)
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}}~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(1u $<$$<$ \mbox{\hyperlink{cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN}})
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+MASK}}~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(\mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}} -\/ 1)
+\item 
+\#define \mbox{\hyperlink{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+SIZE}}~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\+\_\+\+MEM\+\_\+\+PTR\+\_\+\+AS\+\_\+\+INT}})((sizeof(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}) $>$ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}}) ? sizeof(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}) \+: \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_ac00a03c1e594c9e1d9ff3ce4873642a0}{CMock\+String\+Out\+Of\+Memory}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_a797fd9415cd8d0655c68e007f845d020}{CMock\+String\+Called\+More}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_a6ac9ca0995f1b325857c4bdb5a898102}{CMock\+String\+Called\+Less}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_a16b2f46d690a118d6ca14abb35543481}{CMock\+String\+Called\+Early}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_aed2166361988847f5f63d13994f5de40}{CMock\+String\+Called\+Late}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_acf9d38dd7d2872139cc1bc1bf1b19e70}{CMock\+String\+Call\+Order}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_aa04f7531196fa48793136231a0468971}{CMock\+String\+Ign\+Pre\+Exp}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_a784237bba66acd6aa8f05424ab203e50}{CMock\+String\+Ptr\+Pre\+Exp}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_af6f94581b839661ce82bfd01f1c937a1}{CMock\+String\+Ptr\+Is\+NULL}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_aeda885bf7d07126d0e1638f265d7514c}{CMock\+String\+Exp\+NULL}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cmock__internals_8h_a89c88e09ebf68dff96e71a417b8733a5}{CMock\+String\+Mismatch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_ALIGN@{CMOCK\_MEM\_ALIGN}}
+\index{CMOCK\_MEM\_ALIGN@{CMOCK\_MEM\_ALIGN}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_ALIGN}{CMOCK\_MEM\_ALIGN}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+ALIGN~(2)}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00076}{76}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+\Hypertarget{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_ALIGN\_MASK@{CMOCK\_MEM\_ALIGN\_MASK}}
+\index{CMOCK\_MEM\_ALIGN\_MASK@{CMOCK\_MEM\_ALIGN\_MASK}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_ALIGN\_MASK}{CMOCK\_MEM\_ALIGN\_MASK}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a170ba6073741a693e7f4dc21e2db18ef} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+MASK~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(\mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}} -\/ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00087}{87}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+\Hypertarget{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_ALIGN\_SIZE@{CMOCK\_MEM\_ALIGN\_SIZE}}
+\index{CMOCK\_MEM\_ALIGN\_SIZE@{CMOCK\_MEM\_ALIGN\_SIZE}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_ALIGN\_SIZE}{CMOCK\_MEM\_ALIGN\_SIZE}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(1u $<$$<$ \mbox{\hyperlink{cmock__internals_8h_abfaf78baa4716b7adfb7fa89f566f461}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN}})}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00086}{86}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+\Hypertarget{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_INDEX\_SIZE@{CMOCK\_MEM\_INDEX\_SIZE}}
+\index{CMOCK\_MEM\_INDEX\_SIZE@{CMOCK\_MEM\_INDEX\_SIZE}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_INDEX\_SIZE}{CMOCK\_MEM\_INDEX\_SIZE}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_ab4f4b5cc6478d39d04888f64be4e335d} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+SIZE~(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}})(\mbox{\hyperlink{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}{CMOCK\+\_\+\+MEM\+\_\+\+PTR\+\_\+\+AS\+\_\+\+INT}})((sizeof(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}) $>$ \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}}) ? sizeof(\mbox{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{CMOCK\+\_\+\+MEM\+\_\+\+INDEX\+\_\+\+TYPE}}) \+: \mbox{\hyperlink{cmock__internals_8h_aa4c3fd1e195f905d5acd940f1daf9de1}{CMOCK\+\_\+\+MEM\+\_\+\+ALIGN\+\_\+\+SIZE}})}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00088}{88}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+\Hypertarget{cmock__internals_8h_a38ccf90247120b2526382c260b55d576}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_PTR\_AS\_INT@{CMOCK\_MEM\_PTR\_AS\_INT}}
+\index{CMOCK\_MEM\_PTR\_AS\_INT@{CMOCK\_MEM\_PTR\_AS\_INT}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_PTR\_AS\_INT}{CMOCK\_MEM\_PTR\_AS\_INT}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a38ccf90247120b2526382c260b55d576} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+PTR\+\_\+\+AS\+\_\+\+INT~unsigned long}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00060}{60}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+\Hypertarget{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f}\index{cmock\_internals.h@{cmock\_internals.h}!CMOCK\_MEM\_SIZE@{CMOCK\_MEM\_SIZE}}
+\index{CMOCK\_MEM\_SIZE@{CMOCK\_MEM\_SIZE}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_MEM\_SIZE}{CMOCK\_MEM\_SIZE}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a2bf28cc49a4ab9238dc693baf6761d7f} 
+\#define CMOCK\+\_\+\+MEM\+\_\+\+SIZE~(32768)}
+
+
+
+Definition at line \mbox{\hyperlink{cmock__internals_8h_source_l00082}{82}} of file \mbox{\hyperlink{cmock__internals_8h_source}{cmock\+\_\+internals.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{cmock__internals_8h_a16b2f46d690a118d6ca14abb35543481}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringCalledEarly@{CMockStringCalledEarly}}
+\index{CMockStringCalledEarly@{CMockStringCalledEarly}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringCalledEarly}{CMockStringCalledEarly}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a16b2f46d690a118d6ca14abb35543481} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Called\+Early\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00013}{13}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_aed2166361988847f5f63d13994f5de40}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringCalledLate@{CMockStringCalledLate}}
+\index{CMockStringCalledLate@{CMockStringCalledLate}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringCalledLate}{CMockStringCalledLate}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_aed2166361988847f5f63d13994f5de40} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Called\+Late\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00014}{14}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_a6ac9ca0995f1b325857c4bdb5a898102}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringCalledLess@{CMockStringCalledLess}}
+\index{CMockStringCalledLess@{CMockStringCalledLess}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringCalledLess}{CMockStringCalledLess}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a6ac9ca0995f1b325857c4bdb5a898102} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Called\+Less\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00012}{12}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_a797fd9415cd8d0655c68e007f845d020}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringCalledMore@{CMockStringCalledMore}}
+\index{CMockStringCalledMore@{CMockStringCalledMore}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringCalledMore}{CMockStringCalledMore}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a797fd9415cd8d0655c68e007f845d020} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Called\+More\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00011}{11}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_acf9d38dd7d2872139cc1bc1bf1b19e70}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringCallOrder@{CMockStringCallOrder}}
+\index{CMockStringCallOrder@{CMockStringCallOrder}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringCallOrder}{CMockStringCallOrder}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_acf9d38dd7d2872139cc1bc1bf1b19e70} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Call\+Order\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00015}{15}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_aeda885bf7d07126d0e1638f265d7514c}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringExpNULL@{CMockStringExpNULL}}
+\index{CMockStringExpNULL@{CMockStringExpNULL}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringExpNULL}{CMockStringExpNULL}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_aeda885bf7d07126d0e1638f265d7514c} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Exp\+NULL\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00019}{19}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_aa04f7531196fa48793136231a0468971}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringIgnPreExp@{CMockStringIgnPreExp}}
+\index{CMockStringIgnPreExp@{CMockStringIgnPreExp}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringIgnPreExp}{CMockStringIgnPreExp}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_aa04f7531196fa48793136231a0468971} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Ign\+Pre\+Exp\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00016}{16}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_a89c88e09ebf68dff96e71a417b8733a5}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringMismatch@{CMockStringMismatch}}
+\index{CMockStringMismatch@{CMockStringMismatch}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringMismatch}{CMockStringMismatch}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a89c88e09ebf68dff96e71a417b8733a5} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Mismatch\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00020}{20}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_ac00a03c1e594c9e1d9ff3ce4873642a0}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringOutOfMemory@{CMockStringOutOfMemory}}
+\index{CMockStringOutOfMemory@{CMockStringOutOfMemory}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringOutOfMemory}{CMockStringOutOfMemory}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_ac00a03c1e594c9e1d9ff3ce4873642a0} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Out\+Of\+Memory\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00010}{10}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_af6f94581b839661ce82bfd01f1c937a1}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringPtrIsNULL@{CMockStringPtrIsNULL}}
+\index{CMockStringPtrIsNULL@{CMockStringPtrIsNULL}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringPtrIsNULL}{CMockStringPtrIsNULL}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_af6f94581b839661ce82bfd01f1c937a1} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Ptr\+Is\+NULL\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00018}{18}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+
+\Hypertarget{cmock__internals_8h_a784237bba66acd6aa8f05424ab203e50}\index{cmock\_internals.h@{cmock\_internals.h}!CMockStringPtrPreExp@{CMockStringPtrPreExp}}
+\index{CMockStringPtrPreExp@{CMockStringPtrPreExp}!cmock\_internals.h@{cmock\_internals.h}}
+\doxysubsubsection{\texorpdfstring{CMockStringPtrPreExp}{CMockStringPtrPreExp}}
+{\footnotesize\ttfamily \label{cmock__internals_8h_a784237bba66acd6aa8f05424ab203e50} 
+const char\texorpdfstring{$\ast$}{*} CMock\+String\+Ptr\+Pre\+Exp\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{cmock_8c_source_l00017}{17}} of file \mbox{\hyperlink{cmock_8c_source}{cmock.\+c}}.
+

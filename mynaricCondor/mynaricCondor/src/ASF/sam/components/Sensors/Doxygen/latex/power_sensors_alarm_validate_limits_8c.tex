@@ -1,0 +1,120 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Sensors\+Alarm\+Validate\+Limits.c File Reference}
+\hypertarget{power_sensors_alarm_validate_limits_8c}{}\label{power_sensors_alarm_validate_limits_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsAlarmValidateLimits.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensorsAlarmValidateLimits.c}}
+
+
+Validate the values of the booster alarm limits.  
+
+
+{\ttfamily \#include "{}Power\+Sensors\+Alarm\+Validate\+Limits.\+h"{}}\newline
+Include dependency graph for power\+Sensors\+Alarm\+Validate\+Limits.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_alarm_validate_limits_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_a258925ea28197e4a09bd5757fcff009c}{e\+Power\+Sensor\+Validate\+Output\+Limits}} (e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}pb\+Output\+Check\+C408, float f\+High\+Alarm\+Limit\+Booster\+Power\+Output, float f\+Low\+Alarm\+Limit\+Booster\+Power\+Output, e\+Bool\+\_\+t b\+Is\+Booster)
+\begin{DoxyCompactList}\small\item\em Validate the Output Alarm Limits. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_a268655ca851e1b8ecf08f07bb95a5023}{e\+Power\+Sensor\+Validate\+Input\+Limits}} (e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}pb\+Input\+Check\+C408, float f\+High\+Alarm\+Limit\+Booster\+Power\+Input, float f\+Low\+Alarm\+Limit\+Booster\+Power\+Input, e\+Bool\+\_\+t b\+Is\+Booster)
+\begin{DoxyCompactList}\small\item\em Validate the Input Alarm Limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Validate the values of the booster alarm limits. 
+
+\begin{DoxyAuthor}{Author}
+Isabelle Champion 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 08/07/2024 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2024 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+Definition in file \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_source}{power\+Sensors\+Alarm\+Validate\+Limits.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{power_sensors_alarm_validate_limits_8c_a268655ca851e1b8ecf08f07bb95a5023}\index{powerSensorsAlarmValidateLimits.c@{powerSensorsAlarmValidateLimits.c}!ePowerSensorValidateInputLimits@{ePowerSensorValidateInputLimits}}
+\index{ePowerSensorValidateInputLimits@{ePowerSensorValidateInputLimits}!powerSensorsAlarmValidateLimits.c@{powerSensorsAlarmValidateLimits.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorValidateInputLimits()}{ePowerSensorValidateInputLimits()}}
+{\footnotesize\ttfamily \label{power_sensors_alarm_validate_limits_8c_a268655ca851e1b8ecf08f07bb95a5023} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensor\+Validate\+Input\+Limits (\begin{DoxyParamCaption}\item[{e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}}]{pb\+Input\+Check\+C408}{, }\item[{float}]{f\+High\+Alarm\+Limit\+Power\+Input}{, }\item[{float}]{f\+Low\+Alarm\+Limit\+Power\+Input}{, }\item[{e\+Bool\+\_\+t}]{b\+Is\+Booster}{}\end{DoxyParamCaption})}
+
+
+
+Validate the Input Alarm Limits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f\+High\+Alarm\+Limit\+Power\+Output} & Upper limit for the value of the power input limit \\
+\hline
+\mbox{\texttt{ in}}  & {\em f\+Low\+Alarm\+Limit\+Power\+Output} & Lower limit for the value of the power input limit \\
+\hline
+\mbox{\texttt{ in}}  & {\em b\+Is\+Booster} & Booster\+: true // Lna\+: false \\
+\hline
+\mbox{\texttt{ out}}  & {\em pb\+Output\+Check\+C408} & whether or not the limits are within their valid ranges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_source_l00075}{75}} of file \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_source}{power\+Sensors\+Alarm\+Validate\+Limits.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{power_sensors_alarm_validate_limits_8c_a268655ca851e1b8ecf08f07bb95a5023_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_alarm_validate_limits_8c_a258925ea28197e4a09bd5757fcff009c}\index{powerSensorsAlarmValidateLimits.c@{powerSensorsAlarmValidateLimits.c}!ePowerSensorValidateOutputLimits@{ePowerSensorValidateOutputLimits}}
+\index{ePowerSensorValidateOutputLimits@{ePowerSensorValidateOutputLimits}!powerSensorsAlarmValidateLimits.c@{powerSensorsAlarmValidateLimits.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorValidateOutputLimits()}{ePowerSensorValidateOutputLimits()}}
+{\footnotesize\ttfamily \label{power_sensors_alarm_validate_limits_8c_a258925ea28197e4a09bd5757fcff009c} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensor\+Validate\+Output\+Limits (\begin{DoxyParamCaption}\item[{e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}}]{pb\+Output\+Check\+C408}{, }\item[{float}]{f\+High\+Alarm\+Limit\+Power\+Output}{, }\item[{float}]{f\+Low\+Alarm\+Limit\+Power\+Output}{, }\item[{e\+Bool\+\_\+t}]{b\+Is\+Booster}{}\end{DoxyParamCaption})}
+
+
+
+Validate the Output Alarm Limits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f\+High\+Alarm\+Limit\+Power\+Output} & Upper limit for the value of the power output limit \\
+\hline
+\mbox{\texttt{ in}}  & {\em f\+Low\+Alarm\+Limit\+Power\+Output} & Lower limit for the value of the power output limit \\
+\hline
+\mbox{\texttt{ in}}  & {\em b\+Is\+Booster} & Booster\+: true // Lna\+: false \\
+\hline
+\mbox{\texttt{ out}}  & {\em pb\+Output\+Check\+C408} & whether or not the limits are within their valid ranges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_source_l00027}{27}} of file \mbox{\hyperlink{power_sensors_alarm_validate_limits_8c_source}{power\+Sensors\+Alarm\+Validate\+Limits.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{power_sensors_alarm_validate_limits_8c_a258925ea28197e4a09bd5757fcff009c_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,30 @@
+---
+:source:
+  :path: "../Tests"
+  :file: test_currentSensorsCommonAlarm.c
+:successes:
+- :test: test_3_1_eCurrentSensorsHpaAlarmRun_InvalidParams_Fail
+  :line: 45
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_2_eCurrentSensorsHpaAlarmRun_noAlarmsRaised_Success
+  :line: 75
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_3_eCurrentSensorsHpaAlarmRun_AllLowAlarmsRaised_Success
+  :line: 111
+  :message: ''
+  :unity_test_time: 0
+- :test: test_3_4_eCurrentSensorsHpaAlarmRun_someLowAlarmsRaised_Success
+  :line: 149
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 4
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.3095794999971986

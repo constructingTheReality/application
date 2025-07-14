@@ -1,0 +1,819 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Tests/test\+\_\+power\+Sensors\+Booster\+Alarm.c File Reference}
+\hypertarget{test__power_sensors_booster_alarm_8c}{}\label{test__power_sensors_booster_alarm_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/Tests/test\_powerSensorsBoosterAlarm.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/Tests/test\_powerSensorsBoosterAlarm.c}}
+
+
+test file for \doxylink{power_sensors_booster_alarm_8c}{power\+Sensors\+Booster\+Alarm.\+c}  
+
+
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Booster\+Alarm.\+h"{}}\newline
+{\ttfamily \#include "{}dictionary\+Utils.\+h"{}}\newline
+{\ttfamily \#include "{}mpb\+Los\+Detector.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Alarm\+Validate\+Limits.\+h"{}}\newline
+Include dependency graph for test\+\_\+power\+Sensors\+Booster\+Alarm.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a63326a1b70b6e3f070e51687798e02de}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a735bbf08341b182e60c3a0582bfa09b3}{test\+\_\+1\+\_\+1\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Invalid\+Params\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_abfccb24a166f9140efcc1f16cf896aee}{test\+\_\+1\+\_\+2\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+No\+Alarm\+Set\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a05ea19e1d290348d1483080841c1eb2f}{test\+\_\+1\+\_\+3\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a1a67a55ded8731e0f4b637464ec22466}{test\+\_\+1\+\_\+4\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a62d1374c74c15d9d99dac6486c6a5db3}{test\+\_\+1\+\_\+5\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a94980960be333ff46662613474eecd08}{test\+\_\+1\+\_\+6\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_afd958f0851f6b02ba220f67fe411c36f}{test\+\_\+1\+\_\+7\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+\_\+\+And\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a2f3877b4f07062f20c6b4c4c927df525}{test\+\_\+1\+\_\+8\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+\_\+\+And\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a66f8b1295079b3854e17f4f4ab42a7da}{test\+\_\+1\+\_\+9\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+\_\+\+And\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_aa9a8db7c3af4d012775f5c291d134ed1}{test\+\_\+1\+\_\+10\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+\_\+\+And\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_aa87716dbff9b38415368fbfc6b81791e}{test\+\_\+1\+\_\+11\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+No\+Alarm\+\_\+\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_aeb9c63872bcbc2d2fd351f967c0e411a}{test\+\_\+1\+\_\+12\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_af47c45b5809db24151b2059bb7c0940a}{test\+\_\+1\+\_\+13\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a9d2f2bae074c4e451537d03043ecb29e}{test\+\_\+1\+\_\+14\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a50e1cd867cf0da3b8a0ca469f2429d46}{test\+\_\+1\+\_\+15\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+\_\+\+And\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_afb458368426256d70a8ba17e266e6e6f}{test\+\_\+1\+\_\+16\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Less\+Than\+Low\+Input\+Limit\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_af5f27332e8672b3cb7d648abe5f3ff0f}{test\+\_\+1\+\_\+17\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Equal\+To\+Low\+Input\+Limit\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a127076c4213f501e1662ae83bae0fe9f}{test\+\_\+1\+\_\+18\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Limit\+Less\+Than\+Low\+Output\+Limit\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a1e38c92490f74b529588903a4a365cfe}{test\+\_\+1\+\_\+19\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Equal\+To\+Low\+Output\+Limit\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a82ec97ce05441f1f55ac6e516e8c34a7}{test\+\_\+1\+\_\+20\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Input\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a0272cec4925138ff20e9bc1fcad72e9d}{test\+\_\+1\+\_\+21\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Input\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_ad848b9150e08ef7f8d91ed6dff3f438c}{test\+\_\+1\+\_\+22\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a540113a5d0ef5dec5754eccf07d124f8}{test\+\_\+1\+\_\+23\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a89bfc5bb2fb13603745725fa3fbdfdab}{test\+\_\+1\+\_\+24\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Output\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_aa022b34700f0d52713d873fdb2b38962}{test\+\_\+1\+\_\+25\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Output\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a9c08456e390efcf4587cf76c503a1aa9}{test\+\_\+1\+\_\+26\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a9a842d13c8c26d27686146eff769bc23}{test\+\_\+1\+\_\+27\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Above\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_a7e45006d3ac5dcd53da5667245cff877}{e\+Mpb\+Error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+test file for \doxylink{power_sensors_booster_alarm_8c}{power\+Sensors\+Booster\+Alarm.\+c} 
+
+\begin{DoxyAuthor}{Author}
+Isabelle Champion 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 06/12/24 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2024 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB \end{center}  
+
+Definition in file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a63326a1b70b6e3f070e51687798e02de}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!setUp@{setUp}}
+\index{setUp@{setUp}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a63326a1b70b6e3f070e51687798e02de} 
+void set\+Up (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00033}{33}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+\Hypertarget{test__power_sensors_booster_alarm_8c_ab804e0f66def63262c1d6b4e3d2a2bd7}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_ab804e0f66def63262c1d6b4e3d2a2bd7} 
+void tear\+Down (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00038}{38}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+\Hypertarget{test__power_sensors_booster_alarm_8c_aa9a8db7c3af4d012775f5c291d134ed1}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success()}{test\_1\_10\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputHighLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_aa9a8db7c3af4d012775f5c291d134ed1} 
+void test\+\_\+1\+\_\+10\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+\_\+\+And\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00676}{676}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_aa9a8db7c3af4d012775f5c291d134ed1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{test__power_sensors_booster_alarm_8c_aa9a8db7c3af4d012775f5c291d134ed1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_aa87716dbff9b38415368fbfc6b81791e}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success@{test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success}}
+\index{test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success@{test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success()}{test\_1\_11\_ePowerSensorBoosterAlarmRun\_NoAlarm\_Los\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_aa87716dbff9b38415368fbfc6b81791e} 
+void test\+\_\+1\+\_\+11\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+No\+Alarm\+\_\+\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00744}{744}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_aa87716dbff9b38415368fbfc6b81791e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{test__power_sensors_booster_alarm_8c_aa87716dbff9b38415368fbfc6b81791e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_aeb9c63872bcbc2d2fd351f967c0e411a}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success@{test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success}}
+\index{test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success@{test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success()}{test\_1\_12\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_Los\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_aeb9c63872bcbc2d2fd351f967c0e411a} 
+void test\+\_\+1\+\_\+12\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00812}{812}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_aeb9c63872bcbc2d2fd351f967c0e411a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{test__power_sensors_booster_alarm_8c_aeb9c63872bcbc2d2fd351f967c0e411a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_af47c45b5809db24151b2059bb7c0940a}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success@{test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success}}
+\index{test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success@{test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success()}{test\_1\_13\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_Los\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_af47c45b5809db24151b2059bb7c0940a} 
+void test\+\_\+1\+\_\+13\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00879}{879}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_af47c45b5809db24151b2059bb7c0940a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{test__power_sensors_booster_alarm_8c_af47c45b5809db24151b2059bb7c0940a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a9d2f2bae074c4e451537d03043ecb29e}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success@{test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success}}
+\index{test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success@{test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success()}{test\_1\_14\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_Los\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a9d2f2bae074c4e451537d03043ecb29e} 
+void test\+\_\+1\+\_\+14\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00946}{946}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a9d2f2bae074c4e451537d03043ecb29e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{test__power_sensors_booster_alarm_8c_a9d2f2bae074c4e451537d03043ecb29e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a50e1cd867cf0da3b8a0ca469f2429d46}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success@{test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success}}
+\index{test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success@{test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success()}{test\_1\_15\_ePowerSensorBoosterAlarmRun\_OutputHigh\_And\_InputHighLimitAlarm\_Los\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a50e1cd867cf0da3b8a0ca469f2429d46} 
+void test\+\_\+1\+\_\+15\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+\_\+\+And\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01013}{1013}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a50e1cd867cf0da3b8a0ca469f2429d46_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{test__power_sensors_booster_alarm_8c_a50e1cd867cf0da3b8a0ca469f2429d46_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_afb458368426256d70a8ba17e266e6e6f}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success@{test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success}}
+\index{test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success@{test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success()}{test\_1\_16\_ePowerSensorBoosterAlarmRun\_HighInputLimitLessThanLowInputLimit\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_afb458368426256d70a8ba17e266e6e6f} 
+void test\+\_\+1\+\_\+16\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Less\+Than\+Low\+Input\+Limit\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01081}{1081}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_afb458368426256d70a8ba17e266e6e6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{test__power_sensors_booster_alarm_8c_afb458368426256d70a8ba17e266e6e6f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_af5f27332e8672b3cb7d648abe5f3ff0f}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success@{test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success}}
+\index{test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success@{test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success()}{test\_1\_17\_ePowerSensorBoosterAlarmRun\_HighInputLimitEqualToLowInputLimit\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_af5f27332e8672b3cb7d648abe5f3ff0f} 
+void test\+\_\+1\+\_\+17\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Equal\+To\+Low\+Input\+Limit\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01149}{1149}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_af5f27332e8672b3cb7d648abe5f3ff0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{test__power_sensors_booster_alarm_8c_af5f27332e8672b3cb7d648abe5f3ff0f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a127076c4213f501e1662ae83bae0fe9f}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success@{test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success}}
+\index{test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success@{test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success()}{test\_1\_18\_ePowerSensorBoosterAlarmRun\_HighOutputLimitLessThanLowOutputLimit\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a127076c4213f501e1662ae83bae0fe9f} 
+void test\+\_\+1\+\_\+18\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Limit\+Less\+Than\+Low\+Output\+Limit\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01217}{1217}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a127076c4213f501e1662ae83bae0fe9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{test__power_sensors_booster_alarm_8c_a127076c4213f501e1662ae83bae0fe9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a1e38c92490f74b529588903a4a365cfe}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success@{test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success}}
+\index{test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success@{test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success()}{test\_1\_19\_ePowerSensorBoosterAlarmRun\_HighOutputEqualToLowOutputLimit\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a1e38c92490f74b529588903a4a365cfe} 
+void test\+\_\+1\+\_\+19\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Equal\+To\+Low\+Output\+Limit\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01285}{1285}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a1e38c92490f74b529588903a4a365cfe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{test__power_sensors_booster_alarm_8c_a1e38c92490f74b529588903a4a365cfe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a735bbf08341b182e60c3a0582bfa09b3}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail@{test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail}}
+\index{test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail@{test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail()}{test\_1\_1\_ePowerSensorBoosterAlarmRun\_InvalidParams\_Fail()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a735bbf08341b182e60c3a0582bfa09b3} 
+void test\+\_\+1\+\_\+1\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Invalid\+Params\+\_\+\+Fail (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00048}{48}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a735bbf08341b182e60c3a0582bfa09b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{test__power_sensors_booster_alarm_8c_a735bbf08341b182e60c3a0582bfa09b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a82ec97ce05441f1f55ac6e516e8c34a7}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success@{test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success}}
+\index{test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success@{test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success()}{test\_1\_20\_ePowerSensorBoosterAlarmRun\_LowInputLimitBelowThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a82ec97ce05441f1f55ac6e516e8c34a7} 
+void test\+\_\+1\+\_\+20\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Input\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01353}{1353}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a82ec97ce05441f1f55ac6e516e8c34a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{test__power_sensors_booster_alarm_8c_a82ec97ce05441f1f55ac6e516e8c34a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a0272cec4925138ff20e9bc1fcad72e9d}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success@{test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success}}
+\index{test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success@{test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success()}{test\_1\_21\_ePowerSensorBoosterAlarmRun\_LowInputLimitAboveThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a0272cec4925138ff20e9bc1fcad72e9d} 
+void test\+\_\+1\+\_\+21\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Input\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01422}{1422}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a0272cec4925138ff20e9bc1fcad72e9d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{test__power_sensors_booster_alarm_8c_a0272cec4925138ff20e9bc1fcad72e9d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_ad848b9150e08ef7f8d91ed6dff3f438c}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success@{test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success}}
+\index{test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success@{test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success()}{test\_1\_22\_ePowerSensorBoosterAlarmRun\_HighInputLimitBelowThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_ad848b9150e08ef7f8d91ed6dff3f438c} 
+void test\+\_\+1\+\_\+22\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01490}{1490}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_ad848b9150e08ef7f8d91ed6dff3f438c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{test__power_sensors_booster_alarm_8c_ad848b9150e08ef7f8d91ed6dff3f438c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a540113a5d0ef5dec5754eccf07d124f8}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success@{test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success}}
+\index{test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success@{test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success()}{test\_1\_23\_ePowerSensorBoosterAlarmRun\_HighInputLimitAboveThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a540113a5d0ef5dec5754eccf07d124f8} 
+void test\+\_\+1\+\_\+23\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Input\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01560}{1560}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a540113a5d0ef5dec5754eccf07d124f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{test__power_sensors_booster_alarm_8c_a540113a5d0ef5dec5754eccf07d124f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a89bfc5bb2fb13603745725fa3fbdfdab}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success@{test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success}}
+\index{test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success@{test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success()}{test\_1\_24\_ePowerSensorBoosterAlarmRun\_LowOutputLimitBelowThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a89bfc5bb2fb13603745725fa3fbdfdab} 
+void test\+\_\+1\+\_\+24\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Output\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01629}{1629}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a89bfc5bb2fb13603745725fa3fbdfdab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a89bfc5bb2fb13603745725fa3fbdfdab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_aa022b34700f0d52713d873fdb2b38962}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success@{test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success}}
+\index{test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success@{test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success()}{test\_1\_25\_ePowerSensorBoosterAlarmRun\_LowOutputLimitAboveThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_aa022b34700f0d52713d873fdb2b38962} 
+void test\+\_\+1\+\_\+25\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Low\+Output\+Limit\+Above\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01698}{1698}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_aa022b34700f0d52713d873fdb2b38962_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_aa022b34700f0d52713d873fdb2b38962_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a9c08456e390efcf4587cf76c503a1aa9}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success@{test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success}}
+\index{test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success@{test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success()}{test\_1\_26\_ePowerSensorBoosterAlarmRun\_HighOutputLimitBelowThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a9c08456e390efcf4587cf76c503a1aa9} 
+void test\+\_\+1\+\_\+26\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Limit\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01767}{1767}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a9c08456e390efcf4587cf76c503a1aa9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a9c08456e390efcf4587cf76c503a1aa9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a9a842d13c8c26d27686146eff769bc23}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success@{test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success}}
+\index{test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success@{test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success()}{test\_1\_27\_ePowerSensorBoosterAlarmRun\_HighOutputAboveBelowThreshold\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a9a842d13c8c26d27686146eff769bc23} 
+void test\+\_\+1\+\_\+27\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+High\+Output\+Above\+Below\+Threshold\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l01837}{1837}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a9a842d13c8c26d27686146eff769bc23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a9a842d13c8c26d27686146eff769bc23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_abfccb24a166f9140efcc1f16cf896aee}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success@{test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success}}
+\index{test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success@{test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success()}{test\_1\_2\_ePowerSensorBoosterAlarmRun\_NoAlarmSet\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_abfccb24a166f9140efcc1f16cf896aee} 
+void test\+\_\+1\+\_\+2\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+No\+Alarm\+Set\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00134}{134}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_abfccb24a166f9140efcc1f16cf896aee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{test__power_sensors_booster_alarm_8c_abfccb24a166f9140efcc1f16cf896aee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a05ea19e1d290348d1483080841c1eb2f}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success@{test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success@{test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success()}{test\_1\_3\_ePowerSensorBoosterAlarmRun\_InputLowLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a05ea19e1d290348d1483080841c1eb2f} 
+void test\+\_\+1\+\_\+3\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00204}{204}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a05ea19e1d290348d1483080841c1eb2f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{test__power_sensors_booster_alarm_8c_a05ea19e1d290348d1483080841c1eb2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a1a67a55ded8731e0f4b637464ec22466}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success@{test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success@{test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success()}{test\_1\_4\_ePowerSensorBoosterAlarmRun\_InputHighLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a1a67a55ded8731e0f4b637464ec22466} 
+void test\+\_\+1\+\_\+4\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00272}{272}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a1a67a55ded8731e0f4b637464ec22466_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{test__power_sensors_booster_alarm_8c_a1a67a55ded8731e0f4b637464ec22466_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a62d1374c74c15d9d99dac6486c6a5db3}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success()}{test\_1\_5\_ePowerSensorBoosterAlarmRun\_OutputLowLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a62d1374c74c15d9d99dac6486c6a5db3} 
+void test\+\_\+1\+\_\+5\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00341}{341}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a62d1374c74c15d9d99dac6486c6a5db3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{test__power_sensors_booster_alarm_8c_a62d1374c74c15d9d99dac6486c6a5db3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a94980960be333ff46662613474eecd08}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success()}{test\_1\_6\_ePowerSensorBoosterAlarmRun\_OutputHighLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a94980960be333ff46662613474eecd08} 
+void test\+\_\+1\+\_\+6\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00408}{408}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a94980960be333ff46662613474eecd08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{test__power_sensors_booster_alarm_8c_a94980960be333ff46662613474eecd08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_afd958f0851f6b02ba220f67fe411c36f}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success()}{test\_1\_7\_ePowerSensorBoosterAlarmRun\_InputLow\_And\_OutputLowLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_afd958f0851f6b02ba220f67fe411c36f} 
+void test\+\_\+1\+\_\+7\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+Low\+\_\+\+And\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00475}{475}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_afd958f0851f6b02ba220f67fe411c36f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{test__power_sensors_booster_alarm_8c_afd958f0851f6b02ba220f67fe411c36f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a2f3877b4f07062f20c6b4c4c927df525}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success@{test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success()}{test\_1\_8\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputHighLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a2f3877b4f07062f20c6b4c4c927df525} 
+void test\+\_\+1\+\_\+8\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+\_\+\+And\+\_\+\+Output\+High\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00542}{542}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a2f3877b4f07062f20c6b4c4c927df525_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{test__power_sensors_booster_alarm_8c_a2f3877b4f07062f20c6b4c4c927df525_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a66f8b1295079b3854e17f4f4ab42a7da}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success}}
+\index{test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success@{test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success()}{test\_1\_9\_ePowerSensorBoosterAlarmRun\_InputHigh\_And\_OutputLowLimitAlarm\_NoLos\_Success()}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a66f8b1295079b3854e17f4f4ab42a7da} 
+void test\+\_\+1\+\_\+9\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+\_\+\+Input\+High\+\_\+\+And\+\_\+\+Output\+Low\+Limit\+Alarm\+\_\+\+No\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00609}{609}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__power_sensors_booster_alarm_8c_a66f8b1295079b3854e17f4f4ab42a7da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{test__power_sensors_booster_alarm_8c_a66f8b1295079b3854e17f4f4ab42a7da_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{test__power_sensors_booster_alarm_8c_a7e45006d3ac5dcd53da5667245cff877}\index{test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}!eMpbError@{eMpbError}}
+\index{eMpbError@{eMpbError}!test\_powerSensorsBoosterAlarm.c@{test\_powerSensorsBoosterAlarm.c}}
+\doxysubsubsection{\texorpdfstring{eMpbError}{eMpbError}}
+{\footnotesize\ttfamily \label{test__power_sensors_booster_alarm_8c_a7e45006d3ac5dcd53da5667245cff877} 
+e\+Mpb\+Error\+\_\+t e\+Mpb\+Error}
+
+
+
+Definition at line \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source_l00027}{27}} of file \mbox{\hyperlink{test__power_sensors_booster_alarm_8c_source}{test\+\_\+power\+Sensors\+Booster\+Alarm.\+c}}.
+

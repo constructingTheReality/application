@@ -1,0 +1,405 @@
+\chapter{ceedling-\/gcov}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e}{}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e}\index{ceedling-\/gcov@{ceedling-\/gcov}}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md43}{}\doxysection{\texorpdfstring{Plugin Overview}{Plugin Overview}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md43}
+Plugin for integrating GNU GCov code coverage tool into Ceedling projects. Currently only designed for the gcov command (like LCOV for example). In the future we could configure this to work with other code coverage tools.
+
+This plugin currently uses \href{https://www.gcovr.com/}{\texttt{ gcovr}} and / or \href{https://danielpalme.github.io/ReportGenerator/}{\texttt{ Report\+Generator}} as utilities to generate HTML, XML, JSON, or Text reports. The normal gcov plugin {\itshape must} be run first for these reports to generate.\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md44}{}\doxysubsection{\texorpdfstring{Installation}{Installation}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md44}
+gcovr can be installed via pip like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ gcovr}
+
+\end{DoxyCode}
+
+
+Report\+Generator can be installed via .NET Core like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dotnet\ tool\ install\ -\/g\ dotnet-\/reportgenerator-\/globaltool}
+
+\end{DoxyCode}
+
+
+It is not required to install both {\ttfamily gcovr} and {\ttfamily Report\+Generator}. Either utility may be installed to create reports.\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md45}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md45}
+The gcov plugin supports configuration options via your {\ttfamily project.\+yml} provided by Ceedling.\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md46}{}\doxysubsubsection{\texorpdfstring{Utilities}{Utilities}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md46}
+Gcovr and / or Report\+Generator may be enabled to create coverage reports.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :utilities:}
+\DoxyCodeLine{\ \ \ \ -\/\ gcovr\ \ \ \ \ \ \ \ \ \ \ \#\ Use\ gcovr\ to\ create\ the\ specified\ reports\ (default).}
+\DoxyCodeLine{\ \ \ \ -\/\ ReportGenerator\ \#\ Use\ ReportGenerator\ to\ create\ the\ specified\ reports.}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md47}{}\doxysubsubsection{\texorpdfstring{Reports}{Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md47}
+Various reports are available and may be enabled with the following configuration item. See the specific report sections in this README for additional options and information. All generated reports will be found in {\ttfamily build/artifacts/gcov}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ \#\ Specify\ one\ or\ more\ reports\ to\ generate.}
+\DoxyCodeLine{\ \ \#\ Defaults\ to\ HtmlBasic.}
+\DoxyCodeLine{\ \ :reports:}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ an\ HTML\ summary\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr,\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlBasic}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ an\ HTML\ report\ with\ line\ by\ line\ coverage\ of\ each\ source\ file.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr,\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlDetailed}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ Text\ report,\ which\ may\ be\ output\ to\ the\ console\ with\ gcovr\ or\ a\ file\ in\ both\ gcovr\ and\ ReportGenerator.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr,\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ Text}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ Cobertura\ XML\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr,\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ Cobertura}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ SonarQube\ XML\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr,\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ SonarQube}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ JSON\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ gcovr}
+\DoxyCodeLine{\ \ \ \ -\/\ JSON}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ detailed\ HTML\ report\ with\ CSS\ and\ JavaScript\ included\ in\ every\ HTML\ page.\ Useful\ for\ build\ servers.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlInline}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ detailed\ HTML\ report\ with\ a\ light\ theme\ and\ CSS\ and\ JavaScript\ included\ in\ every\ HTML\ page\ for\ Azure\ DevOps.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlInlineAzure}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ detailed\ HTML\ report\ with\ a\ dark\ theme\ and\ CSS\ and\ JavaScript\ included\ in\ every\ HTML\ page\ for\ Azure\ DevOps.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlInlineAzureDark}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ HTML\ file\ containing\ a\ chart\ with\ historic\ coverage\ information.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ HtmlChart}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ detailed\ HTML\ report\ in\ a\ single\ file.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ MHtml}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ SVG\ and\ PNG\ files\ that\ show\ line\ and\ /\ or\ branch\ coverage\ information.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ Badges}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ CSV\ file\ containing\ coverage\ information\ per\ file.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ CsvSummary}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ TEX\ file\ containing\ a\ summary\ for\ all\ files\ and\ detailed\ reports\ for\ each\ files.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ Latex}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ TEX\ file\ containing\ a\ summary\ for\ all\ files.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ LatexSummary}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ PNG\ file\ containing\ a\ chart\ with\ historic\ coverage\ information.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ PngChart}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Command\ line\ output\ interpreted\ by\ TeamCity.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ TeamCitySummary}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ text\ file\ in\ lcov\ format.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ lcov}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ XML\ file\ containing\ a\ summary\ for\ all\ classes\ and\ detailed\ reports\ for\ each\ class.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ Xml}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Make\ a\ single\ XML\ file\ containing\ a\ summary\ for\ all\ files.}
+\DoxyCodeLine{\ \ \ \ \#\ Supported\ utilities:\ ReportGenerator}
+\DoxyCodeLine{\ \ \ \ -\/\ XmlSummary}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md48}{}\doxysubsubsection{\texorpdfstring{Gcovr HTML Reports}{Gcovr HTML Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md48}
+Generation of Gcovr HTML reports may be modified with the following configuration items.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ \#\ Set\ to\ 'true'\ to\ enable\ HTML\ reports\ or\ set\ to\ 'false'\ to\ disable.}
+\DoxyCodeLine{\ \ \#\ Defaults\ to\ enabled.\ (gcovr\ -\/-\/html)}
+\DoxyCodeLine{\ \ \#\ Deprecated\ -\/\ See\ the\ :reports:\ configuration\ option.}
+\DoxyCodeLine{\ \ :html\_report:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \#\ Gcovr\ supports\ generating\ two\ types\ of\ HTML\ reports.\ Use\ 'basic'\ to\ create}
+\DoxyCodeLine{\ \ \#\ an\ HTML\ report\ with\ only\ the\ overall\ file\ information.\ Use\ 'detailed'\ to\ create}
+\DoxyCodeLine{\ \ \#\ an\ HTML\ report\ with\ line\ by\ line\ coverage\ of\ each\ source\ file.}
+\DoxyCodeLine{\ \ \#\ Defaults\ to\ 'basic'.\ Set\ to\ 'detailed'\ for\ (gcovr\ -\/-\/html-\/details).}
+\DoxyCodeLine{\ \ \#\ Deprecated\ -\/\ See\ the\ :reports:\ configuration\ option.}
+\DoxyCodeLine{\ \ :html\_report\_type:\ [basic|detailed]}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ HTML\ report\ filename.}
+\DoxyCodeLine{\ \ \ \ :html\_artifact\_filename:\ <output>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Use\ 'title'\ as\ title\ for\ the\ HTML\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ Default\ is\ 'Head'.\ (gcovr\ -\/-\/html-\/title)}
+\DoxyCodeLine{\ \ \ \ :html\_title:\ <title>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ If\ the\ coverage\ is\ below\ MEDIUM,\ the\ value\ is\ marked\ as\ low\ coverage\ in\ the\ HTML\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ MEDIUM\ has\ to\ be\ lower\ than\ or\ equal\ to\ value\ of\ html\_high\_threshold.}
+\DoxyCodeLine{\ \ \ \ \#\ If\ MEDIUM\ is\ equal\ to\ value\ of\ html\_high\_threshold\ the\ report\ has\ only\ high\ and\ low\ coverage.}
+\DoxyCodeLine{\ \ \ \ \#\ Default\ is\ 75.0.\ (gcovr\ -\/-\/html-\/medium-\/threshold)}
+\DoxyCodeLine{\ \ \ \ :html\_medium\_threshold:\ 75}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ If\ the\ coverage\ is\ below\ HIGH,\ the\ value\ is\ marked\ as\ medium\ coverage\ in\ the\ HTML\ report.}
+\DoxyCodeLine{\ \ \ \ \#\ HIGH\ has\ to\ be\ greater\ than\ or\ equal\ to\ value\ of\ html\_medium\_threshold.}
+\DoxyCodeLine{\ \ \ \ \#\ If\ HIGH\ is\ equal\ to\ value\ of\ html\_medium\_threshold\ the\ report\ has\ only\ high\ and\ low\ coverage.}
+\DoxyCodeLine{\ \ \ \ \#\ Default\ is\ 90.0.\ (gcovr\ -\/html-\/high-\/threshold)}
+\DoxyCodeLine{\ \ \ \ :html\_high\_threshold:\ 90}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Set\ to\ 'true'\ to\ use\ absolute\ paths\ to\ link\ the\ 'detailed'\ reports.}
+\DoxyCodeLine{\ \ \ \ \#\ Defaults\ to\ relative\ links.\ (gcovr\ -\/-\/html-\/absolute-\/paths)}
+\DoxyCodeLine{\ \ \ \ :html\_absolute\_paths:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Override\ the\ declared\ HTML\ report\ encoding.\ Defaults\ to\ UTF-\/8.\ (gcovr\ -\/-\/html-\/encoding)}
+\DoxyCodeLine{\ \ \ \ :html\_encoding:\ <html\_encoding>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md49}{}\doxysubsubsection{\texorpdfstring{Cobertura XML Reports}{Cobertura XML Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md49}
+Generation of Cobertura XML reports may be modified with the following configuration items.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ \#\ Set\ to\ 'true'\ to\ enable\ Cobertura\ XML\ reports\ or\ set\ to\ 'false'\ to\ disable.}
+\DoxyCodeLine{\ \ \#\ Defaults\ to\ disabled.\ (gcovr\ -\/-\/xml)}
+\DoxyCodeLine{\ \ \#\ Deprecated\ -\/\ See\ the\ :reports:\ configuration\ option.}
+\DoxyCodeLine{\ \ :xml\_report:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ Set\ to\ 'true'\ to\ pretty-\/print\ the\ Cobertura\ XML\ report,\ otherwise\ set\ to\ 'false'.}
+\DoxyCodeLine{\ \ \ \ \#\ Defaults\ to\ disabled.\ (gcovr\ -\/-\/xml-\/pretty)}
+\DoxyCodeLine{\ \ \ \ :xml\_pretty:\ [true|false]}
+\DoxyCodeLine{\ \ \ \ :cobertura\_pretty:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Cobertura\ XML\ report\ filename.}
+\DoxyCodeLine{\ \ \ \ :xml\_artifact\_filename:\ <output>}
+\DoxyCodeLine{\ \ \ \ :cobertura\_artifact\_filename:\ <output>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md50}{}\doxysubsubsection{\texorpdfstring{Sonar\+Qube XML Reports}{Sonar\+Qube XML Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md50}
+Generation of Sonar\+Qube XML reports may be modified with the following configuration items.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ SonarQube\ XML\ report\ filename.}
+\DoxyCodeLine{\ \ \ \ :sonarqube\_artifact\_filename:\ <output>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md51}{}\doxysubsubsection{\texorpdfstring{JSON Reports}{JSON Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md51}
+Generation of JSON reports may be modified with the following configuration items.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ Set\ to\ 'true'\ to\ pretty-\/print\ the\ JSON\ report,\ otherwise\ set\ 'false'.}
+\DoxyCodeLine{\ \ \ \ \#\ Defaults\ to\ disabled.\ (gcovr\ -\/-\/json-\/pretty)}
+\DoxyCodeLine{\ \ \ \ :json\_pretty:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ JSON\ report\ filename.}
+\DoxyCodeLine{\ \ \ \ :json\_artifact\_filename:\ <output>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md52}{}\doxysubsubsection{\texorpdfstring{Text Reports}{Text Reports}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md52}
+Generation of text reports may be modified with the following configuration items. Text reports may be printed to the console or output to a file.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ Text\ report\ filename.}
+\DoxyCodeLine{\ \ \ \ \#\ The\ text\ report\ is\ printed\ to\ the\ console\ when\ no\ filename\ is\ provided.}
+\DoxyCodeLine{\ \ \ \ :text\_artifact\_filename:\ <output>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md53}{}\doxysubsubsection{\texorpdfstring{Common Report Options}{Common Report Options}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md53}
+There are a number of options to control which files are considered part of the coverage report. Most often, we only care about coverage on our source code, and not on tests or automatically generated mocks, runners, etc. However, there are times where this isn\textquotesingle{}t true... or there are times where we\textquotesingle{}ve moved ceedling\textquotesingle{}s directory structure so that the project file isn\textquotesingle{}t at the root of the project anymore. In these cases, you may need to tweak {\ttfamily report\+\_\+include}, {\ttfamily report\+\_\+exclude}, and {\ttfamily exclude\+\_\+directories}.
+
+One important note about {\ttfamily report\+\_\+root}\+: gcovr will take only a single root folder, unlike Ceedling\textquotesingle{}s ability to take as many as you like. So you will need to choose a folder which is a superset of ALL the folders you want, and then use the include or exclude options to set up patterns of files to pay attention to or ignore. It\textquotesingle{}s not ideal, but it works.
+
+Finally, there are a number of settings which can be specified to adjust the default behaviors of gcovr\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :gcovr:}
+\DoxyCodeLine{\ \ \ \ \#\ The\ root\ directory\ of\ your\ source\ files.\ Defaults\ to\ "{}."{},\ the\ current\ directory.}
+\DoxyCodeLine{\ \ \ \ \#\ File\ names\ are\ reported\ relative\ to\ this\ root.\ The\ report\_root\ is\ the\ default\ report\_include.}
+\DoxyCodeLine{\ \ \ \ :report\_root:\ "{}."{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Load\ the\ specified\ configuration\ file.}
+\DoxyCodeLine{\ \ \ \ \#\ Defaults\ to\ gcovr.cfg\ in\ the\ report\_root\ directory.\ (gcovr\ -\/-\/config)}
+\DoxyCodeLine{\ \ \ \ :config\_file:\ <config\_file>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exit\ with\ a\ status\ of\ 2\ if\ the\ total\ line\ coverage\ is\ less\ than\ MIN.}
+\DoxyCodeLine{\ \ \ \ \#\ Can\ be\ ORed\ with\ exit\ status\ of\ 'fail\_under\_branch'\ option.\ (gcovr\ -\/-\/fail-\/under-\/line)}
+\DoxyCodeLine{\ \ \ \ :fail\_under\_line:\ 30}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exit\ with\ a\ status\ of\ 4\ if\ the\ total\ branch\ coverage\ is\ less\ than\ MIN.}
+\DoxyCodeLine{\ \ \ \ \#\ Can\ be\ ORed\ with\ exit\ status\ of\ 'fail\_under\_line'\ option.\ (gcovr\ -\/-\/fail-\/under-\/branch)}
+\DoxyCodeLine{\ \ \ \ :fail\_under\_branch:\ 30}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Select\ the\ source\ file\ encoding.}
+\DoxyCodeLine{\ \ \ \ \#\ Defaults\ to\ the\ system\ default\ encoding\ (UTF-\/8).\ (gcovr\ -\/-\/source-\/encoding)}
+\DoxyCodeLine{\ \ \ \ :source\_encoding:\ <source\_encoding>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Report\ the\ branch\ coverage\ instead\ of\ the\ line\ coverage.\ For\ text\ report\ only.\ (gcovr\ -\/-\/branches).}
+\DoxyCodeLine{\ \ \ \ :branches:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Sort\ entries\ by\ increasing\ number\ of\ uncovered\ lines.}
+\DoxyCodeLine{\ \ \ \ \#\ For\ text\ and\ HTML\ report.\ (gcovr\ -\/-\/sort-\/uncovered)}
+\DoxyCodeLine{\ \ \ \ :sort\_uncovered:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Sort\ entries\ by\ increasing\ percentage\ of\ uncovered\ lines.}
+\DoxyCodeLine{\ \ \ \ \#\ For\ text\ and\ HTML\ report.\ (gcovr\ -\/-\/sort-\/percentage)}
+\DoxyCodeLine{\ \ \ \ :sort\_percentage:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Print\ a\ small\ report\ to\ stdout\ with\ line\ \&\ branch\ percentage\ coverage.}
+\DoxyCodeLine{\ \ \ \ \#\ This\ is\ in\ addition\ to\ other\ reports.\ (gcovr\ -\/-\/print-\/summary).}
+\DoxyCodeLine{\ \ \ \ :print\_summary:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Keep\ only\ source\ files\ that\ match\ this\ filter.\ (gcovr\ -\/-\/filter).}
+\DoxyCodeLine{\ \ \ \ :report\_include:\ "{}\string^src"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exclude\ source\ files\ that\ match\ this\ filter.\ (gcovr\ -\/-\/exclude).}
+\DoxyCodeLine{\ \ \ \ :report\_exclude:\ "{}\string^vendor.*|\string^build.*|\string^test.*|\string^lib.*"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Keep\ only\ gcov\ data\ files\ that\ match\ this\ filter.\ (gcovr\ -\/-\/gcov-\/filter).}
+\DoxyCodeLine{\ \ \ \ :gcov\_filter:\ <gcov\_filter>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exclude\ gcov\ data\ files\ that\ match\ this\ filter.\ (gcovr\ -\/-\/gcov-\/exclude).}
+\DoxyCodeLine{\ \ \ \ :gcov\_exclude:\ <gcov\_exclude>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exclude\ directories\ that\ match\ this\ regex\ while\ searching}
+\DoxyCodeLine{\ \ \ \ \#\ raw\ coverage\ files.\ (gcovr\ -\/-\/exclude-\/directories).}
+\DoxyCodeLine{\ \ \ \ :exclude\_directories:\ <exclude\_dirs>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Use\ a\ particular\ gcov\ executable.\ (gcovr\ -\/-\/gcov-\/executable).}
+\DoxyCodeLine{\ \ \ \ :gcov\_executable:\ <gcov\_cmd>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Exclude\ branch\ coverage\ from\ lines\ without\ useful}
+\DoxyCodeLine{\ \ \ \ \#\ source\ code.\ (gcovr\ -\/-\/exclude-\/unreachable-\/branches).}
+\DoxyCodeLine{\ \ \ \ :exclude\_unreachable\_branches:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ For\ branch\ coverage,\ exclude\ branches\ that\ the\ compiler}
+\DoxyCodeLine{\ \ \ \ \#\ generates\ for\ exception\ handling.\ (gcovr\ -\/-\/exclude-\/throw-\/branches).}
+\DoxyCodeLine{\ \ \ \ :exclude\_throw\_branches:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Use\ existing\ gcov\ files\ for\ analysis.\ Default:\ False.\ (gcovr\ -\/-\/use-\/gcov-\/files)}
+\DoxyCodeLine{\ \ \ \ :use\_gcov\_files:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Skip\ lines\ with\ parse\ errors\ in\ GCOV\ files\ instead\ of}
+\DoxyCodeLine{\ \ \ \ \#\ exiting\ with\ an\ error.\ (gcovr\ -\/-\/gcov-\/ignore-\/parse-\/errors).}
+\DoxyCodeLine{\ \ \ \ :gcov\_ignore\_parse\_errors:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Override\ normal\ working\ directory\ detection.\ (gcovr\ -\/-\/object-\/directory)}
+\DoxyCodeLine{\ \ \ \ :object\_directory:\ <objdir>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Keep\ gcov\ files\ after\ processing.\ (gcovr\ -\/-\/keep).}
+\DoxyCodeLine{\ \ \ \ :keep:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Delete\ gcda\ files\ after\ processing.\ (gcovr\ -\/-\/delete).}
+\DoxyCodeLine{\ \ \ \ :delete:\ [true|false]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Set\ the\ number\ of\ threads\ to\ use\ in\ parallel.\ (gcovr\ -\/j).}
+\DoxyCodeLine{\ \ \ \ :num\_parallel\_threads:\ <num\_threads>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \#\ When\ scanning\ the\ code\ coverage,\ if\ any\ files\ are\ found\ that\ do\ not\ have}
+\DoxyCodeLine{\ \ \#\ associated\ coverage\ data,\ the\ command\ will\ abort\ with\ an\ error\ message.}
+\DoxyCodeLine{\ \ :abort\_on\_uncovered:\ true}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \#\ When\ using\ the\ \`{}\`{}abort\_on\_uncovered``\ option,\ the\ files\ in\ this\ list\ will\ not}
+\DoxyCodeLine{\ \ \#\ trigger\ a\ failure.}
+\DoxyCodeLine{\ \ \#\ Ceedling\ globs\ described\ in\ the\ Ceedling\ packet\ \`{}\`{}Path``\ section\ can\ be\ used}
+\DoxyCodeLine{\ \ \#\ when\ directories\ are\ placed\ on\ the\ list.\ Globs\ are\ limited\ to\ matching\ directories}
+\DoxyCodeLine{\ \ \#\ and\ not\ files.}
+\DoxyCodeLine{\ \ :uncovered\_ignore\_list:\ []}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md54}{}\doxysubsubsection{\texorpdfstring{Report\+Generator Configuration}{Report\+Generator Configuration}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md54}
+The Report\+Generator utility may be configured with the following configuration items. All generated reports may be found in {\ttfamily build/artifacts/gcov/\+Report\+Generator}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:gcov:}
+\DoxyCodeLine{\ \ :report\_generator:}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ directory\ for\ storing\ persistent\ coverage\ information.}
+\DoxyCodeLine{\ \ \ \ \#\ Can\ be\ used\ in\ future\ reports\ to\ show\ coverage\ evolution.}
+\DoxyCodeLine{\ \ \ \ :history\_directory:\ <history\_directory>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ plugin\ files\ for\ custom\ reports\ or\ custom\ history\ storage\ (separated\ by\ semicolon).}
+\DoxyCodeLine{\ \ \ \ :plugins:\ CustomReports.dll}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ list\ of\ assemblies\ that\ should\ be\ included\ or\ excluded\ in\ the\ report\ (separated\ by\ semicolon)..}
+\DoxyCodeLine{\ \ \ \ \#\ Exclusion\ filters\ take\ precedence\ over\ inclusion\ filters.}
+\DoxyCodeLine{\ \ \ \ \#\ Wildcards\ are\ allowed,\ but\ not\ regular\ expressions.}
+\DoxyCodeLine{\ \ \ \ :assembly\_filters:\ "{}+Included;-\/Excluded"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ list\ of\ classes\ that\ should\ be\ included\ or\ excluded\ in\ the\ report\ (separated\ by\ semicolon)..}
+\DoxyCodeLine{\ \ \ \ \#\ Exclusion\ filters\ take\ precedence\ over\ inclusion\ filters.}
+\DoxyCodeLine{\ \ \ \ \#\ Wildcards\ are\ allowed,\ but\ not\ regular\ expressions.}
+\DoxyCodeLine{\ \ \ \ :class\_filters:\ "{}+Included;-\/Excluded"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ list\ of\ files\ that\ should\ be\ included\ or\ excluded\ in\ the\ report\ (separated\ by\ semicolon)..}
+\DoxyCodeLine{\ \ \ \ \#\ Exclusion\ filters\ take\ precedence\ over\ inclusion\ filters.}
+\DoxyCodeLine{\ \ \ \ \#\ Wildcards\ are\ allowed,\ but\ not\ regular\ expressions.}
+\DoxyCodeLine{\ \ \ \ :file\_filters:\ "{}-\/./vendor/*;-\/./build/*;-\/./test/*;-\/./lib/*;+./src/*"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ The\ verbosity\ level\ of\ the\ log\ messages.}
+\DoxyCodeLine{\ \ \ \ \#\ Values:\ Verbose,\ Info,\ Warning,\ Error,\ Off}
+\DoxyCodeLine{\ \ \ \ :verbosity:\ Warning}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ tag\ or\ build\ version.}
+\DoxyCodeLine{\ \ \ \ :tag:\ <tag>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ list\ of\ one\ or\ more\ regular\ expressions\ to\ exclude\ gcov\ notes\ files\ that\ match\ these\ filters.}
+\DoxyCodeLine{\ \ \ \ :gcov\_exclude:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ <exclude\_regex1>}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ <exclude\_regex2>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optionally\ use\ a\ particular\ gcov\ executable.\ Defaults\ to\ gcov.}
+\DoxyCodeLine{\ \ \ \ :gcov\_executable:\ <gcov\_cmd>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optionally\ set\ the\ number\ of\ threads\ to\ use\ in\ parallel.\ Defaults\ to\ 1.}
+\DoxyCodeLine{\ \ \ \ :num\_parallel\_threads:\ <num\_threads>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \#\ Optional\ list\ of\ one\ or\ more\ command\ line\ arguments\ to\ pass\ to\ Report\ Generator.}
+\DoxyCodeLine{\ \ \ \ \#\ Useful\ for\ configuring\ Risk\ Hotspots\ and\ Other\ Settings.}
+\DoxyCodeLine{\ \ \ \ \#\ https://github.com/danielpalme/ReportGenerator/wiki/Settings}
+\DoxyCodeLine{\ \ \ \ :custom\_args:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ <custom\_arg1>}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ <custom\_arg2>}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md55}{}\doxysubsection{\texorpdfstring{Example Usage}{Example Usage}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md55}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ceedling\ gcov:all\ utils:gcov}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md56}{}\doxysubsection{\texorpdfstring{To-\/\+Do list}{To-\/\+Do list}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md56}
+
+\begin{DoxyItemize}
+\item Generate overall report (combined statistics from all files with coverage)
+\end{DoxyItemize}\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md57}{}\doxysubsection{\texorpdfstring{Citations}{Citations}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2gcov_2_r_e_a_d_m_e_autotoc_md57}
+Most of the comment text which describes the options was taken from the \href{https://www.gcovr.com/en/stable/guide.html}{\texttt{ Gcovr User Guide}} and the \href{https://github.com/danielpalme/ReportGenerator/wiki}{\texttt{ Report\+Generator Wiki}}. The text is repeated here to provide the most accurate option functionality. 

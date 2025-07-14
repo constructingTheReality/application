@@ -1,0 +1,95 @@
+---
+
+:project:
+  :use_exceptions: FALSE
+
+  :use_test_preprocessor: FALSE
+  :use_auxiliary_dependencies: TRUE
+  :generate_deep_dependencies: TRUE
+  :build_root: build
+#  :release_build: TRUE
+  :test_file_prefix: test_
+  :which_ceedling: vendor/ceedling
+  :default_tasks:
+    - test:all
+
+:paths:
+  :test:
+    - ../Tests
+  :source:
+    - ../
+  :include:
+    - ../
+    #- ../../../../common/boards/ #mpblibs.h
+    - C:/myWorks/mpbComponentSam/commun/Includes/ #mpblibs.h
+    - ../../../../sam/drivers/can/ #dictionaryUtils.h ( and .c)
+    - C:/myWorks/mpbComponentSam/mpbLosDetector/mpbLosDetector/
+    - ../../../../sam/utils/ #compiler.h
+    - ../../../../common/utils/ #parts.h
+    - ../../../../sam/utils/preprocessor #preprocessor.h
+    - ../../../../sam/utils/cmsis/sam3x/include/component/ #component_can.h
+    - ../../../../thirdparty/CMSIS/Include/ #core_cm3.h
+    - ../../../../sam/utils/cmsis/sam3x/source/templates/ #system_sam3x.h
+    - ../../../../sam/components/laser/ #laserData.h
+    #- C:\myWorks\mynaric\Application\embedded\mynaricApp_Embedded\mynaricCondor\mynaricCondor\src\ASF\sam\components\laser
+    - ../../../../sam/components/glue/ #glue.h
+    - ../../../../sam/components/control/ #currentControl.h
+    - ../../../../sam/components/temperature/ #temperature.h
+    - ../../../../sam/drivers/Fram/ #nvMemory.h
+    - ../../../../sam/components/bsp/ #BSPGpio.h
+    - ../../../../sam/drivers/spi/ #spi.h
+    - C:/myWorks/mpbComponentSam/mpbReadPowerIn2Channels/mpbReadPowerIn2Channels/mpbReadPowerIn2Channels/ #mpbPowerIn2Channels.h
+    - ../../../../sam/components/fsm/ #boosterStateMachine.h
+    - ../../../../sam/components/ControlModes/ #accControl.h
+    - ../../../../sam/components/Pid/ #controlLaserPID.h
+    - ../../../../sam/drivers/pio #binaryInput.h
+    - ../../../../sam/drivers/adc #adc.h
+    - ../../../../sam/drivers/pwm #pwm.h
+    - ../../../../sam/boards/mynaric_board #mynaricBoard.h
+    - ../../../../sam/utils/cmsis/sam3x/include #sam3xa.h
+    - ../../../../common/services/clock/sam3x #sysclk.h
+    - ../../../../common/boards # board.h
+    - ../../../../sam/boards #mynaric_board/mynaricBoard.h
+    - ../../../../sam/drivers/pmc #pmc.h
+
+  :support:
+:files:
+  :source:
+    #- -:C:/myWorks/mpbComponentSam/mpbLosDetector/mpbLosDetector/mpbLosDetector.c
+     
+:cmock:
+  :mock_prefix: mock_
+  :when_no_prototypes: :warn
+  :enforce_strict_ordering: TRUE
+  :plugins:
+    - :ignore
+    - :ignore_arg
+    - :expect_any_args
+    - :array
+    - :callback
+    - :return_thru_ptr
+  :treat_as:
+    uint8:    HEX8
+    uint16:   HEX16
+    uint32:   UINT32
+    int8:     INT8
+    bool:     UINT8
+  :treat_externs: :include 
+
+
+:plugins:
+  :load_paths:
+    - vendor/ceedling/plugins
+  :enabled:
+    - xml_tests_report
+    - stdout_pretty_tests_report
+    - module_generator
+    - gcov
+
+:gcov:
+ :html_report_type:  detailed
+    
+:gcovr:
+  :html_title: "Power Sensor Coverage" 
+
+...

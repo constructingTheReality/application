@@ -1,0 +1,38 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/vendor/ceedling/plugins/junit\+\_\+tests\+\_\+report Directory Reference}
+\hypertarget{dir_4c455c3dd483812e03fe9142658e2a21}{}\label{dir_4c455c3dd483812e03fe9142658e2a21}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/junit\_tests\_report Directory Reference@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/junit\_tests\_report Directory Reference}}
+Directory dependency graph for junit\+\_\+tests\+\_\+report\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{dir_4c455c3dd483812e03fe9142658e2a21_dep}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{README.md_autotoc_md61}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{README.md_autotoc_md61}
+The junit\+\_\+tests\+\_\+report plugin creates an XML file of test results in JUnit format, which is handy for Continuous Integration build servers or as input into other reporting tools. The XML file is output to the appropriate {\ttfamily \texorpdfstring{$<$}{<}build\+\_\+root\texorpdfstring{$>$}{>}/artifacts/} directory (e.\+g. {\ttfamily artifacts/test/} for test tasks, {\ttfamily artifacts/gcov/} for gcov, or {\ttfamily artifacts/bullseye/} for bullseye runs).\hypertarget{README.md_autotoc_md62}{}\doxysubsection{\texorpdfstring{Setup}{Setup}}\label{README.md_autotoc_md62}
+Enable the plugin in your project.\+yml by adding {\ttfamily junit\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :enabled:}
+\DoxyCodeLine{\ \ \ \ -\/\ junit\_tests\_report}
+
+\end{DoxyCode}
+\hypertarget{README.md_autotoc_md63}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{README.md_autotoc_md63}
+Optionally configure the output / artifact filename in your project.\+yml with the {\ttfamily artifact\+\_\+filename} configuration option. The default filename is {\ttfamily report.\+xml}.
+
+You can also configure the path that this artifact is stored. This can be done by setting {\ttfamily path}. The default is that it will be placed in a subfolder under the {\ttfamily build} directory.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ YAML}
+\DoxyCodeLine{:junit\_tests\_report:}
+\DoxyCodeLine{\ \ :artifact\_filename:\ report\_junit.xml}
+
+\end{DoxyCode}
+ 

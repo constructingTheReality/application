@@ -1,0 +1,346 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Sensors.c File Reference}
+\hypertarget{power_sensors_8c}{}\label{power_sensors_8c}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensors.c@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerSensors.c}}
+{\ttfamily \#include "{}power\+Sensors.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Config\+Update.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Update\+Database.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Booster\+Alarm.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Lna\+Alarm.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Read\+Channel.\+h"{}}\newline
+{\ttfamily \#include "{}mpb\+Power\+In2\+Channels.\+h"{}}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}booster\+State\+Machine.\+h"{}}\newline
+{\ttfamily \#include "{}lna\+State\+Machine.\+h"{}}\newline
+Include dependency graph for power\+Sensors.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{power_sensors_8c_a96d93a653efa4c530a694fe3d8fd2358}{POWER\+\_\+\+CONFIG\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+CHANNELS}}~( \mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5aea58ae48cea9978f80ce478d900a45c0e8}{e\+Number\+Of\+Power\+Channel\+Configurations}} )
+\item 
+\#define \mbox{\hyperlink{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0}{X}}(Power\+Channel\+Config\+Id,  slope\+Constant,  intercept\+Constant)
+\item 
+\#define \mbox{\hyperlink{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0}{X}}(Power\+Channel\+Config\+Id,  slope\+Constant,  intercept\+Constant)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_a09f78ae094b01c590c69201b2d369973}{e\+Power\+Sensors\+Factory\+Init\+Common\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the power sensors -\/ common section -\/ with factory -\/ emergency-\/ values. In case nvm fail. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_a3567f467c372bf747ec2a51be0ba16c4}{e\+Power\+Sensors\+Factory\+Init\+Lna\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the power sensors -\/ LNA section -\/ with factory -\/ emergency-\/ values. In case nvm fail. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_a4c6316893f675a6080a2328201cb27d6}{e\+Power\+Sensors\+Factory\+Init\+Booster\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the power sensors -\/ HPA section -\/ with factory -\/ emergency-\/ values. In case nvm fail. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_ad5f6eb8576eb41ca33fc33af2a03446e}{e\+Power\+Sensors\+Common\+Config\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Save the config from the DB -\/ common section -\/ into the local copy. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_af5b153abbaf61bcd560e931412a5680d}{e\+Power\+Sensors\+Lna\+Config\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Save the config from the DB -\/ LNA section -\/ into the local copy. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_ab5988b4b7729e9e9b047b0f87d61989e}{e\+Power\+Sensors\+Booster\+Config\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Save the config from the DB -\/ HPA section -\/ into the local copy. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_sensors_8c_abbfd3d79a28a89134ad3d5ea9ed06b0f}{e\+Power\+Sensor\+Update}} (e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}pb\+Hpa\+Power\+Los\+Alarm, e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}pb\+Lna\+Power\+Critical\+Alarm, e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}pb\+Booster\+Power\+Critical\+Alarm)
+\begin{DoxyCompactList}\small\item\em Update critical power of the laser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{power_sensors_8c_a96d93a653efa4c530a694fe3d8fd2358}\index{powerSensors.c@{powerSensors.c}!POWER\_CONFIG\_NUMBER\_OF\_CHANNELS@{POWER\_CONFIG\_NUMBER\_OF\_CHANNELS}}
+\index{POWER\_CONFIG\_NUMBER\_OF\_CHANNELS@{POWER\_CONFIG\_NUMBER\_OF\_CHANNELS}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{POWER\_CONFIG\_NUMBER\_OF\_CHANNELS}{POWER\_CONFIG\_NUMBER\_OF\_CHANNELS}}
+{\footnotesize\ttfamily \label{power_sensors_8c_a96d93a653efa4c530a694fe3d8fd2358} 
+\#define POWER\+\_\+\+CONFIG\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+CHANNELS~( \mbox{\hyperlink{power_sensors_8h_a12090097def9bdbcf665761926e8d5aea58ae48cea9978f80ce478d900a45c0e8}{e\+Number\+Of\+Power\+Channel\+Configurations}} )}
+
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00030}{30}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+\Hypertarget{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0}\index{powerSensors.c@{powerSensors.c}!X@{X}}
+\index{X@{X}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{X}{X}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0} 
+\#define X(\begin{DoxyParamCaption}\item[{}]{Power\+Channel\+Config\+Id}{, }\item[{}]{slope\+Constant}{, }\item[{}]{intercept\+Constant}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{slopeConstant,}
+
+\end{DoxyCode}
+\Hypertarget{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0}\index{powerSensors.c@{powerSensors.c}!X@{X}}
+\index{X@{X}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{X}{X}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{power_sensors_8c_aac28d9bde3c6205cd47910e902076ef0} 
+\#define X(\begin{DoxyParamCaption}\item[{}]{Power\+Channel\+Config\+Id}{, }\item[{}]{slope\+Constant}{, }\item[{}]{intercept\+Constant}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{interceptConstant,}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{power_sensors_8c_ab5988b4b7729e9e9b047b0f87d61989e}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsBoosterConfigUpdate@{ePowerSensorsBoosterConfigUpdate}}
+\index{ePowerSensorsBoosterConfigUpdate@{ePowerSensorsBoosterConfigUpdate}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsBoosterConfigUpdate()}{ePowerSensorsBoosterConfigUpdate()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_ab5988b4b7729e9e9b047b0f87d61989e} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Booster\+Config\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Save the config from the DB -\/ HPA section -\/ into the local copy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00177}{177}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_ab5988b4b7729e9e9b047b0f87d61989e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_ab5988b4b7729e9e9b047b0f87d61989e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_ad5f6eb8576eb41ca33fc33af2a03446e}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsCommonConfigUpdate@{ePowerSensorsCommonConfigUpdate}}
+\index{ePowerSensorsCommonConfigUpdate@{ePowerSensorsCommonConfigUpdate}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsCommonConfigUpdate()}{ePowerSensorsCommonConfigUpdate()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_ad5f6eb8576eb41ca33fc33af2a03446e} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Common\+Config\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Save the config from the DB -\/ common section -\/ into the local copy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00159}{159}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_ad5f6eb8576eb41ca33fc33af2a03446e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_a4c6316893f675a6080a2328201cb27d6}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsFactoryInitBoosterChannels@{ePowerSensorsFactoryInitBoosterChannels}}
+\index{ePowerSensorsFactoryInitBoosterChannels@{ePowerSensorsFactoryInitBoosterChannels}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsFactoryInitBoosterChannels()}{ePowerSensorsFactoryInitBoosterChannels()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_a4c6316893f675a6080a2328201cb27d6} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Factory\+Init\+Booster\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the power sensors -\/ HPA section -\/ with factory -\/ emergency-\/ values. In case nvm fail. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00111}{111}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a4c6316893f675a6080a2328201cb27d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a4c6316893f675a6080a2328201cb27d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_a09f78ae094b01c590c69201b2d369973}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsFactoryInitCommonChannels@{ePowerSensorsFactoryInitCommonChannels}}
+\index{ePowerSensorsFactoryInitCommonChannels@{ePowerSensorsFactoryInitCommonChannels}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsFactoryInitCommonChannels()}{ePowerSensorsFactoryInitCommonChannels()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_a09f78ae094b01c590c69201b2d369973} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Factory\+Init\+Common\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the power sensors -\/ common section -\/ with factory -\/ emergency-\/ values. In case nvm fail. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00058}{58}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a09f78ae094b01c590c69201b2d369973_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a09f78ae094b01c590c69201b2d369973_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_a3567f467c372bf747ec2a51be0ba16c4}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsFactoryInitLnaChannels@{ePowerSensorsFactoryInitLnaChannels}}
+\index{ePowerSensorsFactoryInitLnaChannels@{ePowerSensorsFactoryInitLnaChannels}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsFactoryInitLnaChannels()}{ePowerSensorsFactoryInitLnaChannels()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_a3567f467c372bf747ec2a51be0ba16c4} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Factory\+Init\+Lna\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the power sensors -\/ LNA section -\/ with factory -\/ emergency-\/ values. In case nvm fail. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00073}{73}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a3567f467c372bf747ec2a51be0ba16c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_a3567f467c372bf747ec2a51be0ba16c4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_af5b153abbaf61bcd560e931412a5680d}\index{powerSensors.c@{powerSensors.c}!ePowerSensorsLnaConfigUpdate@{ePowerSensorsLnaConfigUpdate}}
+\index{ePowerSensorsLnaConfigUpdate@{ePowerSensorsLnaConfigUpdate}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsLnaConfigUpdate()}{ePowerSensorsLnaConfigUpdate()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_af5b153abbaf61bcd560e931412a5680d} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensors\+Lna\+Config\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Save the config from the DB -\/ LNA section -\/ into the local copy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em none.} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00168}{168}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_af5b153abbaf61bcd560e931412a5680d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_sensors_8c_abbfd3d79a28a89134ad3d5ea9ed06b0f}\index{powerSensors.c@{powerSensors.c}!ePowerSensorUpdate@{ePowerSensorUpdate}}
+\index{ePowerSensorUpdate@{ePowerSensorUpdate}!powerSensors.c@{powerSensors.c}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorUpdate()}{ePowerSensorUpdate()}}
+{\footnotesize\ttfamily \label{power_sensors_8c_abbfd3d79a28a89134ad3d5ea9ed06b0f} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Sensor\+Update (\begin{DoxyParamCaption}\item[{e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}}]{pb\+Hpa\+Power\+Los\+Alarm}{, }\item[{e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}}]{pb\+Lna\+Power\+Critical\+Alarm}{, }\item[{e\+Bool\+\_\+t \texorpdfstring{$\ast$}{*}}]{pb\+Booster\+Power\+Critical\+Alarm}{}\end{DoxyParamCaption})}
+
+
+
+Update critical power of the laser. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em alarms} & detected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or library error message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{power_sensors_8c_source_l00186}{186}} of file \mbox{\hyperlink{power_sensors_8c_source}{power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_sensors_8c_abbfd3d79a28a89134ad3d5ea9ed06b0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{power_sensors_8c_abbfd3d79a28a89134ad3d5ea9ed06b0f_icgraph}
+\end{center}
+\end{figure}

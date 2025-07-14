@@ -1,0 +1,507 @@
+\doxysection{Unit\+Test\+Framework/build/test/runners/test\+\_\+power\+Sensors\+\_\+runner.c File Reference}
+\hypertarget{build_2test_2runners_2test__power_sensors__runner_8c}{}\label{build_2test_2runners_2test__power_sensors__runner_8c}\index{UnitTestFramework/build/test/runners/test\_powerSensors\_runner.c@{UnitTestFramework/build/test/runners/test\_powerSensors\_runner.c}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}cmock.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+power\+Sensors\+Update\+Database.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+power\+Sensors\+Config\+Update.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+laser\+Data.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+power\+Read\+Channel.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+booster\+State\+Machine.\+h"{}}\newline
+{\ttfamily \#include "{}mock\+\_\+lna\+State\+Machine.\+h"{}}\newline
+Include dependency graph for test\+\_\+power\+Sensors\+\_\+runner.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836}{set\+Up}} (void)
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662}{tear\+Down}} (void)
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a77d20eccd4449cd7e6b28405ec9ebb41}{test\+\_\+3\+\_\+1\+\_\+e\+Power\+Sensor\+Update\+\_\+\+Invalid\+Params\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a82ab9e0265e4c5bb1ed2fce344bdeee2}{test\+\_\+3\+\_\+2\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Mpb\+Power\+In2\+Channels\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_ad74db4f92289122b564c848bdd77c8ad}{test\+\_\+3\+\_\+3\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_acb079b82fd0c80555b3bc3f632fc2fef}{test\+\_\+3\+\_\+4\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Channel\+Run\+Failure\+\_\+test1\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a71bffd690567330507147e18287a6794}{test\+\_\+3\+\_\+5\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Channel\+Run\+Failure\+\_\+test2\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a6d16a155349f4f2a42f453c2e4633c09}{test\+\_\+3\+\_\+6\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel0\+\_\+\+Lna\+Channel1\+\_\+no\+Alarms\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a8a5b82c97c6c4525ee0249e37e61f2ed}{test\+\_\+3\+\_\+7\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel0\+\_\+\+Lna\+Channel0\+\_\+no\+Alarms\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_aac543411fb8d297ccdd83762b9a6b726}{test\+\_\+3\+\_\+8\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel0\+\_\+no\+Alarms\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a5163396a031779925fcdd8f1fe5c8041}{test\+\_\+3\+\_\+9\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+no\+Alarms\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_af279ac96def7a6385e8741aba4e95789}{test\+\_\+3\+\_\+10\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+\+Due\+To\+Los\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_ad9df27cae8a1a4f478c4edcf2a098fe7}{test\+\_\+3\+\_\+11\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+\+And\+\_\+\+Lna\+Alarm\+\_\+\+Due\+To\+Power\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a6b6be17a6e493fba8f83f6da22cdc89f}{test\+\_\+3\+\_\+12\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+Failure\+\_\+\+Fail}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a9af059d706f4945727c91751585ce0fe}{test\+\_\+3\+\_\+13\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Lna\+Alarm\+\_\+due\+To\+Power\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_abd8d8527785523e82531038e32126c44}{test\+\_\+3\+\_\+14\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+due\+To\+Power\+\_\+\+Success}} ()
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7}{reset\+Test}} (void)
+\item 
+void \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2}{verify\+Test}} (void)
+\item 
+int \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b}{Global\+Expect\+Count}}
+\item 
+int \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330}{Global\+Verify\+Order}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf}{Global\+Order\+Error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{build_2test_2runners_2test__power_sensors__runner_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!main@{main}}
+\index{main@{main}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00113}{113}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7}\label{build_2test_2runners_2test__power_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!resetTest@{resetTest}}
+\index{resetTest@{resetTest}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{resetTest()}{resetTest()}}
+{\footnotesize\ttfamily void reset\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00070}{70}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{build_2test_2runners_2test__power_sensors__runner_8c_afb3a9b98e779c4f69e72aca5aa9fa1d7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836}\label{build_2test_2runners_2test__power_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!setUp@{setUp}}
+\index{setUp@{setUp}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void set\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{__test__power_sensors_config_update_8c_source_l00005}{5}} of file \mbox{\hyperlink{__test__power_sensors_config_update_8c_source}{\+\_\+test\+\_\+power\+Sensors\+Config\+Update.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{build_2test_2runners_2test__power_sensors__runner_8c_a95c834d6178047ce9e1bce7cbfea2836_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662}\label{build_2test_2runners_2test__power_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void tear\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{__test__power_sensors_config_update_8c_source_l00009}{9}} of file \mbox{\hyperlink{__test__power_sensors_config_update_8c_source}{\+\_\+test\+\_\+power\+Sensors\+Config\+Update.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{build_2test_2runners_2test__power_sensors__runner_8c_a9909011e5fea0c018842eec4d93d0662_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_af279ac96def7a6385e8741aba4e95789}\label{build_2test_2runners_2test__power_sensors__runner_8c_af279ac96def7a6385e8741aba4e95789} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success@{test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success}}
+\index{test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success@{test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success()}{test\_3\_10\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_DueToLos\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+10\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+\+Due\+To\+Los\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l01341}{1341}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_af279ac96def7a6385e8741aba4e95789_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{build_2test_2runners_2test__power_sensors__runner_8c_af279ac96def7a6385e8741aba4e95789_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_ad9df27cae8a1a4f478c4edcf2a098fe7}\label{build_2test_2runners_2test__power_sensors__runner_8c_ad9df27cae8a1a4f478c4edcf2a098fe7} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success@{test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success}}
+\index{test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success@{test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success()}{test\_3\_11\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_And\_LnaAlarm\_DueToPower\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+11\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+\+And\+\_\+\+Lna\+Alarm\+\_\+\+Due\+To\+Power\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l01558}{1558}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_ad9df27cae8a1a4f478c4edcf2a098fe7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{build_2test_2runners_2test__power_sensors__runner_8c_ad9df27cae8a1a4f478c4edcf2a098fe7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a6b6be17a6e493fba8f83f6da22cdc89f}\label{build_2test_2runners_2test__power_sensors__runner_8c_a6b6be17a6e493fba8f83f6da22cdc89f} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail@{test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail}}
+\index{test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail@{test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail()}{test\_3\_12\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_ePowerSensorBoosterAlarmRunFailure\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+12\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+e\+Power\+Sensor\+Booster\+Alarm\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l01787}{1787}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a6b6be17a6e493fba8f83f6da22cdc89f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a9af059d706f4945727c91751585ce0fe}\label{build_2test_2runners_2test__power_sensors__runner_8c_a9af059d706f4945727c91751585ce0fe} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success@{test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success}}
+\index{test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success@{test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success()}{test\_3\_13\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_LnaAlarm\_dueToPower\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+13\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Lna\+Alarm\+\_\+due\+To\+Power\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l02022}{2022}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a9af059d706f4945727c91751585ce0fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{build_2test_2runners_2test__power_sensors__runner_8c_a9af059d706f4945727c91751585ce0fe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_abd8d8527785523e82531038e32126c44}\label{build_2test_2runners_2test__power_sensors__runner_8c_abd8d8527785523e82531038e32126c44} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success@{test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success}}
+\index{test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success@{test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success()}{test\_3\_14\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_BoosterAlarm\_dueToPower\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+14\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+\+Booster\+Alarm\+\_\+due\+To\+Power\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l02256}{2256}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_abd8d8527785523e82531038e32126c44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{build_2test_2runners_2test__power_sensors__runner_8c_abd8d8527785523e82531038e32126c44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a77d20eccd4449cd7e6b28405ec9ebb41}\label{build_2test_2runners_2test__power_sensors__runner_8c_a77d20eccd4449cd7e6b28405ec9ebb41} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail@{test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail}}
+\index{test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail@{test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail()}{test\_3\_1\_ePowerSensorUpdate\_InvalidParams\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+1\+\_\+e\+Power\+Sensor\+Update\+\_\+\+Invalid\+Params\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00069}{69}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a77d20eccd4449cd7e6b28405ec9ebb41_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{build_2test_2runners_2test__power_sensors__runner_8c_a77d20eccd4449cd7e6b28405ec9ebb41_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a82ab9e0265e4c5bb1ed2fce344bdeee2}\label{build_2test_2runners_2test__power_sensors__runner_8c_a82ab9e0265e4c5bb1ed2fce344bdeee2} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail@{test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail}}
+\index{test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail@{test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail()}{test\_3\_2\_ePowerSensorUpdate\_eMpbPowerIn2ChannelsRunFailure\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+2\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Mpb\+Power\+In2\+Channels\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00105}{105}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a82ab9e0265e4c5bb1ed2fce344bdeee2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{build_2test_2runners_2test__power_sensors__runner_8c_a82ab9e0265e4c5bb1ed2fce344bdeee2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_ad74db4f92289122b564c848bdd77c8ad}\label{build_2test_2runners_2test__power_sensors__runner_8c_ad74db4f92289122b564c848bdd77c8ad} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail@{test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail}}
+\index{test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail@{test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail()}{test\_3\_3\_ePowerSensorUpdate\_ePowerReadOffsetChannelRunFailure\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+3\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Offset\+Channel\+Run\+Failure\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00267}{267}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_ad74db4f92289122b564c848bdd77c8ad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_ad74db4f92289122b564c848bdd77c8ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_acb079b82fd0c80555b3bc3f632fc2fef}\label{build_2test_2runners_2test__power_sensors__runner_8c_acb079b82fd0c80555b3bc3f632fc2fef} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail@{test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail}}
+\index{test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail@{test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail()}{test\_3\_4\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test1\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+4\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Channel\+Run\+Failure\+\_\+test1\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00289}{289}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_acb079b82fd0c80555b3bc3f632fc2fef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{build_2test_2runners_2test__power_sensors__runner_8c_acb079b82fd0c80555b3bc3f632fc2fef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a71bffd690567330507147e18287a6794}\label{build_2test_2runners_2test__power_sensors__runner_8c_a71bffd690567330507147e18287a6794} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail@{test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail}}
+\index{test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail@{test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail()}{test\_3\_5\_ePowerSensorUpdate\_ePowerReadChannelRunFailure\_test2\_Fail()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+5\+\_\+e\+Power\+Sensor\+Update\+\_\+e\+Power\+Read\+Channel\+Run\+Failure\+\_\+test2\+\_\+\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00334}{334}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a71bffd690567330507147e18287a6794_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{build_2test_2runners_2test__power_sensors__runner_8c_a71bffd690567330507147e18287a6794_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a6d16a155349f4f2a42f453c2e4633c09}\label{build_2test_2runners_2test__power_sensors__runner_8c_a6d16a155349f4f2a42f453c2e4633c09} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success@{test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success}}
+\index{test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success@{test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success()}{test\_3\_6\_ePowerSensorUpdate\_boostChannel0\_LnaChannel1\_noAlarms\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+6\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel0\+\_\+\+Lna\+Channel1\+\_\+no\+Alarms\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00485}{485}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a6d16a155349f4f2a42f453c2e4633c09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{build_2test_2runners_2test__power_sensors__runner_8c_a6d16a155349f4f2a42f453c2e4633c09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a8a5b82c97c6c4525ee0249e37e61f2ed}\label{build_2test_2runners_2test__power_sensors__runner_8c_a8a5b82c97c6c4525ee0249e37e61f2ed} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success@{test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success}}
+\index{test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success@{test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success()}{test\_3\_7\_ePowerSensorUpdate\_boostChannel0\_LnaChannel0\_noAlarms\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+7\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel0\+\_\+\+Lna\+Channel0\+\_\+no\+Alarms\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00698}{698}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a8a5b82c97c6c4525ee0249e37e61f2ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{build_2test_2runners_2test__power_sensors__runner_8c_a8a5b82c97c6c4525ee0249e37e61f2ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_aac543411fb8d297ccdd83762b9a6b726}\label{build_2test_2runners_2test__power_sensors__runner_8c_aac543411fb8d297ccdd83762b9a6b726} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success@{test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success}}
+\index{test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success@{test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success()}{test\_3\_8\_ePowerSensorUpdate\_boostChannel1\_LnaChannel0\_noAlarms\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+8\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel0\+\_\+no\+Alarms\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l00912}{912}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_aac543411fb8d297ccdd83762b9a6b726_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{build_2test_2runners_2test__power_sensors__runner_8c_aac543411fb8d297ccdd83762b9a6b726_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a5163396a031779925fcdd8f1fe5c8041}\label{build_2test_2runners_2test__power_sensors__runner_8c_a5163396a031779925fcdd8f1fe5c8041} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success@{test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success}}
+\index{test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success@{test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success()}{test\_3\_9\_ePowerSensorUpdate\_boostChannel1\_LnaChannel1\_noAlarms\_Success()}}
+{\footnotesize\ttfamily void test\+\_\+3\+\_\+9\+\_\+e\+Power\+Sensor\+Update\+\_\+boost\+Channel1\+\_\+\+Lna\+Channel1\+\_\+no\+Alarms\+\_\+\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tests_2test__power_sensors_8c_source_l01126}{1126}} of file \mbox{\hyperlink{_tests_2test__power_sensors_8c_source}{test\+\_\+power\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{build_2test_2runners_2test__power_sensors__runner_8c_a5163396a031779925fcdd8f1fe5c8041_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{build_2test_2runners_2test__power_sensors__runner_8c_a5163396a031779925fcdd8f1fe5c8041_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2}\label{build_2test_2runners_2test__power_sensors__runner_8c_aeb6db8fdb0691ec531a093d12c3ff4c2} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!verifyTest@{verifyTest}}
+\index{verifyTest@{verifyTest}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{verifyTest()}{verifyTest()}}
+{\footnotesize\ttfamily void verify\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00079}{79}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b}\label{build_2test_2runners_2test__power_sensors__runner_8c_a719a4fcf367d1f23c73ec881194d299b} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!GlobalExpectCount@{GlobalExpectCount}}
+\index{GlobalExpectCount@{GlobalExpectCount}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalExpectCount}{GlobalExpectCount}}
+{\footnotesize\ttfamily int Global\+Expect\+Count}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00013}{13}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf}\label{build_2test_2runners_2test__power_sensors__runner_8c_a94d3e1da2ccba5f79767ec94774db1cf} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!GlobalOrderError@{GlobalOrderError}}
+\index{GlobalOrderError@{GlobalOrderError}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalOrderError}{GlobalOrderError}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} Global\+Order\+Error}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00015}{15}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+
+\Hypertarget{build_2test_2runners_2test__power_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330}\label{build_2test_2runners_2test__power_sensors__runner_8c_ac2b7788e16200424c9d7090905c05330} 
+\index{test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}!GlobalVerifyOrder@{GlobalVerifyOrder}}
+\index{GlobalVerifyOrder@{GlobalVerifyOrder}!test\_powerSensors\_runner.c@{test\_powerSensors\_runner.c}}
+\doxysubsubsection{\texorpdfstring{GlobalVerifyOrder}{GlobalVerifyOrder}}
+{\footnotesize\ttfamily int Global\+Verify\+Order}
+
+
+
+Definition at line \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source_l00014}{14}} of file \mbox{\hyperlink{build_2test_2runners_2test__power_sensors__runner_8c_source}{test\+\_\+power\+Sensors\+\_\+runner.\+c}}.
+

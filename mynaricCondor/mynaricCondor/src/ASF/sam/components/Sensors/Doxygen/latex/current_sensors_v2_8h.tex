@@ -1,0 +1,314 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+V2 Attempt Files/current\+Sensors\+V2.h File Reference}
+\hypertarget{current_sensors_v2_8h}{}\label{current_sensors_v2_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/V2 Attempt Files/currentSensorsV2.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/V2 Attempt Files/currentSensorsV2.h}}
+{\ttfamily \#include "{}mpblibs.\+h"{}}\newline
+{\ttfamily \#include "{}Laser\+Data.\+h"{}}\newline
+{\ttfamily \#include "{}glue.\+h"{}}\newline
+Include dependency graph for current\+Sensors\+V2.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{current_sensors_v2_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{current_sensors_v2_8h_a603b5d74b9aa1d611615944a5caa86f4}{LIST\+\_\+\+OF\+\_\+\+CURRENT\+\_\+\+CHANNELS}}
+\begin{DoxyCompactList}\small\item\em Define the slope intercept values for current inputs. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{current_sensors_v2_8h_a72f0110cac236d052ad4e009e6a3178d}{X}}(Current\+Channel\+Config\+Id,  slope\+Constant,  intercept\+Constant)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0}{e\+Current\+Channels\+Scaling\+\_\+t}} \{ \mbox{\hyperlink{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0aacff42f3b6140eef4d69b6f675344441}{e\+Number\+Of\+Channel\+Configurations}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the possible ADC channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{current_sensors_v2_8h_a1cda315b492179bf67ff0cc02cf0bf08}{v\+Current\+Sensors\+Init\+Internal\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the current scaling internal channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{current_sensors_v2_8h_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3}{v\+Current\+Sensors\+Factory\+Init\+Lna\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the current scaling internal channels for LNA. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{current_sensors_v2_8h_a9a85ca60c578193fb77cfcd4b3519561}{v\+Current\+Sensors\+Factory\+Init\+Booster\+Channels}} (void)
+\begin{DoxyCompactList}\small\item\em Init the current scaling internal channels for HPA. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{current_sensors_v2_8h_ad3b4ccc82c00e613cc68cb2b56acf051}{e\+Current\+Sensors\+Lna\+Config\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em set the current intercept scaling factor for the lna \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{current_sensors_v2_8h_a466deae2c4cf59603216b524f92ac98d}{e\+Current\+Sensors\+Booster\+Config\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em set the current intercept scaling factor for the booster \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{current_sensors_v2_8h_ae20a43e48fb44f44437096b8342c5f79}{e\+Current\+Sensor\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Update critical currents of the laser. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{current_sensors_v2_8h_ab5e159685d98b8f1d8a238e6de8e88d1}{e\+Current\+Sensing\+Get\+Current\+Value}} (\mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0}{e\+Current\+Channels\+Scaling\+\_\+t}} e\+Channel, float \texorpdfstring{$\ast$}{*}f\+CurrentmA, uint16\+\_\+t \texorpdfstring{$\ast$}{*}ul\+Current\+Raw)
+\begin{DoxyCompactList}\small\item\em init the calibration factors when nvm memory is empty or damage \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{current_sensors_v2_8h_a603b5d74b9aa1d611615944a5caa86f4}\index{currentSensorsV2.h@{currentSensorsV2.h}!LIST\_OF\_CURRENT\_CHANNELS@{LIST\_OF\_CURRENT\_CHANNELS}}
+\index{LIST\_OF\_CURRENT\_CHANNELS@{LIST\_OF\_CURRENT\_CHANNELS}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{LIST\_OF\_CURRENT\_CHANNELS}{LIST\_OF\_CURRENT\_CHANNELS}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a603b5d74b9aa1d611615944a5caa86f4} 
+\#define LIST\+\_\+\+OF\+\_\+\+CURRENT\+\_\+\+CHANNELS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{current_sensors_8c_a72f0110cac236d052ad4e009e6a3178d}{X}}(\ \ eAdcInternal28VPwrCurrentMonitorCH1\ \ \ \ \ \ \ \ ,0.69\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal28VPwrCurrentMonitorCH2\ \ \ \ \ ,0.69\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal28VPwrVoltageMonitorCH1\ \ \ \ \ ,0.0017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal28VPwrVoltageMonitorCH2\ \ \ \ \ ,0.0017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal7VPwrVoltageMonitorCH1\ \ \ \ \ \ ,0.00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal7VPwrVoltageMonitorCH2\ \ \ \ \ \ ,0.00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal3\_3VPower\_VoltageMonitor\ \ \ \ ,0.00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternal3VPower\_VoltageMonitor\ \ \ \ \ \ ,0.00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternalPowerCurrentMonitor\ \ \ \ \ \ \ \ \ ,0.69\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternalCanPwrCurrentMonitorCH1\ \ \ \ \ ,0.69\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcInternalCanPwrCurrentMonitorCH2\ \ \ \ \ ,0.69\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExLnaSingleModeldCurrentMonitor\ \ \ \ \ ,0.000220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExHpaSingleModeld\_CurrentMonitor\ \ \ \ ,0.000220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExHpaMultiModeld\_CurrentMonitor1\ \ \ \ ,0.0026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,-\/0.9818\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExternalLnaSm\_ld\_Bfm\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.000754\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExternalHpaSm\_ld\_Bfm\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0.000754\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,0\ )\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X(\ \ eAdcExHpaMultiModeld\_CurrentMonitor2\ \ \ \ ,0.0027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,-\/1.1719\ )}
+
+\end{DoxyCode}
+
+
+Define the slope intercept values for current inputs. 
+
+\begin{DoxyNote}{Note}
+Current\+Channel\+Config\+Id The identifier for the channel. 
+
+slope constant The slope filter constant. 
+
+intercept constant The intercept constant. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_v2_8h_source_l00034}{34}} of file \mbox{\hyperlink{current_sensors_v2_8h_source}{current\+Sensors\+V2.\+h}}.
+
+\Hypertarget{current_sensors_v2_8h_a72f0110cac236d052ad4e009e6a3178d}\index{currentSensorsV2.h@{currentSensorsV2.h}!X@{X}}
+\index{X@{X}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a72f0110cac236d052ad4e009e6a3178d} 
+\#define X(\begin{DoxyParamCaption}\item[{}]{Current\+Channel\+Config\+Id}{, }\item[{}]{slope\+Constant}{, }\item[{}]{intercept\+Constant}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CurrentChannelConfigId,}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_v2_8h_source_l00059}{59}} of file \mbox{\hyperlink{current_sensors_v2_8h_source}{current\+Sensors\+V2.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0}\index{currentSensorsV2.h@{currentSensorsV2.h}!eCurrentChannelsScaling\_t@{eCurrentChannelsScaling\_t}}
+\index{eCurrentChannelsScaling\_t@{eCurrentChannelsScaling\_t}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentChannelsScaling\_t}{eCurrentChannelsScaling\_t}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0} 
+enum \mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0}{e\+Current\+Channels\+Scaling\+\_\+t}}}
+
+
+
+Defines the possible ADC channels. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eNumberOfChannelConfigurations@{eNumberOfChannelConfigurations}!currentSensorsV2.h@{currentSensorsV2.h}}\index{currentSensorsV2.h@{currentSensorsV2.h}!eNumberOfChannelConfigurations@{eNumberOfChannelConfigurations}}}\Hypertarget{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0aacff42f3b6140eef4d69b6f675344441}\label{current_sensors_v2_8h_aa1138f17f2125e9faaa8e13ab7952dd0aacff42f3b6140eef4d69b6f675344441} 
+e\+Number\+Of\+Channel\+Configurations&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_v2_8h_source_l00057}{57}} of file \mbox{\hyperlink{current_sensors_v2_8h_source}{current\+Sensors\+V2.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{current_sensors_v2_8h_ab5e159685d98b8f1d8a238e6de8e88d1}\index{currentSensorsV2.h@{currentSensorsV2.h}!eCurrentSensingGetCurrentValue@{eCurrentSensingGetCurrentValue}}
+\index{eCurrentSensingGetCurrentValue@{eCurrentSensingGetCurrentValue}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensingGetCurrentValue()}{eCurrentSensingGetCurrentValue()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_ab5e159685d98b8f1d8a238e6de8e88d1} 
+e\+Mpb\+Error\+\_\+t e\+Current\+Sensing\+Get\+Current\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{current_sensors_8h_aa1138f17f2125e9faaa8e13ab7952dd0}{e\+Current\+Channels\+Scaling\+\_\+t}}}]{e\+Channel}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{f\+CurrentmA}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{ul\+Current\+Raw}{}\end{DoxyParamCaption})}
+
+
+
+init the calibration factors when nvm memory is empty or damage 
+
+Return value of current in mA and raw value 
+
+Definition at line \mbox{\hyperlink{current_sensors_v2_8c_source_l00264}{264}} of file \mbox{\hyperlink{current_sensors_v2_8c_source}{current\+Sensors\+V2.\+c}}.
+
+\Hypertarget{current_sensors_v2_8h_a466deae2c4cf59603216b524f92ac98d}\index{currentSensorsV2.h@{currentSensorsV2.h}!eCurrentSensorsBoosterConfigUpdate@{eCurrentSensorsBoosterConfigUpdate}}
+\index{eCurrentSensorsBoosterConfigUpdate@{eCurrentSensorsBoosterConfigUpdate}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsBoosterConfigUpdate()}{eCurrentSensorsBoosterConfigUpdate()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a466deae2c4cf59603216b524f92ac98d} 
+e\+Mpb\+Error\+\_\+t e\+Current\+Sensors\+Booster\+Config\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+set the current intercept scaling factor for the booster 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em e\+Channel} & the channel requested. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_8c_source_l00141}{141}} of file \mbox{\hyperlink{current_sensors_8c_source}{current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a466deae2c4cf59603216b524f92ac98d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{current_sensors_v2_8h_ad3b4ccc82c00e613cc68cb2b56acf051}\index{currentSensorsV2.h@{currentSensorsV2.h}!eCurrentSensorsLnaConfigUpdate@{eCurrentSensorsLnaConfigUpdate}}
+\index{eCurrentSensorsLnaConfigUpdate@{eCurrentSensorsLnaConfigUpdate}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsLnaConfigUpdate()}{eCurrentSensorsLnaConfigUpdate()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_ad3b4ccc82c00e613cc68cb2b56acf051} 
+e\+Mpb\+Error\+\_\+t e\+Current\+Sensors\+Lna\+Config\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+set the current intercept scaling factor for the lna 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em e\+Channel} & the channel requested. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_8c_source_l00132}{132}} of file \mbox{\hyperlink{current_sensors_8c_source}{current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_ad3b4ccc82c00e613cc68cb2b56acf051_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{current_sensors_v2_8h_ae20a43e48fb44f44437096b8342c5f79}\index{currentSensorsV2.h@{currentSensorsV2.h}!eCurrentSensorUpdate@{eCurrentSensorUpdate}}
+\index{eCurrentSensorUpdate@{eCurrentSensorUpdate}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorUpdate()}{eCurrentSensorUpdate()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_ae20a43e48fb44f44437096b8342c5f79} 
+e\+Mpb\+Error\+\_\+t e\+Current\+Sensor\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Update critical currents of the laser. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em none.} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{current_sensors_v2_8c_source_l00148}{148}} of file \mbox{\hyperlink{current_sensors_v2_8c_source}{current\+Sensors\+V2.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_ae20a43e48fb44f44437096b8342c5f79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{current_sensors_v2_8h_ae20a43e48fb44f44437096b8342c5f79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{current_sensors_v2_8h_a9a85ca60c578193fb77cfcd4b3519561}\index{currentSensorsV2.h@{currentSensorsV2.h}!vCurrentSensorsFactoryInitBoosterChannels@{vCurrentSensorsFactoryInitBoosterChannels}}
+\index{vCurrentSensorsFactoryInitBoosterChannels@{vCurrentSensorsFactoryInitBoosterChannels}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{vCurrentSensorsFactoryInitBoosterChannels()}{vCurrentSensorsFactoryInitBoosterChannels()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a9a85ca60c578193fb77cfcd4b3519561} 
+void v\+Current\+Sensors\+Factory\+Init\+Booster\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the current scaling internal channels for HPA. 
+
+
+
+Definition at line \mbox{\hyperlink{current_sensors_8c_source_l00113}{113}} of file \mbox{\hyperlink{current_sensors_8c_source}{current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a9a85ca60c578193fb77cfcd4b3519561_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a9a85ca60c578193fb77cfcd4b3519561_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{current_sensors_v2_8h_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3}\index{currentSensorsV2.h@{currentSensorsV2.h}!vCurrentSensorsFactoryInitLnaChannels@{vCurrentSensorsFactoryInitLnaChannels}}
+\index{vCurrentSensorsFactoryInitLnaChannels@{vCurrentSensorsFactoryInitLnaChannels}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{vCurrentSensorsFactoryInitLnaChannels()}{vCurrentSensorsFactoryInitLnaChannels()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3} 
+void v\+Current\+Sensors\+Factory\+Init\+Lna\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the current scaling internal channels for LNA. 
+
+
+
+Definition at line \mbox{\hyperlink{current_sensors_8c_source_l00102}{102}} of file \mbox{\hyperlink{current_sensors_8c_source}{current\+Sensors.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a1d2c9528ed1e1e8bb1ca8999f9bbb0f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{current_sensors_v2_8h_a1cda315b492179bf67ff0cc02cf0bf08}\index{currentSensorsV2.h@{currentSensorsV2.h}!vCurrentSensorsInitInternalChannels@{vCurrentSensorsInitInternalChannels}}
+\index{vCurrentSensorsInitInternalChannels@{vCurrentSensorsInitInternalChannels}!currentSensorsV2.h@{currentSensorsV2.h}}
+\doxysubsubsection{\texorpdfstring{vCurrentSensorsInitInternalChannels()}{vCurrentSensorsInitInternalChannels()}}
+{\footnotesize\ttfamily \label{current_sensors_v2_8h_a1cda315b492179bf67ff0cc02cf0bf08} 
+void v\+Current\+Sensors\+Init\+Internal\+Channels (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Init the current scaling internal channels. 
+
+
+
+Definition at line \mbox{\hyperlink{current_sensors_8c_source_l00056}{56}} of file \mbox{\hyperlink{current_sensors_8c_source}{current\+Sensors.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_sensors_v2_8h_a1cda315b492179bf67ff0cc02cf0bf08_icgraph}
+\end{center}
+\end{figure}

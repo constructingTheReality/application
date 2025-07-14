@@ -1,0 +1,70 @@
+\chapter{ceedling-\/bullseye}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e}{}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e}\index{ceedling-\/bullseye@{ceedling-\/bullseye}}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md0}{}\doxysection{\texorpdfstring{Plugin Overview}{Plugin Overview}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md0}
+Plugin for integrating Bullseye code coverage tool into Ceedling projects. This plugin requires a working license to Bullseye code coverage tools. The tools must be within the path or the path should be added to the environment in the {\ttfamily project.\+yml file}.\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md1}
+The bullseye plugin supports configuration options via your {\ttfamily project.\+yml} provided by Ceedling. The following is a typical configuration example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:bullseye:}
+\DoxyCodeLine{\ \ :auto\_license:\ TRUE}
+\DoxyCodeLine{:plugins:}
+\DoxyCodeLine{\ \ :bullseye\_lib\_path:\ []}
+\DoxyCodeLine{:paths:}
+\DoxyCodeLine{\ \ :bullseye\_toolchain\_include:\ []}
+\DoxyCodeLine{}
+\DoxyCodeLine{:tools:}
+\DoxyCodeLine{\ \ :bullseye\_instrumentation:}
+\DoxyCodeLine{\ \ \ \ :executable:\ covc}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ '-\/-\/file\ \$':\ ENVIRONMENT\_COVFILE}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/q}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ \$\{1\}}
+\DoxyCodeLine{\ \ :bullseye\_compiler:}
+\DoxyCodeLine{\ \ \ \ :executable:\ gcc}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/g}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/I"{}\$"{}:\ COLLECTION\_PATHS\_TEST\_SUPPORT\_SOURCE\_INCLUDE\_VENDOR}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/I"{}\$"{}:\ COLLECTION\_PATHS\_BULLSEYE\_TOOLCHAIN\_INCLUDE}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/D\$:\ COLLECTION\_DEFINES\_TEST\_AND\_VENDOR}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/DBULLSEYE\_COMPILER}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/c\ "{}\$\{1\}"{}}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/o\ "{}\$\{2\}"{}}
+\DoxyCodeLine{\ \ :bullseye\_linker:}
+\DoxyCodeLine{\ \ \ \ :executable:\ gcc}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ \$\{1\}}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/o\ \$\{2\}}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/L\$:\ PLUGINS\_BULLSEYE\_LIB\_PATH}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/lcov}
+\DoxyCodeLine{\ \ :bullseye\_fixture:}
+\DoxyCodeLine{\ \ \ \ :executable:\ \$\{1\}}
+\DoxyCodeLine{\ \ :bullseye\_report\_covsrc:}
+\DoxyCodeLine{\ \ \ \ :executable:\ covsrc}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ '-\/-\/file\ \$':\ ENVIRONMENT\_COVFILE}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/q}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/w140}
+\DoxyCodeLine{\ \ :bullseye\_report\_covfn:}
+\DoxyCodeLine{\ \ \ \ :executable:\ covfn}
+\DoxyCodeLine{\ \ \ \ :stderr\_redirect:\ :auto}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ '-\/-\/file\ \$':\ ENVIRONMENT\_COVFILE}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/-\/width\ 120}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/-\/no-\/source}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ '"{}\$\{1\}"{}'}
+\DoxyCodeLine{\ \ :bullseye\_browser:}
+\DoxyCodeLine{\ \ \ \ :executable:\ CoverageBrowser}
+\DoxyCodeLine{\ \ \ \ :background\_exec:\ :auto}
+\DoxyCodeLine{\ \ \ \ :optional:\ TRUE}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ '"{}\$"{}':\ ENVIRONMENT\_COVFILE}
+
+\end{DoxyCode}
+\hypertarget{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Example Usage}{Example Usage}}\label{md__unit_test_framework_2vendor_2ceedling_2plugins_2bullseye_2_r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ceedling\ bullseye:all\ utils:bullseye}
+
+\end{DoxyCode}
+ 

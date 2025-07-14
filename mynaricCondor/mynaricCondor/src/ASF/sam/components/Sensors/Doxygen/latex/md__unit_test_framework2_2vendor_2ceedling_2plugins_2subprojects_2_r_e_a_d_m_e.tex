@@ -1,0 +1,71 @@
+\chapter{ceedling-\/subprojects}
+\hypertarget{md__unit_test_framework2_2vendor_2ceedling_2plugins_2subprojects_2_r_e_a_d_m_e}{}\label{md__unit_test_framework2_2vendor_2ceedling_2plugins_2subprojects_2_r_e_a_d_m_e}\index{ceedling-\/subprojects@{ceedling-\/subprojects}}
+Plugin for supporting subprojects that are built as static libraries. It continues to support ~\newline
+ dependency tracking, without getting confused between your main project files and your ~\newline
+ subproject files. It accepts different compiler flags and linker flags, allowing you to ~\newline
+ optimize for your situation.
+
+First, you\textquotesingle{}re going to want to add the extension to your list of known extensions\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:extension:}
+\DoxyCodeLine{\ \ :subprojects:\ '.a'}
+
+\end{DoxyCode}
+
+
+Define a new section called \+:subprojects. There, you can list as many subprojects ~\newline
+ as you may need under the \+:paths key. For each, you specify a unique place to build ~\newline
+ and a unique name.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:subprojects:\ \ }
+\DoxyCodeLine{\ \ :paths:}
+\DoxyCodeLine{\ \ \ -\/\ :name:\ libprojectA}
+\DoxyCodeLine{\ \ \ \ \ :source:}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectA/first/dir}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectA/second/dir}
+\DoxyCodeLine{\ \ \ \ \ :include:}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectA/include/dir}
+\DoxyCodeLine{\ \ \ \ \ :build\_root:\ ./subprojectA/build/dir}
+\DoxyCodeLine{\ \ \ \ \ :defines:\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ DEFINE\_JUST\_FOR\_THIS\_FILE}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ AND\_ANOTHER}
+\DoxyCodeLine{\ \ \ -\/\ :name:\ libprojectB}
+\DoxyCodeLine{\ \ \ \ \ :source:}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectB/only/dir}
+\DoxyCodeLine{\ \ \ \ \ :include:}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectB/first/include/dir}
+\DoxyCodeLine{\ \ \ \ \ \ \ -\/\ ./subprojectB/second/include/dir}
+\DoxyCodeLine{\ \ \ \ \ :build\_root:\ ./subprojectB/build/dir}
+\DoxyCodeLine{\ \ \ \ \ :defines:\ []\ \#none\ for\ this\ one}
+
+\end{DoxyCode}
+
+
+You can specify the compiler and linker, just as you would a release build\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:tools:}
+\DoxyCodeLine{\ \ :subprojects\_compiler:}
+\DoxyCodeLine{\ \ \ \ :executable:\ gcc}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/g}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/I"{}\$"{}:\ COLLECTION\_PATHS\_SUBPROJECTS}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/D\$:\ COLLECTION\_DEFINES\_SUBPROJECTS}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/c\ "{}\$\{1\}"{}}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/o\ "{}\$\{2\}"{}}
+\DoxyCodeLine{\ \ :subprojects\_linker:}
+\DoxyCodeLine{\ \ \ \ :executable:\ ar}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ rcs}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ \$\{2\}}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ \$\{1\}}
+
+\end{DoxyCode}
+
+
+That\textquotesingle{}s all there is to it! Happy Hacking! 

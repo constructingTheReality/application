@@ -1,0 +1,31 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Sensors\+Alarm\+Validate\+Limits.h}
+\hypertarget{power_sensors_alarm_validate_limits_8h_source}{}\label{power_sensors_alarm_validate_limits_8h_source}\mbox{\hyperlink{power_sensors_alarm_validate_limits_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00016}00016\ \textcolor{comment}{/*\ Header\ guard\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ POWERSENSORSALARMVALIDATELIMITS\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ POWERSENSORSALARMVALIDATELIMITS\_H\_}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00019}00019\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}mpblibs.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}dictionaryUtils.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}can428Packet.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}can408Packet.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}can402Packet.h"{}}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00026}00026\ \textcolor{comment}{/*\ Define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00027}00027\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00028}00028\ \textcolor{comment}{/*\ Exported\ enum\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00029}00029\ \textcolor{comment}{/*\ Exported\ struct\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00042}00042\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_alarm_validate_limits_8h_a1061f2aadb6165590d7d5cc99dff7aa5}{ePowerSensorValidateOutputLimits}}(\ eBool\_t*\ pbOutputCheckC408,\ \textcolor{keywordtype}{float}\ fHighAlarmLimitPowerOutput,\ \textcolor{keywordtype}{float}\ fLowAlarmLimitPowerOutput,\ eBool\_t\ bIsBooster);}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00052}00052\ eMpbError\_t\ \mbox{\hyperlink{power_sensors_alarm_validate_limits_8h_a35b73986f8adc01db899b9f9e56c9b69}{ePowerSensorValidateInputLimits}}(\ eBool\_t*\ pbInputCheckC408,\ \ \textcolor{keywordtype}{float}\ fHighAlarmLimitPowerInput,\ \textcolor{keywordtype}{float}\ fLowAlarmLimitPowerInput,\ eBool\_t\ bIsBooster);}
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{power_sensors_alarm_validate_limits_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ POWERSENSORSALARMVALIDATELIMITS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

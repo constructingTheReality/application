@@ -1,0 +1,658 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/mocks/mock\+\_\+current\+Sensorsread\+Channel.h File Reference}
+\hypertarget{mock__current_sensorsread_channel_8h}{}\label{mock__current_sensorsread_channel_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_currentSensorsreadChannel.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_currentSensorsreadChannel.h}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}current\+Sensorsread\+Channel.\+h"{}}\newline
+Include dependency graph for mock\+\_\+current\+Sensorsread\+Channel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a594d040b8feaa659cdb8e7bad97fd292}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a88d89a20587ddda95c9767646299bf3e}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a1a05155b0f701d12673e959d21599597}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a6f529f1785f8ecf46f7f4b8f50bdc6df}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+And\+Return}}(x\+Stream,  us\+Offset,  x\+Current\+Input\+Scaling,  pf\+Current\+Readed\+In\+Ma,  pus\+Current\+Raw,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a97a76e7e8b1b8e577fb9dfaf8fa4903b}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a6505a404bb7da1b44125970696f0f314}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_aa6fa6badc02ff3c7071a6952daf958e6}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return}}(x\+Stream,  us\+Offset,  x\+Current\+Input\+Scaling,  pf\+Current\+Readed\+In\+Ma,  pf\+Current\+Readed\+In\+Ma\+\_\+\+Depth,  pus\+Current\+Raw,  pus\+Current\+Raw\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a93977d8a0476fcadb4dbb02f32afdf38}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma}}(pf\+Current\+Readed\+In\+Ma)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a4f0d474f3b60091c2edecc03e80edfe0}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma}}(pf\+Current\+Readed\+In\+Ma,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ac923c24b2ebfbe595daa529fabd8e49f}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma}}(pf\+Current\+Readed\+In\+Ma,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a15460d986b0b8d39bc6fb6f4fab4fd66}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Current\+Raw}}(pus\+Current\+Raw)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a5cadca6f9cb8e18c50fbc0b6f114dffd}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Current\+Raw}}(pus\+Current\+Raw,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a52fcb577a3433966a0a278a7743a0e43}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Current\+Raw}}(pus\+Current\+Raw,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a8265c32f823bfd96287026bda4962be5}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Stream}}()
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ac499f19481343e722855b3f94670e85d}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+us\+Offset}}()
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a9de984b5fef0a38916b6242731e37284}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Current\+Input\+Scaling}}()
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ae1f3fa7c154ac35de638e388b07e8878}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pf\+Current\+Readed\+In\+Ma}}()
+\item 
+\#define \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ae0ba43e48e252e475a731e351e2bfce7}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Current\+Raw}}()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}{CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK}}) (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Current\+Input\+Scaling\+\_\+t x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw, int cmock\+\_\+num\+\_\+calls)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a78f66db70f4f913c8f26a523aca117cc}{mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a8c9482ea787f574ab437627667f97ca6}{mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Destroy}} (void)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a86d814cbe67f211586daeee34a96cb9e}{mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Verify}} (void)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a7c0c6b7fd323d99cf4e3934755ade2a2}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a86c65c31414f883fb4edc3a2878af923}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_aa19706fa7d346c419334269d4881b783}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a579b06f8a89c978f0eeb379eb1aced97}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Current\+Input\+Scaling\+\_\+t x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a8251304a457d82a08a7d1a12a550b260}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}{CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a6505a404bb7da1b44125970696f0f314}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub}} (\mbox{\hyperlink{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}{CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a9f705d98647d0721e4ac1341a7a85528}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Current\+Input\+Scaling\+\_\+t x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, int pf\+Current\+Readed\+In\+Ma\+\_\+\+Depth, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw, int pus\+Current\+Raw\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ab6755649b41084ebe91a1d32a7cc33e8}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a3e4695c73ab23b669ceabb9fed8db9f2}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Current\+Raw}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_ac881b0524c4910343a6d232e9706c2fe}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Stream}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a35e2f51136b52e602d7a43fe25b87ee0}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+us\+Offset}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_a9c1a7f521236cea69d1f3490e2834846}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Current\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_aa551d2e567e50773efbe1b098c5a065a}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pf\+Current\+Readed\+In\+Ma}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__current_sensorsread_channel_8h_af91ee99ba6a246bd41c883be56987dfd}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Current\+Raw}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mock__current_sensorsread_channel_8h_a6f529f1785f8ecf46f7f4b8f50bdc6df}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ExpectAndReturn@{eCurrentSensorsReadChannelRun\_ExpectAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_ExpectAndReturn@{eCurrentSensorsReadChannelRun\_ExpectAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ExpectAndReturn}{eCurrentSensorsReadChannelRun\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a6f529f1785f8ecf46f7f4b8f50bdc6df} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{x\+Stream}{, }\item[{}]{us\+Offset}{, }\item[{}]{x\+Current\+Input\+Scaling}{, }\item[{}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{}]{pus\+Current\+Raw}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a579b06f8a89c978f0eeb379eb1aced97}{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ xStream,\ usOffset,\ xCurrentInputScaling,\ pfCurrentReadedInMa,\ pusCurrentRaw,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00033}{33}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a1a05155b0f701d12673e959d21599597}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn@{eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn@{eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn}{eCurrentSensorsReadChannelRun\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a1a05155b0f701d12673e959d21599597} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_aa19706fa7d346c419334269d4881b783}{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00031}{31}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_aa6fa6badc02ff3c7071a6952daf958e6}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn@{eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn@{eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn}{eCurrentSensorsReadChannelRun\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_aa6fa6badc02ff3c7071a6952daf958e6} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{x\+Stream}{, }\item[{}]{us\+Offset}{, }\item[{}]{x\+Current\+Input\+Scaling}{, }\item[{}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{}]{pf\+Current\+Readed\+In\+Ma\+\_\+\+Depth}{, }\item[{}]{pus\+Current\+Raw}{, }\item[{}]{pus\+Current\+Raw\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a9f705d98647d0721e4ac1341a7a85528}{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ xStream,\ usOffset,\ xCurrentInputScaling,\ pfCurrentReadedInMa,\ pfCurrentReadedInMa\_Depth,\ pusCurrentRaw,\ pusCurrentRaw\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00039}{39}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a594d040b8feaa659cdb8e7bad97fd292}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreAndReturn@{eCurrentSensorsReadChannelRun\_IgnoreAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreAndReturn@{eCurrentSensorsReadChannelRun\_IgnoreAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreAndReturn}{eCurrentSensorsReadChannelRun\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a594d040b8feaa659cdb8e7bad97fd292} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a7c0c6b7fd323d99cf4e3934755ade2a2}{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00027}{27}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_ae1f3fa7c154ac35de638e388b07e8878}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa}{eCurrentSensorsReadChannelRun\_IgnoreArg\_pfCurrentReadedInMa}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ae1f3fa7c154ac35de638e388b07e8878} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pf\+Current\+Readed\+In\+Ma(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_aa551d2e567e50773efbe1b098c5a065a}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00055}{55}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_ae0ba43e48e252e475a731e351e2bfce7}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw}{eCurrentSensorsReadChannelRun\_IgnoreArg\_pusCurrentRaw}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ae0ba43e48e252e475a731e351e2bfce7} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+pus\+Current\+Raw(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_af91ee99ba6a246bd41c883be56987dfd}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00057}{57}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_ac499f19481343e722855b3f94670e85d}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset@{eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset@{eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset}{eCurrentSensorsReadChannelRun\_IgnoreArg\_usOffset}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ac499f19481343e722855b3f94670e85d} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+us\+Offset(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a35e2f51136b52e602d7a43fe25b87ee0}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00051}{51}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a9de984b5fef0a38916b6242731e37284}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling@{eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling@{eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling}{eCurrentSensorsReadChannelRun\_IgnoreArg\_xCurrentInputScaling}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a9de984b5fef0a38916b6242731e37284} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Current\+Input\+Scaling(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a9c1a7f521236cea69d1f3490e2834846}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00053}{53}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a8265c32f823bfd96287026bda4962be5}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream@{eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream}}
+\index{eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream@{eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream}{eCurrentSensorsReadChannelRun\_IgnoreArg\_xStream}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a8265c32f823bfd96287026bda4962be5} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Ignore\+Arg\+\_\+x\+Stream(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_ac881b0524c4910343a6d232e9706c2fe}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00049}{49}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a4f0d474f3b60091c2edecc03e80edfe0}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa}{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pfCurrentReadedInMa}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a4f0d474f3b60091c2edecc03e80edfe0} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma(\begin{DoxyParamCaption}\item[{}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_ab6755649b41084ebe91a1d32a7cc33e8}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa}}(\_\_LINE\_\_,\ pfCurrentReadedInMa,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pfCurrentReadedInMa))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00042}{42}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a5cadca6f9cb8e18c50fbc0b6f114dffd}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw}{eCurrentSensorsReadChannelRun\_ReturnArrayThruPtr\_pusCurrentRaw}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a5cadca6f9cb8e18c50fbc0b6f114dffd} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+pus\+Current\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Current\+Raw}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a3e4695c73ab23b669ceabb9fed8db9f2}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw}}(\_\_LINE\_\_,\ pusCurrentRaw,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pusCurrentRaw))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00046}{46}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_ac923c24b2ebfbe595daa529fabd8e49f}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa}{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pfCurrentReadedInMa}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ac923c24b2ebfbe595daa529fabd8e49f} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma(\begin{DoxyParamCaption}\item[{}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_ab6755649b41084ebe91a1d32a7cc33e8}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa}}(\_\_LINE\_\_,\ pfCurrentReadedInMa,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00043}{43}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a52fcb577a3433966a0a278a7743a0e43}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw}{eCurrentSensorsReadChannelRun\_ReturnMemThruPtr\_pusCurrentRaw}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a52fcb577a3433966a0a278a7743a0e43} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Current\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Current\+Raw}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a3e4695c73ab23b669ceabb9fed8db9f2}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw}}(\_\_LINE\_\_,\ pusCurrentRaw,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00047}{47}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a93977d8a0476fcadb4dbb02f32afdf38}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa}{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pfCurrentReadedInMa}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a93977d8a0476fcadb4dbb02f32afdf38} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma(\begin{DoxyParamCaption}\item[{}]{pf\+Current\+Readed\+In\+Ma}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_ab6755649b41084ebe91a1d32a7cc33e8}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa}}(\_\_LINE\_\_,\ pfCurrentReadedInMa,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00041}{41}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a15460d986b0b8d39bc6fb6f4fab4fd66}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw}{eCurrentSensorsReadChannelRun\_ReturnThruPtr\_pusCurrentRaw}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a15460d986b0b8d39bc6fb6f4fab4fd66} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Return\+Thru\+Ptr\+\_\+pus\+Current\+Raw(\begin{DoxyParamCaption}\item[{}]{pus\+Current\+Raw}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a3e4695c73ab23b669ceabb9fed8db9f2}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw}}(\_\_LINE\_\_,\ pusCurrentRaw,\ \textcolor{keyword}{sizeof}(uint16\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00045}{45}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a88d89a20587ddda95c9767646299bf3e}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_StopIgnore@{eCurrentSensorsReadChannelRun\_StopIgnore}}
+\index{eCurrentSensorsReadChannelRun\_StopIgnore@{eCurrentSensorsReadChannelRun\_StopIgnore}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_StopIgnore}{eCurrentSensorsReadChannelRun\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a88d89a20587ddda95c9767646299bf3e} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a86c65c31414f883fb4edc3a2878af923}{eCurrentSensorsReadChannelRun\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00029}{29}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a97a76e7e8b1b8e577fb9dfaf8fa4903b}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_StubWithCallback@{eCurrentSensorsReadChannelRun\_StubWithCallback}}
+\index{eCurrentSensorsReadChannelRun\_StubWithCallback@{eCurrentSensorsReadChannelRun\_StubWithCallback}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_StubWithCallback}{eCurrentSensorsReadChannelRun\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a97a76e7e8b1b8e577fb9dfaf8fa4903b} 
+\#define e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__current_sensorsread_channel_8c_a6505a404bb7da1b44125970696f0f314}{e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00038}{38}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK@{CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK}}
+\index{CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK@{CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK}{CMOCK\_eCurrentSensorsReadChannelRun\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK) (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, x\+Current\+Input\+Scaling\+\_\+t x\+Current\+Input\+Scaling, float \texorpdfstring{$\ast$}{*}pf\+Current\+Readed\+In\+Ma, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Current\+Raw, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source_l00035}{35}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8h_source}{mock\+\_\+current\+Sensorsread\+Channel.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mock__current_sensorsread_channel_8h_a8251304a457d82a08a7d1a12a550b260}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_AddCallback@{eCurrentSensorsReadChannelRun\_AddCallback}}
+\index{eCurrentSensorsReadChannelRun\_AddCallback@{eCurrentSensorsReadChannelRun\_AddCallback}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_AddCallback()}{eCurrentSensorsReadChannelRun\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a8251304a457d82a08a7d1a12a550b260} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}{CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00244}{244}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a579b06f8a89c978f0eeb379eb1aced97}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockExpectAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn()}{eCurrentSensorsReadChannelRun\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a579b06f8a89c978f0eeb379eb1aced97} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{handle\+\_\+t}]{x\+Stream}{, }\item[{uint16\+\_\+t}]{us\+Offset}{, }\item[{x\+Current\+Input\+Scaling\+\_\+t}]{x\+Current\+Input\+Scaling}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Current\+Raw}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00228}{228}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a579b06f8a89c978f0eeb379eb1aced97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_aa19706fa7d346c419334269d4881b783}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn()}{eCurrentSensorsReadChannelRun\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_aa19706fa7d346c419334269d4881b783} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00213}{213}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_aa19706fa7d346c419334269d4881b783_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a9f705d98647d0721e4ac1341a7a85528}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn@{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn()}{eCurrentSensorsReadChannelRun\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a9f705d98647d0721e4ac1341a7a85528} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{handle\+\_\+t}]{x\+Stream}{, }\item[{uint16\+\_\+t}]{us\+Offset}{, }\item[{x\+Current\+Input\+Scaling\+\_\+t}]{x\+Current\+Input\+Scaling}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{int}]{pf\+Current\+Readed\+In\+Ma\+\_\+\+Depth}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Current\+Raw}{, }\item[{int}]{pus\+Current\+Raw\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00258}{258}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a9f705d98647d0721e4ac1341a7a85528_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a7c0c6b7fd323d99cf4e3934755ade2a2}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn@{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn@{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn()}{eCurrentSensorsReadChannelRun\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a7c0c6b7fd323d99cf4e3934755ade2a2} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00192}{192}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a7c0c6b7fd323d99cf4e3934755ade2a2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_aa551d2e567e50773efbe1b098c5a065a}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa()}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pfCurrentReadedInMa()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_aa551d2e567e50773efbe1b098c5a065a} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pf\+Current\+Readed\+In\+Ma (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00312}{312}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_aa551d2e567e50773efbe1b098c5a065a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_af91ee99ba6a246bd41c883be56987dfd}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw()}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_pusCurrentRaw()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_af91ee99ba6a246bd41c883be56987dfd} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+pus\+Current\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00319}{319}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_af91ee99ba6a246bd41c883be56987dfd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a35e2f51136b52e602d7a43fe25b87ee0}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset()}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_usOffset()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a35e2f51136b52e602d7a43fe25b87ee0} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+us\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00298}{298}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a35e2f51136b52e602d7a43fe25b87ee0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a9c1a7f521236cea69d1f3490e2834846}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling()}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xCurrentInputScaling()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a9c1a7f521236cea69d1f3490e2834846} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Current\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00305}{305}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a9c1a7f521236cea69d1f3490e2834846_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_ac881b0524c4910343a6d232e9706c2fe}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream}}
+\index{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream@{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream()}{eCurrentSensorsReadChannelRun\_CMockIgnoreArg\_xStream()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ac881b0524c4910343a6d232e9706c2fe} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Ignore\+Arg\+\_\+x\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00291}{291}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_ac881b0524c4910343a6d232e9706c2fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_ab6755649b41084ebe91a1d32a7cc33e8}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa}}
+\index{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa@{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa()}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pfCurrentReadedInMa()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_ab6755649b41084ebe91a1d32a7cc33e8} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pf\+Current\+Readed\+In\+Ma (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Current\+Readed\+In\+Ma}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00273}{273}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_ab6755649b41084ebe91a1d32a7cc33e8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a3e4695c73ab23b669ceabb9fed8db9f2}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw}}
+\index{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw@{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw()}{eCurrentSensorsReadChannelRun\_CMockReturnMemThruPtr\_pusCurrentRaw()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a3e4695c73ab23b669ceabb9fed8db9f2} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+pus\+Current\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Current\+Raw}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00282}{282}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a3e4695c73ab23b669ceabb9fed8db9f2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a86c65c31414f883fb4edc3a2878af923}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_CMockStopIgnore@{eCurrentSensorsReadChannelRun\_CMockStopIgnore}}
+\index{eCurrentSensorsReadChannelRun\_CMockStopIgnore@{eCurrentSensorsReadChannelRun\_CMockStopIgnore}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_CMockStopIgnore()}{eCurrentSensorsReadChannelRun\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a86c65c31414f883fb4edc3a2878af923} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00206}{206}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a86c65c31414f883fb4edc3a2878af923_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a6505a404bb7da1b44125970696f0f314}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!eCurrentSensorsReadChannelRun\_Stub@{eCurrentSensorsReadChannelRun\_Stub}}
+\index{eCurrentSensorsReadChannelRun\_Stub@{eCurrentSensorsReadChannelRun\_Stub}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{eCurrentSensorsReadChannelRun\_Stub()}{eCurrentSensorsReadChannelRun\_Stub()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a6505a404bb7da1b44125970696f0f314} 
+void e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__current_sensorsread_channel_8h_a0aefe42c2831fef4efcb1f252e06d035}{CMOCK\+\_\+e\+Current\+Sensors\+Read\+Channel\+Run\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00251}{251}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+\Hypertarget{mock__current_sensorsread_channel_8h_a8c9482ea787f574ab437627667f97ca6}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!mock\_currentSensorsreadChannel\_Destroy@{mock\_currentSensorsreadChannel\_Destroy}}
+\index{mock\_currentSensorsreadChannel\_Destroy@{mock\_currentSensorsreadChannel\_Destroy}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_currentSensorsreadChannel\_Destroy()}{mock\_currentSensorsreadChannel\_Destroy()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a8c9482ea787f574ab437627667f97ca6} 
+void mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00080}{80}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a8c9482ea787f574ab437627667f97ca6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a8c9482ea787f574ab437627667f97ca6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a78f66db70f4f913c8f26a523aca117cc}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!mock\_currentSensorsreadChannel\_Init@{mock\_currentSensorsreadChannel\_Init}}
+\index{mock\_currentSensorsreadChannel\_Init@{mock\_currentSensorsreadChannel\_Init}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_currentSensorsreadChannel\_Init()}{mock\_currentSensorsreadChannel\_Init()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a78f66db70f4f913c8f26a523aca117cc} 
+void mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00075}{75}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__current_sensorsread_channel_8h_a78f66db70f4f913c8f26a523aca117cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__current_sensorsread_channel_8h_a86d814cbe67f211586daeee34a96cb9e}\index{mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}!mock\_currentSensorsreadChannel\_Verify@{mock\_currentSensorsreadChannel\_Verify}}
+\index{mock\_currentSensorsreadChannel\_Verify@{mock\_currentSensorsreadChannel\_Verify}!mock\_currentSensorsreadChannel.h@{mock\_currentSensorsreadChannel.h}}
+\doxysubsubsection{\texorpdfstring{mock\_currentSensorsreadChannel\_Verify()}{mock\_currentSensorsreadChannel\_Verify()}}
+{\footnotesize\ttfamily \label{mock__current_sensorsread_channel_8h_a86d814cbe67f211586daeee34a96cb9e} 
+void mock\+\_\+current\+Sensorsread\+Channel\+\_\+\+Verify (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source_l00056}{56}} of file \mbox{\hyperlink{mock__current_sensorsread_channel_8c_source}{mock\+\_\+current\+Sensorsread\+Channel.\+c}}.
+

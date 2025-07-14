@@ -1,0 +1,70 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/vendor/ceedling/plugins/command\+\_\+hooks Directory Reference}
+\hypertarget{dir_7f2d042ac0dc124dfe41c3089d6dda6b}{}\label{dir_7f2d042ac0dc124dfe41c3089d6dda6b}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/command\_hooks Directory Reference@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/vendor/ceedling/plugins/command\_hooks Directory Reference}}
+Directory dependency graph for command\+\_\+hooks\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{dir_7f2d042ac0dc124dfe41c3089d6dda6b_dep}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+Plugin for easily calling command line tools at various points in the build process
+
+Define any of these sections in \+:tools\+: to provide additional hooks to be called on demand\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:pre\_mock\_generate}
+\DoxyCodeLine{:post\_mock\_generate}
+\DoxyCodeLine{:pre\_runner\_generate}
+\DoxyCodeLine{:post\_runner\_generate}
+\DoxyCodeLine{:pre\_compile\_execute}
+\DoxyCodeLine{:post\_compile\_execute}
+\DoxyCodeLine{:pre\_link\_execute}
+\DoxyCodeLine{:post\_link\_execute}
+\DoxyCodeLine{:pre\_test\_fixture\_execute}
+\DoxyCodeLine{:pre\_test}
+\DoxyCodeLine{:post\_test}
+\DoxyCodeLine{:pre\_release}
+\DoxyCodeLine{:post\_release}
+\DoxyCodeLine{:pre\_build}
+\DoxyCodeLine{:post\_build}
+
+\end{DoxyCode}
+
+
+Each of these tools can support an \+:executable string and an \+:arguments list, like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:tools:}
+\DoxyCodeLine{\ \ :post\_link\_execute:}
+\DoxyCodeLine{\ \ \ \ :executable:\ objcopy.exe}
+\DoxyCodeLine{\ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ \$\{1\}\ \#This\ is\ replaced\ with\ the\ executable\ name}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ output.srec}
+\DoxyCodeLine{\ \ \ \ \ \ -\/\ -\/-\/strip-\/all}
+
+\end{DoxyCode}
+
+
+You may also specify an array of executables to be called in a particular place, like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{:tools:}
+\DoxyCodeLine{\ \ :post\_test:}
+\DoxyCodeLine{\ \ \ \ -\/\ \ :executable:\ echo}
+\DoxyCodeLine{\ \ \ \ \ \ \ :arguments:\ "{}\$\{1\}\ was\ glorious!"{}}
+\DoxyCodeLine{\ \ \ \ -\/\ \ :executable:\ echo}
+\DoxyCodeLine{\ \ \ \ \ \ \ :arguments:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ -\/\ it\ kinda\ made\ me\ cry\ a\ little.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ -\/\ you?}
+
+\end{DoxyCode}
+
+
+Please note that it varies which arguments are being parsed down to the hooks. For now see {\ttfamily command\+\_\+hooks.\+rb} to figure out which suits you best. Happy Tweaking! 

@@ -1,0 +1,130 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/power\+Read\+Channel.h File Reference}
+\hypertarget{power_read_channel_8h}{}\label{power_read_channel_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/powerReadChannel.h}}
+
+
+power\+Read\+Channel header file.  
+
+
+{\ttfamily \#include "{}mpblibs.\+h"{}}\newline
+{\ttfamily \#include "{}glue.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors.\+h"{}}\newline
+Include dependency graph for power\+Read\+Channel.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_read_channel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_read_channel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1}{e\+Power\+Read\+Offset\+Channel\+Run}} (uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Internal\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+External\+Offset1)
+\begin{DoxyCompactList}\small\item\em get the offset in raw data. this info will be used for calculate the power in the other channels. \end{DoxyCompactList}\item 
+e\+Mpb\+Error\+\_\+t \mbox{\hyperlink{power_read_channel_8h_acdb1c09066c33f53244861da8d347e80}{e\+Power\+Read\+Channel\+Run}} (handle\+\_\+t x\+Stream, uint16\+\_\+t us\+Offset, float f\+Slope, float f\+Intercept, float \texorpdfstring{$\ast$}{*}pf\+Power\+Readed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}pus\+Power\+Raw)
+\begin{DoxyCompactList}\small\item\em get temperature value for a specific channel \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+power\+Read\+Channel header file. 
+
+\begin{DoxyAuthor}{Author}
+juan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 2024-\/05-\/30 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+MPB, Montreal, Qc \doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT 2024 MPB, Montreal, Quebec, Canada\end{center} }
+\end{DoxyCopyright}
+\doxysubsubsection*{\begin{center}\copyright{} All rights reserved.\end{center} }
+
+~\newline
+~\newline
+ \begin{center}This document contains confidential and proprietary information of MPB (subject to a non-\/disclosure agreement) and shall\end{center}  \begin{center}not be disclosed, distributed, or reproduced in whole or in part, without the prior written authorization of MPB.\end{center}  
+
+Definition in file \mbox{\hyperlink{power_read_channel_8h_source}{power\+Read\+Channel.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{power_read_channel_8h_acdb1c09066c33f53244861da8d347e80}\index{powerReadChannel.h@{powerReadChannel.h}!ePowerReadChannelRun@{ePowerReadChannelRun}}
+\index{ePowerReadChannelRun@{ePowerReadChannelRun}!powerReadChannel.h@{powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadChannelRun()}{ePowerReadChannelRun()}}
+{\footnotesize\ttfamily \label{power_read_channel_8h_acdb1c09066c33f53244861da8d347e80} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Read\+Channel\+Run (\begin{DoxyParamCaption}\item[{handle\+\_\+t}]{x\+Stream}{, }\item[{uint16\+\_\+t}]{us\+Offset}{, }\item[{float}]{f\+Slope}{, }\item[{float}]{f\+Intercept}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{pf\+Power\+Readed}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Power\+Raw}{}\end{DoxyParamCaption})}
+
+
+
+get temperature value for a specific channel 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+Stream} & the driver hardware number \\
+\hline
+\mbox{\texttt{ in}}  & {\em us\+Offset} & needed to calcul the input power. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pf\+Temperature\+Readed} & the temperature read in c. \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Critical\+Analog\+Power} & the power reads. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{power_read_channel_8c_source_l00066}{66}} of file \mbox{\hyperlink{power_read_channel_8c_source}{power\+Read\+Channel.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_read_channel_8h_acdb1c09066c33f53244861da8d347e80_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1}\index{powerReadChannel.h@{powerReadChannel.h}!ePowerReadOffsetChannelRun@{ePowerReadOffsetChannelRun}}
+\index{ePowerReadOffsetChannelRun@{ePowerReadOffsetChannelRun}!powerReadChannel.h@{powerReadChannel.h}}
+\doxysubsubsection{\texorpdfstring{ePowerReadOffsetChannelRun()}{ePowerReadOffsetChannelRun()}}
+{\footnotesize\ttfamily \label{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1} 
+e\+Mpb\+Error\+\_\+t e\+Power\+Read\+Offset\+Channel\+Run (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+Internal\+Offset}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{pus\+External\+Offset1}{}\end{DoxyParamCaption})}
+
+
+
+get the offset in raw data. this info will be used for calculate the power in the other channels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em pus\+Internal\+Offset} & offset in internal ADC channel 12. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pus\+External\+Offset} & offset in external ADC channel 06. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pus\+External\+Offset1} & offset in external ADC channel 23. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{power_read_channel_8c_source_l00023}{23}} of file \mbox{\hyperlink{power_read_channel_8c_source}{power\+Read\+Channel.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{power_read_channel_8h_aa894f8700120f30e5d3a63ffecd61ca1_icgraph}
+\end{center}
+\end{figure}

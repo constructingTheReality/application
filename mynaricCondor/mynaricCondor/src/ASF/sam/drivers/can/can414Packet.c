@@ -48,7 +48,8 @@ eMpbError_t eMpbCan414Encode( c414StatusDefinition_t *c414StatusDefinition, eBoo
 	BytesUnion	cxLnaOpticalInputPower;
 	BytesUnion	cxUnitBaseTemperature;
 	
-	BytesUnion	cxPowerSupplyMonitor;
+	BytesUnion	cxBackFacetHpaMonitor;
+	BytesUnion	cxBackFacetLnaMonitor;
 	
 	
 	
@@ -212,30 +213,50 @@ eMpbError_t eMpbCan414Encode( c414StatusDefinition_t *c414StatusDefinition, eBoo
 				
 
 		/*  bits 48-55 */
-		if(c414StatusDefinition->fPowerSupplyMonitor > X2_414_POWER_SUPPLY_MONITOR )
+		/*if(c414StatusDefinition->fBackFacetHpaMonitorRaw > X2_414_POWER_SUPPLY_MONITOR )
 		{
-			c414StatusDefinition->fPowerSupplyMonitor = X2_414_POWER_SUPPLY_MONITOR;
+			c414StatusDefinition->fBackFacetHpaMonitorRaw = X2_414_POWER_SUPPLY_MONITOR;
 		}
 		
-		if(c414StatusDefinition->fPowerSupplyMonitor < X1_414_POWER_SUPPLY_MONITOR )
+		if(c414StatusDefinition->fBackFacetHpaMonitorRaw < X1_414_POWER_SUPPLY_MONITOR )
 		{
-			c414StatusDefinition->fPowerSupplyMonitor = X1_414_POWER_SUPPLY_MONITOR;
-		}
+			c414StatusDefinition->fBackFacetHpaMonitorRaw = X1_414_POWER_SUPPLY_MONITOR;
+		}*/
 		
 		
-		fxValue.fValue											= mpb_math_flinear_approx(  (float)(X1_414_POWER_SUPPLY_MONITOR),
-																							(float)(Y1_414_POWER_SUPPLY_MONITOR),
-																							(float)(X2_414_POWER_SUPPLY_MONITOR),
-																							(float)(Y2_414_POWER_SUPPLY_MONITOR),
-																							c414StatusDefinition->fPowerSupplyMonitor ,  coerce );
+		fxValue.fValue											= mpb_math_flinear_approx(  (float)(X1_414_BACKFACET_MONITOR),
+																							(float)(Y1_414_BACKFACET_MONITOR),
+																							(float)(X2_414_BACKFACET_MONITOR),
+																							(float)(Y2_414_BACKFACET_MONITOR),
+																							c414StatusDefinition->fBackFacetHpaMonitorRaw ,  coerce );
 		
 		fxValue.fValue                                          = fxValue.fValue ;//- FLOAT_ADJUST ;
-		cxPowerSupplyMonitor.value								= 0;
-		cxPowerSupplyMonitor.byte[0]							= (uint8_t)(fxValue.fValue);
-		cxPowerSupplyMonitor.value								= ( cxPowerSupplyMonitor.value << DEF_CAN_414_POWER_SUPPLY_MONITOR ) & 0x00FF000000000000; /*48-55*/
+		cxBackFacetHpaMonitor.value								= 0;
+		cxBackFacetHpaMonitor.byte[0]							= (uint8_t)(fxValue.fValue);
+		cxBackFacetHpaMonitor.value								= ( cxBackFacetHpaMonitor.value << DEF_CAN_414_BACKFACET_HPA_MONITOR ) & 0x00FF000000000000; /*48-55*/
 		
 		cRPDO_414.data.value									= cRPDO_414.data.value & 0xFF00FFFFFFFFFFFF ;
-		cRPDO_414.data.value									= cRPDO_414.data.value |  cxPowerSupplyMonitor.value;
+		cRPDO_414.data.value									= cRPDO_414.data.value |  cxBackFacetHpaMonitor.value;
+			
+			
+		/*Bit 56-63 */
+		
+		fxValue.fValue											= mpb_math_flinear_approx(  (float)(X1_414_BACKFACET_MONITOR),
+																							(float)(Y1_414_BACKFACET_MONITOR),
+																							(float)(X2_414_BACKFACET_MONITOR),
+																							(float)(Y2_414_BACKFACET_MONITOR),
+																							c414StatusDefinition->fBackFacetLnaMonitorRaw ,  coerce );
+		
+		fxValue.fValue                                          = fxValue.fValue ;//- FLOAT_ADJUST ;
+		cxBackFacetLnaMonitor.value								= 0;
+		cxBackFacetLnaMonitor.byte[0]							= (uint8_t)(fxValue.fValue);
+		cxBackFacetLnaMonitor.value								= ( cxBackFacetLnaMonitor.value << DEF_CAN_414_BACKFACET_LNA_MONITOR ) & 0xFF00000000000000; /*56-63*/
+		
+		cRPDO_414.data.value									= cRPDO_414.data.value & 0x00FFFFFFFFFFFFFF ;
+		cRPDO_414.data.value									= cRPDO_414.data.value |  cxBackFacetLnaMonitor.value;
+			
+			
+			
 				
 		//cRPDO_414.data.bytes[4]									= cxPowerSupplyMonitor.byte[4];
 		//cRPDO_414.data.bytes[9]									= cxPowerSupplyMonitor.byte[9];
@@ -364,7 +385,8 @@ eMpbError_t eMpbCan414Decode( c414StatusDefinition_t *c414StatusDefinition )
 	BytesUnion	cxLnaOpticalOutputPower;
 	BytesUnion	cxLnaOpticalInputPower;
 	BytesUnion	cxUnitBaseTemperature;
-	BytesUnion	cxPowerSupplyMonitor;
+	BytesUnion	cxHpaBackfacetMonitor;
+	BytesUnion	cxLnaBackfacetMonitor;
 	
 	
 	floatUnion  fxValue;
@@ -458,17 +480,29 @@ eMpbError_t eMpbCan414Decode( c414StatusDefinition_t *c414StatusDefinition )
 
 
 		/*Bit 48-55 */
-		cxPowerSupplyMonitor.value							= 0;
-		cxPowerSupplyMonitor.value							= ( cRPDO_414.data.value >> DEF_CAN_414_POWER_SUPPLY_MONITOR) & 0x00000000000000FF;
-		c414StatusDefinition->fPowerSupplyMonitor			= (float)(cxPowerSupplyMonitor.byte[0] );
+		cxHpaBackfacetMonitor.value							= 0;
+		cxHpaBackfacetMonitor.value							= ( cRPDO_414.data.value >> DEF_CAN_414_BACKFACET_HPA_MONITOR) & 0x00000000000000FF;
+		c414StatusDefinition->fBackFacetHpaMonitorRaw		= (float)(cxHpaBackfacetMonitor.byte[0] );
 		
-		fxValue.fValue										= mpb_math_flinear_approx(  (float)(Y1_414_POWER_SUPPLY_MONITOR),
-																						(float)(X1_414_POWER_SUPPLY_MONITOR),
-																						(float)(Y2_414_POWER_SUPPLY_MONITOR),
-																						(float)(X2_414_POWER_SUPPLY_MONITOR),
-																						c414StatusDefinition->fPowerSupplyMonitor ,  coerce );
+		fxValue.fValue										= mpb_math_flinear_approx(  (float)(Y1_414_BACKFACET_MONITOR),
+																						(float)(X1_414_BACKFACET_MONITOR),
+																						(float)(Y2_414_BACKFACET_MONITOR),
+																						(float)(X2_414_BACKFACET_MONITOR),
+																						c414StatusDefinition->fBackFacetHpaMonitorRaw ,  coerce );
 		
-		c414StatusDefinition->fPowerSupplyMonitor			= fxValue.fValue;
+		c414StatusDefinition->fBackFacetHpaMonitorRaw			= fxValue.fValue;
+		/*Bit 56-63 */
+		cxLnaBackfacetMonitor.value							= 0;
+		cxLnaBackfacetMonitor.value							= ( cRPDO_414.data.value >> DEF_CAN_414_BACKFACET_LNA_MONITOR) & 0x00000000000000FF;
+		c414StatusDefinition->fBackFacetLnaMonitorRaw		= (float)(cxLnaBackfacetMonitor.byte[0] );
+		
+		fxValue.fValue										= mpb_math_flinear_approx(  (float)(Y1_414_BACKFACET_MONITOR),
+																						(float)(X1_414_BACKFACET_MONITOR),
+																						(float)(Y2_414_BACKFACET_MONITOR),
+																						(float)(X2_414_BACKFACET_MONITOR),
+																						c414StatusDefinition->fBackFacetLnaMonitorRaw ,  coerce );
+		
+		c414StatusDefinition->fBackFacetLnaMonitorRaw			= fxValue.fValue;
 
 
 

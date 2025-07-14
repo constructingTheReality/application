@@ -1612,13 +1612,13 @@ void setCallbackCan1(int mailbox, void (*cb)(CAN_FRAME *))
 bool canErrorDetected(void)
 {
 	bool bErrorDetected = false;
-	if ( (CanBusStatusRegisterBitAssignment.bAckError = 1 ) ||		 
-	     (CanBusStatusRegisterBitAssignment.bFormError = 1 ) ||		 
-		 (CanBusStatusRegisterBitAssignment.bErrorPassive = 1 ) ||		 
-		 (CanBusStatusRegisterBitAssignment.bBusOff = 1 ) ||		 
-		 (CanBusStatusRegisterBitAssignment.bStuffingErrorInMailbox = 1 ) ||		 
-		 (CanBusStatusRegisterBitAssignment.bCrcErrorInMailbox = 1 ) ||		 
-		 (CanBusStatusRegisterBitAssignment.bBitError = 1 ) 	)	 
+	if ( (CanBusStatusRegisterBitAssignment.bAckError == 1 ) ||		 
+	     (CanBusStatusRegisterBitAssignment.bFormError == 1 ) ||		 
+		 (CanBusStatusRegisterBitAssignment.bErrorPassive == 1 ) ||		 
+		 (CanBusStatusRegisterBitAssignment.bBusOff == 1 ) ||		 
+		 (CanBusStatusRegisterBitAssignment.bStuffingErrorInMailbox == 1 ) ||		 
+		 (CanBusStatusRegisterBitAssignment.bCrcErrorInMailbox == 1 ) ||		 
+		 (CanBusStatusRegisterBitAssignment.bBitError == 1 ) 	)	 
 		 {
 			bErrorDetected = true ;		 
 		 }

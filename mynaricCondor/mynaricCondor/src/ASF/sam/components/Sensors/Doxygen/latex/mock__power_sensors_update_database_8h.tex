@@ -1,0 +1,1444 @@
+\doxysection{C\+:/my\+Works/mynaric/\+Application/embedded/mynaric\+App\+\_\+\+Embedded/mynaric\+Condor/mynaric\+Condor/src/\+ASF/sam/components/\+Sensors/\+Unit\+Test\+Framework/build/test/mocks/mock\+\_\+power\+Sensors\+Update\+Database.h File Reference}
+\hypertarget{mock__power_sensors_update_database_8h}{}\label{mock__power_sensors_update_database_8h}\index{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_powerSensorsUpdateDatabase.h@{C:/myWorks/mynaric/Application/embedded/mynaricApp\_Embedded/mynaricCondor/mynaricCondor/src/ASF/sam/components/Sensors/UnitTestFramework/build/test/mocks/mock\_powerSensorsUpdateDatabase.h}}
+{\ttfamily \#include "{}unity.\+h"{}}\newline
+{\ttfamily \#include "{}power\+Sensors\+Update\+Database.\+h"{}}\newline
+Include dependency graph for mock\+\_\+power\+Sensors\+Update\+Database.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_ac8d3275a303d8d0825276451e4160392}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5c085b89629a11799d1b9fdda0af4271}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a4d8738153c0c293615e700077b344bde}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_af9acb381c035149009a4b5857fdf4ea5}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a8b5e7c18181da8a0354104d56640774b}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa62d89c1b71883172c93db08382e7158}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa1dcbae67d250a1723d4878b626d10b4}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+With\+Array\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a6d31cbd780ac0e113d75bfd64b10ed63}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}})
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a01f588561f2795c68d333256f5ca45a6}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_af6285fc182f8b01dd9ccec6890148320}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_afc33a90ce63c8fbe42eac94db889c3a1}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a224663055059da9b162b6fc8f4da19f5}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_abe35ef4285001e54a90e72696b6e6cb5}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa3581fc143ec0d1a6ebdf1986d6b10fa}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_adca1a4a8e5b1ed5da68214900ef2afbe}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a39421c5ec1f28c0f6e1823cdc25d9901}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa55793ca6e24d2c1cc083ddbb6e0d22f}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a46ce482e44a2efc4a12216c201aedbc6}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+With\+Array\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a557c44a8d0e10cba6b3b2fb9302811e1}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}})
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a1da1f42051774428c1f61dcd7e6d8b61}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5e4815715269cbe467dfbb781fe7e361}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_aea44e4d8a1ed1ef302e4002dc4b02097}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a71dc2aa4802129ea08cd746ac6d145d8}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a73a6c7a938d7106f2f09377b39bba322}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stop\+Ignore}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a7055a5711a10b371d3c4b41067dfdddc}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+Any\+Args\+And\+Return}}(cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a52733d90cddd3c326ec067d472da55d3}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  px\+Hpa\+Limits\+Config,  px\+Hpa\+Powers\+Config,  px\+Los\+Values,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a8ebb6ebbff7797cf7f20650fcdd9a3c8}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub\+With\+Callback}}~\mbox{\hyperlink{mock__power_sensors_update_database_8c_a2e4abfca70f7b3cdebbf05c2d59361a3}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub}}
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_acf6cdaa0afda6c08a6121b14381c5fa4}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+With\+Array\+And\+Return}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth,  px\+Hpa\+Limits\+Config,  px\+Hpa\+Limits\+Config\+\_\+\+Depth,  px\+Hpa\+Powers\+Config,  px\+Hpa\+Powers\+Config\+\_\+\+Depth,  px\+Los\+Values,  px\+Los\+Values\+\_\+\+Depth,  cmock\+\_\+retval)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a44be1e1ac59d5cd40671b5697187a4b5}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}})
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa833085f10e6c08ba9d0bed971b9b63a}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_ac30dbc29381799396d32686cb038a657}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}}(\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}},  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a090aaccd09899f619ed9e277a2ffbe68}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config}}(px\+Hpa\+Limits\+Config)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a10732bdb9cdf84370b2dff6a14adf060}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config}}(px\+Hpa\+Limits\+Config,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a655c688adc8321601e0c3ba2f92e54a6}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config}}(px\+Hpa\+Limits\+Config,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_af765e62c5767a2f2bdf0e6e8f2ff9140}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config}}(px\+Hpa\+Powers\+Config)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_aacf705085c48d4fac2e7c4028f69ad75}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config}}(px\+Hpa\+Powers\+Config,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_ae7caa1dcd1714928867539d2257e7ae6}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config}}(px\+Hpa\+Powers\+Config,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a49f9124f5c28d9481aa0df928f407f29}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Los\+Values}}(px\+Los\+Values)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a909f233b168594b3e3abc0c6cfb5a6f1}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Los\+Values}}(px\+Los\+Values,  cmock\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5f53db94598b505417935b52e49309af}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Los\+Values}}(px\+Los\+Values,  cmock\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a055614598f5230b69cd502db24cdeedb}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a44f8383001a908442fb970c8646c3d02}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Hpa\+Limits\+Config}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a82c5d580278941f786054a7da675453d}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Hpa\+Powers\+Config}}()
+\item 
+\#define \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5eecca21368853c8b4b0cb769b1fc700}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Los\+Values}}()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK}}) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int cmock\+\_\+num\+\_\+calls)
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK}}) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int cmock\+\_\+num\+\_\+calls)
+\item 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK}}) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Limits\+Config, x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Powers\+Config, x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}px\+Los\+Values, int cmock\+\_\+num\+\_\+calls)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a2196e01a6a8db1282232de4bb80b0cda}{mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a70355e966363b216db9c48d4df443b4b}{mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Destroy}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ae21d25f15ca5c4fb54efdc6755b13fb3}{mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Verify}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a5d5638b98caf894a9ec7a9af5d8b1a57}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a797985e8d4cde9f1c5e8471948e06625}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a532a9cc85c5306cc1b24e7f6f833ea74}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a66503b51012428e81925363773bcd024}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ab65fac9b40e3dbdd0167fbd6149ca730}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa62d89c1b71883172c93db08382e7158}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a0d363179b10fa0277f9c8e890493a4b5}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a9c0d0eba099fad3997b36412f63e8c56}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aba7cde0610f09c07489170f5b79edc1d}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_adb47146311881fb1f34ca3742fd18ae9}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a60109a7aa9168d8be8e24173e2c945a8}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_af912c120b7c9b83b93af2eb1b9e5d5ab}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a7e60a1576e09635e8c61beb90a92e4ba}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a43d6f4d41c0626da2db4071230d9eacd}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa55793ca6e24d2c1cc083ddbb6e0d22f}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ae68f825be8e690d330bfae5c06a8a47c}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a2f5351de9738ac1b67216b737d9ee077}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a8a82ac2f4225fe72752b38b6b6f51c3a}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a31dd0e020285409d27c2f84aa3831861}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a57f3674867e980908f9c2cea1216c2a0}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Stop\+Ignore}} (void)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a20232a2ba2c4e11a63f9591f8cdff12b}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a91553ec155baec0902b0fcf56f7c05a3}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Limits\+Config, x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Powers\+Config, x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}px\+Los\+Values, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ad4d645c87813c937922389666366dcb6}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Add\+Callback}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a2e4abfca70f7b3cdebbf05c2d59361a3}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub}} (\mbox{\hyperlink{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK}} Callback)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_adab44f17dbfba348498946a33eeb962e}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth, x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Limits\+Config, int px\+Hpa\+Limits\+Config\+\_\+\+Depth, x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Powers\+Config, int px\+Hpa\+Powers\+Config\+\_\+\+Depth, x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}px\+Los\+Values, int px\+Los\+Values\+\_\+\+Depth, e\+Mpb\+Error\+\_\+t cmock\+\_\+to\+\_\+return)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aed47b8974ac3da12b10d101fc1671178}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa0a714e0e8b09ab0eddb7f7c7b29223f}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Limits\+Config, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ab02f45ec3d801ecd31788091df87bf58}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Powers\+Config, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_ad6da69b01329fd04fe4803abe11bdb2d}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Los\+Values}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line, x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}px\+Los\+Values, size\+\_\+t cmock\+\_\+size)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a61241c64c2dd896e52bc2c50a97248a1}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aaa731c9899e16a9cbdd2abdb83e449bf}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Hpa\+Limits\+Config}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_a0c2a48f173c43a4af4d909ba3dbd463f}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Hpa\+Powers\+Config}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\item 
+void \mbox{\hyperlink{mock__power_sensors_update_database_8h_aa76c63a77f14f86936cd8996245047fd}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Los\+Values}} (\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}} cmock\+\_\+line)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mock__power_sensors_update_database_8h_a52733d90cddd3c326ec067d472da55d3}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn}{ePowerSensorsUpdateDatabaseBooster\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a52733d90cddd3c326ec067d472da55d3} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{px\+Hpa\+Limits\+Config}{, }\item[{}]{px\+Hpa\+Powers\+Config}{, }\item[{}]{px\+Los\+Values}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a91553ec155baec0902b0fcf56f7c05a3}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ pxHpaLimitsConfig,\ pxHpaPowersConfig,\ pxLosValues,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00073}{73}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a7055a5711a10b371d3c4b41067dfdddc}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn}{ePowerSensorsUpdateDatabaseBooster\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a7055a5711a10b371d3c4b41067dfdddc} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a20232a2ba2c4e11a63f9591f8cdff12b}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00071}{71}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_acf6cdaa0afda6c08a6121b14381c5fa4}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn}{ePowerSensorsUpdateDatabaseBooster\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_acf6cdaa0afda6c08a6121b14381c5fa4} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{}]{px\+Hpa\+Limits\+Config}{, }\item[{}]{px\+Hpa\+Limits\+Config\+\_\+\+Depth}{, }\item[{}]{px\+Hpa\+Powers\+Config}{, }\item[{}]{px\+Hpa\+Powers\+Config\+\_\+\+Depth}{, }\item[{}]{px\+Los\+Values}{, }\item[{}]{px\+Los\+Values\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_adab44f17dbfba348498946a33eeb962e}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ pxLocalPowerInputScaling\_Depth,\ pxHpaLimitsConfig,\ pxHpaLimitsConfig\_Depth,\ pxHpaPowersConfig,\ pxHpaPowersConfig\_Depth,\ pxLosValues,\ pxLosValues\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00079}{79}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a71dc2aa4802129ea08cd746ac6d145d8}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn}{ePowerSensorsUpdateDatabaseBooster\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a71dc2aa4802129ea08cd746ac6d145d8} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a31dd0e020285409d27c2f84aa3831861}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00067}{67}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a44f8383001a908442fb970c8646c3d02}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig}{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaLimitsConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a44f8383001a908442fb970c8646c3d02} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Hpa\+Limits\+Config(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aaa731c9899e16a9cbdd2abdb83e449bf}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00099}{99}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a82c5d580278941f786054a7da675453d}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig}{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxHpaPowersConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a82c5d580278941f786054a7da675453d} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Hpa\+Powers\+Config(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a0c2a48f173c43a4af4d909ba3dbd463f}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00101}{101}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a055614598f5230b69cd502db24cdeedb}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a055614598f5230b69cd502db24cdeedb} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a61241c64c2dd896e52bc2c50a97248a1}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00097}{97}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a5eecca21368853c8b4b0cb769b1fc700}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues}{ePowerSensorsUpdateDatabaseBooster\_IgnoreArg\_pxLosValues}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5eecca21368853c8b4b0cb769b1fc700} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Ignore\+Arg\+\_\+px\+Los\+Values(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa76c63a77f14f86936cd8996245047fd}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00103}{103}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a10732bdb9cdf84370b2dff6a14adf060}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaLimitsConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a10732bdb9cdf84370b2dff6a14adf060} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Limits\+Config}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa0a714e0e8b09ab0eddb7f7c7b29223f}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig}}(\_\_LINE\_\_,\ pxHpaLimitsConfig,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pxHpaLimitsConfig))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00086}{86}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_aacf705085c48d4fac2e7c4028f69ad75}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxHpaPowersConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aacf705085c48d4fac2e7c4028f69ad75} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Powers\+Config}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ab02f45ec3d801ecd31788091df87bf58}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig}}(\_\_LINE\_\_,\ pxHpaPowersConfig,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pxHpaPowersConfig))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00090}{90}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_aa833085f10e6c08ba9d0bed971b9b63a}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa833085f10e6c08ba9d0bed971b9b63a} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aed47b8974ac3da12b10d101fc1671178}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00082}{82}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a909f233b168594b3e3abc0c6cfb5a6f1}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues}{ePowerSensorsUpdateDatabaseBooster\_ReturnArrayThruPtr\_pxLosValues}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a909f233b168594b3e3abc0c6cfb5a6f1} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Los\+Values(\begin{DoxyParamCaption}\item[{}]{px\+Los\+Values}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ad6da69b01329fd04fe4803abe11bdb2d}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues}}(\_\_LINE\_\_,\ pxLosValues,\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*pxLosValues))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00094}{94}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a655c688adc8321601e0c3ba2f92e54a6}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaLimitsConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a655c688adc8321601e0c3ba2f92e54a6} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Limits\+Config}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa0a714e0e8b09ab0eddb7f7c7b29223f}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig}}(\_\_LINE\_\_,\ pxHpaLimitsConfig,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00087}{87}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_ae7caa1dcd1714928867539d2257e7ae6}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxHpaPowersConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ae7caa1dcd1714928867539d2257e7ae6} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Powers\+Config}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ab02f45ec3d801ecd31788091df87bf58}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig}}(\_\_LINE\_\_,\ pxHpaPowersConfig,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00091}{91}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_ac30dbc29381799396d32686cb038a657}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ac30dbc29381799396d32686cb038a657} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aed47b8974ac3da12b10d101fc1671178}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00083}{83}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a5f53db94598b505417935b52e49309af}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues}{ePowerSensorsUpdateDatabaseBooster\_ReturnMemThruPtr\_pxLosValues}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5f53db94598b505417935b52e49309af} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Los\+Values(\begin{DoxyParamCaption}\item[{}]{px\+Los\+Values}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ad6da69b01329fd04fe4803abe11bdb2d}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues}}(\_\_LINE\_\_,\ pxLosValues,\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00095}{95}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a090aaccd09899f619ed9e277a2ffbe68}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaLimitsConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a090aaccd09899f619ed9e277a2ffbe68} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Limits\+Config}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa0a714e0e8b09ab0eddb7f7c7b29223f}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig}}(\_\_LINE\_\_,\ pxHpaLimitsConfig,\ \textcolor{keyword}{sizeof}(xHpaLimitsConfig\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00085}{85}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_af765e62c5767a2f2bdf0e6e8f2ff9140}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig}{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxHpaPowersConfig}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_af765e62c5767a2f2bdf0e6e8f2ff9140} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config(\begin{DoxyParamCaption}\item[{}]{px\+Hpa\+Powers\+Config}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ab02f45ec3d801ecd31788091df87bf58}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig}}(\_\_LINE\_\_,\ pxHpaPowersConfig,\ \textcolor{keyword}{sizeof}(xHpaPowersConfig\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00089}{89}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a44be1e1ac59d5cd40671b5697187a4b5}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a44be1e1ac59d5cd40671b5697187a4b5} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aed47b8974ac3da12b10d101fc1671178}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ \textcolor{keyword}{sizeof}(xPowerInputScaling\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00081}{81}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a49f9124f5c28d9481aa0df928f407f29}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues}{ePowerSensorsUpdateDatabaseBooster\_ReturnThruPtr\_pxLosValues}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a49f9124f5c28d9481aa0df928f407f29} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Los\+Values(\begin{DoxyParamCaption}\item[{}]{px\+Los\+Values}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ad6da69b01329fd04fe4803abe11bdb2d}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues}}(\_\_LINE\_\_,\ pxLosValues,\ \textcolor{keyword}{sizeof}(xLosValues\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00093}{93}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a73a6c7a938d7106f2f09377b39bba322}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_StopIgnore@{ePowerSensorsUpdateDatabaseBooster\_StopIgnore}}
+\index{ePowerSensorsUpdateDatabaseBooster\_StopIgnore@{ePowerSensorsUpdateDatabaseBooster\_StopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_StopIgnore}{ePowerSensorsUpdateDatabaseBooster\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a73a6c7a938d7106f2f09377b39bba322} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a57f3674867e980908f9c2cea1216c2a0}{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00069}{69}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a8ebb6ebbff7797cf7f20650fcdd9a3c8}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_StubWithCallback@{ePowerSensorsUpdateDatabaseBooster\_StubWithCallback}}
+\index{ePowerSensorsUpdateDatabaseBooster\_StubWithCallback@{ePowerSensorsUpdateDatabaseBooster\_StubWithCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_StubWithCallback}{ePowerSensorsUpdateDatabaseBooster\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a8ebb6ebbff7797cf7f20650fcdd9a3c8} 
+\#define e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__power_sensors_update_database_8c_a2e4abfca70f7b3cdebbf05c2d59361a3}{e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00078}{78}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_af9acb381c035149009a4b5857fdf4ea5}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn}{ePowerSensorsUpdateDatabaseCommon\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_af9acb381c035149009a4b5857fdf4ea5} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a66503b51012428e81925363773bcd024}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00033}{33}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a4d8738153c0c293615e700077b344bde}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn}{ePowerSensorsUpdateDatabaseCommon\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a4d8738153c0c293615e700077b344bde} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a532a9cc85c5306cc1b24e7f6f833ea74}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00031}{31}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_aa1dcbae67d250a1723d4878b626d10b4}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn}{ePowerSensorsUpdateDatabaseCommon\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa1dcbae67d250a1723d4878b626d10b4} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a0d363179b10fa0277f9c8e890493a4b5}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ pxLocalPowerInputScaling\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00039}{39}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_ac8d3275a303d8d0825276451e4160392}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn}{ePowerSensorsUpdateDatabaseCommon\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ac8d3275a303d8d0825276451e4160392} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a5d5638b98caf894a9ec7a9af5d8b1a57}{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00027}{27}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_afc33a90ce63c8fbe42eac94db889c3a1}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseCommon\_IgnoreArg\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_afc33a90ce63c8fbe42eac94db889c3a1} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_aba7cde0610f09c07489170f5b79edc1d}{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00045}{45}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a01f588561f2795c68d333256f5ca45a6}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseCommon\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a01f588561f2795c68d333256f5ca45a6} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a9c0d0eba099fad3997b36412f63e8c56}{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00042}{42}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_af6285fc182f8b01dd9ccec6890148320}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseCommon\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_af6285fc182f8b01dd9ccec6890148320} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a9c0d0eba099fad3997b36412f63e8c56}{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00043}{43}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a6d31cbd780ac0e113d75bfd64b10ed63}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseCommon\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a6d31cbd780ac0e113d75bfd64b10ed63} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a9c0d0eba099fad3997b36412f63e8c56}{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ \textcolor{keyword}{sizeof}(xPowerInputScaling\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00041}{41}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a5c085b89629a11799d1b9fdda0af4271}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_StopIgnore@{ePowerSensorsUpdateDatabaseCommon\_StopIgnore}}
+\index{ePowerSensorsUpdateDatabaseCommon\_StopIgnore@{ePowerSensorsUpdateDatabaseCommon\_StopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_StopIgnore}{ePowerSensorsUpdateDatabaseCommon\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5c085b89629a11799d1b9fdda0af4271} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a797985e8d4cde9f1c5e8471948e06625}{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00029}{29}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a8b5e7c18181da8a0354104d56640774b}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_StubWithCallback@{ePowerSensorsUpdateDatabaseCommon\_StubWithCallback}}
+\index{ePowerSensorsUpdateDatabaseCommon\_StubWithCallback@{ePowerSensorsUpdateDatabaseCommon\_StubWithCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_StubWithCallback}{ePowerSensorsUpdateDatabaseCommon\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a8b5e7c18181da8a0354104d56640774b} 
+\#define e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa62d89c1b71883172c93db08382e7158}{e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00038}{38}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_adca1a4a8e5b1ed5da68214900ef2afbe}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn}{ePowerSensorsUpdateDatabaseLna\_ExpectAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_adca1a4a8e5b1ed5da68214900ef2afbe} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a7e60a1576e09635e8c61beb90a92e4ba}{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00053}{53}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_aa3581fc143ec0d1a6ebdf1986d6b10fa}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn}{ePowerSensorsUpdateDatabaseLna\_ExpectAnyArgsAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa3581fc143ec0d1a6ebdf1986d6b10fa} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+Any\+Args\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_af912c120b7c9b83b93af2eb1b9e5d5ab}{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00051}{51}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a46ce482e44a2efc4a12216c201aedbc6}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn}{ePowerSensorsUpdateDatabaseLna\_ExpectWithArrayAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a46ce482e44a2efc4a12216c201aedbc6} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Expect\+With\+Array\+And\+Return(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_ae68f825be8e690d330bfae5c06a8a47c}{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ pxLocalPowerInputScaling\_Depth,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00059}{59}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a224663055059da9b162b6fc8f4da19f5}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn@{ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn}{ePowerSensorsUpdateDatabaseLna\_IgnoreAndReturn}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a224663055059da9b162b6fc8f4da19f5} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Ignore\+And\+Return(\begin{DoxyParamCaption}\item[{}]{cmock\+\_\+retval}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_adb47146311881fb1f34ca3742fd18ae9}{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn}}(\_\_LINE\_\_,\ cmock\_retval)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00047}{47}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_aea44e4d8a1ed1ef302e4002dc4b02097}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseLna\_IgnoreArg\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aea44e4d8a1ed1ef302e4002dc4b02097} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a8a82ac2f4225fe72752b38b6b6f51c3a}{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling}}(\_\_LINE\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00065}{65}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a1da1f42051774428c1f61dcd7e6d8b61}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseLna\_ReturnArrayThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a1da1f42051774428c1f61dcd7e6d8b61} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Array\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+len}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a2f5351de9738ac1b67216b737d9ee077}{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_len\ *\ \textcolor{keyword}{sizeof}(*\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00062}{62}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a5e4815715269cbe467dfbb781fe7e361}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseLna\_ReturnMemThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5e4815715269cbe467dfbb781fe7e361} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{, }\item[{}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a2f5351de9738ac1b67216b737d9ee077}{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ cmock\_size)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00063}{63}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a557c44a8d0e10cba6b3b2fb9302811e1}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling}{ePowerSensorsUpdateDatabaseLna\_ReturnThruPtr\_pxLocalPowerInputScaling}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a557c44a8d0e10cba6b3b2fb9302811e1} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Return\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a2f5351de9738ac1b67216b737d9ee077}{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}(\_\_LINE\_\_,\ \mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{pxLocalPowerInputScaling}},\ \textcolor{keyword}{sizeof}(xPowerInputScaling\_t))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00061}{61}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_abe35ef4285001e54a90e72696b6e6cb5}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_StopIgnore@{ePowerSensorsUpdateDatabaseLna\_StopIgnore}}
+\index{ePowerSensorsUpdateDatabaseLna\_StopIgnore@{ePowerSensorsUpdateDatabaseLna\_StopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_StopIgnore}{ePowerSensorsUpdateDatabaseLna\_StopIgnore}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_abe35ef4285001e54a90e72696b6e6cb5} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stop\+Ignore(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mock__power_sensors_update_database_8c_a60109a7aa9168d8be8e24173e2c945a8}{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore}}()}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00049}{49}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a39421c5ec1f28c0f6e1823cdc25d9901}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_StubWithCallback@{ePowerSensorsUpdateDatabaseLna\_StubWithCallback}}
+\index{ePowerSensorsUpdateDatabaseLna\_StubWithCallback@{ePowerSensorsUpdateDatabaseLna\_StubWithCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_StubWithCallback}{ePowerSensorsUpdateDatabaseLna\_StubWithCallback}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a39421c5ec1f28c0f6e1823cdc25d9901} 
+\#define e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub\+With\+Callback~\mbox{\hyperlink{mock__power_sensors_update_database_8c_aa55793ca6e24d2c1cc083ddbb6e0d22f}{e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub}}}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00058}{58}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK}}
+\index{CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK}{CMOCK\_ePowerSensorsUpdateDatabaseBooster\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Limits\+Config, x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}px\+Hpa\+Powers\+Config, x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}px\+Los\+Values, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00075}{75}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK}}
+\index{CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK}{CMOCK\_ePowerSensorsUpdateDatabaseCommon\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00035}{35}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK}}
+\index{CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK@{CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK}{CMOCK\_ePowerSensorsUpdateDatabaseLna\_CALLBACK}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348} 
+typedef e\+Mpb\+Error\+\_\+t(\texorpdfstring{$\ast$}{*} CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK) (x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{power_read_channel_8c_a7a2fa82c182287541094528be4590903}{px\+Local\+Power\+Input\+Scaling}}, int cmock\+\_\+num\+\_\+calls)}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8h_source_l00055}{55}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8h_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mock__power_sensors_update_database_8h_ad4d645c87813c937922389666366dcb6}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_AddCallback@{ePowerSensorsUpdateDatabaseBooster\_AddCallback}}
+\index{ePowerSensorsUpdateDatabaseBooster\_AddCallback@{ePowerSensorsUpdateDatabaseBooster\_AddCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_AddCallback()}{ePowerSensorsUpdateDatabaseBooster\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ad4d645c87813c937922389666366dcb6} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00652}{652}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a91553ec155baec0902b0fcf56f7c05a3}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn()}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a91553ec155baec0902b0fcf56f7c05a3} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Limits\+Config}{, }\item[{x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Powers\+Config}{, }\item[{x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Los\+Values}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00636}{636}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a91553ec155baec0902b0fcf56f7c05a3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a20232a2ba2c4e11a63f9591f8cdff12b}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn()}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a20232a2ba2c4e11a63f9591f8cdff12b} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00621}{621}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a20232a2ba2c4e11a63f9591f8cdff12b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_adab44f17dbfba348498946a33eeb962e}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn()}{ePowerSensorsUpdateDatabaseBooster\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_adab44f17dbfba348498946a33eeb962e} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{int}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Limits\+Config}{, }\item[{int}]{px\+Hpa\+Limits\+Config\+\_\+\+Depth}{, }\item[{x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Powers\+Config}{, }\item[{int}]{px\+Hpa\+Powers\+Config\+\_\+\+Depth}{, }\item[{x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Los\+Values}{, }\item[{int}]{px\+Los\+Values\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00666}{666}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_adab44f17dbfba348498946a33eeb962e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a31dd0e020285409d27c2f84aa3831861}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn()}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a31dd0e020285409d27c2f84aa3831861} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00600}{600}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a31dd0e020285409d27c2f84aa3831861_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aaa731c9899e16a9cbdd2abdb83e449bf}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig()}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaLimitsConfig()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aaa731c9899e16a9cbdd2abdb83e449bf} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Hpa\+Limits\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00724}{724}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_aaa731c9899e16a9cbdd2abdb83e449bf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a0c2a48f173c43a4af4d909ba3dbd463f}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig()}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxHpaPowersConfig()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a0c2a48f173c43a4af4d909ba3dbd463f} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Hpa\+Powers\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00731}{731}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a0c2a48f173c43a4af4d909ba3dbd463f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a61241c64c2dd896e52bc2c50a97248a1}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a61241c64c2dd896e52bc2c50a97248a1} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00717}{717}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a61241c64c2dd896e52bc2c50a97248a1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aa76c63a77f14f86936cd8996245047fd}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues()}{ePowerSensorsUpdateDatabaseBooster\_CMockIgnoreArg\_pxLosValues()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa76c63a77f14f86936cd8996245047fd} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Los\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00738}{738}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_aa76c63a77f14f86936cd8996245047fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aa0a714e0e8b09ab0eddb7f7c7b29223f}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig()}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaLimitsConfig()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa0a714e0e8b09ab0eddb7f7c7b29223f} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Limits\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Hpa\+Limits\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Limits\+Config}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00690}{690}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_aa0a714e0e8b09ab0eddb7f7c7b29223f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_ab02f45ec3d801ecd31788091df87bf58}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig()}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxHpaPowersConfig()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ab02f45ec3d801ecd31788091df87bf58} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Hpa\+Powers\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Hpa\+Powers\+Config\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Hpa\+Powers\+Config}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00699}{699}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_ab02f45ec3d801ecd31788091df87bf58_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aed47b8974ac3da12b10d101fc1671178}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aed47b8974ac3da12b10d101fc1671178} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00681}{681}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_aed47b8974ac3da12b10d101fc1671178_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_ad6da69b01329fd04fe4803abe11bdb2d}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues@{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues()}{ePowerSensorsUpdateDatabaseBooster\_CMockReturnMemThruPtr\_pxLosValues()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ad6da69b01329fd04fe4803abe11bdb2d} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Los\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Los\+Values\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Los\+Values}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00708}{708}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_ad6da69b01329fd04fe4803abe11bdb2d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a57f3674867e980908f9c2cea1216c2a0}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore}}
+\index{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore()}{ePowerSensorsUpdateDatabaseBooster\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a57f3674867e980908f9c2cea1216c2a0} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00614}{614}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a57f3674867e980908f9c2cea1216c2a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a2e4abfca70f7b3cdebbf05c2d59361a3}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseBooster\_Stub@{ePowerSensorsUpdateDatabaseBooster\_Stub}}
+\index{ePowerSensorsUpdateDatabaseBooster\_Stub@{ePowerSensorsUpdateDatabaseBooster\_Stub}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseBooster\_Stub()}{ePowerSensorsUpdateDatabaseBooster\_Stub()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a2e4abfca70f7b3cdebbf05c2d59361a3} 
+void e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_a1f27cd5f5b1f0cc25e9be96f2d092d44}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Booster\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00659}{659}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_ab65fac9b40e3dbdd0167fbd6149ca730}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_AddCallback@{ePowerSensorsUpdateDatabaseCommon\_AddCallback}}
+\index{ePowerSensorsUpdateDatabaseCommon\_AddCallback@{ePowerSensorsUpdateDatabaseCommon\_AddCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_AddCallback()}{ePowerSensorsUpdateDatabaseCommon\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ab65fac9b40e3dbdd0167fbd6149ca730} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00278}{278}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a66503b51012428e81925363773bcd024}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn()}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a66503b51012428e81925363773bcd024} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00262}{262}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a66503b51012428e81925363773bcd024_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a532a9cc85c5306cc1b24e7f6f833ea74}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn()}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a532a9cc85c5306cc1b24e7f6f833ea74} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00247}{247}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a532a9cc85c5306cc1b24e7f6f833ea74_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a0d363179b10fa0277f9c8e890493a4b5}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn()}{ePowerSensorsUpdateDatabaseCommon\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a0d363179b10fa0277f9c8e890493a4b5} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{int}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00292}{292}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a0d363179b10fa0277f9c8e890493a4b5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a5d5638b98caf894a9ec7a9af5d8b1a57}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn()}{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a5d5638b98caf894a9ec7a9af5d8b1a57} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00226}{226}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a5d5638b98caf894a9ec7a9af5d8b1a57_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aba7cde0610f09c07489170f5b79edc1d}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseCommon\_CMockIgnoreArg\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aba7cde0610f09c07489170f5b79edc1d} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00316}{316}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_aba7cde0610f09c07489170f5b79edc1d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a9c0d0eba099fad3997b36412f63e8c56}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseCommon\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a9c0d0eba099fad3997b36412f63e8c56} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00307}{307}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a9c0d0eba099fad3997b36412f63e8c56_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a797985e8d4cde9f1c5e8471948e06625}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore}}
+\index{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore()}{ePowerSensorsUpdateDatabaseCommon\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a797985e8d4cde9f1c5e8471948e06625} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00240}{240}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a797985e8d4cde9f1c5e8471948e06625_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aa62d89c1b71883172c93db08382e7158}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseCommon\_Stub@{ePowerSensorsUpdateDatabaseCommon\_Stub}}
+\index{ePowerSensorsUpdateDatabaseCommon\_Stub@{ePowerSensorsUpdateDatabaseCommon\_Stub}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseCommon\_Stub()}{ePowerSensorsUpdateDatabaseCommon\_Stub()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa62d89c1b71883172c93db08382e7158} 
+void e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_af9590db5f79b055ee3c65e615723b415}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Common\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00285}{285}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a43d6f4d41c0626da2db4071230d9eacd}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_AddCallback@{ePowerSensorsUpdateDatabaseLna\_AddCallback}}
+\index{ePowerSensorsUpdateDatabaseLna\_AddCallback@{ePowerSensorsUpdateDatabaseLna\_AddCallback}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_AddCallback()}{ePowerSensorsUpdateDatabaseLna\_AddCallback()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a43d6f4d41c0626da2db4071230d9eacd} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00438}{438}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a7e60a1576e09635e8c61beb90a92e4ba}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn()}{ePowerSensorsUpdateDatabaseLna\_CMockExpectAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a7e60a1576e09635e8c61beb90a92e4ba} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00422}{422}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a7e60a1576e09635e8c61beb90a92e4ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_af912c120b7c9b83b93af2eb1b9e5d5ab}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn()}{ePowerSensorsUpdateDatabaseLna\_CMockExpectAnyArgsAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_af912c120b7c9b83b93af2eb1b9e5d5ab} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+Any\+Args\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00407}{407}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_af912c120b7c9b83b93af2eb1b9e5d5ab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_ae68f825be8e690d330bfae5c06a8a47c}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn()}{ePowerSensorsUpdateDatabaseLna\_CMockExpectWithArrayAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ae68f825be8e690d330bfae5c06a8a47c} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Expect\+With\+Array\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{int}]{px\+Local\+Power\+Input\+Scaling\+\_\+\+Depth}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00452}{452}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_ae68f825be8e690d330bfae5c06a8a47c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_adb47146311881fb1f34ca3742fd18ae9}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn@{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn()}{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreAndReturn()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_adb47146311881fb1f34ca3742fd18ae9} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Ignore\+And\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{e\+Mpb\+Error\+\_\+t}]{cmock\+\_\+to\+\_\+return}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00386}{386}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_adb47146311881fb1f34ca3742fd18ae9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a8a82ac2f4225fe72752b38b6b6f51c3a}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseLna\_CMockIgnoreArg\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a8a82ac2f4225fe72752b38b6b6f51c3a} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Ignore\+Arg\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00476}{476}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a8a82ac2f4225fe72752b38b6b6f51c3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a2f5351de9738ac1b67216b737d9ee077}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling@{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}{ePowerSensorsUpdateDatabaseLna\_CMockReturnMemThruPtr\_pxLocalPowerInputScaling()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a2f5351de9738ac1b67216b737d9ee077} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Return\+Mem\+Thru\+Ptr\+\_\+px\+Local\+Power\+Input\+Scaling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unity__internals_8h_a5c76dbcaafb6db2a52336cf5d4835290}{UNITY\+\_\+\+LINE\+\_\+\+TYPE}}}]{cmock\+\_\+line}{, }\item[{x\+Power\+Input\+Scaling\+\_\+t \texorpdfstring{$\ast$}{*}}]{px\+Local\+Power\+Input\+Scaling}{, }\item[{size\+\_\+t}]{cmock\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00467}{467}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a2f5351de9738ac1b67216b737d9ee077_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a60109a7aa9168d8be8e24173e2c945a8}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore}}
+\index{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore@{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore()}{ePowerSensorsUpdateDatabaseLna\_CMockStopIgnore()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a60109a7aa9168d8be8e24173e2c945a8} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CMock\+Stop\+Ignore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00400}{400}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a60109a7aa9168d8be8e24173e2c945a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_aa55793ca6e24d2c1cc083ddbb6e0d22f}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!ePowerSensorsUpdateDatabaseLna\_Stub@{ePowerSensorsUpdateDatabaseLna\_Stub}}
+\index{ePowerSensorsUpdateDatabaseLna\_Stub@{ePowerSensorsUpdateDatabaseLna\_Stub}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{ePowerSensorsUpdateDatabaseLna\_Stub()}{ePowerSensorsUpdateDatabaseLna\_Stub()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_aa55793ca6e24d2c1cc083ddbb6e0d22f} 
+void e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+Stub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mock__power_sensors_update_database_8h_a5ccd1ddaef77ce6a4ac025533e734348}{CMOCK\+\_\+e\+Power\+Sensors\+Update\+Database\+Lna\+\_\+\+CALLBACK}}}]{Callback}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00445}{445}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+\Hypertarget{mock__power_sensors_update_database_8h_a70355e966363b216db9c48d4df443b4b}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!mock\_powerSensorsUpdateDatabase\_Destroy@{mock\_powerSensorsUpdateDatabase\_Destroy}}
+\index{mock\_powerSensorsUpdateDatabase\_Destroy@{mock\_powerSensorsUpdateDatabase\_Destroy}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerSensorsUpdateDatabase\_Destroy()}{mock\_powerSensorsUpdateDatabase\_Destroy()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a70355e966363b216db9c48d4df443b4b} 
+void mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00155}{155}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a70355e966363b216db9c48d4df443b4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a70355e966363b216db9c48d4df443b4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_a2196e01a6a8db1282232de4bb80b0cda}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!mock\_powerSensorsUpdateDatabase\_Init@{mock\_powerSensorsUpdateDatabase\_Init}}
+\index{mock\_powerSensorsUpdateDatabase\_Init@{mock\_powerSensorsUpdateDatabase\_Init}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerSensorsUpdateDatabase\_Init()}{mock\_powerSensorsUpdateDatabase\_Init()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_a2196e01a6a8db1282232de4bb80b0cda} 
+void mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00150}{150}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mock__power_sensors_update_database_8h_a2196e01a6a8db1282232de4bb80b0cda_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mock__power_sensors_update_database_8h_ae21d25f15ca5c4fb54efdc6755b13fb3}\index{mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}!mock\_powerSensorsUpdateDatabase\_Verify@{mock\_powerSensorsUpdateDatabase\_Verify}}
+\index{mock\_powerSensorsUpdateDatabase\_Verify@{mock\_powerSensorsUpdateDatabase\_Verify}!mock\_powerSensorsUpdateDatabase.h@{mock\_powerSensorsUpdateDatabase.h}}
+\doxysubsubsection{\texorpdfstring{mock\_powerSensorsUpdateDatabase\_Verify()}{mock\_powerSensorsUpdateDatabase\_Verify()}}
+{\footnotesize\ttfamily \label{mock__power_sensors_update_database_8h_ae21d25f15ca5c4fb54efdc6755b13fb3} 
+void mock\+\_\+power\+Sensors\+Update\+Database\+\_\+\+Verify (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mock__power_sensors_update_database_8c_source_l00105}{105}} of file \mbox{\hyperlink{mock__power_sensors_update_database_8c_source}{mock\+\_\+power\+Sensors\+Update\+Database.\+c}}.
+
